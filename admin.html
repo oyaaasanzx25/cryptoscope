@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2463c7">
+<title>Admin — CryptoScope</title>
+<style>
+:root{--blue:#2866ca;--blue2:#174ca8;--bg:#f3f6fb;--paper:#fff;--ink:#202938;--muted:#778296;--line:#e8edf5;--orange:#ff9b45;--cyan:#50c5d8;--green:#22a879;--purple:#9274e8;--red:#d64545;--shadow:0 8px 28px #1d35550c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:245px 1fr}
+.sidebar{background:linear-gradient(165deg,#2e70d7,#1d55b4 70%,#17479b);color:#fff;padding:25px 17px;display:flex;flex-direction:column;gap:25px}
+.brand{display:flex;align-items:center;gap:10px;padding:0 9px;font-size:20px;font-weight:850;letter-spacing:-.7px}.brand-mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,#ffb35f,#ff7b37);display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 5px 15px #102e6c55}
+.brand span{color:#ffd39c}.side-label{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:#c6d9ff;padding:0 11px;margin-bottom:6px}
+.nav{display:grid;gap:5px}.nav a{display:flex;align-items:center;gap:12px;padding:11px;border-radius:10px;color:#e0eaff;font-size:13px;transition:.2s}.nav a:hover,.nav a.active{background:#ffffff20;color:#fff}.ico{width:20px;text-align:center;font-size:16px}
+.sidebar-bottom{margin-top:auto}.tip{padding:14px;border:1px solid #ffffff32;background:#ffffff12;border-radius:13px;font-size:12px;color:#e6efff}.tip b{display:block;color:#fff;margin-bottom:5px}
+.main{min-width:0}.topbar{height:76px;background:#ffffffed;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px;position:sticky;top:0;z-index:4;backdrop-filter:blur(10px)}
+.content{padding:28px 32px 42px;max-width:1000px;margin:auto}.welcome{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.welcome h1{font-size:25px;margin:0 0 4px;letter-spacing:-.6px}.welcome p{margin:0;color:var(--muted)}
+.section-head{display:flex;justify-content:space-between;align-items:center;margin:27px 0 13px}.section-head h3{margin:0;font-size:17px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.panel-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.panel-head b{font-size:14px}.panel-head small{color:var(--muted);font-size:11px}
+.panel-body{padding:18px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:11px;font-weight:800;color:#33415c;margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#f7f9fc;border-radius:10px;padding:10px 12px;outline:none;font:inherit;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#9ab9ee;background:#fff}
+.field textarea{min-height:74px;resize:vertical}
+.btn{display:inline-block;padding:10px 14px;border-radius:9px;border:1px solid var(--line);background:#fff;font-weight:800;font-size:12px;color:var(--ink)}
+.btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn-danger{background:var(--red);border-color:var(--red);color:#fff}
+.btn-sm{padding:6px 10px;font-size:11px}
+.btn-row{display:flex;flex-wrap:wrap;gap:8px}
+.msg{margin-top:12px;font-size:12px;border-radius:10px;padding:10px 12px;display:none}
+.msg.show{display:block}
+.msg-ok{background:#e3f8f0;color:#1c8a66}
+.msg-err{background:#fdecec;color:#b3261e}
+.msg-info{background:#e9f1ff;color:#2866ca}
+.admin-item{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.admin-item:last-child{border:0}
+.admin-item b{font-size:12px;display:block;line-height:1.35}
+.admin-item small{font-size:11px;color:var(--muted)}
+.admin-item .actions{display:flex;gap:6px;flex-shrink:0}
+.empty{padding:20px 18px;color:var(--muted);font-size:12px;text-align:center}
+.hidden{display:none!important}
+.notice{margin-top:18px;background:#fff9ed;border:1px solid #f7e4c6;color:#89653c;border-radius:11px;padding:12px 14px;font-size:11px}
+footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(--line);background:#fff}
+@media(max-width:950px){.app{grid-template-columns:205px 1fr}.content{padding:24px}}
+@media(max-width:650px){.app{display:block}.sidebar{padding:13px 14px;gap:12px}.brand{font-size:18px}.nav{display:flex;overflow:auto;gap:4px;padding-bottom:2px}.nav a{white-space:nowrap;padding:8px 10px;font-size:11px}.side-label,.sidebar-bottom{display:none}.topbar{height:60px;padding:0 15px}.content{padding:19px 14px 30px}.welcome{align-items:flex-start;flex-direction:column;margin-bottom:17px}.welcome h1{font-size:22px}.admin-item{flex-direction:column}footer{padding:19px 14px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <a class="brand" href="cryptoscope-1.html"><span class="brand-mark">C</span>CRYPTO<span>SCOPE</span></a>
+  <div><div class="side-label">Menu</div><nav class="nav">
+    <a href="cryptoscope-1.html"><span class="ico">⌂</span> Lihat Website</a>
+    <a class="active" href="admin.html"><span class="ico">⚙</span> Admin</a>
+  </nav></div>
+  <div class="sidebar-bottom"><div class="side-label">Tentang</div><div class="tip"><b>Admin CryptoScope.</b>Hanya akun admin yang bisa menambah, mengubah, dan menghapus berita.</div></div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <b style="font-size:15px">Admin CryptoScope</b>
+  <span id="loginStatus" style="font-size:12px;color:var(--muted)">Belum login</span>
+</header>
+<div class="content">
+  <section class="welcome"><div><h1>Kelola Berita</h1><p>Tambah, ubah, dan hapus berita portal CryptoScope.</p></div></section>
+
+  <!-- Login -->
+  <section id="loginBox" class="panel"><div class="panel-body">
+    <b style="font-size:14px">Login Admin</b>
+    <p style="font-size:12px;color:var(--muted);margin:6px 0 14px">Login dengan akun Google admin. Hanya <b>iyasanz217@gmail.com</b> yang bisa mengelola berita.</p>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="btnLogin" type="button">Login dengan Google</button>
+    </div>
+    <div id="loginMsg" class="msg"></div>
+  </div></section>
+
+  <!-- Panel admin -->
+  <div id="adminPanel" class="hidden">
+    <div class="section-head"><h3>Tambah / Ubah Berita</h3><span id="adminEmail" style="font-size:12px;color:var(--muted)"></span></div>
+    <section class="panel"><div class="panel-body">
+      <form id="newsForm">
+        <input type="hidden" id="fId" value="">
+        <div class="field"><label for="fTitle">Judul *</label><input id="fTitle" required maxlength="200" placeholder="Judul berita..."></div>
+        <div class="field"><label for="fSummary">Ringkasan (bahasa Indonesia) *</label><textarea id="fSummary" required maxlength="500" placeholder="Ringkasan singkat berita..."></textarea></div>
+        <div class="field"><label for="fCat">Kategori *</label><select id="fCat" required>
+          <option value="crypto">Crypto &amp; Blockchain</option>
+          <option value="geopolitik">Geopolitik</option>
+          <option value="ekonomi">Ekonomi Global</option>
+          <option value="teknologi">Teknologi &amp; AI</option>
+          <option value="breaking">Breaking News</option>
+        </select></div>
+        <div class="field"><label for="fSource">Sumber *</label><input id="fSource" required maxlength="120" placeholder="Nama media, contoh: Kompas"></div>
+        <div class="field"><label for="fDate">Tanggal publikasi *</label><input id="fDate" required maxlength="40" placeholder="Contoh: 23 Nov 2026"></div>
+        <div class="field"><label for="fUrl">URL sumber *</label><input id="fUrl" required type="url" maxlength="500" placeholder="https://..."></div>
+        <div class="field"><label for="fType">Status *</label><select id="fType" required>
+          <option value="fakta">Fakta</option>
+          <option value="analisis">Analisis</option>
+          <option value="belum-terkonfirmasi">Belum terkonfirmasi</option>
+        </select></div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btnSave" type="submit">Simpan Berita</button>
+          <button class="btn hidden" id="btnCancelEdit" type="button">Batal Ubah</button>
+          <button class="btn" id="btnLogout" type="button">Logout</button>
+        </div>
+        <div id="formMsg" class="msg"></div>
+      </form>
+    </div></section>
+
+    <div class="section-head"><h3>Daftar Berita</h3><span style="font-size:12px;color:var(--muted)">Terbaru dulu</span></div>
+    <section class="panel"><div id="newsAdminList"></div></section>
+  </div>
+
+  <div class="notice">Berita yang disimpan di sini langsung tampil di portal CryptoScope (cryptoscope-1.html). Keamanan diatur oleh Firestore Rules di konsol Firebase — hanya akun admin yang bisa menulis.</div>
+</div>
+<footer><b style="color:#334155">CRYPTOSCOPE</b> &nbsp;·&nbsp; See Beyond The Market. &nbsp;·&nbsp; Media informasi crypto berbahasa Indonesia.</footer>
+</main></div>
+<script type="module">
+/* Admin CryptoScope — Firebase Auth (Google) + Firestore.
+   Config Firebase web di bawah ini bersifat PUBLIK (bukan rahasia):
+   keamanan diatur oleh Firestore Rules di konsol Firebase, bukan oleh config.
+   Rules: baca publik, tulis hanya jika login Google dengan email iyasanz217@gmail.com. */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, getDocs, query, orderBy, limit, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA9lY-Icc2HUIaNPTNra433DGaJKfno5sY",
+  authDomain: "cryptoscope-45ceb.firebaseapp.com",
+  projectId: "cryptoscope-45ceb",
+  storageBucket: "cryptoscope-45ceb.firebasestorage.app",
+  messagingSenderId: "529933559913",
+  appId: "1:529933559913:web:111fa9f2921fde5e86daf8"
+};
+const ADMIN_EMAIL = "iyasanz217@gmail.com";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const loginBox = document.getElementById("loginBox");
+const adminPanel = document.getElementById("adminPanel");
+const loginMsg = document.getElementById("loginMsg");
+const loginStatus = document.getElementById("loginStatus");
+const adminEmail = document.getElementById("adminEmail");
+const formMsg = document.getElementById("formMsg");
+const newsForm = document.getElementById("newsForm");
+const newsAdminList = document.getElementById("newsAdminList");
+const btnSave = document.getElementById("btnSave");
+const btnCancelEdit = document.getElementById("btnCancelEdit");
+
+function showMsg(el, text, kind) {
+  el.textContent = text;
+  el.className = "msg show msg-" + (kind || "info");
+}
+function hideMsg(el) { el.className = "msg"; el.textContent = ""; }
+
+function todayId() {
+  const m = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+  const d = new Date();
+  return d.getDate() + " " + m[d.getMonth()] + " " + d.getFullYear();
+}
+
+function resetForm() {
+  newsForm.reset();
+  document.getElementById("fId").value = "";
+  document.getElementById("fDate").value = todayId();
+  btnSave.textContent = "Simpan Berita";
+  btnCancelEdit.classList.add("hidden");
+  hideMsg(formMsg);
+}
+document.getElementById("fDate").value = todayId();
+
+document.getElementById("btnLogin").addEventListener("click", async function () {
+  hideMsg(loginMsg);
+  try {
+    await signInWithPopup(auth, new GoogleAuthProvider());
+  } catch (e) {
+    if (e.code === "auth/unauthorized-domain") {
+      showMsg(loginMsg, "Domain ini belum diizinkan: tambahkan domain ini di Firebase console → Authentication → Settings → Authorized domains, lalu coba lagi.", "err");
+    } else if (e.code === "auth/popup-closed-by-user") {
+      showMsg(loginMsg, "Login dibatalkan. Coba lagi.", "err");
+    } else if (e.code === "auth/popup-blocked") {
+      showMsg(loginMsg, "Popup login diblokir browser. Izinkan popup untuk situs ini, lalu coba lagi.", "err");
+    } else {
+      showMsg(loginMsg, "Login gagal: " + (e.message || e.code), "err");
+    }
+  }
+});
+
+document.getElementById("btnLogout").addEventListener("click", async function () {
+  await signOut(auth);
+});
+
+btnCancelEdit.addEventListener("click", resetForm);
+
+onAuthStateChanged(auth, async function (user) {
+  if (!user) {
+    loginBox.classList.remove("hidden");
+    adminPanel.classList.add("hidden");
+    loginStatus.textContent = "Belum login";
+    return;
+  }
+  if (user.email !== ADMIN_EMAIL) {
+    showMsg(loginMsg, "Akun ini bukan admin (" + user.email + "). Login dengan akun admin.", "err");
+    await signOut(auth);
+    return;
+  }
+  loginBox.classList.add("hidden");
+  adminPanel.classList.remove("hidden");
+  loginStatus.textContent = "Login sebagai " + user.email;
+  adminEmail.textContent = "Login sebagai " + user.email;
+  loadNews();
+});
+
+newsForm.addEventListener("submit", async function (ev) {
+  ev.preventDefault();
+  hideMsg(formMsg);
+  const data = {
+    title: document.getElementById("fTitle").value.trim(),
+    summary: document.getElementById("fSummary").value.trim(),
+    cat: document.getElementById("fCat").value,
+    source: document.getElementById("fSource").value.trim(),
+    date: document.getElementById("fDate").value.trim(),
+    url: document.getElementById("fUrl").value.trim(),
+    type: document.getElementById("fType").value
+  };
+  if (!data.title || !data.summary || !data.source || !data.date || !data.url) {
+    showMsg(formMsg, "Semua kolom wajib diisi.", "err");
+    return;
+  }
+  const editId = document.getElementById("fId").value;
+  btnSave.disabled = true;
+  try {
+    if (editId) {
+      await updateDoc(doc(db, "news", editId), data);
+      showMsg(formMsg, "Berita berhasil diubah.", "ok");
+    } else {
+      await addDoc(collection(db, "news"), Object.assign({}, data, { createdAt: serverTimestamp() }));
+      showMsg(formMsg, "Berita berhasil ditambahkan.", "ok");
+    }
+    resetForm();
+    loadNews();
+  } catch (e) {
+    if (e.code === "permission-denied") {
+      showMsg(formMsg, "Gagal menyimpan: akun ini tidak diizinkan menulis. Periksa Firestore Rules di konsol Firebase.", "err");
+    } else {
+      showMsg(formMsg, "Gagal menyimpan: " + (e.message || e.code), "err");
+    }
+  } finally {
+    btnSave.disabled = false;
+  }
+});
+
+let cachedNews = [];
+async function loadNews() {
+  newsAdminList.innerHTML = "";
+  const loading = document.createElement("div");
+  loading.className = "empty";
+  loading.textContent = "Memuat berita...";
+  newsAdminList.appendChild(loading);
+  try {
+    const snap = await getDocs(query(collection(db, "news"), orderBy("createdAt", "desc"), limit(50)));
+    cachedNews = [];
+    snap.forEach(function (d) { cachedNews.push(Object.assign({ id: d.id }, d.data())); });
+    renderAdminList();
+  } catch (e) {
+    newsAdminList.innerHTML = "";
+    const err = document.createElement("div");
+    err.className = "empty";
+    err.textContent = e.code === "permission-denied"
+      ? "Tidak bisa membaca berita: periksa Firestore Rules di konsol Firebase."
+      : "Gagal memuat berita: " + (e.message || e.code);
+    newsAdminList.appendChild(err);
+  }
+}
+
+const CAT_LABEL = { crypto: "Crypto & Blockchain", geopolitik: "Geopolitik", ekonomi: "Ekonomi Global", teknologi: "Teknologi & AI", breaking: "Breaking News" };
+
+function renderAdminList() {
+  newsAdminList.innerHTML = "";
+  if (!cachedNews.length) {
+    const d = document.createElement("div");
+    d.className = "empty";
+    d.textContent = "Belum ada berita di database. Tambahkan berita pertama lewat form di atas.";
+    newsAdminList.appendChild(d);
+    return;
+  }
+  cachedNews.forEach(function (n) {
+    const item = document.createElement("div");
+    item.className = "admin-item";
+    const info = document.createElement("div");
+    const b = document.createElement("b");
+    b.textContent = n.title || "(tanpa judul)";
+    info.appendChild(b);
+    const sm = document.createElement("small");
+    sm.textContent = (CAT_LABEL[n.cat] || n.cat) + " · " + (n.source || "") + " · " + (n.date || "") + " · " + (n.type || "");
+    info.appendChild(sm);
+    item.appendChild(info);
+    const actions = document.createElement("div");
+    actions.className = "actions";
+    const btnEdit = document.createElement("button");
+    btnEdit.type = "button";
+    btnEdit.className = "btn btn-sm";
+    btnEdit.textContent = "Edit";
+    btnEdit.addEventListener("click", function () { startEdit(n); });
+    const btnDel = document.createElement("button");
+    btnDel.type = "button";
+    btnDel.className = "btn btn-sm btn-danger";
+    btnDel.textContent = "Hapus";
+    btnDel.addEventListener("click", async function () {
+      if (!confirm("Hapus berita ini?\n\n" + (n.title || ""))) return;
+      try {
+        await deleteDoc(doc(db, "news", n.id));
+        loadNews();
+      } catch (e) {
+        alert("Gagal menghapus: " + (e.message || e.code));
+      }
+    });
+    actions.appendChild(btnEdit);
+    actions.appendChild(btnDel);
+    item.appendChild(actions);
+    newsAdminList.appendChild(item);
+  });
+}
+
+function startEdit(n) {
+  document.getElementById("fId").value = n.id;
+  document.getElementById("fTitle").value = n.title || "";
+  document.getElementById("fSummary").value = n.summary || "";
+  document.getElementById("fCat").value = n.cat || "crypto";
+  document.getElementById("fSource").value = n.source || "";
+  document.getElementById("fDate").value = n.date || "";
+  document.getElementById("fUrl").value = n.url || "";
+  document.getElementById("fType").value = n.type || "fakta";
+  btnSave.textContent = "Simpan Perubahan";
+  btnCancelEdit.classList.remove("hidden");
+  hideMsg(formMsg);
+  document.getElementById("newsForm").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+</script>
+</body></html>

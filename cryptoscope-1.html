@@ -107,7 +107,7 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
     </section>
   </div>
   <section id="portal">
-    <div class="section-head"><h3>Berita berdasarkan kategori</h3><span style="font-size:12px;color:var(--muted)">15 berita · 23 Nov 2026</span></div>
+    <div class="section-head"><h3>Berita berdasarkan kategori</h3><span id="portalCount" style="font-size:12px;color:var(--muted)">15 berita · 23 Nov 2026</span></div>
     <div class="cat-filters" role="group" aria-label="Filter kategori berita">
       <button class="pill-cat active" data-cat="all" type="button">Semua</button>
       <button class="pill-cat" data-cat="crypto" type="button">Crypto &amp; Blockchain</button>
@@ -413,5 +413,61 @@ function drawNewsImage(){
 renderCatNews();
 fillTemplate();
 drawNewsImage();
+</script>
+<script type="module">
+/* Portal berita live dari Firestore (koleksi `news`, terbaru dulu, maks. 15).
+   FALLBACK: kalau Firestore gagal / kosong / offline, portal tetap memakai
+   NEWS_DATA statis yang sudah ada di file — portal tidak pernah kosong.
+   Config Firebase web di bawah ini bersifat PUBLIK (bukan rahasia):
+   keamanan diatur oleh Firestore Rules di konsol Firebase, bukan oleh config. */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, query, orderBy, limit, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA9lY-Icc2HUIaNPTNra433DGaJKfno5sY",
+  authDomain: "cryptoscope-45ceb.firebaseapp.com",
+  projectId: "cryptoscope-45ceb",
+  storageBucket: "cryptoscope-45ceb.firebasestorage.app",
+  messagingSenderId: "529933559913",
+  appId: "1:529933559913:web:111fa9f2921fde5e86daf8"
+};
+
+try {
+  const fbApp = initializeApp(firebaseConfig);
+  const db = getFirestore(fbApp);
+  const snap = await getDocs(query(collection(db, "news"), orderBy("createdAt", "desc"), limit(15)));
+  if (!snap.empty) {
+    const items = [];
+    snap.forEach(function (d) {
+      const v = d.data();
+      items.push({
+        cat: v.cat || "crypto",
+        title: v.title || "",
+        summary: v.summary || "",
+        source: v.source || "",
+        date: v.date || "",
+        url: v.url || "#",
+        type: v.type || "fakta"
+      });
+    });
+    NEWS_DATA.length = 0;
+    items.forEach(function (it) { NEWS_DATA.push(it); });
+    const sel = document.getElementById("studioNews");
+    sel.innerHTML = "";
+    NEWS_DATA.forEach(function (n, i) {
+      const o = document.createElement("option");
+      o.value = i;
+      o.textContent = n.title;
+      sel.appendChild(o);
+    });
+    const pc = document.getElementById("portalCount");
+    if (pc) pc.textContent = NEWS_DATA.length + " berita · dari database";
+    renderCatNews();
+    fillTemplate();
+    drawNewsImage();
+  }
+} catch (e) {
+  console.warn("Firestore tidak tersedia, memakai data statis:", e);
+}
 </script>
 </body></html>
