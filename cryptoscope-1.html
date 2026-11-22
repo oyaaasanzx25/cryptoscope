@@ -27,6 +27,37 @@ a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.app{min
 footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(--line);background:#fff}
 @media(max-width:950px){.app{grid-template-columns:205px 1fr}.quick{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.content{padding:24px}}
 @media(max-width:650px){.app{display:block}.sidebar{padding:13px 14px;gap:12px}.brand{font-size:18px}.nav{display:flex;overflow:auto;gap:4px;padding-bottom:2px}.nav a{white-space:nowrap;padding:8px 10px;font-size:11px}.side-label,.sidebar-bottom{display:none}.topbar{height:60px;padding:0 15px}.top-actions{gap:9px}.top-actions .user-name{display:none}.content{padding:19px 14px 30px}.welcome{align-items:flex-start;flex-direction:column;margin-bottom:17px}.welcome h1{font-size:22px}.date{display:none}.hero{padding:21px;border-radius:15px}.hero-art{width:76px;height:76px;font-size:39px}.hero:after{font-size:125px;right:4%;top:-18px}.hero p{font-size:12px}.quick{gap:9px}.quick-card{padding:13px;min-height:108px}.columns{gap:13px}.section-head{margin-top:22px}.news-item{padding:13px}.news-thumb{width:54px;height:52px}.search input{padding:10px 10px 10px 35px;font-size:12px}.search span{top:6px;left:10px}footer{padding:19px 14px}}
+/* --- Portal berita, Studio Gambar & Integrasi AI (tambahan 23 Nov 2026; gaya lama tidak diubah) --- */
+.cat-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.pill-cat{border:1px solid var(--line);background:#fff;color:#33415c;font-size:11px;font-weight:800;letter-spacing:.3px;padding:8px 12px;border-radius:20px}
+.pill-cat:hover{border-color:#9ab9ee}
+.pill-cat.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.badge{font-size:9px;font-weight:800;letter-spacing:.6px;padding:4px 7px;border-radius:20px;margin-left:5px}
+.badge-fakta{background:#e3f8f0;color:#1c8a66}
+.badge-analisis{background:#e9f1ff;color:#2866ca}
+.badge-belum{background:#fff1e4;color:#d87b2d}
+.cat-news-item{align-items:flex-start}
+.cat-news-item>div{min-width:0}
+.news-src{font-size:11px;color:var(--muted);margin-top:5px}
+.news-src b{display:inline;color:#33415c}
+.news-src a{color:var(--blue);font-weight:700;white-space:nowrap}
+.cat-empty{padding:20px 18px;color:var(--muted);font-size:12px;text-align:center}
+.studio-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:16px;align-items:start}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:11px;font-weight:800;color:#33415c;margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#f7f9fc;border-radius:10px;padding:10px 12px;outline:none;font:inherit;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#9ab9ee;background:#fff}
+.field textarea{min-height:74px;resize:vertical}
+.btn{display:inline-block;padding:10px 14px;border-radius:9px;border:1px solid var(--line);background:#fff;font-weight:800;font-size:12px;color:var(--ink)}
+.btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn-orange{background:linear-gradient(135deg,#ffb35f,#ff7b37);border:0;color:#fff}
+.btn-row{display:flex;flex-wrap:wrap;gap:8px}
+.studio-note{font-size:11px;color:var(--muted);margin-top:10px}
+#newsCanvas{max-width:100%;height:auto;border-radius:12px;display:block;background:#101114}
+.codebox{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:12px;font:11px/1.6 ui-monospace,Menlo,Consolas,monospace;overflow:auto;white-space:pre-wrap;word-break:break-word}
+@media(max-width:950px){.studio-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.pill-cat{padding:7px 10px;font-size:10px}.cat-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.news-src a{white-space:normal}}
+
 </style>
 </head>
 <body>
@@ -75,12 +106,312 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
       </div></div>
     </section>
   </div>
-  <div class="notice" id="analysis">Ini masih prototipe tampilan. Berita aktual, harga real-time, akun admin, database, dan AI belum terhubung. Selalu periksa sumber informasi; konten bukan saran investasi.</div>
+  <section id="portal">
+    <div class="section-head"><h3>Berita berdasarkan kategori</h3><span style="font-size:12px;color:var(--muted)">15 berita · 23 Nov 2026</span></div>
+    <div class="cat-filters" role="group" aria-label="Filter kategori berita">
+      <button class="pill-cat active" data-cat="all" type="button">Semua</button>
+      <button class="pill-cat" data-cat="crypto" type="button">Crypto &amp; Blockchain</button>
+      <button class="pill-cat" data-cat="geopolitik" type="button">Geopolitik</button>
+      <button class="pill-cat" data-cat="ekonomi" type="button">Ekonomi Global</button>
+      <button class="pill-cat" data-cat="teknologi" type="button">Teknologi &amp; AI</button>
+      <button class="pill-cat" data-cat="breaking" type="button">Breaking News</button>
+    </div>
+    <div class="panel"><div class="news-list" id="catNewsList"></div></div>
+  </section>
+  <section id="studio">
+    <div class="section-head"><h3>Studio Gambar Berita</h3><span style="font-size:12px;color:var(--muted)">Gambar dibuat di perangkatmu, tanpa server</span></div>
+    <div class="panel"><div style="padding:18px"><div class="studio-grid">
+      <div>
+        <div class="field"><label for="studioNews">Pilih berita</label><select id="studioNews"></select></div>
+        <div class="field"><label for="studioTitle">Judul</label><input id="studioTitle" maxlength="160" placeholder="Tulis judul berita..."></div>
+        <div class="field"><label for="studioCaption">Caption</label><textarea id="studioCaption" maxlength="300" placeholder="Tulis caption singkat..."></textarea></div>
+        <div class="field"><label for="studioCat">Kategori</label><select id="studioCat">
+          <option value="crypto">Crypto &amp; Blockchain</option>
+          <option value="geopolitik">Geopolitik</option>
+          <option value="ekonomi">Ekonomi Global</option>
+          <option value="teknologi">Teknologi &amp; AI</option>
+          <option value="breaking">Breaking News</option>
+        </select></div>
+        <div class="field"><label for="studioRatio">Ukuran gambar</label><select id="studioRatio">
+          <option value="4:5">4:5 — 1080 × 1350 (feed)</option>
+          <option value="16:9">16:9 — 1280 × 720 (wide)</option>
+        </select></div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btnTemplate" type="button">Buat judul &amp; caption otomatis</button>
+          <button class="btn btn-orange" id="btnDraw" type="button">Buat Gambar</button>
+        </div>
+        <p class="studio-note">Generator template (tanpa AI): judul &amp; caption diambil dari berita yang kamu pilih di atas. Ringkasan AI menyusul setelah integrasi backend aktif.</p>
+      </div>
+      <div>
+        <canvas id="newsCanvas" width="1080" height="1350"></canvas>
+        <div class="btn-row" style="margin-top:12px"><button class="btn btn-primary" id="btnDownload" type="button">Unduh PNG</button></div>
+      </div>
+    </div></div></div>
+  </section>
+  <section id="ai">
+    <div class="section-head"><h3>Integrasi AI</h3><span style="font-size:12px;color:var(--muted)">Status: belum aktif</span></div>
+    <div class="panel"><div class="panel-head"><b>Ringkasan &amp; judul otomatis</b><small>Disiapkan untuk API backend</small></div>
+    <div style="padding:16px 18px">
+      <p style="margin:0 0 10px;font-size:12px;color:#33415c">Belum aktif — disiapkan untuk integrasi API backend. Nantinya, ringkasan berita otomatis dan pembuatan judul/caption akan diproses lewat server backend (proxy). API key disimpan di server dan <b>tidak pernah</b> disimpan di frontend atau di file ini.</p>
+      <div class="codebox">AI_CONFIG = { enabled: false, provider: null, endpoint: '' }
+// Ringkasan otomatis + judul/caption via backend proxy.
+// Frontend tidak menyimpan API key.</div>
+    </div></div>
+  </section>
+  <div class="notice" id="analysis">Berita diperbarui harian oleh agen CryptoScope; harga BTC/ETH/SOL diperbarui tiap pagi. Akun admin dan database belum terhubung. AI belum aktif — disiapkan untuk integrasi API. Selalu periksa sumber informasi; konten bukan saran investasi.</div>
 </div>
 <footer><b style="color:#334155">CRYPTOSCOPE</b> &nbsp;·&nbsp; See Beyond The Market. &nbsp;·&nbsp; Media informasi crypto berbahasa Indonesia.</footer>
 </main></div>
 <script>
 document.getElementById('today').textContent=new Intl.DateTimeFormat('id-ID',{dateStyle:'full'}).format(new Date());
-document.getElementById('searchInput').addEventListener('input',function(){const q=this.value.toLowerCase();document.querySelectorAll('.news-item').forEach(el=>{el.style.display=el.textContent.toLowerCase().includes(q)?'flex':'none'})});
+
+/* Integrasi AI — BELUM AKTIF. Tidak ada API key, token, atau URL API di file ini.
+   Ringkasan otomatis + pembuatan judul/caption nantinya lewat backend proxy:
+   server yang memegang API key, frontend hanya memanggil endpoint backend. */
+const AI_CONFIG={enabled:false,provider:null,endpoint:'',notes:'Ringkasan otomatis dan judul/caption via backend proxy; API key disimpan di server, tidak pernah di frontend.'};
+
+/* Data berita 23 Nov 2026 — diriset dari pencarian berita, URL sumber verbatim.
+   type: fakta = peristiwa terkonfirmasi; analisis = penilaian pihak ketiga;
+   belum-terkonfirmasi = klaim yang masih dugaan. */
+const NEWS_DATA=[
+{cat:"crypto",title:"Bitcoin rebound ke $60.960 setelah jatuh ke $55.130",summary:"Bitcoin sempat jatuh ke $55.809 pada 21 Nov, level terendah sejak Juli, lalu rebound di atas $60.000. Ethereum turun hampir 10% ke $1.543 dan XRP menguji support $0,87.",source:"Brave New Coin",date:"21 Nov 2026",url:"https://bravenewcoin.com/insights/crypto-news-today-bitcoin-price-nears-55k-as-ethereum-plunges-10-and-xrp-tests-0-87-support",type:"fakta"},
+{cat:"crypto",title:"ETF Bitcoin AS catat arus keluar lebih dari $2,5 miliar sepanjang 2026",summary:"ETF Bitcoin spot AS mencatat arus keluar bersih lebih dari $300 juta pada Rabu, sehingga total arus keluar 2026 menembus $2,5 miliar. Tekanan jual berlanjut saat Bitcoin mendekati $60.000.",source:"The Motley Fool",date:"19 Nov 2026",url:"https://www.fool.com/coverage/stock-market-today/2026/11/19/crypto-market-today-nov-19-bitcoin-approaches-usd60-000-as-etf-outflows-surpass-usd2-5-billion-in-2026/",type:"fakta"},
+{cat:"crypto",title:"Upgrade Glamsterdam Ethereum berpotensi mundur ke April–Mei 2027",summary:"Developer Ethereum mempertimbangkan kembali jadwal upgrade Glamsterdam setelah menemukan masalah kompatibilitas terkait perubahan harga gas. Keputusan penundaan belum diambil dalam rapat All Core Developers.",source:"Gadgets 360",date:"20 Nov 2026",url:"https://turbo.gadgets360.com/en/cryptocurrency/crypto-market-today-market-cap-bitcoin-ethereum-prices-btc-eth-altcoins-news-9369633",type:"belum-terkonfirmasi"},
+{cat:"geopolitik",title:"COP31 di Antalya berakhir tanpa kesepakatan soal bahan bakar fosil",summary:"KTT iklim PBB COP31 berakhir Minggu tanpa kesepakatan setelah UE, Inggris, Panama, dan negara rentan iklim menolak draf akhir yang tidak menyebut bahan bakar fosil.",source:"One Turn",date:"22 Nov 2026",url:"https://oneturn.news/day/2026-11-22/",type:"fakta"},
+{cat:"geopolitik",title:"Drone Rusia hantam apartemen dekat Kyiv, 14 orang hilang",summary:"Drone Rusia menghantam gedung apartemen lima lantai di Dymer, utara Kyiv, menewaskan dua orang. Presiden Zelensky menyebut sedikitnya 14 orang masih hilang di bawah reruntuhan.",source:"One Turn",date:"22 Nov 2026",url:"https://oneturn.news/day/2026-11-22/",type:"fakta"},
+{cat:"geopolitik",title:"Trump, Xi, dan Putin gelar pertemuan trilateral pertama di Shenzhen",summary:"Presiden Trump bertemu Xi Jinping dan Vladimir Putin di sela KTT APEC di Shenzhen — pertemuan trilateral pertama ketiganya. Agenda: pengurangan senjata nuklir dan perang dengan Iran; Ukraina disebut tidak masuk agenda.",source:"Mike's AI Lab — World & Geopolitics Briefing",date:"14 Nov 2026",url:"https://library.mikesailab.com/news/world-news/world-geopolitics/november-2026/world-geopolitics-briefing-11-14-26/",type:"fakta"},
+{cat:"ekonomi",title:"The Fed isyaratkan kenaikan suku bunga Desember, Waller buka opsi 50 bp",summary:"Risalah rapat FOMC 27–28 Okt menunjukkan dukungan luas untuk kenaikan lanjutan. Gubernur Waller mengusulkan mempertimbangkan kenaikan 50 basis poin pada Desember.",source:"The Motley Fool",date:"20 Nov 2026",url:"https://www.fool.com/retirement/advisor/2026/11/20/advisor-insights-brought-to-you-by-the-motley-fool/",type:"fakta"},
+{cat:"ekonomi",title:"Inflasi AS Oktober naik 0,4%, yield obligasi 10 tahun kembali di atas 5%",summary:"CPI AS Oktober naik 0,4% per bulan, di atas ekspektasi 0,3%. Yield obligasi 10 tahun naik kembali di atas 5% dan dolar AS menguat ke level tertinggi sejak April 2025.",source:"Zurich — Weekly Macro and Markets View",date:"16 Nov 2026",url:"https://www.zurich.com/-/media-assets/project/zurich/dotcom/economics-and-markets/docs/2026/weekly-macro-and-markets-view/weekly-macro-and-markets-view-week-47-2026.pdf?v=2",type:"fakta"},
+{cat:"ekonomi",title:"Ekonomi AS tumbuh 3,4% di kuartal III, The Fed tahan suku bunga 3,75–4,00%",summary:"PDB AS kuartal III tumbuh 3,4% (annualisasi), melampaui ekspektasi 3,2%. The Fed mempertahankan suku bunga dengan suara 10–2; dua anggota menginginkan kenaikan langsung 25 bp.",source:"FXCM — Global Macro and Markets Briefing",date:"2 Nov 2026",url:"https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-02-november-2026/",type:"fakta"},
+{cat:"teknologi",title:"Anthropic raih $81,3 miliar dalam IPO terbesar sepanjang sejarah",summary:"Anthropic menjual 980 juta saham seharga $83 per lembar dan debut di Nasdaq dengan kode ANT. Saham ditutup naik 17% menjadi sekitar $97 pada hari pertama perdagangan.",source:"GlobalData",date:"20 Nov 2026",url:"http://www.globaldata.com/newsletter/details/anthropic-raises-81-3bn-in-biggest-ipo-on-record_405017/?newsletterdate=2026-11-20&hubspotcategory=gd-technology-verdict-daily&utm_source=website&utm_medium=top_navigation&utm_content=spotlight_news_article&utm_campaign=type2_technology",type:"fakta"},
+{cat:"teknologi",title:"Nvidia selidiki dugaan hubungan CEO dengan mata-mata China",summary:"Nvidia menyewa firma hukum besar AS untuk menyelidiki dugaan hubungan CEO Jensen Huang dengan seorang wanita yang diduga mata-mata China. Dugaan mata-mata itu sendiri belum terkonfirmasi.",source:"The Munich Eye",date:"22 Nov 2026",url:"https://themunicheye.com/breaking-news",type:"belum-terkonfirmasi"},
+{cat:"teknologi",title:"Anthropic kembangkan AI dua kali lebih cepat, kata kelompok riset independen",summary:"Analisis METR menyebut Anthropic mengembangkan sistem AI sekitar dua kali lebih cepat dibanding setahun lalu, di tengah seruan CEO-nya sendiri untuk memperlambat laju pengembangan demi keamanan.",source:"TechXplore",date:"5 Nov 2026",url:"https://techxplore.com/news/2026-11-anthropic-rapidly-ai-slowdown-group.html",type:"analisis"},
+{cat:"breaking",title:"Pesawat transport militer Rusia jatuh di Siberia, 19 orang tewas",summary:"Pesawat transport militer Rusia jatuh di wilayah tak berpenghuni di Siberia barat dan menewaskan seluruh 19 orang di dalamnya, menurut Kementerian Pertahanan Rusia.",source:"The Munich Eye",date:"22 Nov 2026",url:"https://themunicheye.com/breaking-news",type:"fakta"},
+{cat:"breaking",title:"Kebakaran pabrik di Indonesia: 7 jenazah ditemukan, 50 orang hilang",summary:"Tujuh kantong jenazah ditemukan dan 50 orang masih hilang setelah kebakaran pabrik di Indonesia, menurut laporan berita 23 November.",source:"JagranJosh",date:"23 Nov 2026",url:"https://us.jagranjosh.com/news/school-assembly-news-headlines-november-23-2026-top-national-world-education-and-business-news-189158",type:"fakta"},
+{cat:"breaking",title:"AS setujui ekspor hampir 900.000 chip AI ke China dalam enam bulan",summary:"Komite Urusan Luar Negeri DPR AS mengungkapkan pemerintahan Trump menyetujui ekspor hampir 900.000 chip AI canggih Nvidia dan AMD ke perusahaan China antara Desember 2025 dan Mei 2026.",source:"The Munich Eye",date:"22 Nov 2026",url:"https://themunicheye.com/breaking-news",type:"fakta"}
+];
+
+const CATS={
+ crypto:{label:"CRYPTO & BLOCKCHAIN",icon:"₿",thumb:"linear-gradient(135deg,#f6a34c,#e46e3f)"},
+ geopolitik:{label:"GEOPOLITIK",icon:"◍",thumb:"linear-gradient(135deg,#438de4,#55c3d2)"},
+ ekonomi:{label:"EKONOMI GLOBAL",icon:"▥",thumb:"linear-gradient(135deg,#22a879,#50c5d8)"},
+ teknologi:{label:"TEKNOLOGI & AI",icon:"◈",thumb:"linear-gradient(135deg,#8d70df,#c18be5)"},
+ breaking:{label:"BREAKING NEWS",icon:"!",thumb:"linear-gradient(135deg,#e5484d,#ff7b37)"}
+};
+const TYPE_BADGE={fakta:["FAKTA","badge-fakta"],analisis:["ANALISIS","badge-analisis"],"belum-terkonfirmasi":["BELUM TERKONFIRMASI","badge-belum"]};
+
+/* Pencarian: memfilter berita lama (.news-item) dan berita kategori (.cat-news-item). */
+let searchQ="";
+function applySearch(){
+  document.querySelectorAll(".news-item").forEach(function(el){
+    el.style.display=el.textContent.toLowerCase().includes(searchQ)?"":"none";
+  });
+}
+document.getElementById("searchInput").addEventListener("input",function(){searchQ=this.value.toLowerCase();applySearch();});
+
+/* Portal berita: render + filter kategori. */
+let activeCat="all";
+function renderCatNews(){
+  const list=document.getElementById("catNewsList");
+  list.innerHTML="";
+  const items=NEWS_DATA.filter(function(n){return activeCat==="all"||n.cat===activeCat;});
+  if(!items.length){
+    const d=document.createElement("div");d.className="cat-empty";d.textContent="Tidak ada berita pada kategori ini.";list.appendChild(d);return;
+  }
+  items.forEach(function(n){
+    const c=CATS[n.cat],badge=TYPE_BADGE[n.type]||TYPE_BADGE.fakta;
+    const art=document.createElement("article");art.className="news-item cat-news-item";
+    const th=document.createElement("div");th.className="news-thumb";th.style.background=c.thumb;th.textContent=c.icon;art.appendChild(th);
+    const body=document.createElement("div");
+    const pill=document.createElement("span");pill.className="pill";pill.textContent=c.label;body.appendChild(pill);
+    const bd=document.createElement("span");bd.className="badge "+badge[1];bd.textContent=badge[0];body.appendChild(bd);
+    const b=document.createElement("b");b.textContent=n.title;body.appendChild(b);
+    const sm=document.createElement("small");sm.textContent=n.summary;body.appendChild(sm);
+    const src=document.createElement("div");src.className="news-src";
+    src.appendChild(document.createTextNode("Sumber: "));
+    const sb=document.createElement("b");sb.textContent=n.source;src.appendChild(sb);
+    src.appendChild(document.createTextNode(" · "+n.date+" · "));
+    const a=document.createElement("a");a.href=n.url;a.target="_blank";a.rel="noopener";a.textContent="Baca sumber →";src.appendChild(a);
+    body.appendChild(src);
+    art.appendChild(body);list.appendChild(art);
+  });
+  applySearch();
+}
+document.querySelectorAll(".pill-cat").forEach(function(btn){
+  btn.addEventListener("click",function(){
+    document.querySelectorAll(".pill-cat").forEach(function(b){b.classList.remove("active");});
+    this.classList.add("active");
+    activeCat=this.dataset.cat;
+    renderCatNews();
+  });
+});
+
+/* Studio Gambar Berita — semua digambar prosedural di canvas, tanpa gambar eksternal. */
+const studioNews=document.getElementById("studioNews");
+NEWS_DATA.forEach(function(n,i){
+  const o=document.createElement("option");o.value=i;o.textContent=n.title;studioNews.appendChild(o);
+});
+const studioTitle=document.getElementById("studioTitle");
+const studioCaption=document.getElementById("studioCaption");
+const studioCat=document.getElementById("studioCat");
+const studioRatio=document.getElementById("studioRatio");
+
+function fillTemplate(){
+  const n=NEWS_DATA[+studioNews.value];
+  studioTitle.value=n.title;
+  studioCaption.value="Ringkasan: "+n.summary+" — Sumber: "+n.source+", "+n.date+". Baca selengkapnya di CryptoScope.";
+  studioCat.value=n.cat;
+}
+studioNews.addEventListener("change",function(){fillTemplate();drawNewsImage();});
+document.getElementById("btnTemplate").addEventListener("click",function(){fillTemplate();drawNewsImage();});
+document.getElementById("btnDraw").addEventListener("click",drawNewsImage);
+studioRatio.addEventListener("change",drawNewsImage);
+studioCat.addEventListener("change",drawNewsImage);
+document.getElementById("btnDownload").addEventListener("click",function(){
+  const cv=document.getElementById("newsCanvas");
+  cv.toBlob(function(blob){
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="cryptoscope-"+studioCat.value+"-"+studioRatio.value.replace(":","x")+".png";
+    a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);},4000);
+  },"image/png");
+});
+
+function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function wrapLines(ctx,text,maxW,maxLines){
+  const words=text.split(/\s+/);const lines=[];let line="";
+  words.forEach(function(w){
+    const t=line?line+" "+w:w;
+    if(ctx.measureText(t).width>maxW&&line){lines.push(line);line=w;}else line=t;
+  });
+  if(line)lines.push(line);
+  if(lines.length>maxLines){lines.length=maxLines;lines[maxLines-1]+="…";}
+  return lines;
+}
+function drawVisual(ctx,cat,x,y,w,h,W){
+  ctx.save();
+  ctx.strokeStyle="rgba(255,255,255,0.08)";ctx.lineWidth=1;
+  for(let i=1;i<5;i++){ctx.beginPath();ctx.moveTo(x,y+h*i/5);ctx.lineTo(x+w,y+h*i/5);ctx.stroke();}
+  const cx=x+w/2, cy=y+h/2;
+  if(cat==="crypto"){
+    const seed=[0.52,0.44,0.58,0.36,0.62,0.5,0.7,0.42,0.66,0.78,0.6,0.85];
+    ctx.beginPath();
+    seed.forEach(function(s,i){
+      const px=x+10+i*(w-20)/(seed.length-1);
+      const py=y+h-(s*h*0.8)-h*0.08;
+      if(i===0)ctx.moveTo(px,py);else ctx.lineTo(px,py);
+    });
+    ctx.strokeStyle="#ff9b45";ctx.lineWidth=Math.max(4,W*0.004);ctx.stroke();
+    ctx.lineTo(x+w-10,y+h);ctx.lineTo(x+10,y+h);ctx.closePath();
+    const ag=ctx.createLinearGradient(0,y,0,y+h);ag.addColorStop(0,"rgba(255,155,69,0.25)");ag.addColorStop(1,"rgba(255,155,69,0)");
+    ctx.fillStyle=ag;ctx.fill();
+    ctx.fillStyle="#ff9b45";ctx.beginPath();ctx.arc(x+w-10,y+h-(0.85*h*0.8)-h*0.08,Math.max(6,W*0.007),0,Math.PI*2);ctx.fill();
+  }else if(cat==="geopolitik"){
+    const r=Math.min(w,h)*0.42;
+    ctx.strokeStyle="#50c5d8";ctx.lineWidth=Math.max(3,W*0.003);
+    ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke();
+    ctx.beginPath();ctx.ellipse(cx,cy,r*0.55,r,0,0,Math.PI*2);ctx.stroke();
+    ctx.beginPath();ctx.ellipse(cx,cy,r,r*0.55,0,0,Math.PI*2);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(cx-r,cy);ctx.lineTo(cx+r,cy);ctx.stroke();
+    [["#ff9b45",cx-r*0.35,cy-r*0.3],["#ff9b45",cx+r*0.4,cy+r*0.25],["#50c5d8",cx+r*0.1,cy-r*0.55]].forEach(function(p){
+      ctx.fillStyle=p[0];ctx.beginPath();ctx.arc(p[1],p[2],Math.max(7,W*0.008),0,Math.PI*2);ctx.fill();
+      ctx.strokeStyle=p[0];ctx.lineWidth=2;ctx.beginPath();ctx.arc(p[1],p[2],Math.max(13,W*0.014),0,Math.PI*2);ctx.stroke();
+    });
+  }else if(cat==="ekonomi"){
+    const vals=[0.45,0.7,0.55,0.85,0.65,0.95,0.8];
+    const bw=w/(vals.length*1.6);
+    vals.forEach(function(v,i){
+      const bx=x+10+i*(w-20)/vals.length+bw*0.2;
+      const bh=v*h*0.85;
+      ctx.fillStyle=i===vals.length-1?"#ff9b45":"#2e70d7";
+      rr(ctx,bx,y+h-bh,bw,bh,6);ctx.fill();
+    });
+  }else if(cat==="teknologi"){
+    const nodes=[];
+    for(let i=0;i<7;i++){nodes.push([x+20+((i*97)%(w-40)),y+20+((i*53)%(h-40))]);}
+    ctx.strokeStyle="rgba(80,197,216,0.7)";ctx.lineWidth=2;
+    for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+      if(Math.abs(nodes[i][0]-nodes[j][0])<w*0.45&&Math.abs(nodes[i][1]-nodes[j][1])<h*0.6){
+        ctx.beginPath();ctx.moveTo(nodes[i][0],nodes[i][1]);ctx.lineTo(nodes[j][0],nodes[j][1]);ctx.stroke();
+      }
+    }
+    nodes.forEach(function(p,i){
+      ctx.fillStyle=i===0?"#ff9b45":"#50c5d8";
+      ctx.beginPath();ctx.arc(p[0],p[1],i===0?12:8,0,Math.PI*2);ctx.fill();
+    });
+  }else{
+    ctx.fillStyle="#d64545";
+    rr(ctx,x,y,w,Math.round(h*0.28),10);ctx.fill();
+    ctx.fillStyle="#fff";ctx.font="900 "+Math.round(h*0.2)+"px Inter,system-ui,sans-serif";ctx.textAlign="center";ctx.textBaseline="middle";
+    ctx.fillText("BREAKING",cx,y+Math.round(h*0.14));
+    ctx.textAlign="left";ctx.textBaseline="top";
+    ctx.strokeStyle="#d64545";ctx.lineWidth=Math.max(4,W*0.004);
+    ctx.beginPath();ctx.moveTo(x,y+h*0.55);ctx.lineTo(x+w*0.3,y+h*0.42);ctx.lineTo(x+w*0.55,y+h*0.6);ctx.lineTo(x+w*0.8,y+h*0.38);ctx.lineTo(x+w,y+h*0.5);ctx.stroke();
+  }
+  ctx.restore();
+}
+function drawNewsImage(){
+  const cv=document.getElementById("newsCanvas");
+  const ratio=studioRatio.value;
+  const W=ratio==="4:5"?1080:1280, H=ratio==="4:5"?1350:720;
+  cv.width=W;cv.height=H;
+  const ctx=cv.getContext("2d");
+  const cat=studioCat.value, c=CATS[cat];
+  const pad=Math.round(W*0.055);
+  const title=(studioTitle.value||"CryptoScope").trim();
+  const caption=(studioCaption.value||"").trim();
+  const n=NEWS_DATA[+studioNews.value];
+  ctx.fillStyle="#101114";ctx.fillRect(0,0,W,H);
+  const g=ctx.createLinearGradient(0,0,W,0);
+  g.addColorStop(0,"#2e70d7");g.addColorStop(1,"#17479b");
+  const bandH=Math.round(H*0.085);
+  ctx.fillStyle=g;ctx.fillRect(0,0,W,bandH);
+  const mark=bandH*0.62, my=(bandH-mark)/2;
+  ctx.fillStyle="#ff7b37";rr(ctx,pad,my,mark,mark,mark*0.28);ctx.fill();
+  ctx.textAlign="center";ctx.textBaseline="middle";
+  ctx.fillStyle="#fff";ctx.font="900 "+Math.round(mark*0.62)+"px Inter,system-ui,sans-serif";
+  ctx.fillText("C",pad+mark/2,my+mark/2+1);
+  ctx.textAlign="left";
+  ctx.font="800 "+Math.round(bandH*0.34)+"px Inter,system-ui,sans-serif";
+  ctx.fillText("CRYPTO",pad+mark+14,bandH/2);
+  const w1=ctx.measureText("CRYPTO").width;
+  ctx.fillStyle="#ffd39c";ctx.fillText("SCOPE",pad+mark+14+w1,bandH/2);
+  ctx.textBaseline="top";
+  const pillY=bandH+Math.round(H*0.03);
+  ctx.font="800 "+Math.round(W*0.022)+"px Inter,system-ui,sans-serif";
+  const pillH=Math.round(W*0.045);
+  const lw=ctx.measureText(c.label).width+34;
+  ctx.fillStyle=cat==="breaking"?"#d64545":"#ff7b37";
+  rr(ctx,pad,pillY,lw,pillH,Math.round(W*0.022));ctx.fill();
+  ctx.fillStyle="#fff";
+  ctx.fillText(c.label,pad+17,pillY+(pillH-Math.round(W*0.022))/2);
+  const visY=pillY+Math.round(H*0.055), visH=Math.round(H*0.24);
+  drawVisual(ctx,cat,pad,visY,W-2*pad,visH,W);
+  let y=visY+visH+Math.round(H*0.04);
+  ctx.fillStyle="#fff";
+  const is45=ratio==="4:5";
+  const fs=is45?62:54;
+  ctx.font="800 "+fs+"px Inter,system-ui,sans-serif";
+  const lh=fs*1.18;
+  wrapLines(ctx,title,W-2*pad,is45?4:3).forEach(function(ln){ctx.fillText(ln,pad,y);y+=lh;});
+  if(caption){
+    y+=Math.round(H*0.015);
+    ctx.fillStyle="#c9d4e6";
+    const cfs=is45?30:26;
+    ctx.font="400 "+cfs+"px Inter,system-ui,sans-serif";
+    wrapLines(ctx,caption,W-2*pad,is45?3:2).forEach(function(ln){ctx.fillText(ln,pad,y);y+=cfs*1.45;});
+  }
+  const ruleY=H-Math.round(H*0.055);
+  ctx.fillStyle="#ff7b37";ctx.fillRect(pad,ruleY,Math.round(W*0.09),5);
+  ctx.fillStyle="#8a96a8";
+  const ffs=is45?24:22;
+  ctx.font="400 "+ffs+"px Inter,system-ui,sans-serif";
+  ctx.fillText("Sumber: "+n.source+" · "+n.date+" · cryptoscope",pad,ruleY+12);
+}
+
+renderCatNews();
+fillTemplate();
+drawNewsImage();
 </script>
 </body></html>
