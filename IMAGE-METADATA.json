@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-11-23T11:59:00+07:00",
+  "updated": "2026-11-23T12:13:55+07:00",
   "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3 — context-based, banned compositions, QC checklist",
   "images": [
     {
@@ -267,6 +267,34 @@
       "generation_timestamp": "2026-11-23T11:59:00+07:00",
       "image_dimensions": "1920x1080",
       "image_generation_status": "regenerated",
+      "image_type": "ai"
+    },
+    {
+      "article_id": "etf-november-outflows",
+      "slug": "etf-november-outflows",
+      "category": "crypto",
+      "article_title": "Bitcoin menuju November terburuk sejak 2018, ETF keluar $4,14 miliar",
+      "article_source": "TradingView",
+      "image_url": "images/2026-11-23/etf-november-outflows.webp",
+      "image_prompt": "A giant cracked glass-and-steel vault in an empty stock-exchange hall at dusk, a huge golden Bitcoin disc split by a jagged crack at its center, molten gold streaming out of the crack like water from a burst dam across a dark marble floor, cold red emergency light washing the hall while a few dim green glints fade in the far background — the image shows institutional money draining out of Bitcoin in its worst November since 2018. Fire-red accent (negative sentiment), no people, no text/numbers/logos (v3.1).",
+      "image_provider": "media.generate_image",
+      "generation_timestamp": "2026-11-23T12:13:55+07:00",
+      "image_dimensions": "1920x1080",
+      "image_generation_status": "generated",
+      "image_type": "ai"
+    },
+    {
+      "article_id": "fusionist-ace-exploit",
+      "slug": "fusionist-ace-exploit",
+      "category": "breaking",
+      "article_title": "Jembatan ACE Fusionist dieksploitasi, $2 juta dicuri lalu cadangan $3,7 juta dikuras",
+      "article_source": "The Block",
+      "image_url": "images/2026-11-23/fusionist-ace-exploit.webp",
+      "image_prompt": "A massive steel suspension bridge snapped in half over a dark canyon at dusk, its broken deck hanging at an angle, glowing teal token-streams pouring out of a torn steel vault at the bridge's end and cascading down into a dark swirling whirlpool far below, red emergency light flaring from the rupture, scattered gold coins on the cracked roadway — the image shows a cross-chain bridge exploited and drained of its reserves. Fire-red accent (negative sentiment), no people, no text/numbers/logos (v3.1).",
+      "image_provider": "media.generate_image",
+      "generation_timestamp": "2026-11-23T12:13:55+07:00",
+      "image_dimensions": "1920x1080",
+      "image_generation_status": "generated",
       "image_type": "ai"
     }
   ]
