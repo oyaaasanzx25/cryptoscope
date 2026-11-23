@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T17:08:00+07:00",
+ "updated": "2026-11-23T17:17:49+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -433,6 +433,20 @@
    "image_prompt": "Konsep: satu koridor pembayaran kaca transparan yang elegan membentang diagonal di tengah frame, membawa aliran koin-koin kecil emas yang tertib dari gedung kantor bisnis di kiri ke menara bank modern di kanan — penyelesaian stablecoin mengalir ke rekening bank biasa; latar depan meja kayu dengan amplop bisnis tersegel dan tumpukan kertas kosong; latar belakang skyline Singapura saat senja dengan cahaya hangat keemasan; suasana institusional tenang dan konstruktif, tanpa wajah/manusia, tanpa teks/angka/logo/grafik, tanpa koin raksasa, tanpa server room/kristal/siluet. Crop 16:9 + brand mark CryptoScope via PIL.",
    "image_provider": "media.generate_image",
    "generation_timestamp": "2026-11-23T17:08:00+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "korea-digital-asset-basic-act",
+   "slug": "korea-digital-asset-basic-act",
+   "category": "crypto",
+   "article_title": "Korea Selatan terbitkan draf UU Aset Digital pekan ini, lisensi bursa dan stablecoin bank jadi sorotan",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/korea-digital-asset-basic-act.webp",
+   "image_prompt": "Konsep v3.5: dokumen draf undang-undang resmi yang besar dan terbuka di atas meja kayu gelap di aula pemerintahan megah dengan kolom marmer — halaman kosong tanpa teks terbaca, satu halaman disegel stempel lilin merah — karena beritanya tentang Korea Selatan yang menerbitkan draf Digital Asset Basic Act (kerangka hukum kripto komprehensif: rezim lisensi + stablecoin won berbasis bank). Di samping dokumen setumpuk berkas regulasi; lewat jendela tinggi terlihat gedung bank modern; bendera Korea Selatan di dinding aula. Cahaya hangat keemasan (netral, regulasi). Tanpa wajah/manusia, tanpa teks/angka/logo. Crop 16:9 1920x1080 + brand mark CryptoScope pojok kiri bawah via PIL. QC: uji orang asing lolos (dokumen resmi Korea terbaca 1 detik), thumbnail 64x58 terbaca.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T17:17:49+07:00",
    "image_dimensions": "1920x1080",
    "image_generation_status": "generated",
    "image_type": "ai"
