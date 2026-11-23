@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T20:47:00+07:00",
+ "updated": "2026-11-23T14:13:54+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -629,6 +629,20 @@
    "image_prompt": "Original editorial photo (NOT AI): rows of Bitcoin ASIC mining machines with cooling fans in a mining facility, purple-blue lighting — viewed directly, clean, no logo, no watermark, no text, no branding, no people. The Block og:image / media:content from RSS: https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/getty-images-yyZwIVuwOA-unsplash-scaled.jpg (Getty/Unsplash mining-farm photo). Resolution 1600x900.",
    "image_provider": "original",
    "generation_timestamp": "2026-11-23T20:47:00+07:00",
+   "image_dimensions": "1600x900",
+   "image_generation_status": "original",
+   "image_type": "original-photo"
+  },
+  {
+   "article_id": "pump-fun-private-key-imports",
+   "slug": "pump-fun-private-key-imports",
+   "category": "teknologi",
+   "article_title": "Pump.fun dihujani kritik usai minta pengguna impor private key saat hapus login dompet eksternal",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/pump-fun-private-key-imports.webp",
+   "image_prompt": "Original editorial photo (NOT AI): man looking at a crypto trading chart screen with candlesticks, dark background — viewed directly, clean, no logo, no watermark, no text overlay, no branding. The Block og:image / media:content from RSS: https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/image-2026-11-23T161750.489.jpg. Resolution 1600x900.",
+   "image_provider": "original",
+   "generation_timestamp": "2026-11-23T14:13:54+07:00",
    "image_dimensions": "1600x900",
    "image_generation_status": "original",
    "image_type": "original-photo"
