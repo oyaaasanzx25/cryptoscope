@@ -11,6 +11,17 @@
  "items": [
   {
    "cat": "crypto",
+   "title": "Bitcoin tembus $63.000, saham kripto dan teknologi reli usai Nvidia kembalikan Jensen Huang",
+   "summary": "Bitcoin kembali menembus $63.000, naik 3,4% dalam sehari, sementara indeks GMCI 30 melonjak 5,5% saat saham kripto dan teknologi reli pada Senin pagi setelah dewan Nvidia mengembalikan Jensen Huang sebagai presiden dan CEO. Saham Nvidia (NVDA) melonjak 30% di premarket hingga sekitar $164, memulihkan sebagian kejatuhan sekitar 43% selama sebulan terakhir sejak Huang mengundurkan diri pada 12 November di tengah laporan upaya intelijen asing. Presiden Donald Trump memuji keputusan dewan yang bulat itu, sementara Nvidia menegaskan investigasi independen soal dugaan upaya intelijen asing tetap berjalan dan kembalinya Huang tidak menimbulkan risiko keamanan nasional menurut masukan pemerintah AS.",
+   "source": "The Block",
+   "date": "23 Nov 2026",
+   "published": "23 Nov 2026 · 22:02 WIB",
+   "url": "https://www.theblock.co/news/markets/2026-11-23-bitcoin-crypto-tech-stocks-rally-nvidia-reinstates-jensen-huang-ceo-nvda-jumps-444952",
+   "type": "fakta",
+   "img": "images/2026-11-23/bitcoin-crypto-rally-huang-nvidia.webp"
+  },
+  {
+   "cat": "crypto",
    "title": "American Bitcoin raih fasilitas kredit $150 juta dari FalconX dengan agunan Bitcoin",
    "summary": "American Bitcoin, perusahaan penambang Bitcoin yang didirikan bersama Eric Trump, mengamankan fasilitas kredit bergulir $150 juta dari FalconX lewat anak usahanya, American Bitcoin Operating, dengan sebagian Bitcoin sebagai agunan. Perjanjian yang ditandatangani Rabu itu belum ditarik dananya hingga Senin; dana bisa dipakai untuk ekspansi dan biaya operasional tanpa menjual Bitcoin — pada kuartal ketiga perusahaan menjual sekitar 465 BTC senilai $36,3 juta untuk menutup biaya operasional. Fasilitas dua tahun itu membebankan biaya tahunan 5,95% atas dana yang dipinjam plus biaya komitmen atas saldo yang tidak dipakai, dengan agunan awal $1,43 Bitcoin per dolar yang dipinjam; FalconX bisa meminta tambahan agunan bila nilainya turun di bawah $1,30 per dolar utang. CEO Mike Ho menyebut fasilitas itu memungkinkan perusahaan mengerahkan modal dan mengamankan infrastruktur sambil tetap fokus pada strategi akumulasi Bitcoin jangka panjang; cadangan perusahaan sudah melampaui 8.500 BTC per 4 November. Saham ABTC diperdagangkan $3,84 di pre-market Senin pukul 11:10 UTC, naik 9,7% dari penutupan Jumat $3,50 — meski masih turun sekitar 94% dari setahun lalu setelah penyesuaian reverse split 1:15 pada Juli.",
    "source": "Cointelegraph",
@@ -19,17 +30,6 @@
    "url": "https://cointelegraph.com/news/trumps-american-bitcoin-rises-150m-credit-falconx?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "type": "fakta",
    "img": ""
-  },
-  {
-   "cat": "crypto",
-   "title": "Penambang solo Bitcoin menangkan hadiah blok $191.000 meski peluang 1 banding 1.650",
-   "summary": "Seorang penambang solo Bitcoin memecahkan blok 977.057 pada Minggu dan meraup 3,129 BTC senilai sekitar $190.764 — terdiri dari subsidi blok 3,125 BTC plus 0,004 BTC biaya transaksi — lewat Solo CKPool, sebelum potongan biaya 2%. Penambang beralamat bc1q~zy9j itu hanya mengerahkan 11,1 TH/s, setara beberapa rig rumahan dan sekitar 0,000001% dari total hashrate jaringan Bitcoin 1,07 ZH/s; menurut pengembang CKpool Con Kolivas, penambang sekecil itu punya peluang sekitar 1 banding 1.650 untuk menemukan satu blok dalam setahun. Bukan yang pertama: pada April penambang CKpool lain meraup sekitar $210.000, dan pada November 2025 penambang 6 TH/s memenangkan blok senilai sekitar $265.000.",
-   "source": "The Block",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 20:37 WIB",
-   "url": "https://www.theblock.co/news/ecosystems/2026-11-23-solo-bitcoin-miner-beats-odds-wins-191000-block-reward-444919",
-   "type": "fakta",
-   "img": "images/2026-11-23/solo-bitcoin-miner-block-reward.jpg"
   },
   {
    "cat": "crypto",
@@ -77,14 +77,14 @@
   },
   {
    "cat": "ekonomi",
-   "title": "Fidelity, eToro, dan Strive gabung venue saham tokenisasi OKX-ICE",
-   "summary": "Fidelity Investments, eToro, Strive, dan Vida Global bergabung sebagai penerbit di venue saham tokenisasi OKX-ICE, usaha patungan bursa kripto OKX dan induk NYSE, Intercontinental Exchange (ICE). Venue yang beroperasi di bawah “innovation exemption” SEC itu kini mengonfirmasi 113 aset — saham, ETF, dan produk bursa lainnya — yang tersedia bertahap mulai Senin pukul 12.00 waktu Timur AS. Partisipasi mereka memperluas jajaran awal yang didominasi perusahaan terkait kripto seperti Coinbase, Circle, Robinhood, dan Strategy; Direxion berencana membawa 59 ETF. Peluncuran ini menyusul penolakan 56 dari 62 perusahaan yang awalnya dipilih untuk diperdagangkan, termasuk Apple, Microsoft, Nvidia, dan JPMorgan Chase.",
-   "source": "CoinDesk",
+   "title": "OKXICE luncurkan venue saham tokenisasi, 113 aset diperdagangkan 24/7",
+   "summary": "OKXICE, usaha patungan bursa kripto OKX dan Intercontinental Exchange — induk NYSE — meluncurkan venue saham tokenisasi (TSV) untuk pelanggan OKX Inc. di Amerika Serikat yang memenuhi syarat, lewat aplikasi OKX. Venue ini membuka perdagangan dengan 113 aset — saham penerbit dan ETF — dari penerbit dan manajer aset seperti eToro, Fidelity, Strive, BitGo, Circle, Coinbase, Robinhood, dan Strategy. Setiap token mewakili hak atas saham yang dijamin 1 banding 1 oleh saham aslinya, lengkap dengan hak pemegang saham termasuk dividen, hak suara, dan aksi korporasi. Perdagangan didukung pool likuiditas AMM di Uniswap v4 pada X Layer — Ethereum layer-2 milik OKX — sementara Securitize menyediakan infrastruktur tokenisasi, dan token tetap berada di dompet self-custody pengguna. Venue beroperasi di bawah Innovation Exemption SEC, perintah sementara lima tahun yang mengizinkan perdagangan onchain saham AS tanpa mendaftar sebagai bursa. Peluncuran ini didahului penolakan: 67 perusahaan mengajukan Notice of Issuer Objection sehingga saham mereka tidak bisa ditokenisasi, termasuk Apple, Microsoft, Alphabet, Nvidia, Amazon, Tesla, Meta, JPMorgan Chase, Goldman Sachs, Walmart, Costco, Boeing, dan Netflix.",
+   "source": "The Block",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 20:49 WIB",
-   "url": "https://www.coindesk.com/business/2026/11/23/fidelity-investments-strive-etoro-join-okx-ice-tokenized-securities-venue",
+   "published": "23 Nov 2026 · 21:01 WIB",
+   "url": "https://www.theblock.co/news/business/2026-11-23-okxice-launches-tokenized-securities-venue-444898",
    "type": "fakta",
-   "img": ""
+   "img": "images/2026-11-23/okxice-tokenized-securities-venue.webp"
   },
   {
    "cat": "ekonomi",
@@ -121,14 +121,14 @@
   },
   {
    "cat": "teknologi",
-   "title": "Visa luncurkan dompet agen AI eksperimental, agen terverifikasi bisa hasilkan OUSD dari tugas berbayar",
-   "summary": "Visa Crypto Labs meluncurkan versi eksperimental dompet agen AI Visa CLI: pengguna AS yang memenuhi syarat bisa memverifikasi agen AI mereka dengan kartu Visa dan mendaftarkannya di Visa Agent Directory, lalu menghasilkan OUSD dari tugas berbayar di Taskmarket — survei berbayar, komposisi musik, riset pasar, hingga gaming. Dompet ini dibangun di atas Tempo memakai Machine Payments Protocol; Taskmarket menampilkan lebih dari 25 tugas terbuka dengan imbalan 10–50 OUSD. Peluncuran ini memperluas Trusted Agent Protocol Visa dari e-commerce ke dompet agen dan marketplace tugas.",
-   "source": "The Block",
+   "title": "Jensen Huang kembali jadi CEO Nvidia, saham melonjak 26% di premarket",
+   "summary": "Dewan Nvidia sepakat bulat mengembalikan Jensen Huang sebagai presiden dan CEO, berlaku segera, 11 hari setelah ia mengundurkan diri — membalikkan sikap dewan yang pada 17 November menyatakan tidak berniat mengembalikannya. Masukan dari pejabat senior pemerintah AS membuat dewan yakin kembalinya Huang tidak menimbulkan risiko keamanan nasional, sementara investigasi independen soal dugaan upaya intelijen asing tetap berjalan. Saham Nvidia melonjak sekitar 26% di premarket Senin ke atas $160, sekitar 28% dari penutupan Jumat $125,53 — menambah sekitar $780 miliar nilai pasar, meski masih di bawah $166,19 saat Huang mengundurkan diri.",
+   "source": "Decrypt",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 18:22 WIB",
-   "url": "https://www.theblock.co/news/business/2026-11-23-visa-launches-experimental-ai-agent-wallet-for-eligible-us-users-to-earn-ousd-from-paid-tasks-444903",
+   "published": "23 Nov 2026 · 21:07 WIB",
+   "url": "https://decrypt.co/383797/nvidia-reinstates-jensen-huang-as-ceo-days-after-board-ruled-out-his-return",
    "type": "fakta",
-   "img": "images/2026-11-23/visa-ai-agent-wallet.webp"
+   "img": ""
   },
   {
    "cat": "teknologi",

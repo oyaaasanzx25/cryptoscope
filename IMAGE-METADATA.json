@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T14:13:54+07:00",
+ "updated": "2026-11-23T15:14:51+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -643,6 +643,34 @@
    "image_prompt": "Original editorial photo (NOT AI): man looking at a crypto trading chart screen with candlesticks, dark background — viewed directly, clean, no logo, no watermark, no text overlay, no branding. The Block og:image / media:content from RSS: https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/image-2026-11-23T161750.489.jpg. Resolution 1600x900.",
    "image_provider": "original",
    "generation_timestamp": "2026-11-23T14:13:54+07:00",
+   "image_dimensions": "1600x900",
+   "image_generation_status": "original",
+   "image_type": "original-photo"
+  },
+  {
+   "article_id": "okxice-tokenized-securities-venue",
+   "slug": "okxice-tokenized-securities-venue",
+   "category": "ekonomi",
+   "article_title": "OKXICE luncurkan venue saham tokenisasi, 113 aset diperdagangkan 24/7",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/okxice-tokenized-securities-venue.webp",
+   "image_prompt": "V3.5 template. Concept: inside a grand classical stock-exchange hall with marble columns and a high arched ceiling at night, a wide circular trading pit dominates the center: neat stacks of paper share certificates rise from the pit floor and transform mid-air into a continuous glowing ring of luminous digital tokens flowing around the pit, symbolizing a market that trades 24 hours a day. Foreground: polished wooden broker desk with a tall stack of share certificates and a brass bell; background: tall windows revealing a city skyline at dusk. Warm gold light mixed with lime-green glow from the token ring (positive sentiment). No people, no faces, no text, no numbers, no logos. 16:9 landscape. Post-process: center-crop 1920x1280 to 1920x1080 + CryptoScope brand mark bottom-left via PIL (DejaVuSans-Bold 34).",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T21:32:25+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "bitcoin-crypto-rally-huang-nvidia",
+   "slug": "bitcoin-crypto-rally-huang-nvidia",
+   "category": "crypto",
+   "article_title": "Bitcoin tembus $63.000, saham kripto dan teknologi reli usai Nvidia kembalikan Jensen Huang",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/bitcoin-crypto-rally-huang-nvidia.webp",
+   "image_prompt": "Original editorial photo (NOT AI): Jensen Huang speaking into a microphone, black leather jacket, light blue background — viewed directly, clean, no logo, no watermark, no text overlay, no branding. The Block og:image / media:content from RSS: https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/GettyImages-2299100584-scaled.jpg. Resolution 1600x900.",
+   "image_provider": "original",
+   "generation_timestamp": "2026-11-23T15:14:51+07:00",
    "image_dimensions": "1600x900",
    "image_generation_status": "original",
    "image_type": "original-photo"
