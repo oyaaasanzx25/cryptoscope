@@ -11,6 +11,17 @@
  "items": [
   {
    "cat": "crypto",
+   "title": "American Bitcoin raih fasilitas kredit $150 juta dari FalconX dengan agunan Bitcoin",
+   "summary": "American Bitcoin, perusahaan penambang Bitcoin yang didirikan bersama Eric Trump, mengamankan fasilitas kredit bergulir $150 juta dari FalconX lewat anak usahanya, American Bitcoin Operating, dengan sebagian Bitcoin sebagai agunan. Perjanjian yang ditandatangani Rabu itu belum ditarik dananya hingga Senin; dana bisa dipakai untuk ekspansi dan biaya operasional tanpa menjual Bitcoin — pada kuartal ketiga perusahaan menjual sekitar 465 BTC senilai $36,3 juta untuk menutup biaya operasional. Fasilitas dua tahun itu membebankan biaya tahunan 5,95% atas dana yang dipinjam plus biaya komitmen atas saldo yang tidak dipakai, dengan agunan awal $1,43 Bitcoin per dolar yang dipinjam; FalconX bisa meminta tambahan agunan bila nilainya turun di bawah $1,30 per dolar utang. CEO Mike Ho menyebut fasilitas itu memungkinkan perusahaan mengerahkan modal dan mengamankan infrastruktur sambil tetap fokus pada strategi akumulasi Bitcoin jangka panjang; cadangan perusahaan sudah melampaui 8.500 BTC per 4 November. Saham ABTC diperdagangkan $3,84 di pre-market Senin pukul 11:10 UTC, naik 9,7% dari penutupan Jumat $3,50 — meski masih turun sekitar 94% dari setahun lalu setelah penyesuaian reverse split 1:15 pada Juli.",
+   "source": "Cointelegraph",
+   "date": "23 Nov 2026",
+   "published": "23 Nov 2026 · 20:44 WIB",
+   "url": "https://cointelegraph.com/news/trumps-american-bitcoin-rises-150m-credit-falconx?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "type": "fakta",
+   "img": ""
+  },
+  {
+   "cat": "crypto",
    "title": "Penambang solo Bitcoin menangkan hadiah blok $191.000 meski peluang 1 banding 1.650",
    "summary": "Seorang penambang solo Bitcoin memecahkan blok 977.057 pada Minggu dan meraup 3,129 BTC senilai sekitar $190.764 — terdiri dari subsidi blok 3,125 BTC plus 0,004 BTC biaya transaksi — lewat Solo CKPool, sebelum potongan biaya 2%. Penambang beralamat bc1q~zy9j itu hanya mengerahkan 11,1 TH/s, setara beberapa rig rumahan dan sekitar 0,000001% dari total hashrate jaringan Bitcoin 1,07 ZH/s; menurut pengembang CKpool Con Kolivas, penambang sekecil itu punya peluang sekitar 1 banding 1.650 untuk menemukan satu blok dalam setahun. Bukan yang pertama: pada April penambang CKpool lain meraup sekitar $210.000, dan pada November 2025 penambang 6 TH/s memenangkan blok senilai sekitar $265.000.",
    "source": "The Block",
@@ -30,17 +41,6 @@
    "url": "https://decrypt.co/383779/strategy-buys-30m-in-bitcoin-moves-1b-from-usd-reserve-to-cash-pot",
    "type": "fakta",
    "img": "images/2026-11-23/strategy-saylor-457-btc.jpg"
-  },
-  {
-   "cat": "crypto",
-   "title": "Bitcoin cetak tujuh pekan merah beruntun, terpanjang kedua sepanjang sejarah",
-   "summary": "Bitcoin menutup pekan ketujuh beruntun di zona merah — rentetan penurunan mingguan terpanjang kedua sepanjang sejarah; rekornya sembilan pekan pada 2022 setelah runtuhnya Terra/LUNA. Sejak dibuka di dekat $86.487 pada 5 Oktober, Bitcoin sudah turun sekitar 29%, dengan penutupan mingguan di dekat $61.000. Setelah sempat menyentuh titik terendah dua tahun $55.081 pada Sabtu, Bitcoin memantul ke $61.846 pada Senin, tetapi sebagian pengamat melihat potensi penurunan lanjutan.",
-   "source": "CoinDesk",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 19:30 WIB",
-   "url": "https://www.coindesk.com/daybook-us/2026/11/23/bitcoin-s-losing-streak-is-second-longest-ever-and-some-observers-see-more-downside",
-   "type": "fakta",
-   "img": "images/2026-11-23/bitcoin-losing-streak-second-longest.webp"
   },
   {
    "cat": "geopolitik",
@@ -77,14 +77,14 @@
   },
   {
    "cat": "ekonomi",
-   "title": "Jepang perketat audit pajak kripto usai temukan penghasilan tersembunyi $24,5 juta",
-   "summary": "Jepang memperketat audit pajak terhadap trader kripto setelah menemukan penghasilan tersembunyi senilai $24,5 juta. Audit lapangan terhadap trader kripto perorangan rata-rata menemukan tambahan pajak 12,58 juta yen per kasus — hampir tiga kali lipat rata-rata audit standar otoritas pajak. Mulai 2027, Jepang akan menerima data perdagangan tahunan secara otomatis dari otoritas pajak luar negeri di bawah kerangka OECD untuk memeriksa aktivitas offshore.",
+   "title": "Fidelity, eToro, dan Strive gabung venue saham tokenisasi OKX-ICE",
+   "summary": "Fidelity Investments, eToro, Strive, dan Vida Global bergabung sebagai penerbit di venue saham tokenisasi OKX-ICE, usaha patungan bursa kripto OKX dan induk NYSE, Intercontinental Exchange (ICE). Venue yang beroperasi di bawah “innovation exemption” SEC itu kini mengonfirmasi 113 aset — saham, ETF, dan produk bursa lainnya — yang tersedia bertahap mulai Senin pukul 12.00 waktu Timur AS. Partisipasi mereka memperluas jajaran awal yang didominasi perusahaan terkait kripto seperti Coinbase, Circle, Robinhood, dan Strategy; Direxion berencana membawa 59 ETF. Peluncuran ini menyusul penolakan 56 dari 62 perusahaan yang awalnya dipilih untuk diperdagangkan, termasuk Apple, Microsoft, Nvidia, dan JPMorgan Chase.",
    "source": "CoinDesk",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 18:33 WIB",
-   "url": "https://www.coindesk.com/business/2026/11/23/japan-to-ramp-up-crypto-tax-audits-after-uncovering-usd24-5-million-in-hidden-income",
+   "published": "23 Nov 2026 · 20:49 WIB",
+   "url": "https://www.coindesk.com/business/2026/11/23/fidelity-investments-strive-etoro-join-okx-ice-tokenized-securities-venue",
    "type": "fakta",
-   "img": "images/2026-11-23/japan-crypto-tax-audits.webp"
+   "img": ""
   },
   {
    "cat": "ekonomi",
@@ -110,6 +110,17 @@
   },
   {
    "cat": "teknologi",
+   "title": "Pump.fun dihujani kritik usai minta pengguna impor private key saat hapus login dompet eksternal",
+   "summary": "Platform trading berbasis Solana, Pump.fun, mengakhiri login dompet eksternal di web dan meminta pengguna mengimpor private key agar akun lama yang terhubung dompet tetap bisa dipakai — langkah yang menuai kritik. Mulai 30 November, pengguna dengan sesi dompet yang masih aktif akan diminta menambah login email atau sosial (Google, Apple, GitHub); Pump.fun menyebut kunci yang diimpor dienkripsi di browser dan dipegang penyedia loginnya, Privy. Mantan CEO Mt. Gox Mark Karpelès menilai klaim \"end-to-end encrypted\" itu menyesatkan karena kunci dekripsi dipegang infrastruktur Privy. Migrasi ini hanya berlaku untuk login web; aplikasi seluler, API dan trading tidak terdampak.",
+   "source": "The Block",
+   "date": "23 Nov 2026",
+   "published": "23 Nov 2026 · 20:54 WIB",
+   "url": "https://www.theblock.co/news/ecosystems/2026-11-23-pump-fun-draws-criticism-over-private-key-imports-as-it-retires-external-wallet-sign-in-on-web-444926",
+   "type": "fakta",
+   "img": "images/2026-11-23/pump-fun-private-key-imports.webp"
+  },
+  {
+   "cat": "teknologi",
    "title": "Visa luncurkan dompet agen AI eksperimental, agen terverifikasi bisa hasilkan OUSD dari tugas berbayar",
    "summary": "Visa Crypto Labs meluncurkan versi eksperimental dompet agen AI Visa CLI: pengguna AS yang memenuhi syarat bisa memverifikasi agen AI mereka dengan kartu Visa dan mendaftarkannya di Visa Agent Directory, lalu menghasilkan OUSD dari tugas berbayar di Taskmarket — survei berbayar, komposisi musik, riset pasar, hingga gaming. Dompet ini dibangun di atas Tempo memakai Machine Payments Protocol; Taskmarket menampilkan lebih dari 25 tugas terbuka dengan imbalan 10–50 OUSD. Peluncuran ini memperluas Trusted Agent Protocol Visa dari e-commerce ke dompet agen dan marketplace tugas.",
    "source": "The Block",
@@ -129,17 +140,6 @@
    "url": "https://www.coindesk.com/markets/2026/11/23/ethereum-wallets-holding-usd72-billion-eth-are-under-threat-of-a-future-quantum-attack",
    "type": "fakta",
    "img": "images/2026-11-23/eth-quantum-threat.webp"
-  },
-  {
-   "cat": "teknologi",
-   "title": "Trump desak Nvidia pekerjakan lagi Jensen Huang, laporan mata-mata China jadi ganjalan",
-   "summary": "Presiden Donald Trump mendesak dewan Nvidia lewat Truth Social pada Senin agar mempekerjakan lagi Jensen Huang, CEO yang mengundurkan diri kurang dari dua minggu lalu — dewan sudah menolak pada 17 November dan firma pencari eksekutif kini memburu pengganti. Menteri Keuangan Scott Bessent menghindar saat ditanya soal pengembalian Huang. Laporan New York Times menyebut mantan pasangan Huang, Alice Huang, berhubungan dengan perwira intelijen China selama lebih dari setahun; Alice pernah menjalankan Megaspeed International, firma Singapura di balik penjualan chip Nvidia bernilai miliaran dolar yang diselidiki AS sejak 2024 atas dugaan penyelundupan chip AI ke China. Saham Nvidia ditutup Jumat di $125,53, anjlok 14% sehari dan sekitar 41% di bawah penutupan 29 Oktober.",
-   "source": "BeInCrypto",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 15:14 WIB",
-   "url": "https://beincrypto.com/trump-urges-nvidia-rehire-jensen-huang/",
-   "type": "fakta",
-   "img": "images/2026-11-23/trump-nvidia-huang-spy-report.webp"
   },
   {
    "cat": "breaking",
