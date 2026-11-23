@@ -27,7 +27,7 @@ a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.app{min
 footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(--line);background:#fff}
 @media(max-width:950px){.app{grid-template-columns:205px 1fr}.quick{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.content{padding:24px}}
 @media(max-width:650px){.app{display:block}.sidebar{padding:13px 14px;gap:12px}.brand{font-size:18px}.nav{display:flex;overflow:auto;gap:4px;padding-bottom:2px}.nav a{white-space:nowrap;padding:8px 10px;font-size:11px}.side-label,.sidebar-bottom{display:none}.topbar{height:60px;padding:0 15px}.top-actions{gap:9px}.top-actions .user-name{display:none}.content{padding:19px 14px 30px}.welcome{align-items:flex-start;flex-direction:column;margin-bottom:17px}.welcome h1{font-size:22px}.date{display:none}.hero{padding:21px;border-radius:15px}.hero-art{width:76px;height:76px;font-size:39px}.hero:after{font-size:125px;right:4%;top:-18px}.hero p{font-size:12px}.quick{gap:9px}.quick-card{padding:13px;min-height:108px}.columns{gap:13px}.section-head{margin-top:22px}.news-item{padding:13px}.news-thumb{width:54px;height:52px}.search input{padding:10px 10px 10px 35px;font-size:12px}.search span{top:6px;left:10px}footer{padding:19px 14px}}
-/* --- Portal berita, Studio Gambar & Integrasi AI (tambahan 23 Nov 2026; gaya lama tidak diubah) --- */
+/* --- Portal berita & Integrasi AI (tambahan 23 Nov 2026; gaya lama tidak diubah) --- */
 .cat-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
 .pill-cat{border:1px solid var(--line);background:#fff;color:#33415c;font-size:11px;font-weight:800;letter-spacing:.3px;padding:8px 12px;border-radius:20px}
 .pill-cat:hover{border-color:#9ab9ee}
@@ -42,7 +42,6 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 .news-src b{display:inline;color:#33415c}
 .news-src a{color:var(--blue);font-weight:700;white-space:nowrap}
 .cat-empty{padding:20px 18px;color:var(--muted);font-size:12px;text-align:center}
-.studio-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:16px;align-items:start}
 .field{margin-bottom:12px}
 .field label{display:block;font-size:11px;font-weight:800;color:#33415c;margin-bottom:5px}
 .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#f7f9fc;border-radius:10px;padding:10px 12px;outline:none;font:inherit;color:var(--ink)}
@@ -52,12 +51,20 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 .btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
 .btn-orange{background:linear-gradient(135deg,#ffb35f,#ff7b37);border:0;color:#fff}
 .btn-row{display:flex;flex-wrap:wrap;gap:8px}
-.studio-note{font-size:11px;color:var(--muted);margin-top:10px}
 #newsCanvas{max-width:100%;height:auto;border-radius:12px;display:block;background:#101114}
 .codebox{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:12px;font:11px/1.6 ui-monospace,Menlo,Consolas,monospace;overflow:auto;white-space:pre-wrap;word-break:break-word}
-@media(max-width:950px){.studio-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.pill-cat{padding:7px 10px;font-size:10px}.cat-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.news-src a{white-space:normal}}
 
+.thumb-btn{background:none;border:0;padding:0;cursor:pointer;flex-shrink:0;border-radius:10px}
+.thumb-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.lb-hidden{display:none!important}
+#lightbox{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:18px}
+.lb-backdrop{position:absolute;inset:0;background:#0b0e1acc}
+.lb-card{position:relative;background:#fff;border-radius:16px;max-width:480px;width:100%;max-height:92vh;overflow:auto;box-shadow:0 20px 60px #00000055}
+.lb-card img{width:100%;display:block;border-radius:16px 16px 0 0;background:#101527}
+.lb-body{padding:16px 18px}
+.lb-body b{display:block;font-size:15px;line-height:1.35;margin-bottom:4px}
+.lb-body small{color:var(--muted);font-size:11px;display:block;margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -118,40 +125,6 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
     </div>
     <div class="panel"><div class="news-list" id="catNewsList"></div></div>
   </section>
-  <section id="studio">
-    <div class="section-head"><h3>Studio Gambar Berita</h3><span style="font-size:12px;color:var(--muted)">Gambar dibuat di perangkatmu, tanpa server</span></div>
-    <div class="panel"><div style="padding:18px"><div class="studio-grid">
-      <div>
-        <div class="field"><label for="studioNews">Pilih berita</label><select id="studioNews"></select></div>
-        <div class="field"><label for="studioTitle">Judul</label><input id="studioTitle" maxlength="160" placeholder="Tulis judul berita..."></div>
-        <div class="field"><label for="studioCaption">Caption</label><textarea id="studioCaption" maxlength="300" placeholder="Tulis caption singkat..."></textarea></div>
-        <div class="field"><label for="studioCat">Kategori</label><select id="studioCat">
-          <option value="crypto">Crypto &amp; Blockchain</option>
-          <option value="geopolitik">Geopolitik</option>
-          <option value="ekonomi">Ekonomi Global</option>
-          <option value="teknologi">Teknologi &amp; AI</option>
-          <option value="breaking">Breaking News</option>
-        </select></div>
-        <div class="field"><label for="studioRatio">Ukuran gambar</label><select id="studioRatio">
-          <option value="4:5">4:5 — 1080 × 1350 (Instagram feed)</option>
-          <option value="9:16">9:16 — 1080 × 1920 (Story / TikTok)</option>
-          <option value="16:9">16:9 — 1280 × 720 (X / wide)</option>
-          <option value="1.91:1">1.91:1 — 1200 × 630 (Facebook)</option>
-        </select></div>
-        <div class="btn-row">
-          <button class="btn btn-primary" id="btnTemplate" type="button">Buat judul &amp; caption otomatis</button>
-          <button class="btn btn-orange" id="btnDraw" type="button">Buat Gambar</button>
-        </div>
-        <div class="field"><label for="studioSocial">Caption &amp; hashtag (otomatis dari berita)</label><textarea id="studioSocial" rows="3" readonly></textarea></div>
-        <div class="btn-row"><button class="btn" id="btnCopySocial" type="button">Salin Caption</button><span id="copyMsg" style="font-size:11px;color:var(--green);align-self:center"></span></div>
-        <p class="studio-note">Judul, caption &amp; hashtag dibuat otomatis dari berita terpilih (template, tanpa AI). Gambar digambar prosedural di perangkatmu — gaya mengikuti referensi: latar gelap, judul besar, sorotan angka.</p>
-      </div>
-      <div>
-        <canvas id="newsCanvas" width="1080" height="1350"></canvas>
-        <div class="btn-row" style="margin-top:12px"><button class="btn btn-primary" id="btnDownload" type="button">Unduh PNG</button></div>
-      </div>
-    </div></div></div>
-  </section>
   <section id="ai">
     <div class="section-head"><h3>Integrasi AI</h3><span style="font-size:12px;color:var(--muted)">Status: template lokal — AI belum aktif</span></div>
     <div class="panel"><div class="panel-head"><b>Ringkasan &amp; judul otomatis</b><small>Disiapkan untuk API backend</small></div>
@@ -163,7 +136,7 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
         <button class="btn" id="btnAiCaption" type="button">Buat Caption</button>
         <button class="btn" id="btnAiTranslate" type="button">Terjemahkan (EN)</button>
       </div>
-      <div class="codebox" id="aiResult">Pilih berita di Studio Gambar Berita, lalu tekan salah satu tombol di atas. Hasil tampil di sini.</div>
+      <div class="codebox" id="aiResult">AI memakai berita pertama dari kategori yang sedang aktif. Tekan salah satu tombol di atas. Hasil tampil di sini.</div>
       <p style="margin:10px 0 0;font-size:11px;color:var(--muted)">Kontrak proxy: POST ke endpoint dengan JSON {task: "summary"|"title"|"caption"|"translate", text: "..."} → balas JSON {result: "..."}. Aktifkan dengan mengisi AI_CONFIG.endpoint di file ini (tanpa API key).</p>
       <div class="codebox">AI_CONFIG = { enabled: false, provider: null, endpoint: '' }
 // Ringkasan otomatis + judul/caption via backend proxy.
@@ -174,6 +147,15 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 </div>
 <footer><b style="color:#334155">CRYPTOSCOPE</b> &nbsp;·&nbsp; See Beyond The Market. &nbsp;·&nbsp; Media informasi crypto berbahasa Indonesia.</footer>
 </main></div>
+<div id="lightbox" class="lb-hidden" role="dialog" aria-modal="true">
+  <div class="lb-backdrop"></div>
+  <div class="lb-card">
+    <img id="lbImg" alt="Gambar berita">
+    <div class="lb-body"><b id="lbTitle"></b><small id="lbMeta"></small>
+      <div class="btn-row"><button class="btn btn-primary" id="lbDownload" type="button">Unduh PNG</button><a class="btn" id="lbSource" target="_blank" rel="noopener">Baca sumber &rarr;</a><button class="btn" id="lbClose" type="button">Tutup</button></div>
+    </div>
+  </div>
+</div>
 <script>
 document.getElementById('today').textContent=new Intl.DateTimeFormat('id-ID',{dateStyle:'full'}).format(new Date());
 
@@ -219,7 +201,11 @@ function applySearch(){
     el.style.display=el.textContent.toLowerCase().includes(searchQ)?"":"none";
   });
 }
-document.getElementById("searchInput").addEventListener("input",function(){searchQ=this.value.toLowerCase();applySearch();});
+document.getElementById("searchInput").addEventListener("input",function(){
+  searchQ=this.value.toLowerCase();
+  if(searchQ){activeCat="all";document.querySelectorAll(".pill-cat").forEach(function(b){b.classList.toggle("active",b.dataset.cat==="all");});renderCatNews();}
+  else{applySearch();}
+});
 
 /* Portal berita: render + filter kategori. */
 let activeCat="all";
@@ -233,7 +219,15 @@ function renderCatNews(){
   items.forEach(function(n){
     const c=CATS[n.cat],badge=TYPE_BADGE[n.type]||TYPE_BADGE.fakta;
     const art=document.createElement("article");art.className="news-item cat-news-item";
-    const th=document.createElement("div");th.className="news-thumb";th.style.background=c.thumb;th.textContent=c.icon;if(n.img){const im=document.createElement("img");im.src=n.img;im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";im.onerror=function(){im.remove()};th.appendChild(im)}art.appendChild(th);
+    const th=document.createElement("div");th.className="news-thumb";th.style.background=c.thumb;th.textContent=c.icon;
+    const gurl=graphicDataURL(n,480,600);
+    const im=document.createElement("img");im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";
+    if(gurl){im.src=gurl;}else if(n.img){im.src=n.img;}
+    im.onerror=function(){ if(n.img&&im.src!==n.img){im.src=n.img;} else {im.remove();} };
+    th.appendChild(im);
+    const tb=document.createElement("button");tb.type="button";tb.className="thumb-btn";tb.setAttribute("aria-label","Lihat gambar: "+n.title);
+    tb.appendChild(th);tb.addEventListener("click",function(){openLightbox(n);});
+    art.appendChild(tb);
     const body=document.createElement("div");
     const pill=document.createElement("span");pill.className="pill";pill.textContent=c.label;body.appendChild(pill);
     const bd=document.createElement("span");bd.className="badge "+badge[1];bd.textContent=badge[0];body.appendChild(bd);
@@ -258,40 +252,96 @@ document.querySelectorAll(".pill-cat").forEach(function(btn){
   });
 });
 
-/* Studio Gambar Berita — semua digambar prosedural di canvas, tanpa gambar eksternal. */
-const studioNews=document.getElementById("studioNews");
-NEWS_DATA.forEach(function(n,i){
-  const o=document.createElement("option");o.value=i;o.textContent=n.title;studioNews.appendChild(o);
-});
-const studioTitle=document.getElementById("studioTitle");
-const studioCaption=document.getElementById("studioCaption");
-const studioCat=document.getElementById("studioCat");
-const studioRatio=document.getElementById("studioRatio");
-
-function fillTemplate(){
-  const n=NEWS_DATA[+studioNews.value];
-  studioTitle.value=n.title;
-  studioCaption.value="Ringkasan: "+n.summary+" — Sumber: "+n.source+", "+n.date+". Baca selengkapnya di CryptoScope.";
-  studioCat.value=n.cat;
-  const sc=document.getElementById("studioSocial");
-  if(sc) sc.value=buildSocial();
+/* Gambar berita: digambar prosedural otomatis dari data berita (gaya referensi gelap:
+   latar gelap, judul besar caps, angka disorot oranye, brand + sumber di footer).
+   Tanpa pilih manual, tanpa gambar eksternal. Ketuk gambar untuk lihat besar + unduh. */
+function currentNews(){
+  const items=NEWS_DATA.filter(function(x){return activeCat==="all"||x.cat===activeCat;});
+  return items[0]||NEWS_DATA[0];
 }
-studioNews.addEventListener("change",function(){fillTemplate();drawNewsImage();});
-document.getElementById("btnTemplate").addEventListener("click",function(){fillTemplate();drawNewsImage();});
-document.getElementById("btnDraw").addEventListener("click",drawNewsImage);
-studioRatio.addEventListener("change",drawNewsImage);
-studioCat.addEventListener("change",drawNewsImage);
-document.getElementById("btnDownload").addEventListener("click",function(){
-  const cv=document.getElementById("newsCanvas");
-  cv.toBlob(function(blob){
-    const a=document.createElement("a");
-    a.href=URL.createObjectURL(blob);
-    a.download="cryptoscope-"+studioCat.value+"-"+studioRatio.value.replace(":","x")+".png";
-    a.click();
-    setTimeout(function(){URL.revokeObjectURL(a.href);},4000);
-  },"image/png");
-});
-
+function graphicDataURL(item,W,H){
+  try{
+    const cv=document.createElement("canvas");
+    drawNewsGraphic(cv,item,W||480,H||600);
+    return cv.toDataURL("image/png");
+  }catch(e){ return null; }
+}
+let lbItem=null, lbCanvas=null;
+function openLightbox(item){
+  lbItem=item;
+  const lb=document.getElementById("lightbox");
+  const img=document.getElementById("lbImg");
+  lbCanvas=null;
+  let shown=false;
+  try{
+    const cv=document.createElement("canvas");
+    drawNewsGraphic(cv,item,1080,1350);
+    img.src=cv.toDataURL("image/png");
+    lbCanvas=cv; shown=true;
+  }catch(e){}
+  if(!shown&&item.img){ img.src=item.img; }
+  document.getElementById("lbTitle").textContent=item.title||"";
+  document.getElementById("lbMeta").textContent=(item.source||"CryptoScope")+(item.date?" \u00b7 "+item.date:"");
+  const src=document.getElementById("lbSource");
+  if(item.url){ src.href=item.url; src.style.display=""; } else { src.style.display="none"; }
+  lb.classList.remove("lb-hidden");
+  document.body.style.overflow="hidden";
+}
+function closeLightbox(){
+  document.getElementById("lightbox").classList.add("lb-hidden");
+  document.body.style.overflow="";
+}
+function initLightbox(){
+  document.getElementById("lbClose").addEventListener("click",closeLightbox);
+  document.getElementById("lightbox").addEventListener("click",function(e){
+    if(e.target.id==="lightbox"||e.target.classList.contains("lb-backdrop")) closeLightbox();
+  });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeLightbox(); });
+  document.getElementById("lbDownload").addEventListener("click",function(){
+    if(lbCanvas){
+      lbCanvas.toBlob(function(blob){
+        const a=document.createElement("a");
+        a.href=URL.createObjectURL(blob);
+        a.download="cryptoscope-"+(lbItem?lbItem.cat:"news")+"-4x5.png";
+        a.click();
+        setTimeout(function(){URL.revokeObjectURL(a.href);},4000);
+      },"image/png");
+    }else if(lbItem&&lbItem.img){
+      fetch(lbItem.img).then(function(r){return r.blob();}).then(function(blob){
+        const a=document.createElement("a");
+        a.href=URL.createObjectURL(blob);
+        a.download="cryptoscope-gambar.png";
+        a.click();
+        setTimeout(function(){URL.revokeObjectURL(a.href);},4000);
+      }).catch(function(){ window.open(lbItem.img,"_blank"); });
+    }
+  });
+}
+function wireTopNews(){
+  document.querySelectorAll("#newsList .news-item").forEach(function(art){
+    const th=art.querySelector(".news-thumb");
+    const b=art.querySelector("b");
+    const sm=art.querySelector("small");
+    const pill=art.querySelector(".pill");
+    if(!th||!b) return;
+    const icon=th.textContent.trim();
+    const title=b.textContent.trim();
+    const raw=sm?sm.textContent:"";
+    const dm=raw.match(/(\d{1,2} \w+ \d{4})\s*$/);
+    const oldImg=th.querySelector("img");
+    const item={cat:"crypto",title:title,summary:raw,date:dm?dm[1]:"",source:"CryptoScope",url:"",type:"fakta",img:oldImg?oldImg.getAttribute("src")||"":""};
+    const gurl=graphicDataURL(item,480,600);
+    const im=document.createElement("img");
+    im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";
+    if(gurl){im.src=gurl;}else if(item.img){im.src=item.img;}
+    im.onerror=function(){ if(item.img&&im.src!==item.img){im.src=item.img;} else {im.remove();} };
+    th.textContent=icon;th.appendChild(im);
+    const tb=document.createElement("button");
+    tb.type="button";tb.className="thumb-btn";tb.setAttribute("aria-label","Lihat gambar: "+title);
+    th.parentNode.insertBefore(tb,th);tb.appendChild(th);
+    tb.addEventListener("click",function(){openLightbox(item);});
+  });
+}
 function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
 function wrapLines(ctx,text,maxW,maxLines){
   const words=text.split(/\s+/);const lines=[];let line="";
@@ -365,20 +415,11 @@ function drawVisual(ctx,cat,x,y,w,h,W){
   }
   ctx.restore();
 }
-const STUDIO_SIZES={"4:5":[1080,1350],"9:16":[1080,1920],"16:9":[1280,720],"1.91:1":[1200,630]};
 const SOCIAL_TAGS={crypto:["#Bitcoin","#Crypto","#CryptoScope","#BTC"],geopolitik:["#Geopolitik","#Dunia","#CryptoScope"],ekonomi:["#Ekonomi","#BI","#IHSG","#CryptoScope"],teknologi:["#AI","#Teknologi","#CryptoScope"],breaking:["#BreakingNews","#CryptoScope"]};
-function buildSocial(){
-  const n=NEWS_DATA[+studioNews.value];
+function buildSocial(n){
   const tags=(SOCIAL_TAGS[n.cat]||SOCIAL_TAGS.crypto).join(" ");
   return n.title+" \u2014 "+n.summary+" Baca selengkapnya di CryptoScope. Sumber: "+n.source+". "+tags;
 }
-document.getElementById("btnCopySocial").addEventListener("click",function(){
-  const ta=document.getElementById("studioSocial");
-  const msg=document.getElementById("copyMsg");
-  function done(){ if(msg) msg.textContent="Caption tersalin."; setTimeout(function(){ if(msg) msg.textContent=""; },2500); }
-  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(ta.value).then(done,function(){ ta.select(); document.execCommand("copy"); done(); }); }
-  else { ta.select(); try{document.execCommand("copy");}catch(e){} done(); }
-});
 function drawAccentLines(ctx,text,x,y,maxW,lh,maxLines){
   const words=text.split(/\s+/);
   const lines=[];let line=[];let lw=0;
@@ -400,18 +441,14 @@ function drawAccentLines(ctx,text,x,y,maxW,lh,maxLines){
   });
   return y;
 }
-function drawNewsImage(){
-  const cv=document.getElementById("newsCanvas");
-  const ratio=studioRatio.value;
-  const sz=STUDIO_SIZES[ratio]||STUDIO_SIZES["4:5"];
-  const W=sz[0], H=sz[1];
+function drawNewsGraphic(cv,item,W,H){
   cv.width=W;cv.height=H;
   const ctx=cv.getContext("2d");
-  const cat=studioCat.value, c=CATS[cat];
+  const cat=item.cat, c=CATS[cat]||CATS.crypto;
   const pad=Math.round(W*0.06);
-  const title=(studioTitle.value||"CryptoScope").trim().toUpperCase();
-  const caption=(studioCaption.value||"").trim();
-  const n=NEWS_DATA[+studioNews.value];
+  const title=(item.title||"CryptoScope").trim().toUpperCase();
+  const caption=(item.summary||"").trim();
+  const n=item;
   const bg=ctx.createLinearGradient(0,0,0,H);
   bg.addColorStop(0,"#0d1120");bg.addColorStop(0.55,"#101527");bg.addColorStop(1,"#0a0d18");
   ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
@@ -441,15 +478,14 @@ function drawNewsImage(){
   drawVisual(ctx,cat,pad,visY,W-2*pad,visH,W);
   let y=visY+visH+Math.round(H*0.035);
   ctx.fillStyle="#fff";
-  const isTall=(ratio==="4:5"||ratio==="9:16");
-  const fs=isTall?Math.round(W*0.058):Math.round(W*0.042);
+  const fs=Math.round(W*0.058);
   ctx.font="800 "+fs+"px Inter,system-ui,sans-serif";
-  y=drawAccentLines(ctx,title,pad,y,W-2*pad,fs*1.16,isTall?5:3);
+  y=drawAccentLines(ctx,title,pad,y,W-2*pad,fs*1.16,5);
   const ruleY=H-Math.round(H*0.045);
   if(caption){
     const cfs=Math.round(W*0.026);
     ctx.font="400 "+cfs+"px Inter,system-ui,sans-serif";
-    const capLines=wrapLines(ctx,caption,W-2*pad,isTall?3:2);
+    const capLines=wrapLines(ctx,caption,W-2*pad,3);
     const capH=capLines.length*cfs*1.5;
     if(y+Math.round(H*0.014)+capH<ruleY-8){
       y+=Math.round(H*0.014);
@@ -491,7 +527,7 @@ loadMarket();
 async function aiTask(task){
   const res=document.getElementById("aiResult");
   if(!res) return;
-  const n=NEWS_DATA[+studioNews.value];
+  const n=currentNews();
   const text=n.title+". "+n.summary;
   if(AI_CONFIG.enabled&&AI_CONFIG.endpoint){
     res.textContent="Memproses via backend\u2026";
@@ -504,7 +540,7 @@ async function aiTask(task){
   }
   if(task==="summary"){res.textContent="[Template] "+n.summary;}
   else if(task==="title"){res.textContent="[Template] Judul alternatif: "+n.title;}
-  else if(task==="caption"){res.textContent="[Template] "+buildSocial();}
+  else if(task==="caption"){res.textContent="[Template] "+buildSocial(n);}
   else if(task==="translate"){res.textContent="[Template] Terjemahan butuh AI aktif. Ringkasan asli: "+n.summary;}
 }
 ["btnAiSummary","btnAiTitle","btnAiCaption","btnAiTranslate"].forEach(function(id){
@@ -513,8 +549,8 @@ async function aiTask(task){
 });
 
 renderCatNews();
-fillTemplate();
-drawNewsImage();
+wireTopNews();
+initLightbox();
 </script>
 <script type="module">
 /* Portal berita live dari Firestore (koleksi `news`, terbaru dulu, maks. 15).
@@ -555,19 +591,9 @@ try {
     });
     NEWS_DATA.length = 0;
     items.forEach(function (it) { NEWS_DATA.push(it); });
-    const sel = document.getElementById("studioNews");
-    sel.innerHTML = "";
-    NEWS_DATA.forEach(function (n, i) {
-      const o = document.createElement("option");
-      o.value = i;
-      o.textContent = n.title;
-      sel.appendChild(o);
-    });
     const pc = document.getElementById("portalCount");
     if (pc) pc.textContent = NEWS_DATA.length + " berita · dari database";
     renderCatNews();
-    fillTemplate();
-    drawNewsImage();
   }
 } catch (e) {
   console.warn("Firestore tidak tersedia, memakai data statis:", e);
