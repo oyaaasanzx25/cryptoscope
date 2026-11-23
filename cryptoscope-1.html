@@ -203,16 +203,19 @@ function applySearch(){
 }
 document.getElementById("searchInput").addEventListener("input",function(){
   searchQ=this.value.toLowerCase();
-  if(searchQ){activeCat="all";document.querySelectorAll(".pill-cat").forEach(function(b){b.classList.toggle("active",b.dataset.cat==="all");});renderCatNews();}
+  if(searchQ){activeCat="all";activeType=null;document.querySelectorAll(".pill-cat").forEach(function(b){b.classList.toggle("active",b.dataset.cat==="all");});renderCatNews();}
   else{applySearch();}
 });
 
 /* Portal berita: render + filter kategori. */
 let activeCat="all";
+let activeType=null;
 function renderCatNews(){
   const list=document.getElementById("catNewsList");
   list.innerHTML="";
-  const items=NEWS_DATA.filter(function(n){return activeCat==="all"||n.cat===activeCat;});
+  const items=NEWS_DATA.filter(function(n){return (activeCat==="all"||n.cat===activeCat)&&(!activeType||n.type===activeType);});
+  const pc=document.getElementById("portalCount");
+  if(pc){pc.textContent=items.length+" berita \u00b7 "+(activeType?"Analisis":(activeCat==="all"?"Semua":(CATS[activeCat]?CATS[activeCat].label:activeCat)));}
   if(!items.length){
     const d=document.createElement("div");d.className="cat-empty";d.textContent="Tidak ada berita pada kategori ini.";list.appendChild(d);return;
   }
@@ -250,9 +253,40 @@ document.querySelectorAll(".pill-cat").forEach(function(btn){
   btn.addEventListener("click",function(){
     document.querySelectorAll(".pill-cat").forEach(function(b){b.classList.remove("active");});
     this.classList.add("active");
-    activeCat=this.dataset.cat;
+    activeCat=this.dataset.cat;activeType=null;
     renderCatNews();
   });
+});
+
+/* Menu utama (sidebar kiri) + kartu kategori di beranda: tiap item memfilter
+   portal dan scroll ke bagiannya. Sebelumnya menu ini hanya anchor
+   (#home/#news/...) — cuma scroll tanpa memfilter, jadi terasa tidak berfungsi. */
+function goMenu(href){
+  var si=document.getElementById("searchInput");
+  function clearSearch(){searchQ="";if(si)si.value="";}
+  function syncPills(cat){document.querySelectorAll(".pill-cat").forEach(function(b){b.classList.toggle("active",b.dataset.cat===cat);});}
+  if(href==="#home"){activeCat="all";activeType=null;clearSearch();syncPills("all");renderCatNews();window.scrollTo({top:0,behavior:"smooth"});return;}
+  if(href==="#market"){document.getElementById("market").scrollIntoView({behavior:"smooth"});return;}
+  var cat="crypto",type=null,el=document.getElementById("portal");
+  if(href==="#news"){cat="crypto";}
+  else if(href==="#bitcoin"){cat="crypto";}
+  else if(href==="#altcoin"){cat="crypto";el=document.getElementById("altcoin");}
+  else if(href==="#web3"){cat="crypto";el=document.getElementById("web3");}
+  else if(href==="#analysis"){cat="all";type="analisis";}
+  else{return;}
+  activeCat=cat;activeType=type;clearSearch();syncPills(cat);renderCatNews();
+  if(el)el.scrollIntoView({behavior:"smooth"});
+}
+document.querySelectorAll(".nav a").forEach(function(a){
+  a.addEventListener("click",function(e){
+    e.preventDefault();
+    document.querySelectorAll(".nav a").forEach(function(x){x.classList.remove("active");});
+    this.classList.add("active");
+    goMenu(this.getAttribute("href"));
+  });
+});
+document.querySelectorAll(".quick-card").forEach(function(a){
+  a.addEventListener("click",function(e){e.preventDefault();goMenu(this.getAttribute("href"));});
 });
 
 /* Gambar berita: foto asli dari sumber berita (og:image, OTOMATIS, tanpa pilih manual)
@@ -260,7 +294,7 @@ document.querySelectorAll(".pill-cat").forEach(function(btn){
    dipakai, gambar digambar prosedural gaya referensi gelap dari data beritanya.
    Ketuk gambar untuk lihat besar + unduh. */
 function currentNews(){
-  const items=NEWS_DATA.filter(function(x){return activeCat==="all"||x.cat===activeCat;});
+  const items=NEWS_DATA.filter(function(x){return (activeCat==="all"||x.cat===activeCat)&&(!activeType||x.type===activeType);});
   return items[0]||NEWS_DATA[0];
 }
 function graphicDataURL(item,W,H){
