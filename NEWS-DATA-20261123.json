@@ -121,25 +121,25 @@
   },
   {
    "cat": "teknologi",
-   "title": "Jensen Huang kembali jadi CEO Nvidia, saham melonjak 26% di premarket",
-   "summary": "Dewan Nvidia sepakat bulat mengembalikan Jensen Huang sebagai presiden dan CEO, berlaku segera, 11 hari setelah ia mengundurkan diri — membalikkan sikap dewan yang pada 17 November menyatakan tidak berniat mengembalikannya. Masukan dari pejabat senior pemerintah AS membuat dewan yakin kembalinya Huang tidak menimbulkan risiko keamanan nasional, sementara investigasi independen soal dugaan upaya intelijen asing tetap berjalan. Saham Nvidia melonjak sekitar 26% di premarket Senin ke atas $160, sekitar 28% dari penutupan Jumat $125,53 — menambah sekitar $780 miliar nilai pasar, meski masih di bawah $166,19 saat Huang mengundurkan diri.",
+   "title": "Kekayaan Jensen Huang naik $36 miliar saat saham Nvidia melonjak, short seller rugi $12 miliar",
+   "summary": "Kekayaan Jensen Huang bertambah lebih dari $36 miliar pada Senin setelah dewan Nvidia mengembalikannya sebagai CEO, 11 hari setelah ia mengundurkan diri. Saham Nvidia melonjak lebih dari 33% ke sekitar $167, sementara penjual short menanggung kerugian di atas kertas sekitar $12,2 miliar — hari terburuk mereka setidaknya sejak 2019, menurut data ORTEX yang dikutip Reuters. Meski begitu, penjual short masih untung sekitar $14 miliar sejak 29 Oktober. Kembalinya Huang — yang didorong Presiden Donald Trump — juga mengangkat pasar lebih luas dan kripto, dengan Bitcoin ikut reli; S&P 500 naik sekitar 5% dan Nasdaq hampir 7%. Forbes mencatat Huang kini berada di peringkat 13 orang terkaya dunia.",
    "source": "Decrypt",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 21:07 WIB",
-   "url": "https://decrypt.co/383797/nvidia-reinstates-jensen-huang-as-ceo-days-after-board-ruled-out-his-return",
+   "date": "24 Nov 2026",
+   "published": "24 Nov 2026 · 00:28 WIB",
+   "url": "https://decrypt.co/383815/jensen-huang-fortune-37-billion-nvidia-soars-short-sellers-rekt",
    "type": "fakta",
-   "img": ""
+   "img": "images/2026-11-24/jensen-huang-wealth-short-sellers.webp"
   },
   {
    "cat": "teknologi",
-   "title": "Dompet Ethereum berisi ETH $72 miliar terancam serangan kuantum di masa depan",
-   "summary": "Dompet Ethereum yang menyimpan ETH senilai total $72 miliar terancam serangan komputer kuantum di masa depan, menurut laporan CoinDesk. Kunci publik dompet Ethereum menjadi terlihat permanen begitu pemiliknya bertransaksi, sehingga komputer kuantum yang cukup kuat kelak bisa menurunkan kunci privat dari kunci publik yang terekspos. Riset Google Quantum AI — yang ditulis bersama peneliti Ethereum Foundation Justin Drake dan kriptografer Stanford Dan Boneh — memetakan lima jalur serangan terhadap Ethereum, dengan total eksposur di atas $100 miliar, mencakup dompet, kontrak pintar, staking, layer-2, dan setup data-availability. Ethereum Foundation menargetkan kriptografi tahan kuantum pada 2029, tapi setiap kontrak dan infrastruktur harus di-upgrade sendiri-sendiri.",
-   "source": "CoinDesk",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 19:13 WIB",
-   "url": "https://www.coindesk.com/markets/2026/11/23/ethereum-wallets-holding-usd72-billion-eth-are-under-threat-of-a-future-quantum-attack",
+   "title": "Pool pinjaman stUSDS Sky kering, cofounder utang $77 juta dan timbang jual token SKY",
+   "summary": "Pendiri bersama Sky Protocol (dulu MakerDAO) Rune Christensen mengakui pinjamannya membuat pool pinjaman stUSDS kehabisan dana untuk penarikan: tidak ada dana tersedia, 99,99% dari pool sekitar $159 juta sedang dipakai, dan suku bunga deposan melonjak di atas 50% dari sekitar 6% pada awal bulan. Christensen sudah melunasi sekitar $3 juta USDS dan masih berutang sekitar $77 juta; ia menjajaki penjualan sebagian token SKY miliknya ke investor institusi untuk melunasi sisanya, dengan kabar terbaru tiap 48 jam. USDS sendiri masih bertahan di dekat $1. Bursa Korea Selatan Upbit, Bithumb, dan Coinone memasukkan SKY dan USDS ke daftar peringatan perdagangan serta menghentikan deposit; Coinone memperingatkan risiko kerugian bagi pemegang stUSDS. Proposal tata kelola Sky mengusulkan pemangkasan suku bunga stUSDS ke 10%, penghentian pinjaman baru, dan pemakaian cadangan protokol untuk membeli stUSDS di pasar.",
+   "source": "The Block",
+   "date": "24 Nov 2026",
+   "published": "24 Nov 2026 · 00:31 WIB",
+   "url": "https://www.theblock.co/news/defi/2026-11-23-sky-cofounder-weighs-sky-sale-repay-77-million-stusds-pool-runs-dry-445373",
    "type": "fakta",
-   "img": "images/2026-11-23/eth-quantum-threat.webp"
+   "img": ""
   },
   {
    "cat": "breaking",

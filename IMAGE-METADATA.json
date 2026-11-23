@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T23:51:46+07:00",
+ "updated": "2026-11-24T00:33:59+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -687,6 +687,20 @@
    "image_dimensions": "1920x1080",
    "image_generation_status": "ok",
    "image_type": "original-photo"
+  },
+  {
+   "article_id": "jensen-huang-wealth-short-sellers",
+   "slug": "jensen-huang-wealth-short-sellers",
+   "category": "teknologi",
+   "article_title": "Kekayaan Jensen Huang naik $36 miliar saat saham Nvidia melonjak, short seller rugi $12 miliar",
+   "article_source": "Decrypt",
+   "image_url": "images/2026-11-24/jensen-huang-wealth-short-sellers.webp",
+   "image_prompt": "Original article image from Decrypt RSS enclosure — real photo portrait of Jensen Huang in black leather jacket against blue-purple gradient background; not AI generated",
+   "image_provider": "Decrypt (RSS enclosure / article image)",
+   "generation_timestamp": "2026-11-24T00:33:59+07:00",
+   "image_dimensions": "1024x512",
+   "image_generation_status": "external",
+   "image_type": "external"
   }
  ]
 }
