@@ -33,12 +33,12 @@
   },
   {
    "cat": "crypto",
-   "title": "Bitcoin diskon 37% di pasar dolar Kanada Kraken karena order book akhir pekan menipis",
-   "summary": "Sebanyak 592,24 Bitcoin berpindah tangan di pasar dolar Kanada Kraken dari Jumat malam hingga Sabtu pagi dengan harga rata-rata CA$51.886 per koin — sekitar 37,3% di bawah patokan dolar AS CA$82.798 berdasarkan kurs Bank of Canada hari Jumat. Dalam satu detik pada Sabtu, 104 fill yang menjual 10,42 BTC dibuka di CA$31.000 sementara rata-ratanya hanya CA$25.505; harga terendah perdagangan mencapai CA$24.250. Penyebabnya: order book akhir pekan yang tipis — spread bid-ask yang sempit menyembunyikan biaya jual 10 BTC sekaligus, karena bid terbaik hanya menutupi sebagian order sehingga sisanya harus menerima harga yang lebih rendah. Studi Coinbase Institutional menyebut volume spot Bitcoin hari kerja pada 2025 dua sampai tiga kali lipat volume akhir pekan.",
-   "source": "Cointelegraph",
+   "title": "ARK Invest batalkan dua rencana ETF kripto CoinDesk 20",
+   "summary": "ARK Investment Management milik Cathie Wood meminta SEC menarik kembali pendaftaran dua ETF indeks kripto — ARK CoinDesk 20 Crypto ETF dan ARK CoinDesk 20 ex-Bitcoin Crypto ETF — lewat surat penarikan Form RW tertanggal 20 November 2026. Kedua produk yang diajukan sejak 23 Januari 2026 itu tidak pernah dinyatakan efektif dan tidak ada saham yang diterbitkan atau dijual; ARK menyatakan tidak akan melanjutkan distribusi sahamnya. Kedua dana dirancang mengikuti indeks CoinDesk 20 — 20 aset kripto terbesar berdasarkan kapitalisasi pasar — lewat kontrak berjangka, sementara versi ex-Bitcoin juga melakukan short terhadap kontrak berjangka Bitcoin CME untuk menghilangkan eksposur Bitcoin. Penarikan ini bukan penolakan SEC — regulator tidak pernah memutuskan — sehingga ARK bisa mengajukan kembali kapan saja; dana Bitcoin single-asset ARK tetap berjalan.",
+   "source": "CoinDesk",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 22:57 WIB",
-   "url": "https://cointelegraph.com/news/how-market-depth-shapes-the-price-of-a-weekend-bitcoin-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "published": "23 Nov 2026 · 23:39 WIB",
+   "url": "https://www.coindesk.com/business/2026/11/23/cathie-wood-s-ark-invest-pulls-the-plug-on-two-planned-crypto-etfs",
    "type": "fakta",
    "img": ""
   },
@@ -99,14 +99,14 @@
   },
   {
    "cat": "ekonomi",
-   "title": "ECB izinkan bank jaminkan sekuritas tokenisasi sebagai agunan mulai Juni 2027",
-   "summary": "Bank Sentral Eropa (ECB) menyetujui rencana yang memungkinkan bank meminjam dari bank sentral zona euro dengan agunan sekuritas tokenisasi yang diterbitkan di platform berlisensi di bawah program percontohan DLT Uni Eropa, berlaku mulai Juni 2027. Sejak 30 Maret bank sudah bisa menjaminkan sekuritas tokenisasi tertentu lewat kustodian sentral berbasis distributed ledger; keputusan ini memperluasnya ke obligasi yang diterbitkan di platform pilot berlisensi, selama memenuhi aturan agunan Eurosystem dan terjangkau lewat tautan yang disetujui ke kustodian sentral dengan penyelesaian di TARGET2-Securities. ECB juga menjajaki sekuritas yang diterbitkan dan diselesaikan sepenuhnya di distributed ledger, dengan cetak biru dijadwalkan 2028.",
+   "title": "Cross River Bank luncurkan pinjaman berjaminan Bitcoin hingga $250.000",
+   "summary": "Cross River Bank bersama perusahaan pembiayaan konsumen LendingUSA meluncurkan program pinjaman berjaminan Bitcoin hingga $250.000, memungkinkan nasabah meminjam dana tanpa menjual BTC mereka. Pinjaman berkisar $10.000–$250.000 dengan rasio pinjaman 30%, 50%, atau 70% dari nilai Bitcoin yang dijaminkan; nasabah bisa membayar bunga saja selama masa pinjaman atau menunda pembayaran hingga jatuh tempo. Bitcoin yang dijaminkan disimpan kustodian pihak ketiga yang qualified selama masa pinjaman. Risikonya: bila harga Bitcoin turun, nasabah bisa diminta menambah agunan atau melunasi sebagian pinjaman, dan BTC yang dijaminkan bisa dilikuidasi bila syarat agunan tidak terpenuhi. Ini program pinjaman berjaminan Bitcoin pertama Cross River sebagai originator.",
    "source": "Cointelegraph",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 18:49 WIB",
-   "url": "https://cointelegraph.com/news/ecb-expands-eurosystem-collateral-tokenized-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "published": "23 Nov 2026 · 23:23 WIB",
+   "url": "https://cointelegraph.com/news/cross-river-bank-bitcoin-backed-lending-250k-loans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "type": "fakta",
-   "img": "images/2026-11-23/ecb-tokenized-collateral.webp"
+   "img": ""
   },
   {
    "cat": "teknologi",
