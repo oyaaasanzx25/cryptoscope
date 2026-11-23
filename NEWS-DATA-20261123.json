@@ -1,178 +1,178 @@
 {
- "date": "2026-11-23",
- "sources": [
-  "CoinDesk",
-  "Cointelegraph",
-  "The Block",
-  "Decrypt",
-  "BeInCrypto"
- ],
- "note": "Reuters tidak bisa dijangkau dari VM (DataDome block)",
- "items": [
-  {
-   "cat": "crypto",
-   "title": "Bitcoin sentuh $64.500, naik 17% dari titik terendah — likuidasi kripto tembus $500 juta",
-   "summary": "Bitcoin menyentuh $64.505 di Bitstamp pada Senin, naik lebih dari 17% dari titik terendah 26 bulan di kisaran $55.000 pada Sabtu, setelah dewan Nvidia mengembalikan Jensen Huang sebagai CEO. Saham Nvidia melonjak 35% hingga $171,50 dan menambah sekitar $1 triliun kapitalisasi pasar, sementara S&P 500 naik 4,8% dan Nasdaq 6,8%. Reli ini mengejutkan penjual short: likuidasi kripto melampaui $500 juta dalam empat jam hingga pukul 16:00 UTC, menurut data CoinGlass. Analis Michaël van de Poppe menilai target berikutnya adalah rata-rata bergerak 21 hari di $69.014 dan 200 hari di $72.240.",
-   "source": "Cointelegraph",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 23:51 WIB",
-   "url": "https://cointelegraph.com/markets/bitcoin-rebounds-lows-nvidia-rally-sparks-500m-crypto-liquidations",
-   "type": "fakta",
-   "img": ""
-  },
-  {
-   "cat": "crypto",
-   "title": "Bitmine tambah 7.819 ETH, pegang 4,98% pasokan Ethereum senilai $10,4 miliar",
-   "summary": "Bitmine Immersion Technologies menambah 7.819 ETH pekan lalu sehingga total kepemilikannya menjadi 6.085.564 ETH — sekitar 4,98% dari total pasokan Ethereum — senilai sekitar $10,4 miliar per 22 November. Perusahaan telah men-staking 5.227.037 ETH senilai $9 miliar dan memproyeksikan pendapatan staking tahunan $245 juta pada level saat ini, hingga $286 juta bila seluruhnya di-staking dengan yield tujuh hari 2,74%. Ketua Tom Lee menyebut ETH dan Bitcoin sama-sama 'hard money' karena pertumbuhan pasokan ETH sejak 30 Juni 2025 hanya 1,26%, nyaris sama dengan Bitcoin 0,82% per tahun. ETH diperdagangkan $1.717,20 pada Senin, naik 0,89% dalam 24 jam; saham BMNR naik 8,94% di premarket.",
-   "source": "The Block",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 22:02 WIB",
-   "url": "https://www.theblock.co/news/business/2026-11-23-bitmine-adds-7819-eth-tom-lee-makes-hard-money-case-444948",
-   "type": "fakta",
-   "img": "images/2026-11-23/bitmine-eth-treasury.webp"
-  },
-  {
-   "cat": "crypto",
-   "title": "ARK Invest batalkan dua rencana ETF kripto CoinDesk 20",
-   "summary": "ARK Investment Management milik Cathie Wood meminta SEC menarik kembali pendaftaran dua ETF indeks kripto — ARK CoinDesk 20 Crypto ETF dan ARK CoinDesk 20 ex-Bitcoin Crypto ETF — lewat surat penarikan Form RW tertanggal 20 November 2026. Kedua produk yang diajukan sejak 23 Januari 2026 itu tidak pernah dinyatakan efektif dan tidak ada saham yang diterbitkan atau dijual; ARK menyatakan tidak akan melanjutkan distribusi sahamnya. Kedua dana dirancang mengikuti indeks CoinDesk 20 — 20 aset kripto terbesar berdasarkan kapitalisasi pasar — lewat kontrak berjangka, sementara versi ex-Bitcoin juga melakukan short terhadap kontrak berjangka Bitcoin CME untuk menghilangkan eksposur Bitcoin. Penarikan ini bukan penolakan SEC — regulator tidak pernah memutuskan — sehingga ARK bisa mengajukan kembali kapan saja; dana Bitcoin single-asset ARK tetap berjalan.",
-   "source": "CoinDesk",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 23:39 WIB",
-   "url": "https://www.coindesk.com/business/2026/11/23/cathie-wood-s-ark-invest-pulls-the-plug-on-two-planned-crypto-etfs",
-   "type": "fakta",
-   "img": "images/2026-11-23/ark-coindesk20-etf-withdrawal.webp"
-  },
-  {
-   "cat": "geopolitik",
-   "title": "Separuh dompet undangan makan malam memecoin Trump berasal dari bursa luar negeri",
-   "summary": "Analisis Public Citizen menemukan 66 dari 130 dompet yang lolos ke makan malam memecoin Donald Trump menerima token TRUMP dari bursa yang melarang warga AS, seperti Binance global, Bybit, dan BloFin. Trump menggelar makan malam keduanya untuk pemegang TRUMP terbesar di Trump National Golf Club, Virginia, dengan 185 kursi berdasarkan kepemilikan. Token TRUMP kini di $0,89, turun 98,8% dari puncak $75,35.",
-   "source": "Cointelegraph",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 07:53 WIB",
-   "url": "https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges",
-   "type": "fakta",
-   "img": "images/2026-11-23/trump-memecoin-dinner-v2.webp"
-  },
-  {
-   "cat": "geopolitik",
-   "title": "Hong Kong terbitkan RUU lisensi kustodian dan penasihat kripto",
-   "summary": "Hong Kong menerbitkan RUU Layanan Aset Virtual (Amandemen) 2026 yang mewajibkan dealer, penasihat, manajer aset, dan kustodian kripto memperoleh lisensi atau terdaftar di Securities and Futures Commission (SFC), memperluas pengawasan dari bursa ke seluruh layanan aset virtual. RUU yang mengubah Ordonansi Anti Pencucian Uang ini juga mewajibkan bank dan penerbit stored-value facility yang diawasi Otoritas Moneter Hong Kong untuk mendaftar ke SFC bila menawarkan layanan aset virtual. Pembacaan pertama di Dewan Legislatif dijadwalkan 2 Desember; asosiasi industri meminta masa transisi 6–12 bulan agar bisnis tidak terpaksa berhenti saat permohonan diproses.",
-   "source": "Cointelegraph",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 13:00 WIB",
-   "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3Fttl%3D0%26_%3D1763850775866%26_t%3D1763850775866&utm_campaign=rss_partner_inbound",
-   "type": "fakta",
-   "img": "images/2026-11-23/hong-kong-licensing.webp"
-  },
-  {
-   "cat": "geopolitik",
-   "title": "Macron usulkan 'aturan emas' konstitusi untuk jinakkan krisis utang Prancis yang diincar bull Bitcoin",
-   "summary": "Presiden Emmanuel Macron menghidupkan kembali 'aturan emas' dari 2011: aturan konstitusi yang memaksa setiap pemerintah Prancis menetapkan target belanja, pendapatan, dan defisit yang mengikat minimal tiga tahun, dengan Dewan Konstitusi bisa membatalkan anggaran yang melanggarnya. Langkah ini meredam krisis utang yang sempat mendorong yield obligasi 10 tahun Prancis menembus 5% pada Oktober — tertinggi sejak 2002 — dengan selisih terhadap Jerman 1,59 poin pada 9 Oktober, terlebar sejak 2011; utang Prancis sekitar 119% dari PDB. Partai Le Pen cenderung mendukung, kubu kiri menolak; aturan ini butuh dukungan tiga perlima parlemen atau referendum, dan Januari jadi penentu. Taruhan para bull Bitcoin — Arthur Hayes memprediksi krisis Prancis memaksa pencetakan uang dan mendorong BTC ke $125.000–$250.000 akhir tahun — kini terancam: BTC di dekat $61.306 harus naik dua kali lipat untuk mencapai batas bawah prediksi itu, sementara The Fed justru menaikkan suku bunga pada September dan pasar melihat peluang 98% kenaikan lagi pada 9 Desember.",
-   "source": "BeInCrypto",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 18:28 WIB",
-   "url": "https://beincrypto.com/france-golden-rule-bitcoin-crisis-trade/",
-   "type": "fakta",
-   "img": "images/2026-11-23/france-golden-rule-bitcoin-crisis.webp"
-  },
-  {
-   "cat": "ekonomi",
-   "title": "Pasar saham AS anjlok 13 kali abad ini: apa yang ditunjukkan polanya?",
-   "summary": "Pasar saham AS telah mengalami 13 kali selloff besar sejak 2000; sembilan di antaranya berakhir sebelum turun 20% — ambang bear market. Selloff AI terbaru mendorong S&P 500 turun 11,6% dari rekor Oktober, sementara Nasdaq 18,1% di bawah puncak. Senin membawa pembalikan tajam: S&P 500 melonjak sekitar 5% pada tengah hari setelah dewan Nvidia mengembalikan Jensen Huang sebagai CEO, dan indeks ditutup di 6.910. Sejarah memberi sedikit ketenangan sekaligus peringatan: koreksi biasa pulih dari titik terendah rata-rata sekitar empat bulan, tapi bear market butuh sekitar dua tahun — dot-com butuh sampai Mei 2007 untuk kembali ke puncak Maret 2000, krisis 2008 sekitar 5,5 tahun, COVID-19 enam bulan, dan 2022 sekitar dua tahun. Tiga dari empat bear market sejak 2000 berbarengan dengan resesi AS; pengecualiannya 2022, saat kenaikan suku bunga The Fed mendorong saham turun 25,4%. Ed Yardeni dari Yardeni Research menilai tanpa resesi, ini koreksi bukan bear market. Dari 31 penurunan S&P 500 yang mencapai minimal 11,6% sejak 1950, hanya 11 yang menjadi bear market (35%). Investor kini mengawasi risiko resesi dan earnings perusahaan AI; pulih bertahan di atas rata-rata 200 hari dekat 7.350 akan memperkuat rebound, sementara jatuh di bawah 6.255 menandai bear market.",
-   "source": "BeInCrypto",
-   "date": "24 Nov 2026",
-   "published": "24 Nov 2026 · 01:17 WIB",
-   "url": "https://beincrypto.com/us-stock-market-crashes-since-2000/",
-   "type": "analisis",
-   "img": "images/2026-11-24/us-stock-market-crashes-13-times.webp"
-  },
-  {
-   "cat": "ekonomi",
-   "title": "OKXICE luncurkan venue saham tokenisasi, 113 aset diperdagangkan 24/7",
-   "summary": "OKXICE, usaha patungan bursa kripto OKX dan Intercontinental Exchange — induk NYSE — meluncurkan venue saham tokenisasi (TSV) untuk pelanggan OKX Inc. di Amerika Serikat yang memenuhi syarat, lewat aplikasi OKX. Venue ini membuka perdagangan dengan 113 aset — saham penerbit dan ETF — dari penerbit dan manajer aset seperti eToro, Fidelity, Strive, BitGo, Circle, Coinbase, Robinhood, dan Strategy. Setiap token mewakili hak atas saham yang dijamin 1 banding 1 oleh saham aslinya, lengkap dengan hak pemegang saham termasuk dividen, hak suara, dan aksi korporasi. Perdagangan didukung pool likuiditas AMM di Uniswap v4 pada X Layer — Ethereum layer-2 milik OKX — sementara Securitize menyediakan infrastruktur tokenisasi, dan token tetap berada di dompet self-custody pengguna. Venue beroperasi di bawah Innovation Exemption SEC, perintah sementara lima tahun yang mengizinkan perdagangan onchain saham AS tanpa mendaftar sebagai bursa. Peluncuran ini didahului penolakan: 67 perusahaan mengajukan Notice of Issuer Objection sehingga saham mereka tidak bisa ditokenisasi, termasuk Apple, Microsoft, Alphabet, Nvidia, Amazon, Tesla, Meta, JPMorgan Chase, Goldman Sachs, Walmart, Costco, Boeing, dan Netflix.",
-   "source": "The Block",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 21:01 WIB",
-   "url": "https://www.theblock.co/news/business/2026-11-23-okxice-launches-tokenized-securities-venue-444898",
-   "type": "fakta",
-   "img": "images/2026-11-23/okxice-tokenized-securities-venue.webp"
-  },
-  {
-   "cat": "ekonomi",
-   "title": "Emas dan perak memantul usai pekan terburuk, laporan inflasi AS jadi penentu",
-   "summary": "Emas dan perak memantul tajam pada Senin setelah pekan terburuk dalam ingatan terakhir: emas spot naik sekitar 2% ke dekat $3.620 per ons, perak naik 2,4% ke $42,15, dan platinum naik 0,8% ke $1.309. Pekan lalu emas anjlok sekitar 9% — penurunan mingguan tertajam sejak Maret — hingga ke titik terendah 14 bulan, sementara perak longsor sekitar 15%. Pemicunya antara lain sinyal pejabat The Fed soal kenaikan suku bunga lanjutan yang menguatkan dolar AS, serta aksi jual saham teknologi yang memaksa investor menjual emas untuk menutup kerugian. Perhatian kini beralih ke laporan inflasi PCE AS hari Rabu — ukuran inflasi favorit The Fed — yang akan menentukan apakah pantulan ini bertahan; taruhan pasar atas kenaikan suku bunga Desember menurut CME FedWatch turun ke 93% dari hampir 100%.",
-   "source": "BeInCrypto",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 20:05 WIB",
-   "url": "https://beincrypto.com/gold-silver-rebound-after-historic-weekly-plunge/",
-   "type": "fakta",
-   "img": ""
-  },
-  {
-   "cat": "teknologi",
-   "title": "Senat AS soroti kembalinya Jensen Huang ke Nvidia meski didukung Trump",
-   "summary": "Dewan direksi Nvidia mengembalikan Jensen Huang sebagai CEO pada Senin, 11 hari setelah ia mengundurkan diri menyusul terungkapnya perselingkuhan — termasuk dengan Alice Huang, mantan eksekutif Megaspeed yang diduga pejabat AS bekerja untuk intelijen China. Dewan menyebut menerima masukan dari pejabat senior pemerintah AS dan yakin kembalinya Huang tidak menimbulkan risiko keamanan nasional; Presiden Donald Trump mendorong kembalinya Huang. Anggota Kongres skeptis: Senator Elizabeth Warren, Demokrat senior di Komite Perbankan Senat, menegaskan Huang, para eksekutif Nvidia, dan dewan masih berutang jawaban soal kepatuhan kontrol ekspor AS, dan pemerintahan Trump harus menjelaskan masukan apa yang diberikan dan oleh siapa. Huang dijadwalkan bersaksi tertutup di tiga komite DPR pada 1 Desember dan bersaksi terbuka di Komite Perbankan Senat pada 3 Desember; SEC juga menyelidiki pengungkapan Nvidia.",
-   "source": "CoinDesk",
-   "date": "24 Nov 2026",
-   "published": "24 Nov 2026",
-   "url": "https://www.coindesk.com/business/2026/11/23/nvidia-s-jensen-huang-faces-senate-scrutiny-despite-trump-backed-return-as-ceo",
-   "type": "fakta",
-   "img": ""
-  },
-  {
-   "cat": "teknologi",
-   "title": "Kekayaan Jensen Huang naik $36 miliar saat saham Nvidia melonjak, short seller rugi $12 miliar",
-   "summary": "Kekayaan Jensen Huang bertambah lebih dari $36 miliar pada Senin setelah dewan Nvidia mengembalikannya sebagai CEO, 11 hari setelah ia mengundurkan diri. Saham Nvidia melonjak lebih dari 33% ke sekitar $167, sementara penjual short menanggung kerugian di atas kertas sekitar $12,2 miliar — hari terburuk mereka setidaknya sejak 2019, menurut data ORTEX yang dikutip Reuters. Meski begitu, penjual short masih untung sekitar $14 miliar sejak 29 Oktober. Kembalinya Huang — yang didorong Presiden Donald Trump — juga mengangkat pasar lebih luas dan kripto, dengan Bitcoin ikut reli; S&P 500 naik sekitar 5% dan Nasdaq hampir 7%. Forbes mencatat Huang kini berada di peringkat 13 orang terkaya dunia.",
-   "source": "Decrypt",
-   "date": "24 Nov 2026",
-   "published": "24 Nov 2026 · 00:28 WIB",
-   "url": "https://decrypt.co/383815/jensen-huang-fortune-37-billion-nvidia-soars-short-sellers-rekt",
-   "type": "fakta",
-   "img": "images/2026-11-24/jensen-huang-wealth-short-sellers.webp"
-  },
-  {
-   "cat": "teknologi",
-   "title": "Pool pinjaman stUSDS Sky kering, cofounder utang $77 juta dan timbang jual token SKY",
-   "summary": "Pendiri bersama Sky Protocol (dulu MakerDAO) Rune Christensen mengakui pinjamannya membuat pool pinjaman stUSDS kehabisan dana untuk penarikan: tidak ada dana tersedia, 99,99% dari pool sekitar $159 juta sedang dipakai, dan suku bunga deposan melonjak di atas 50% dari sekitar 6% pada awal bulan. Christensen sudah melunasi sekitar $3 juta USDS dan masih berutang sekitar $77 juta; ia menjajaki penjualan sebagian token SKY miliknya ke investor institusi untuk melunasi sisanya, dengan kabar terbaru tiap 48 jam. USDS sendiri masih bertahan di dekat $1. Bursa Korea Selatan Upbit, Bithumb, dan Coinone memasukkan SKY dan USDS ke daftar peringatan perdagangan serta menghentikan deposit; Coinone memperingatkan risiko kerugian bagi pemegang stUSDS. Proposal tata kelola Sky mengusulkan pemangkasan suku bunga stUSDS ke 10%, penghentian pinjaman baru, dan pemakaian cadangan protokol untuk membeli stUSDS di pasar.",
-   "source": "The Block",
-   "date": "24 Nov 2026",
-   "published": "24 Nov 2026 · 00:31 WIB",
-   "url": "https://www.theblock.co/news/defi/2026-11-23-sky-cofounder-weighs-sky-sale-repay-77-million-stusds-pool-runs-dry-445373",
-   "type": "fakta",
-   "img": ""
-  },
-  {
-   "cat": "breaking",
-   "title": "Iklan berbahaya 'MoldyRoost' bobol iPhone sekali ketuk demi kunci dompet kripto",
-   "summary": "Kampanye iklan berbahaya bernama MoldyRoost dapat membobol iPhone yang rentan hanya dengan satu ketukan, sehingga seed phrase dompet kripto pengguna terancam dicuri, menurut firma keamanan siber Confiant. Iklan online yang tampak biasa itu menjadi jalan masuk pencuri kripto ke ponsel korban.",
-   "source": "CoinDesk",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 14:45 WIB",
-   "url": "https://www.coindesk.com/tech/2026/11/23/moldyroost-malvertizing-campaign-uses-one-tap-iphone-hacks-to-hunt-crypto-wallet-keys-research-shows",
-   "type": "fakta",
-   "img": "images/2026-11-23/moldyroost-iphone-malvertising.webp"
-  },
-  {
-   "cat": "breaking",
-   "title": "Hakim New York tolak blokir Kalshi untuk sementara, bursa prediksi tetap beroperasi",
-   "summary": "Hakim Melissa Crane dari Mahkamah Agung New York County menolak — untuk sementara — permintaan Jaksa Agung New York Letitia James untuk memerintahkan Kalshi berhenti beroperasi di negara bagian itu. James menggugat Kalshi sejak 31 Juli 2026 dengan tuduhan menjalankan bisnis judi tanpa lisensi; perintah yang diminta melarang Kalshi beroperasi 'di dalam atau dari' New York, mencakup kontrak olahraga, budaya, dan pemilu, serta melarang pengguna di bawah 21 tahun. Kalshi memperingatkan perintah itu akan menutup bursanya untuk semua pelanggan karena kantor pusatnya di New York dan bisa memaksa likuidasi posisi terbuka. Sebelumnya, hakim federal Lorna Schofield pada Jumat menolak permintaan darurat CFTC untuk memblokir penegakan hukum New York, dan hakim Vernon Broderick mengembalikan perkara itu ke pengadilan negara bagian pada Kamis. Sengketa yurisdiksi masih berlanjut; belum ada putusan soal apakah kontrak Kalshi melanggar hukum judi negara bagian.",
-   "source": "CoinDesk",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026",
-   "url": "https://www.coindesk.com/policy/2026/11/23/new-york-judge-declines-to-block-kalshi-from-operating-in-the-state-for-now",
-   "type": "fakta",
-   "img": ""
-  },
-  {
-   "cat": "breaking",
-   "title": "Aturan bursa prediksi CFTC masuk tinjauan Gedung Putih di tengah sengketa yurisdiksi negara bagian-federal",
-   "summary": "Komisi Perdagangan Berjangka AS (CFTC) mengajukan rancangan aturan bursa prediksi ke Kantor Informasi dan Urusan Regulasi (OIRA) — divisi Kantor Manajemen dan Anggaran Gedung Putih — untuk ditinjau sebelum dipublikasikan. Aturan yang diusulkan sejak Juni ini menegaskan yurisdiksi CFTC atas kontrak event di bursa prediksi dan akan membatasi kontrak terkait perjudian, perang, terorisme, dan pembunuhan; lebih dari 1.300 komentar publik sudah masuk. Ketua CFTC Michael Selig bersikeras lembaganya memegang 'yurisdiksi eksklusif' karena kontrak prediksi adalah swap atas peristiwa masa depan, sementara negara-negara bagian menilainya sebagai bisnis judi ilegal yang menghindari regulasi dan pajak. Sengketa ini sudah menjadi gugatan di hampir belasan negara bagian dengan putusan pengadilan yang saling bertentangan; koalisi 44 jaksa agung menentang aturan itu pada Jumat, New Jersey meminta Mahkamah Agung AS turun tangan, dan mantan Komisioner Christy Goldsmith Romero menilai perkara ini bisa berakhir di Mahkamah Agung.",
-   "source": "The Block",
-   "date": "24 Nov 2026",
-   "published": "24 Nov 2026 · 01:30 WIB",
-   "url": "https://www.theblock.co/news/regulation/2026-11-23-cftc-prediction-market-rules-advance-white-house-review-amid-state-federal-jurisdiction-fight-445384",
-   "type": "fakta",
-   "img": "images/2026-11-24/cftc-prediction-market-rules.webp"
-  }
- ]
+  "date": "2026-11-23",
+  "sources": [
+    "CoinDesk",
+    "Cointelegraph",
+    "The Block",
+    "Decrypt",
+    "BeInCrypto"
+  ],
+  "note": "Reuters tidak bisa dijangkau dari VM (DataDome block)",
+  "items": [
+    {
+      "cat": "crypto",
+      "title": "Bitcoin sentuh $64.500, naik 17% dari titik terendah — likuidasi kripto tembus $500 juta",
+      "summary": "Bitcoin menyentuh $64.505 di Bitstamp pada Senin, naik lebih dari 17% dari titik terendah 26 bulan di kisaran $55.000 pada Sabtu, setelah dewan Nvidia mengembalikan Jensen Huang sebagai CEO. Saham Nvidia melonjak 35% hingga $171,50 dan menambah sekitar $1 triliun kapitalisasi pasar, sementara S&P 500 naik 4,8% dan Nasdaq 6,8%. Reli ini mengejutkan penjual short: likuidasi kripto melampaui $500 juta dalam empat jam hingga pukul 16:00 UTC, menurut data CoinGlass. Analis Michaël van de Poppe menilai target berikutnya adalah rata-rata bergerak 21 hari di $69.014 dan 200 hari di $72.240.",
+      "source": "Cointelegraph",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026 · 23:51 WIB",
+      "url": "https://cointelegraph.com/markets/bitcoin-rebounds-lows-nvidia-rally-sparks-500m-crypto-liquidations",
+      "type": "fakta",
+      "img": ""
+    },
+    {
+      "cat": "crypto",
+      "title": "Bitmine tambah 7.819 ETH, pegang 4,98% pasokan Ethereum senilai $10,4 miliar",
+      "summary": "Bitmine Immersion Technologies menambah 7.819 ETH pekan lalu sehingga total kepemilikannya menjadi 6.085.564 ETH — sekitar 4,98% dari total pasokan Ethereum — senilai sekitar $10,4 miliar per 22 November. Perusahaan telah men-staking 5.227.037 ETH senilai $9 miliar dan memproyeksikan pendapatan staking tahunan $245 juta pada level saat ini, hingga $286 juta bila seluruhnya di-staking dengan yield tujuh hari 2,74%. Ketua Tom Lee menyebut ETH dan Bitcoin sama-sama 'hard money' karena pertumbuhan pasokan ETH sejak 30 Juni 2025 hanya 1,26%, nyaris sama dengan Bitcoin 0,82% per tahun. ETH diperdagangkan $1.717,20 pada Senin, naik 0,89% dalam 24 jam; saham BMNR naik 8,94% di premarket.",
+      "source": "The Block",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026 · 22:02 WIB",
+      "url": "https://www.theblock.co/news/business/2026-11-23-bitmine-adds-7819-eth-tom-lee-makes-hard-money-case-444948",
+      "type": "fakta",
+      "img": "images/2026-11-23/bitmine-eth-treasury.webp"
+    },
+    {
+      "cat": "crypto",
+      "title": "XRP sempat tembus $1 lalu kehilangan level itu dalam hitungan jam",
+      "summary": "XRP sempat menembus $1 pada Senin, naik dari $0,91 ke $1,026, sebelum kehilangan level itu dalam hitungan jam dan mundur ke sekitar $0,96. Reli ini antara lain didorong penutupan posisi short: sekitar $7,1 juta dari $11,5 juta likuidasi berjangka XRP dalam 24 jam berasal dari posisi short, menurut data CoinGlass. Namun ETF spot XRP mencatat arus keluar $4,97 juta pada Jumat, dan gambaran teknisnya tetap lemah: XRP turun sekitar 26% dalam 30 hari, RSI harian di dekat 38, dan harga masih lebih dari 20% di bawah rata-rata bergerak 200 hari. Analis Jesse Olson memperingatkan XRP hampir menghapus seluruh breakout November 2024 yang sempat menghasilkan kenaikan lebih dari 500%.",
+      "source": "BeInCrypto",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 01:40 WIB",
+      "url": "https://beincrypto.com/xrp-price-reclaims-1-dollar-reversal-outlook/",
+      "type": "fakta",
+      "img": ""
+    },
+    {
+      "cat": "geopolitik",
+      "title": "Separuh dompet undangan makan malam memecoin Trump berasal dari bursa luar negeri",
+      "summary": "Analisis Public Citizen menemukan 66 dari 130 dompet yang lolos ke makan malam memecoin Donald Trump menerima token TRUMP dari bursa yang melarang warga AS, seperti Binance global, Bybit, dan BloFin. Trump menggelar makan malam keduanya untuk pemegang TRUMP terbesar di Trump National Golf Club, Virginia, dengan 185 kursi berdasarkan kepemilikan. Token TRUMP kini di $0,89, turun 98,8% dari puncak $75,35.",
+      "source": "Cointelegraph",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026 · 07:53 WIB",
+      "url": "https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges",
+      "type": "fakta",
+      "img": "images/2026-11-23/trump-memecoin-dinner-v2.webp"
+    },
+    {
+      "cat": "geopolitik",
+      "title": "Hong Kong terbitkan RUU lisensi kustodian dan penasihat kripto",
+      "summary": "Hong Kong menerbitkan RUU Layanan Aset Virtual (Amandemen) 2026 yang mewajibkan dealer, penasihat, manajer aset, dan kustodian kripto memperoleh lisensi atau terdaftar di Securities and Futures Commission (SFC), memperluas pengawasan dari bursa ke seluruh layanan aset virtual. RUU yang mengubah Ordonansi Anti Pencucian Uang ini juga mewajibkan bank dan penerbit stored-value facility yang diawasi Otoritas Moneter Hong Kong untuk mendaftar ke SFC bila menawarkan layanan aset virtual. Pembacaan pertama di Dewan Legislatif dijadwalkan 2 Desember; asosiasi industri meminta masa transisi 6–12 bulan agar bisnis tidak terpaksa berhenti saat permohonan diproses.",
+      "source": "Cointelegraph",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026 · 13:00 WIB",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3Fttl%3D0%26_%3D1763850775866%26_t%3D1763850775866&utm_campaign=rss_partner_inbound",
+      "type": "fakta",
+      "img": "images/2026-11-23/hong-kong-licensing.webp"
+    },
+    {
+      "cat": "geopolitik",
+      "title": "Macron usulkan 'aturan emas' konstitusi untuk jinakkan krisis utang Prancis yang diincar bull Bitcoin",
+      "summary": "Presiden Emmanuel Macron menghidupkan kembali 'aturan emas' dari 2011: aturan konstitusi yang memaksa setiap pemerintah Prancis menetapkan target belanja, pendapatan, dan defisit yang mengikat minimal tiga tahun, dengan Dewan Konstitusi bisa membatalkan anggaran yang melanggarnya. Langkah ini meredam krisis utang yang sempat mendorong yield obligasi 10 tahun Prancis menembus 5% pada Oktober — tertinggi sejak 2002 — dengan selisih terhadap Jerman 1,59 poin pada 9 Oktober, terlebar sejak 2011; utang Prancis sekitar 119% dari PDB. Partai Le Pen cenderung mendukung, kubu kiri menolak; aturan ini butuh dukungan tiga perlima parlemen atau referendum, dan Januari jadi penentu. Taruhan para bull Bitcoin — Arthur Hayes memprediksi krisis Prancis memaksa pencetakan uang dan mendorong BTC ke $125.000–$250.000 akhir tahun — kini terancam: BTC di dekat $61.306 harus naik dua kali lipat untuk mencapai batas bawah prediksi itu, sementara The Fed justru menaikkan suku bunga pada September dan pasar melihat peluang 98% kenaikan lagi pada 9 Desember.",
+      "source": "BeInCrypto",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026 · 18:28 WIB",
+      "url": "https://beincrypto.com/france-golden-rule-bitcoin-crisis-trade/",
+      "type": "fakta",
+      "img": "images/2026-11-23/france-golden-rule-bitcoin-crisis.webp"
+    },
+    {
+      "cat": "ekonomi",
+      "title": "Pasar saham AS anjlok 13 kali abad ini: apa yang ditunjukkan polanya?",
+      "summary": "Pasar saham AS telah mengalami 13 kali selloff besar sejak 2000; sembilan di antaranya berakhir sebelum turun 20% — ambang bear market. Selloff AI terbaru mendorong S&P 500 turun 11,6% dari rekor Oktober, sementara Nasdaq 18,1% di bawah puncak. Senin membawa pembalikan tajam: S&P 500 melonjak sekitar 5% pada tengah hari setelah dewan Nvidia mengembalikan Jensen Huang sebagai CEO, dan indeks ditutup di 6.910. Sejarah memberi sedikit ketenangan sekaligus peringatan: koreksi biasa pulih dari titik terendah rata-rata sekitar empat bulan, tapi bear market butuh sekitar dua tahun — dot-com butuh sampai Mei 2007 untuk kembali ke puncak Maret 2000, krisis 2008 sekitar 5,5 tahun, COVID-19 enam bulan, dan 2022 sekitar dua tahun. Tiga dari empat bear market sejak 2000 berbarengan dengan resesi AS; pengecualiannya 2022, saat kenaikan suku bunga The Fed mendorong saham turun 25,4%. Ed Yardeni dari Yardeni Research menilai tanpa resesi, ini koreksi bukan bear market. Dari 31 penurunan S&P 500 yang mencapai minimal 11,6% sejak 1950, hanya 11 yang menjadi bear market (35%). Investor kini mengawasi risiko resesi dan earnings perusahaan AI; pulih bertahan di atas rata-rata 200 hari dekat 7.350 akan memperkuat rebound, sementara jatuh di bawah 6.255 menandai bear market.",
+      "source": "BeInCrypto",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 01:17 WIB",
+      "url": "https://beincrypto.com/us-stock-market-crashes-since-2000/",
+      "type": "analisis",
+      "img": ""
+    },
+    {
+      "cat": "ekonomi",
+      "title": "OKXICE luncurkan venue saham tokenisasi, 113 aset diperdagangkan 24/7",
+      "summary": "OKXICE, usaha patungan bursa kripto OKX dan Intercontinental Exchange — induk NYSE — meluncurkan venue saham tokenisasi (TSV) untuk pelanggan OKX Inc. di Amerika Serikat yang memenuhi syarat, lewat aplikasi OKX. Venue ini membuka perdagangan dengan 113 aset — saham penerbit dan ETF — dari penerbit dan manajer aset seperti eToro, Fidelity, Strive, BitGo, Circle, Coinbase, Robinhood, dan Strategy. Setiap token mewakili hak atas saham yang dijamin 1 banding 1 oleh saham aslinya, lengkap dengan hak pemegang saham termasuk dividen, hak suara, dan aksi korporasi. Perdagangan didukung pool likuiditas AMM di Uniswap v4 pada X Layer — Ethereum layer-2 milik OKX — sementara Securitize menyediakan infrastruktur tokenisasi, dan token tetap berada di dompet self-custody pengguna. Venue beroperasi di bawah Innovation Exemption SEC, perintah sementara lima tahun yang mengizinkan perdagangan onchain saham AS tanpa mendaftar sebagai bursa. Peluncuran ini didahului penolakan: 67 perusahaan mengajukan Notice of Issuer Objection sehingga saham mereka tidak bisa ditokenisasi, termasuk Apple, Microsoft, Alphabet, Nvidia, Amazon, Tesla, Meta, JPMorgan Chase, Goldman Sachs, Walmart, Costco, Boeing, dan Netflix.",
+      "source": "The Block",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026 · 21:01 WIB",
+      "url": "https://www.theblock.co/news/business/2026-11-23-okxice-launches-tokenized-securities-venue-444898",
+      "type": "fakta",
+      "img": "images/2026-11-23/okxice-tokenized-securities-venue.webp"
+    },
+    {
+      "cat": "ekonomi",
+      "title": "Emas dan perak memantul usai pekan terburuk, laporan inflasi AS jadi penentu",
+      "summary": "Emas dan perak memantul tajam pada Senin setelah pekan terburuk dalam ingatan terakhir: emas spot naik sekitar 2% ke dekat $3.620 per ons, perak naik 2,4% ke $42,15, dan platinum naik 0,8% ke $1.309. Pekan lalu emas anjlok sekitar 9% — penurunan mingguan tertajam sejak Maret — hingga ke titik terendah 14 bulan, sementara perak longsor sekitar 15%. Pemicunya antara lain sinyal pejabat The Fed soal kenaikan suku bunga lanjutan yang menguatkan dolar AS, serta aksi jual saham teknologi yang memaksa investor menjual emas untuk menutup kerugian. Perhatian kini beralih ke laporan inflasi PCE AS hari Rabu — ukuran inflasi favorit The Fed — yang akan menentukan apakah pantulan ini bertahan; taruhan pasar atas kenaikan suku bunga Desember menurut CME FedWatch turun ke 93% dari hampir 100%.",
+      "source": "BeInCrypto",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026 · 20:05 WIB",
+      "url": "https://beincrypto.com/gold-silver-rebound-after-historic-weekly-plunge/",
+      "type": "fakta",
+      "img": ""
+    },
+    {
+      "cat": "teknologi",
+      "title": "Senat AS soroti kembalinya Jensen Huang ke Nvidia meski didukung Trump",
+      "summary": "Dewan direksi Nvidia mengembalikan Jensen Huang sebagai CEO pada Senin, 11 hari setelah ia mengundurkan diri menyusul terungkapnya perselingkuhan — termasuk dengan Alice Huang, mantan eksekutif Megaspeed yang diduga pejabat AS bekerja untuk intelijen China. Dewan menyebut menerima masukan dari pejabat senior pemerintah AS dan yakin kembalinya Huang tidak menimbulkan risiko keamanan nasional; Presiden Donald Trump mendorong kembalinya Huang. Anggota Kongres skeptis: Senator Elizabeth Warren, Demokrat senior di Komite Perbankan Senat, menegaskan Huang, para eksekutif Nvidia, dan dewan masih berutang jawaban soal kepatuhan kontrol ekspor AS, dan pemerintahan Trump harus menjelaskan masukan apa yang diberikan dan oleh siapa. Huang dijadwalkan bersaksi tertutup di tiga komite DPR pada 1 Desember dan bersaksi terbuka di Komite Perbankan Senat pada 3 Desember; SEC juga menyelidiki pengungkapan Nvidia.",
+      "source": "CoinDesk",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026",
+      "url": "https://www.coindesk.com/business/2026/11/23/nvidia-s-jensen-huang-faces-senate-scrutiny-despite-trump-backed-return-as-ceo",
+      "type": "fakta",
+      "img": ""
+    },
+    {
+      "cat": "teknologi",
+      "title": "Kekayaan Jensen Huang naik $36 miliar saat saham Nvidia melonjak, short seller rugi $12 miliar",
+      "summary": "Kekayaan Jensen Huang bertambah lebih dari $36 miliar pada Senin setelah dewan Nvidia mengembalikannya sebagai CEO, 11 hari setelah ia mengundurkan diri. Saham Nvidia melonjak lebih dari 33% ke sekitar $167, sementara penjual short menanggung kerugian di atas kertas sekitar $12,2 miliar — hari terburuk mereka setidaknya sejak 2019, menurut data ORTEX yang dikutip Reuters. Meski begitu, penjual short masih untung sekitar $14 miliar sejak 29 Oktober. Kembalinya Huang — yang didorong Presiden Donald Trump — juga mengangkat pasar lebih luas dan kripto, dengan Bitcoin ikut reli; S&P 500 naik sekitar 5% dan Nasdaq hampir 7%. Forbes mencatat Huang kini berada di peringkat 13 orang terkaya dunia.",
+      "source": "Decrypt",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 00:28 WIB",
+      "url": "https://decrypt.co/383815/jensen-huang-fortune-37-billion-nvidia-soars-short-sellers-rekt",
+      "type": "fakta",
+      "img": "images/2026-11-24/jensen-huang-wealth-short-sellers.webp"
+    },
+    {
+      "cat": "teknologi",
+      "title": "Pool pinjaman stUSDS Sky kering, cofounder utang $77 juta dan timbang jual token SKY",
+      "summary": "Pendiri bersama Sky Protocol (dulu MakerDAO) Rune Christensen mengakui pinjamannya membuat pool pinjaman stUSDS kehabisan dana untuk penarikan: tidak ada dana tersedia, 99,99% dari pool sekitar $159 juta sedang dipakai, dan suku bunga deposan melonjak di atas 50% dari sekitar 6% pada awal bulan. Christensen sudah melunasi sekitar $3 juta USDS dan masih berutang sekitar $77 juta; ia menjajaki penjualan sebagian token SKY miliknya ke investor institusi untuk melunasi sisanya, dengan kabar terbaru tiap 48 jam. USDS sendiri masih bertahan di dekat $1. Bursa Korea Selatan Upbit, Bithumb, dan Coinone memasukkan SKY dan USDS ke daftar peringatan perdagangan serta menghentikan deposit; Coinone memperingatkan risiko kerugian bagi pemegang stUSDS. Proposal tata kelola Sky mengusulkan pemangkasan suku bunga stUSDS ke 10%, penghentian pinjaman baru, dan pemakaian cadangan protokol untuk membeli stUSDS di pasar.",
+      "source": "The Block",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 00:31 WIB",
+      "url": "https://www.theblock.co/news/defi/2026-11-23-sky-cofounder-weighs-sky-sale-repay-77-million-stusds-pool-runs-dry-445373",
+      "type": "fakta",
+      "img": ""
+    },
+    {
+      "cat": "breaking",
+      "title": "Iklan berbahaya 'MoldyRoost' bobol iPhone sekali ketuk demi kunci dompet kripto",
+      "summary": "Kampanye iklan berbahaya bernama MoldyRoost dapat membobol iPhone yang rentan hanya dengan satu ketukan, sehingga seed phrase dompet kripto pengguna terancam dicuri, menurut firma keamanan siber Confiant. Iklan online yang tampak biasa itu menjadi jalan masuk pencuri kripto ke ponsel korban.",
+      "source": "CoinDesk",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026 · 14:45 WIB",
+      "url": "https://www.coindesk.com/tech/2026/11/23/moldyroost-malvertizing-campaign-uses-one-tap-iphone-hacks-to-hunt-crypto-wallet-keys-research-shows",
+      "type": "fakta",
+      "img": "images/2026-11-23/moldyroost-iphone-malvertising.webp"
+    },
+    {
+      "cat": "breaking",
+      "title": "Hakim New York tolak blokir Kalshi untuk sementara, bursa prediksi tetap beroperasi",
+      "summary": "Hakim Melissa Crane dari Mahkamah Agung New York County menolak — untuk sementara — permintaan Jaksa Agung New York Letitia James untuk memerintahkan Kalshi berhenti beroperasi di negara bagian itu. James menggugat Kalshi sejak 31 Juli 2026 dengan tuduhan menjalankan bisnis judi tanpa lisensi; perintah yang diminta melarang Kalshi beroperasi 'di dalam atau dari' New York, mencakup kontrak olahraga, budaya, dan pemilu, serta melarang pengguna di bawah 21 tahun. Kalshi memperingatkan perintah itu akan menutup bursanya untuk semua pelanggan karena kantor pusatnya di New York dan bisa memaksa likuidasi posisi terbuka. Sebelumnya, hakim federal Lorna Schofield pada Jumat menolak permintaan darurat CFTC untuk memblokir penegakan hukum New York, dan hakim Vernon Broderick mengembalikan perkara itu ke pengadilan negara bagian pada Kamis. Sengketa yurisdiksi masih berlanjut; belum ada putusan soal apakah kontrak Kalshi melanggar hukum judi negara bagian.",
+      "source": "CoinDesk",
+      "date": "23 Nov 2026",
+      "published": "23 Nov 2026",
+      "url": "https://www.coindesk.com/policy/2026/11/23/new-york-judge-declines-to-block-kalshi-from-operating-in-the-state-for-now",
+      "type": "fakta",
+      "img": ""
+    },
+    {
+      "cat": "breaking",
+      "title": "Aturan bursa prediksi CFTC masuk tinjauan Gedung Putih di tengah sengketa yurisdiksi negara bagian-federal",
+      "summary": "Komisi Perdagangan Berjangka AS (CFTC) mengajukan rancangan aturan bursa prediksi ke Kantor Informasi dan Urusan Regulasi (OIRA) — divisi Kantor Manajemen dan Anggaran Gedung Putih — untuk ditinjau sebelum dipublikasikan. Aturan yang diusulkan sejak Juni ini menegaskan yurisdiksi CFTC atas kontrak event di bursa prediksi dan akan membatasi kontrak terkait perjudian, perang, terorisme, dan pembunuhan; lebih dari 1.300 komentar publik sudah masuk. Ketua CFTC Michael Selig bersikeras lembaganya memegang 'yurisdiksi eksklusif' karena kontrak prediksi adalah swap atas peristiwa masa depan, sementara negara-negara bagian menilainya sebagai bisnis judi ilegal yang menghindari regulasi dan pajak. Sengketa ini sudah menjadi gugatan di hampir belasan negara bagian dengan putusan pengadilan yang saling bertentangan; koalisi 44 jaksa agung menentang aturan itu pada Jumat, New Jersey meminta Mahkamah Agung AS turun tangan, dan mantan Komisioner Christy Goldsmith Romero menilai perkara ini bisa berakhir di Mahkamah Agung.",
+      "source": "The Block",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 01:30 WIB",
+      "url": "https://www.theblock.co/news/regulation/2026-11-23-cftc-prediction-market-rules-advance-white-house-review-amid-state-federal-jurisdiction-fight-445384",
+      "type": "fakta",
+      "img": "images/2026-11-24/cftc-prediction-market-rules.webp"
+    }
+  ]
 }
