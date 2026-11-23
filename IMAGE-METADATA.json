@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T18:42:09+07:00",
+ "updated": "2026-11-23T19:06:00+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -534,6 +534,34 @@
    "image_dimensions": "1920x1080",
    "image_generation_status": "external",
    "image_type": "external"
+  },
+  {
+   "article_id": "france-golden-rule-bitcoin-crisis",
+   "slug": "france-golden-rule-bitcoin-crisis",
+   "category": "geopolitik",
+   "article_title": "Macron usulkan 'aturan emas' konstitusi untuk jinakkan krisis utang Prancis yang diincar bull Bitcoin",
+   "article_source": "BeInCrypto",
+   "image_url": "images/2026-11-23/france-golden-rule-bitcoin-crisis.webp",
+   "image_prompt": "Grand doors of a stately French government palace in Paris at dusk, closed and sealed with a heavy golden chain and one large golden wax seal bearing scales of justice (the constitutional 'golden rule' locking the budget); a single small Bitcoin coin rests on the stone steps in the center foreground, its glow fading, because the crisis trade that needed France to break is losing its fuel; tense Paris dusk sky in gold and grey, French tricolour flag stirring. No face, no human figure, no text, no numbers, no charts, no logos. Gold accent lighting (neutral institutional mood). Sealed palace doors and golden seal dominate the center of the frame. Crop note: 16:9 crop biased down (y0=175 of 1920x1280) to keep the BTC coin on the steps fully in frame; brand mark 'CryptoScope' overlaid via PIL bottom-left.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T18:57:00+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "ecb-tokenized-collateral",
+   "slug": "ecb-tokenized-collateral",
+   "category": "ekonomi",
+   "article_title": "ECB izinkan bank jaminkan sekuritas tokenisasi sebagai agunan mulai Juni 2027",
+   "article_source": "Cointelegraph",
+   "image_url": "images/2026-11-23/ecb-tokenized-collateral.webp",
+   "image_prompt": "Bright sunlit marble hall of a classical European central bank with tall stone columns; long stone table in center foreground with a neat stack of formal bond certificates, one open document on top showing a subtle abstract linked-block pattern with no readable text; at the far end a massive round bank vault door stands wide open with warm golden light pouring out; documents and open glowing vault connected by a soft golden light path across the marble floor. No people, no faces, no coins. Gold accent lighting (neutral sentiment). 16:9 editorial image, no text/numbers/logos. Concept: ECB approves tokenized securities from DLT Pilot Regime platforms as Eurosystem collateral from June 2027. QC: stranger test passed (open central-bank vault + bond documents = securities accepted as collateral); brand mark 'CryptoScope' overlaid via PIL bottom-left (font 34); 16:9 center crop; thumbnail 64x58 checked, vault glow + document stack readable. og:image rejected (branded Cointelegraph cartoon illustration with watermark + big BANK text). NOTE: an earlier parallel worker wrote a different concept (EU star ring + tokens) into this entry; the file on disk is the marble-hall/vault image described here — prompt corrected 19:06 WIB to match the actual file.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T19:04:00+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
   }
  ]
 }
