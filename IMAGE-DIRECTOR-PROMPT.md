@@ -1,4 +1,4 @@
-# CryptoScope — Editorial Image Director Prompt (v3.4 — Context-Based + Referensi CryptoWave + Anti-Default + QC Brand-Mark/Thumbnail + V21 Event-Specific)
+# CryptoScope — Editorial Image Director Prompt (v3.5 — Context-Based + Referensi CryptoWave + Anti-Default + QC Brand-Mark/Thumbnail + V21 Event-Specific + Uji Orang Asing)
 
 Prompt ini dipakai untuk meng-generate gambar editorial tiap berita CryptoScope.
 Satu gambar unik per berita — gambar harus MENCERITAKAN peristiwa beritanya,
@@ -180,9 +180,14 @@ Contoh arah (sesuaikan dengan BERITA-nya, jangan tempel mentah):
 - **Unrealized loss perusahaan (Strategy)**: laporan keuangan terbuka
   di meja + perbandingan harga beli dengan harga pasar (dua kolom
   harga yang dibandingkan) — BUKAN koin tenggelam di air.
-- **Flash crash bursa (Kraken)**: order book yang tipis (sedikit
-  baris) + dua panel harga pasangan yang berbeda jauh (BTC/CAD vs
-  BTC/USD) — BUKAN retakan tanah berisi lava.
+- **Flash crash bursa (Kraken)**: dua MONITOR TRADING berdampingan —
+  monitor kiri ladder order book sehat (tangga bar bid hijau / ask
+  merah padat dari atas sampai bawah), monitor kanan ladder yang sama
+  tapi HAMPIR KOSONG (hanya 2–3 bar samar di dasar + GAP BESAR kosong
+  + satu bar merah panjang yang jatuh menembus gap ke bawah). Kontras
+  penuh-vs-kosong itulah ceritanya. Monitor harus jelas-jelas monitor
+  (bezel + kaki + meja) — BUKAN panel kaca abstrak, BUKAN retakan
+  tanah berisi lava.
 
 ## 5. VISUAL QUALITY CONTROL (sebelum menyimpan gambar)
 
@@ -244,6 +249,43 @@ LIHAT hasil gambar sebelum dipakai. Periksa:
 Jika hasil tidak relevan atau melanggar satu saja poin di atas,
 REGENERASI dengan konsep yang berbeda. Jangan pakai gambar yang
 "lumayan" — standar adalah cover editorial premium.
+
+## 5b. UJI ORANG ASING — QC MENILAI GAMBAR, BUKAN PROMPT (v3.5, 23 Nov 2026)
+
+Pelajaran dari kegagalan Kraken v3: QC v3.4 menilai PROMPT ("panel
+kiri padat, panel kanan kosong") dan meloloskan gambar yang di layar
+nyatanya TIDAK terbaca — dua panel kaca abstrak, kiri seperti barcode
+terang, kanan kaca gelap kosong dengan cahaya merah. User: "ini apa
+coba". Mulai v3.5, QC menilai GAMBAR-nya:
+
+- [ ] **Uji orang asing 1 detik (WAJIB, sebelum gambar diterima):**
+      bayangkan orang yang belum pernah baca brief dan belum pernah
+      baca berita melihat gambar ini 1 detik. Apakah dia bisa menebak
+      peristiwa SPESIFIKNYA — BUKAN topik umumnya ("crypto turun"),
+      tapi peristiwanya ("order book tipis bikin harga anjlok", "dana
+      keluar dari ETF", "harga beli jauh di atas harga pasar")? Kalau
+      jawabannya tidak, gambar DITOLAK walau prompt-nya sudah benar.
+      Prompt yang bagus tidak menyelamatkan gambar yang tidak terbaca.
+- [ ] **Order book HARUS digambarkan sebagai tangga bar bid/ask
+      (hijau/merah) yang terbaca sebagai buku order** — deretan bar
+      harga horizontal bertumpuk, bid hijau di bawah, ask merah di
+      atas, di layar monitor trading yang jelas-jelas monitor (bezel +
+      kaki + meja). DILARANG: panel kaca abstrak, lempeng kaca
+      bercahaya, deretan bar putih seragam tanpa warna bid/ask,
+      apapun yang terlihat seperti barcode / tirai / blinds.
+- [ ] **Gambar perbandingan dua panel harus membuat PERBEDAANNYA
+      terbaca dalam 1 detik** — bukan sekadar dua panel berdampingan.
+      Perbedaan itu harus berupa kontras visual yang kasar dan
+      langsung: penuh vs kosong, tinggi vs pendek, terang vs gelap.
+      Kalau orang asing harus menatap 5 detik untuk menemukan bedanya,
+      konsep gagal.
+- [ ] **Elemen pendukung harus berada di tengah frame** — koin kecil,
+      objek pendukung, atau detail penjelas yang ditaruh di tepi/bawah
+      frame AKAN terpotong crop 16:9 (1920×1280 → 1920×1080 memotong
+      ~100 px atas-bawah). Bukti: koin kecil di kaki panel Kraken v3
+      hilang saat crop. Kalau elemen itu penting untuk cerita, taruh
+      di tengah frame; kalau tidak bisa, buang elemennya dan kuatkan
+      elemen utama.
 
 ## 6. IMAGE METADATA
 
@@ -383,6 +425,14 @@ menampilkan apa yang terjadi di peristiwa tersebut.
 > is the event's own object. Never depict a real person fictitiously
 > performing a specific action; a public figure may only appear in a
 > neutral, documented setting. No logos, numbers, charts, or fake facts.
+> Before accepting the image, apply the stranger test: a person who has
+> never read the brief must grasp the SPECIFIC event in one second from
+> the image alone — judge the image, never the prompt. An order book
+> must be drawn as a green/red bid/ask bar ladder on a real trading
+> monitor, never as abstract glass panels or a barcode. In a two-panel
+> comparison, the DIFFERENCE itself must be readable in one second
+> (full vs empty, tall vs short). Keep supporting elements near the
+> center of the frame so the 16:9 crop cannot cut them off.
 > One dominant hero subject centered (at least 40% of frame width)
 > that tells the story in one second. Dominant accent lighting follows
 > the story sentiment — lime green for positive/up news, fire red for
@@ -494,3 +544,22 @@ menampilkan apa yang terjadi di peristiwa tersebut.
   strategy-underwater (koin tenggelam + pria generik + wayang acak),
   kraken-flash-crash-v2 (retakan lava + koin) — ketiganya
   diregenerasi jadi -v3 dengan konsep peristiwa spesifik.
+  v3.5 (23 Nov ~15:00 WIB, emergency fix Kraken): + uji orang asing
+  1 detik (§5b: QC menilai GAMBAR, bukan prompt — orang yang belum
+  baca brief harus paham peristiwa spesifiknya dalam 1 detik);
+  + aturan gambar order book (tangga bar bid/ask hijau-merah di
+  monitor trading nyata, larangan panel kaca abstrak/barcode);
+  + aturan perbandingan dua panel (perbedaannya harus terbaca dalam
+  1 detik, bukan sekadar dua panel berdampingan); + aturan elemen
+  pendukung di tengah frame (anti potong crop 16:9); + arah visual
+  flash crash di §4 diperbaiki ke konsep dua monitor. Bukti celah:
+  kraken-flash-crash-v3 lolos QC v3.4 padahal di layar user hanya dua
+  panel kaca abstrak (kiri seperti barcode, kanan kaca gelap kosong)
+  — diregenerasi jadi kraken-flash-crash-v4 (dua monitor trading:
+  ladder bid/ask penuh vs monitor kosong + satu bar merah raksasa
+  yang jatuh), lolos uji orang asing percobaan pertama. Uji orang
+  asing yang sama diterapkan ke etf-outflows-structural-v3 (LOLOS:
+  folder filing + aliran koin tertib keluar ke nampan terbaca sebagai
+  arus dana keluar) dan strategy-underwater-v3 (LOLOS: ledger dengan
+  tumpukan tinggi vs pendek + pita merah terbaca sebagai harga beli
+  vs harga pasar) — keduanya tidak diubah.

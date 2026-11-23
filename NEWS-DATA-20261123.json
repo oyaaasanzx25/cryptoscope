@@ -40,7 +40,7 @@
    "published": "23 Nov 2026 · 08:49 WIB",
    "url": "https://beincrypto.com/bitcoin-under-17000-kraken-flash-crash/",
    "type": "fakta",
-   "img": "images/2026-11-23/kraken-flash-crash-v3.webp"
+   "img": "images/2026-11-23/kraken-flash-crash-v4.webp"
   },
   {
    "cat": "geopolitik",
@@ -143,14 +143,14 @@
   },
   {
    "cat": "breaking",
-   "title": "Chainflip diretas $12 juta, token FLIP anjlok 34%",
-   "summary": "Penyerang mengosongkan vault Ethereum dan Bitcoin Chainflip — sekitar $4,86 juta ETH dan stablecoin plus 122,86 BTC, total sekitar $12 juta — diduga memakai kunci signing yang sah. Dana dicuci lewat Tornado Cash dalam waktu kurang dari 10 menit. Chainflip menawarkan bounty 10% (sekitar $1,2 juta) bila 90% dana dikembalikan sebelum 23 Nov 18:38 UTC; jaringan masuk safe mode penuh.",
-   "source": "The Block",
-   "date": "21 Nov 2026",
-   "published": "21 Nov 2026 · 22:24 WIB",
-   "url": "https://www.theblock.co/news/defi/2026-11-21-chainflips-flip-drops-34-after-attacker-drains-4-86-million-from-vault-with-suspected-key-compromise-444804",
+   "title": "Iklan berbahaya 'MoldyRoost' bobol iPhone sekali ketuk demi kunci dompet kripto",
+   "summary": "Kampanye iklan berbahaya bernama MoldyRoost dapat membobol iPhone yang rentan hanya dengan satu ketukan, sehingga seed phrase dompet kripto pengguna terancam dicuri, menurut firma keamanan siber Confiant. Iklan online yang tampak biasa itu menjadi jalan masuk pencuri kripto ke ponsel korban.",
+   "source": "CoinDesk",
+   "date": "23 Nov 2026",
+   "published": "23 Nov 2026 · 14:45 WIB",
+   "url": "https://www.coindesk.com/tech/2026/11/23/moldyroost-malvertizing-campaign-uses-one-tap-iphone-hacks-to-hunt-crypto-wallet-keys-research-shows",
    "type": "fakta",
-   "img": "images/2026-11-23/chainflip-hack-v2.webp"
+   "img": "images/2026-11-23/moldyroost-iphone-malvertising.webp"
   },
   {
    "cat": "breaking",

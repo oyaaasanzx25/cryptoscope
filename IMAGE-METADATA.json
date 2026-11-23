@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T07:26:26+00:00",
+ "updated": "2026-11-23T07:50:22+00:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -37,10 +37,10 @@
    "category": "crypto",
    "article_title": "Bitcoin anjlok ke $17.000 di Kraken: flash crash pasangan BTC/CAD",
    "article_source": "BeInCrypto",
-   "image_url": "images/2026-11-23/kraken-flash-crash-v3.webp",
-   "image_prompt": "V21 REGENERATION (23 Nov ~14:41 WIB): two tall glass order-book panels side by side on a dark exchange trading desk — left panel densely filled with glowing bars, right panel almost empty with only a few faint bars near the bottom, red warning light at the right panel's base, one small plain gold coin at its foot — visualises the thin BTC/CAD order book and the price gap vs BTC/USD. No people, no text/numbers/logos. Fire-red accent. Post-processed: center-crop 1920x1280 to 1920x1080 16:9 + CryptoScope brand mark bottom-left via PIL. (v2 REJECTED: lava fissure + gold coin template, showed no thin order book or price gap. Note: the small coin at the foot was cropped out by the 16:9 center crop; dense-vs-empty panel contrast carries the concept.)",
+   "image_url": "images/2026-11-23/kraken-flash-crash-v4.webp",
+   "image_prompt": "EMERGENCY REGENERATION v4 (23 Nov ~14:50 WIB): Premium financial editorial photograph, realistic, cinematic, 16:9 landscape. A dark empty trading floor at night. On a dark desk in the center, two large trading monitors stand side by side, both facing the camera, glowing softly, together occupying at least 60 percent of the frame width, centered. LEFT monitor: a healthy order-book ladder — a dense vertical stack of short horizontal price bars, green bid bars on the lower half and red ask bars on the upper half, filling the screen from top to bottom like a full staircase of orders, clearly readable as an order book. RIGHT monitor: the same order-book ladder but almost empty — only two or three faint short bars near the bottom, a large empty black gap in the middle of the screen, and one long thick red bar plunging downward through the gap toward the bottom of the screen, as if the price fell through empty levels. The contrast between the full ladder and the empty ladder is the whole story: one market has buyers, the other does not, so the price collapsed in the thin one. Background: rows of dark empty desks and switched-off monitors, cold blue ambient light, subtle red glow from the right monitor. No people, no text, no numbers, no letters, no logos, no charts with axes, no coins, no abstract glass panels. The two monitors must look like real trading screens showing order-book ladders, not glass slabs or barcodes. Post-processed: center-crop 1920x1280 to 1920x1080 16:9 + CryptoScope brand mark bottom-left via PIL. (v3 REJECTED by user 23 Nov ~14:49 WIB: two abstract glass panels — left looked like a bright barcode, right an empty dark glass slab with red glow at the base; nothing read as an order book, thin book, or BTC/CAD vs BTC/USD gap. QC had judged the PROMPT, not the IMAGE — stranger test introduced in prompt v3.5. v4 PASSED stranger test on first attempt: left ladder red-asks/green-bids reads as an order book; right monitor empty with one giant vertical red plunge bar; contrast legible in 1 second and at 64x58 thumbnail.)",
    "image_provider": "media.generate_image",
-   "generation_timestamp": "2026-11-23T14:41:00+07:00",
+   "generation_timestamp": "2026-11-23T14:50:00+07:00",
    "image_dimensions": "1920x1080",
    "image_generation_status": "regenerated",
    "image_type": "ai"
@@ -391,6 +391,20 @@
    "image_prompt": "Grand modern university mathematics lecture hall at night, low angle: a colossal spiral of small golden points of light (prime numbers as glowing dots) rises from a tall dark chalkboard wall toward a bright skylight, thick open book with blank pages on a wooden lectern with a brass compass in the foreground; gold accent light against deep blue shadows; awe and historic breakthrough mood. No face/human: story's public figures cannot be rendered with a verified recognizable likeness, so symbolic setting used per v3.3 QC fallback (never a wrong/generic face). No text/numbers/logos. Post-processed: center-crop 1920x1280 to 1920x1080 16:9 + CryptoScope brand mark bottom-left via PIL.",
    "image_provider": "media.generate_image",
    "generation_timestamp": "2026-11-23T07:26:26+00:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "moldyroost-iphone-malvertising",
+   "slug": "moldyroost-iphone-malvertising",
+   "category": "breaking",
+   "article_title": "Iklan berbahaya 'MoldyRoost' bobol iPhone sekali ketuk demi kunci dompet kripto",
+   "article_source": "CoinDesk",
+   "image_url": "images/2026-11-23/moldyroost-iphone-malvertising.webp",
+   "image_prompt": "Konsep: sebuah iPhone berdiri tegak di tengah frame, layarnya menampilkan spanduk iklan berwarna cerah yang tampak polos dari blok warna abstrak tanpa teks; dari balik spanduk itu sebuah kait logam gelap menjulur keluar dan menarik sebuah kunci logam kecil (kunci dompet kripto) dari dalam ponsel; cahaya merah peringatan dari sisi kanan. Menceritakan satu peristiwa: kampanye iklan berbahaya MoldyRoost yang membobol iPhone rentan hanya dengan satu ketukan untuk mencuri seed phrase dompet kripto (riset Confiant, via CoinDesk). Hero iPhone >=40% lebar frame, aksen merah api (sentimen negatif), tanpa wajah/manusia, tanpa teks/angka/logo/grafik, tanpa koin raksasa, tanpa server room/kristal/siluet. Crop 16:9 + brand mark CryptoScope via PIL.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T14:50:22+07:00",
    "image_dimensions": "1920x1080",
    "image_generation_status": "generated",
    "image_type": "ai"
