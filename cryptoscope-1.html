@@ -99,10 +99,10 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
       </div></div>
     </section>
     <section id="market"><div class="section-head"><h3>Pantauan market</h3><a href="#market">Detail →</a></div>
-      <div class="panel"><div class="panel-head"><b>Aset populer</b><small>Belum live</small></div><div class="market-list">
-        <div class="asset" id="bitcoin"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Bitcoin</b><small>BTC</small></div></div><div class="asset-price">$60.991<small>+2,02% hari ini</small></div></div>
-        <div class="asset"><div class="asset-left"><span class="asset-icon">◆</span><div><b>Ethereum</b><small>ETH</small></div></div><div class="asset-price">$1.718<small>+2,32% hari ini</small></div></div>
-        <div class="asset"><div class="asset-left"><span class="asset-icon">◎</span><div><b>Solana</b><small>SOL</small></div></div><div class="asset-price">$70,35<small>+0,13% hari ini</small></div></div>
+      <div class="panel"><div class="panel-head"><b>Aset populer</b><small id="marketStamp">Memuat harga live…</small></div><div class="market-list">
+        <div class="asset" id="bitcoin"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Bitcoin</b><small>BTC</small></div></div><div class="asset-price" id="price-btc">$60.991<small>+2,02% hari ini</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">◆</span><div><b>Ethereum</b><small>ETH</small></div></div><div class="asset-price" id="price-eth">$1.718<small>+2,32% hari ini</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">◎</span><div><b>Solana</b><small>SOL</small></div></div><div class="asset-price" id="price-sol">$70,35<small>+0,13% hari ini</small></div></div>
       </div></div>
     </section>
   </div>
@@ -133,14 +133,18 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
           <option value="breaking">Breaking News</option>
         </select></div>
         <div class="field"><label for="studioRatio">Ukuran gambar</label><select id="studioRatio">
-          <option value="4:5">4:5 — 1080 × 1350 (feed)</option>
-          <option value="16:9">16:9 — 1280 × 720 (wide)</option>
+          <option value="4:5">4:5 — 1080 × 1350 (Instagram feed)</option>
+          <option value="9:16">9:16 — 1080 × 1920 (Story / TikTok)</option>
+          <option value="16:9">16:9 — 1280 × 720 (X / wide)</option>
+          <option value="1.91:1">1.91:1 — 1200 × 630 (Facebook)</option>
         </select></div>
         <div class="btn-row">
           <button class="btn btn-primary" id="btnTemplate" type="button">Buat judul &amp; caption otomatis</button>
           <button class="btn btn-orange" id="btnDraw" type="button">Buat Gambar</button>
         </div>
-        <p class="studio-note">Generator template (tanpa AI): judul &amp; caption diambil dari berita yang kamu pilih di atas. Ringkasan AI menyusul setelah integrasi backend aktif.</p>
+        <div class="field"><label for="studioSocial">Caption &amp; hashtag (otomatis dari berita)</label><textarea id="studioSocial" rows="3" readonly></textarea></div>
+        <div class="btn-row"><button class="btn" id="btnCopySocial" type="button">Salin Caption</button><span id="copyMsg" style="font-size:11px;color:var(--green);align-self:center"></span></div>
+        <p class="studio-note">Judul, caption &amp; hashtag dibuat otomatis dari berita terpilih (template, tanpa AI). Gambar digambar prosedural di perangkatmu — gaya mengikuti referensi: latar gelap, judul besar, sorotan angka.</p>
       </div>
       <div>
         <canvas id="newsCanvas" width="1080" height="1350"></canvas>
@@ -149,16 +153,24 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
     </div></div></div>
   </section>
   <section id="ai">
-    <div class="section-head"><h3>Integrasi AI</h3><span style="font-size:12px;color:var(--muted)">Status: belum aktif</span></div>
+    <div class="section-head"><h3>Integrasi AI</h3><span style="font-size:12px;color:var(--muted)">Status: template lokal — AI belum aktif</span></div>
     <div class="panel"><div class="panel-head"><b>Ringkasan &amp; judul otomatis</b><small>Disiapkan untuk API backend</small></div>
     <div style="padding:16px 18px">
-      <p style="margin:0 0 10px;font-size:12px;color:#33415c">Belum aktif — disiapkan untuk integrasi API backend. Nantinya, ringkasan berita otomatis dan pembuatan judul/caption akan diproses lewat server backend (proxy). API key disimpan di server dan <b>tidak pernah</b> disimpan di frontend atau di file ini.</p>
+      <p style="margin:0 0 10px;font-size:12px;color:#33415c">Tombol di bawah memakai backend proxy kalau sudah dikonfigurasi (AI_CONFIG.endpoint). Selama belum aktif, hasilnya memakai template lokal dari berita terpilih — dilabeli [Template], bukan hasil AI. API key disimpan di server dan <b>tidak pernah</b> disimpan di frontend atau di file ini.</p>
+      <div class="btn-row" style="margin-bottom:12px">
+        <button class="btn btn-primary" id="btnAiSummary" type="button">Ringkas Berita</button>
+        <button class="btn" id="btnAiTitle" type="button">Buat Judul Alternatif</button>
+        <button class="btn" id="btnAiCaption" type="button">Buat Caption</button>
+        <button class="btn" id="btnAiTranslate" type="button">Terjemahkan (EN)</button>
+      </div>
+      <div class="codebox" id="aiResult">Pilih berita di Studio Gambar Berita, lalu tekan salah satu tombol di atas. Hasil tampil di sini.</div>
+      <p style="margin:10px 0 0;font-size:11px;color:var(--muted)">Kontrak proxy: POST ke endpoint dengan JSON {task: "summary"|"title"|"caption"|"translate", text: "..."} → balas JSON {result: "..."}. Aktifkan dengan mengisi AI_CONFIG.endpoint di file ini (tanpa API key).</p>
       <div class="codebox">AI_CONFIG = { enabled: false, provider: null, endpoint: '' }
 // Ringkasan otomatis + judul/caption via backend proxy.
 // Frontend tidak menyimpan API key.</div>
     </div></div>
   </section>
-  <div class="notice" id="analysis">Berita diperbarui harian oleh agen CryptoScope; harga BTC/ETH/SOL diperbarui tiap pagi. Akun admin dan database belum terhubung. AI belum aktif — disiapkan untuk integrasi API. Selalu periksa sumber informasi; konten bukan saran investasi.</div>
+  <div class="notice" id="analysis">Berita diperbarui harian oleh agen CryptoScope; harga BTC/ETH/SOL live dari CoinGecko (jam update tertera di panel market). Berita portal bisa dikelola lewat halaman Admin (database Firestore). AI belum aktif — tombol AI memakai template lokal sampai backend proxy dikonfigurasi. Selalu periksa sumber informasi; konten bukan saran investasi.</div>
 </div>
 <footer><b style="color:#334155">CRYPTOSCOPE</b> &nbsp;·&nbsp; See Beyond The Market. &nbsp;·&nbsp; Media informasi crypto berbahasa Indonesia.</footer>
 </main></div>
@@ -221,7 +233,7 @@ function renderCatNews(){
   items.forEach(function(n){
     const c=CATS[n.cat],badge=TYPE_BADGE[n.type]||TYPE_BADGE.fakta;
     const art=document.createElement("article");art.className="news-item cat-news-item";
-    const th=document.createElement("div");th.className="news-thumb";th.style.background=c.thumb;th.textContent=c.icon;if(c.img){const im=document.createElement("img");im.src=c.img;im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";im.onerror=function(){im.remove()};th.appendChild(im)}art.appendChild(th);
+    const th=document.createElement("div");th.className="news-thumb";th.style.background=c.thumb;th.textContent=c.icon;if(n.img){const im=document.createElement("img");im.src=n.img;im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";im.onerror=function(){im.remove()};th.appendChild(im)}art.appendChild(th);
     const body=document.createElement("div");
     const pill=document.createElement("span");pill.className="pill";pill.textContent=c.label;body.appendChild(pill);
     const bd=document.createElement("span");bd.className="badge "+badge[1];bd.textContent=badge[0];body.appendChild(bd);
@@ -261,6 +273,8 @@ function fillTemplate(){
   studioTitle.value=n.title;
   studioCaption.value="Ringkasan: "+n.summary+" — Sumber: "+n.source+", "+n.date+". Baca selengkapnya di CryptoScope.";
   studioCat.value=n.cat;
+  const sc=document.getElementById("studioSocial");
+  if(sc) sc.value=buildSocial();
 }
 studioNews.addEventListener("change",function(){fillTemplate();drawNewsImage();});
 document.getElementById("btnTemplate").addEventListener("click",function(){fillTemplate();drawNewsImage();});
@@ -351,64 +365,152 @@ function drawVisual(ctx,cat,x,y,w,h,W){
   }
   ctx.restore();
 }
+const STUDIO_SIZES={"4:5":[1080,1350],"9:16":[1080,1920],"16:9":[1280,720],"1.91:1":[1200,630]};
+const SOCIAL_TAGS={crypto:["#Bitcoin","#Crypto","#CryptoScope","#BTC"],geopolitik:["#Geopolitik","#Dunia","#CryptoScope"],ekonomi:["#Ekonomi","#BI","#IHSG","#CryptoScope"],teknologi:["#AI","#Teknologi","#CryptoScope"],breaking:["#BreakingNews","#CryptoScope"]};
+function buildSocial(){
+  const n=NEWS_DATA[+studioNews.value];
+  const tags=(SOCIAL_TAGS[n.cat]||SOCIAL_TAGS.crypto).join(" ");
+  return n.title+" \u2014 "+n.summary+" Baca selengkapnya di CryptoScope. Sumber: "+n.source+". "+tags;
+}
+document.getElementById("btnCopySocial").addEventListener("click",function(){
+  const ta=document.getElementById("studioSocial");
+  const msg=document.getElementById("copyMsg");
+  function done(){ if(msg) msg.textContent="Caption tersalin."; setTimeout(function(){ if(msg) msg.textContent=""; },2500); }
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(ta.value).then(done,function(){ ta.select(); document.execCommand("copy"); done(); }); }
+  else { ta.select(); try{document.execCommand("copy");}catch(e){} done(); }
+});
+function drawAccentLines(ctx,text,x,y,maxW,lh,maxLines){
+  const words=text.split(/\s+/);
+  const lines=[];let line=[];let lw=0;
+  words.forEach(function(w){
+    const wW=ctx.measureText(w+" ").width;
+    if(lw+wW>maxW&&line.length){lines.push(line);line=[w];lw=wW;}
+    else{line.push(w);lw+=wW;}
+  });
+  if(line.length)lines.push(line);
+  if(lines.length>maxLines){lines.length=maxLines;}
+  lines.forEach(function(ln){
+    let cx=x;
+    ln.forEach(function(w){
+      ctx.fillStyle=/[\d$%]/.test(w)?"#ff9b45":"#ffffff";
+      ctx.fillText(w,cx,y);
+      cx+=ctx.measureText(w+" ").width;
+    });
+    y+=lh;
+  });
+  return y;
+}
 function drawNewsImage(){
   const cv=document.getElementById("newsCanvas");
   const ratio=studioRatio.value;
-  const W=ratio==="4:5"?1080:1280, H=ratio==="4:5"?1350:720;
+  const sz=STUDIO_SIZES[ratio]||STUDIO_SIZES["4:5"];
+  const W=sz[0], H=sz[1];
   cv.width=W;cv.height=H;
   const ctx=cv.getContext("2d");
   const cat=studioCat.value, c=CATS[cat];
-  const pad=Math.round(W*0.055);
-  const title=(studioTitle.value||"CryptoScope").trim();
+  const pad=Math.round(W*0.06);
+  const title=(studioTitle.value||"CryptoScope").trim().toUpperCase();
   const caption=(studioCaption.value||"").trim();
   const n=NEWS_DATA[+studioNews.value];
-  ctx.fillStyle="#101114";ctx.fillRect(0,0,W,H);
-  const g=ctx.createLinearGradient(0,0,W,0);
-  g.addColorStop(0,"#2e70d7");g.addColorStop(1,"#17479b");
-  const bandH=Math.round(H*0.085);
-  ctx.fillStyle=g;ctx.fillRect(0,0,W,bandH);
-  const mark=bandH*0.62, my=(bandH-mark)/2;
+  const bg=ctx.createLinearGradient(0,0,0,H);
+  bg.addColorStop(0,"#0d1120");bg.addColorStop(0.55,"#101527");bg.addColorStop(1,"#0a0d18");
+  ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle="rgba(255,255,255,0.04)";ctx.lineWidth=1;
+  for(let i=1;i<6;i++){ctx.beginPath();ctx.moveTo(0,H*i/6);ctx.lineTo(W,H*i/6);ctx.stroke();}
+  const mark=Math.round(W*0.052);
+  const my=Math.round(H*0.035);
   ctx.fillStyle="#ff7b37";rr(ctx,pad,my,mark,mark,mark*0.28);ctx.fill();
-  ctx.textAlign="center";ctx.textBaseline="middle";
-  ctx.fillStyle="#fff";ctx.font="900 "+Math.round(mark*0.62)+"px Inter,system-ui,sans-serif";
+  ctx.fillStyle="#fff";ctx.textAlign="center";ctx.textBaseline="middle";
+  ctx.font="900 "+Math.round(mark*0.62)+"px Inter,system-ui,sans-serif";
   ctx.fillText("C",pad+mark/2,my+mark/2+1);
-  ctx.textAlign="left";
-  ctx.font="800 "+Math.round(bandH*0.34)+"px Inter,system-ui,sans-serif";
-  ctx.fillText("CRYPTO",pad+mark+14,bandH/2);
+  ctx.textAlign="left";ctx.textBaseline="middle";
+  ctx.font="800 "+Math.round(mark*0.42)+"px Inter,system-ui,sans-serif";
+  ctx.fillStyle="#fff";ctx.fillText("CRYPTO",pad+mark+12,my+mark/2);
   const w1=ctx.measureText("CRYPTO").width;
-  ctx.fillStyle="#ffd39c";ctx.fillText("SCOPE",pad+mark+14+w1,bandH/2);
+  ctx.fillStyle="#ffd39c";ctx.fillText("SCOPE",pad+mark+12+w1,my+mark/2);
   ctx.textBaseline="top";
-  const pillY=bandH+Math.round(H*0.03);
-  ctx.font="800 "+Math.round(W*0.022)+"px Inter,system-ui,sans-serif";
-  const pillH=Math.round(W*0.045);
+  const pillY=my+mark+Math.round(H*0.028);
+  ctx.font="800 "+Math.round(W*0.021)+"px Inter,system-ui,sans-serif";
+  const pillH=Math.round(W*0.042);
   const lw=ctx.measureText(c.label).width+34;
   ctx.fillStyle=cat==="breaking"?"#d64545":"#ff7b37";
-  rr(ctx,pad,pillY,lw,pillH,Math.round(W*0.022));ctx.fill();
+  rr(ctx,pad,pillY,lw,pillH,Math.round(W*0.02));ctx.fill();
   ctx.fillStyle="#fff";
-  ctx.fillText(c.label,pad+17,pillY+(pillH-Math.round(W*0.022))/2);
-  const visY=pillY+Math.round(H*0.055), visH=Math.round(H*0.24);
+  ctx.fillText(c.label,pad+17,pillY+(pillH-Math.round(W*0.021))/2);
+  const visY=pillY+pillH+Math.round(H*0.03), visH=Math.round(H*0.22);
   drawVisual(ctx,cat,pad,visY,W-2*pad,visH,W);
-  let y=visY+visH+Math.round(H*0.04);
+  let y=visY+visH+Math.round(H*0.035);
   ctx.fillStyle="#fff";
-  const is45=ratio==="4:5";
-  const fs=is45?62:54;
+  const isTall=(ratio==="4:5"||ratio==="9:16");
+  const fs=isTall?Math.round(W*0.058):Math.round(W*0.042);
   ctx.font="800 "+fs+"px Inter,system-ui,sans-serif";
-  const lh=fs*1.18;
-  wrapLines(ctx,title,W-2*pad,is45?4:3).forEach(function(ln){ctx.fillText(ln,pad,y);y+=lh;});
+  y=drawAccentLines(ctx,title,pad,y,W-2*pad,fs*1.16,isTall?5:3);
+  const ruleY=H-Math.round(H*0.045);
   if(caption){
-    y+=Math.round(H*0.015);
-    ctx.fillStyle="#c9d4e6";
-    const cfs=is45?30:26;
+    const cfs=Math.round(W*0.026);
     ctx.font="400 "+cfs+"px Inter,system-ui,sans-serif";
-    wrapLines(ctx,caption,W-2*pad,is45?3:2).forEach(function(ln){ctx.fillText(ln,pad,y);y+=cfs*1.45;});
+    const capLines=wrapLines(ctx,caption,W-2*pad,isTall?3:2);
+    const capH=capLines.length*cfs*1.5;
+    if(y+Math.round(H*0.014)+capH<ruleY-8){
+      y+=Math.round(H*0.014);
+      ctx.fillStyle="#c9d4e6";
+      capLines.forEach(function(ln){ctx.fillText(ln,pad,y);y+=cfs*1.5;});
+    }
   }
-  const ruleY=H-Math.round(H*0.055);
   ctx.fillStyle="#ff7b37";ctx.fillRect(pad,ruleY,Math.round(W*0.09),5);
   ctx.fillStyle="#8a96a8";
-  const ffs=is45?24:22;
+  const ffs=Math.round(W*0.02);
   ctx.font="400 "+ffs+"px Inter,system-ui,sans-serif";
-  ctx.fillText("Sumber: "+n.source+" · "+n.date+" · cryptoscope",pad,ruleY+12);
+  ctx.fillText("Sumber: "+n.source+" \u00b7 "+n.date+" \u00b7 cryptoscope",pad,ruleY+12);
 }
+
+/* Harga market live dari CoinGecko (gratis, tanpa API key).
+   Kalau fetch gagal (offline / diblokir), harga statis di HTML tetap tampil
+   dan labelnya jujur bilang offline — tidak pernah pura-pura live. */
+async function loadMarket(){
+  const stamp=document.getElementById("marketStamp");
+  try{
+    const r=await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true");
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d=await r.json();
+    const fmt=function(v,dec){return v.toLocaleString("id-ID",{minimumFractionDigits:dec,maximumFractionDigits:dec});};
+    const chg=function(v){return (v>=0?"+":"")+v.toLocaleString("id-ID",{minimumFractionDigits:2,maximumFractionDigits:2})+"% \u00b7 24j";};
+    const setP=function(id,v,dec,c){const el=document.getElementById(id); if(el) el.innerHTML="$"+fmt(v,dec)+"<small>"+chg(c)+"</small>";};
+    setP("price-btc",d.bitcoin.usd,0,d.bitcoin.usd_24h_change);
+    setP("price-eth",d.ethereum.usd,0,d.ethereum.usd_24h_change);
+    setP("price-sol",d.solana.usd,2,d.solana.usd_24h_change);
+    if(stamp) stamp.textContent="Live \u00b7 "+new Intl.DateTimeFormat("id-ID",{hour:"2-digit",minute:"2-digit"}).format(new Date())+" WIB \u00b7 CoinGecko";
+  }catch(e){
+    if(stamp) stamp.textContent="Harga 23 Nov 2026 \u00b7 offline \u2014 CoinGecko tidak terjangkau";
+  }
+}
+loadMarket();
+
+/* Tombol AI: pakai backend proxy kalau AI_CONFIG.endpoint diisi; selama belum
+   aktif, hasil memakai template lokal dan dilabeli [Template], bukan hasil AI. */
+async function aiTask(task){
+  const res=document.getElementById("aiResult");
+  if(!res) return;
+  const n=NEWS_DATA[+studioNews.value];
+  const text=n.title+". "+n.summary;
+  if(AI_CONFIG.enabled&&AI_CONFIG.endpoint){
+    res.textContent="Memproses via backend\u2026";
+    try{
+      const r=await fetch(AI_CONFIG.endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({task:task,text:text})});
+      const d=await r.json();
+      res.textContent=d.result||"Backend tidak mengembalikan hasil.";
+    }catch(e){res.textContent="Gagal menghubungi backend AI: "+e.message;}
+    return;
+  }
+  if(task==="summary"){res.textContent="[Template] "+n.summary;}
+  else if(task==="title"){res.textContent="[Template] Judul alternatif: "+n.title;}
+  else if(task==="caption"){res.textContent="[Template] "+buildSocial();}
+  else if(task==="translate"){res.textContent="[Template] Terjemahan butuh AI aktif. Ringkasan asli: "+n.summary;}
+}
+["btnAiSummary","btnAiTitle","btnAiCaption","btnAiTranslate"].forEach(function(id){
+  const b=document.getElementById(id);
+  if(b) b.addEventListener("click",function(){ aiTask(id.replace("btnAi","").toLowerCase()); });
+});
 
 renderCatNews();
 fillTemplate();
@@ -447,7 +549,8 @@ try {
         source: v.source || "",
         date: v.date || "",
         url: v.url || "#",
-        type: v.type || "fakta"
+        type: v.type || "fakta",
+        img: v.img || ""
       });
     });
     NEWS_DATA.length = 0;
