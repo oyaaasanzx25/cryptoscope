@@ -121,13 +121,13 @@
     },
     {
       "cat": "teknologi",
-      "title": "Kembalinya Jensen Huang ke Nvidia bisa tekan saham Anthropic",
-      "summary": "Kembalinya Jensen Huang sebagai CEO membuat saham Nvidia melonjak sekitar 30% pada Senin, sementara Nasdaq naik sekitar 6% — tetapi Anthropic (ANT) justru turun 3% dan makin jauh dari harga penutupan hari pertama $97,17. Analisanya: Anthropic mengenakan biaya untuk akses ke model Claude dan pelanggan tidak bisa mengunduh lalu menjalankan model itu sendiri, sementara model Nemotron Nvidia gratis diunduh dan bisa dijalankan di komputer perusahaan sendiri — alternatif yang lebih murah yang bisa menekan pelanggan atau harga Anthropic. Nvidia juga mendukung pengembang model terbuka seperti Reflection AI, Thinking Machines Lab, dan Poolside, dan David Faber dari CNBC memperingatkan kembalinya Huang bisa merugikan Anthropic karena dukungannya pada AI open-source. Perselisihan ini sudah berbulan-bulan: pada Juli, Huang mendesak Washington menentang ‘pembatasan prematur’ atas model terbuka dan Anthropic menolak menandatangani suratnya, meski CEO Dario Amodei menegaskan Anthropic ‘tidak pernah menganjurkan larangan model open-weights’. Di sisi lain, Nvidia menginvestasikan sekitar $10 miliar bersamaan dengan IPO Anthropic, dan Anthropic tetap bergantung pada chip Nvidia meski mendiversifikasi pemasok. Kembalinya Huang juga mengangkat saham kripto: Strive naik 15,8%, Strategy 12,1%, dan Coinbase 7%. Investor kini mengawasi harga penawaran $83 setelah dukungan harga IPO Morgan Stanley berakhir; apakah tekanan ini melemahkan pertumbuhan Anthropic masih belum pasti.",
-      "source": "BeInCrypto",
-      "date": "23 Nov 2026",
-      "published": "24 Nov 2026 · 02:38 WIB",
-      "url": "https://beincrypto.com/will-huang-return-hurt-anthropic-stock/",
-      "type": "analisis",
+      "title": "Z.ai rilis GLM-5.4, model AI yang diklaim berpikir seperti model empat kali lebih besar",
+      "summary": "Perusahaan AI China Z.ai merilis GLM-5.4 pada Senin, model 750 miliar parameter dengan arsitektur Loop Transformer yang memproses informasi lewat 28 lapisan jaringan saraf yang sama dua kali, sehingga diklaim memiliki kemampuan penalaran setara model 2-3 triliun parameter tanpa menambah parameter. Model ini mendukung konteks satu juta token, menerima gambar dan video, serta bisa menghasilkan hingga 128.000 token dalam satu respons. Dalam eksperimen pada model kecil 30 miliar parameter, teknik looping menaikkan akurasi AIME 2025 dari 19,17% ke 30,42% dan GPQA Diamond dari 47,58% ke 56,26%. Namun Z.ai belum mempublikasikan perbandingan benchmark flagship independen yang menunjukkan GLM-5.4 menyamai Claude atau GPT. Model tersedia lewat langganan coding mulai $18 per bulan; harga API GLM-5.4 belum diumumkan. Z.ai sendiri masuk daftar Entity List AS sejak Januari 2025.",
+      "source": "Decrypt",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 06:06 WIB",
+      "url": "https://decrypt.co/383851/chinas-zai-new-ai-model-glm-think-like-four-times-size",
+      "type": "fakta",
       "img": ""
     },
     {
