@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T15:14:51+07:00",
+ "updated": "2026-11-23T22:56:05+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -671,6 +671,34 @@
    "image_prompt": "Original editorial photo (NOT AI): Jensen Huang speaking into a microphone, black leather jacket, light blue background — viewed directly, clean, no logo, no watermark, no text overlay, no branding. The Block og:image / media:content from RSS: https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/GettyImages-2299100584-scaled.jpg. Resolution 1600x900.",
    "image_provider": "original",
    "generation_timestamp": "2026-11-23T15:14:51+07:00",
+   "image_dimensions": "1600x900",
+   "image_generation_status": "original",
+   "image_type": "original-photo"
+  },
+  {
+   "article_id": "binance-hackers-coinjoin",
+   "slug": "binance-hackers-coinjoin",
+   "category": "breaking",
+   "article_title": "Peretas Binance pindahkan $247 juta lewat transaksi yang kaburkan jejak dana",
+   "article_source": "CoinDesk",
+   "image_url": "images/2026-11-23/binance-hackers-coinjoin.webp",
+   "image_prompt": "V3.5 context-based editorial image. Concept: a giant industrial steel mixing tumbler drum dominates the center of a dark concrete vault chamber, its hatch open; from several pipes on the left and above, separate streams of gold coins in different shades pour into the drum — each stream distinct and traceable; from the drum's outlet on the right, a single uniform stream of identical gold coins flows out into a dark steel channel, its origin now indistinguishable — the coinjoin laundering of stolen Binance funds (2,310 BTC / $149M mixed, ~90% since 17 Nov 2026, coordinated by Kruw; $247M ETH moved via THORChain). A few scattered coins and a broken chain link on the vault floor in the foreground; the vault's heavy steel door stands ajar in the background with cold red warning light spilling through. No people, no faces. Fire-red accent lighting (negative news). 16:9 landscape, no text/numbers/charts/logos. Raw generator output 1920x1280 center-cropped to 1920x1080 with PIL, CryptoScope brand mark overlaid bottom-left (white, low opacity, font 34). QC v3.5 passed: hero drum >=40% frame, stranger test (coins being mixed, uniform stream out = money laundering), thumbnail 64x58 readable, no banned composition, no legible text.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T22:50:00+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "bitmine-eth-treasury",
+   "slug": "bitmine-eth-treasury",
+   "category": "crypto",
+   "article_title": "Bitmine tambah 7.819 ETH, pegang 4,98% pasokan Ethereum senilai $10,4 miliar",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/bitmine-eth-treasury.webp",
+   "image_prompt": "Original editorial image (NOT AI): 3D Ethereum diamond logo floating in a blue arched studio space, clean, no logo, no watermark, no text, no branding. The Block og:image for the Bitmine story, downloaded to repo and converted to WebP, viewed directly before use. 1600x900.",
+   "image_provider": "original",
+   "generation_timestamp": "2026-11-23T22:56:05+07:00",
    "image_dimensions": "1600x900",
    "image_generation_status": "original",
    "image_type": "original-photo"
