@@ -220,10 +220,13 @@ function renderCatNews(){
     const c=CATS[n.cat],badge=TYPE_BADGE[n.type]||TYPE_BADGE.fakta;
     const art=document.createElement("article");art.className="news-item cat-news-item";
     const th=document.createElement("div");th.className="news-thumb";th.style.background=c.thumb;th.textContent=c.icon;
-    const gurl=graphicDataURL(n,480,600);
     const im=document.createElement("img");im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";
-    if(gurl){im.src=gurl;}else if(n.img){im.src=n.img;}
-    im.onerror=function(){ if(n.img&&im.src!==n.img){im.src=n.img;} else {im.remove();} };
+    if(n.img){im.src=n.img;}
+    else{const gurl=graphicDataURL(n,480,600);if(gurl)im.src=gurl;}
+    im.onerror=function(){
+      if(n.img&&im.src===n.img){const gurl=graphicDataURL(n,480,600);if(gurl){im.src=gurl;}else{im.remove();}}
+      else{im.remove();}
+    };
     th.appendChild(im);
     const tb=document.createElement("button");tb.type="button";tb.className="thumb-btn";tb.setAttribute("aria-label","Lihat gambar: "+n.title);
     tb.appendChild(th);tb.addEventListener("click",function(){openLightbox(n);});
@@ -252,9 +255,10 @@ document.querySelectorAll(".pill-cat").forEach(function(btn){
   });
 });
 
-/* Gambar berita: digambar prosedural otomatis dari data berita (gaya referensi gelap:
-   latar gelap, judul besar caps, angka disorot oranye, brand + sumber di footer).
-   Tanpa pilih manual, tanpa gambar eksternal. Ketuk gambar untuk lihat besar + unduh. */
+/* Gambar berita: foto asli dari sumber berita (og:image, OTOMATIS, tanpa pilih manual)
+   — foto itu yang tampil di kartu. Kalau sebuah berita tidak punya foto yang bisa
+   dipakai, gambar digambar prosedural gaya referensi gelap dari data beritanya.
+   Ketuk gambar untuk lihat besar + unduh. */
 function currentNews(){
   const items=NEWS_DATA.filter(function(x){return activeCat==="all"||x.cat===activeCat;});
   return items[0]||NEWS_DATA[0];
@@ -272,14 +276,16 @@ function openLightbox(item){
   const lb=document.getElementById("lightbox");
   const img=document.getElementById("lbImg");
   lbCanvas=null;
-  let shown=false;
-  try{
-    const cv=document.createElement("canvas");
-    drawNewsGraphic(cv,item,1080,1350);
-    img.src=cv.toDataURL("image/png");
-    lbCanvas=cv; shown=true;
-  }catch(e){}
-  if(!shown&&item.img){ img.src=item.img; }
+  if(item.img){
+    img.src=item.img;
+  }else{
+    try{
+      const cv=document.createElement("canvas");
+      drawNewsGraphic(cv,item,1080,1350);
+      img.src=cv.toDataURL("image/png");
+      lbCanvas=cv;
+    }catch(e){}
+  }
   document.getElementById("lbTitle").textContent=item.title||"";
   document.getElementById("lbMeta").textContent=(item.source||"CryptoScope")+(item.date?" \u00b7 "+item.date:"");
   const src=document.getElementById("lbSource");
@@ -310,7 +316,8 @@ function initLightbox(){
       fetch(lbItem.img).then(function(r){return r.blob();}).then(function(blob){
         const a=document.createElement("a");
         a.href=URL.createObjectURL(blob);
-        a.download="cryptoscope-gambar.png";
+        const m=(lbItem.img.match(/\.([a-zA-Z]{3,4})(?:[?#]|$)/)||[])[1]||"png";
+        a.download="cryptoscope-gambar."+m.toLowerCase();
         a.click();
         setTimeout(function(){URL.revokeObjectURL(a.href);},4000);
       }).catch(function(){ window.open(lbItem.img,"_blank"); });
@@ -330,11 +337,14 @@ function wireTopNews(){
     const dm=raw.match(/(\d{1,2} \w+ \d{4})\s*$/);
     const oldImg=th.querySelector("img");
     const item={cat:"crypto",title:title,summary:raw,date:dm?dm[1]:"",source:"CryptoScope",url:"",type:"fakta",img:oldImg?oldImg.getAttribute("src")||"":""};
-    const gurl=graphicDataURL(item,480,600);
     const im=document.createElement("img");
     im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";
-    if(gurl){im.src=gurl;}else if(item.img){im.src=item.img;}
-    im.onerror=function(){ if(item.img&&im.src!==item.img){im.src=item.img;} else {im.remove();} };
+    if(item.img){im.src=item.img;}
+    else{const gurl=graphicDataURL(item,480,600);if(gurl)im.src=gurl;}
+    im.onerror=function(){
+      if(item.img&&im.src===item.img){const gurl=graphicDataURL(item,480,600);if(gurl){im.src=gurl;}else{im.remove();}}
+      else{im.remove();}
+    };
     th.textContent=icon;th.appendChild(im);
     const tb=document.createElement("button");
     tb.type="button";tb.className="thumb-btn";tb.setAttribute("aria-label","Lihat gambar: "+title);
