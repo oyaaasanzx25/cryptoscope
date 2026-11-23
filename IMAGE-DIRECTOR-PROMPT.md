@@ -1,4 +1,4 @@
-# CryptoScope — Editorial Image Director Prompt (v3.2 — Context-Based + Referensi CryptoWave + Anti-Default)
+# CryptoScope — Editorial Image Director Prompt (v3.4 — Context-Based + Referensi CryptoWave + Anti-Default + QC Brand-Mark/Thumbnail + V21 Event-Specific)
 
 Prompt ini dipakai untuk meng-generate gambar editorial tiap berita CryptoScope.
 Satu gambar unik per berita — gambar harus MENCERITAKAN peristiwa beritanya,
@@ -43,6 +43,48 @@ terlarang ini — kalau ada, tulis ulang konsepnya dulu: "server room" /
 menatap layar", "glowing object in dark room", "floating coin" /
 "koin melayang". Pelanggaran yang lolos ke prompt (mis. chainflip-hack
 v1: "Dark server room") harus ditangkap di langkah ini, bukan di QC.
+
+## 1b. ATURAN V21 — PERISTIWA SPESIFIK, BUKAN SIMBOL (23 Nov 2026)
+
+Delapan aturan baru dari audit V21 — berlaku untuk semua generasi baru:
+
+1. **Baca SELURUH isi berita** (headline + summary lengkap + sumber),
+   bukan hanya judul.
+2. **Tentukan SATU peristiwa spesifik** yang benar-benar diberitakan
+   (bukan tema umumnya, mis. bukan "ETF turun" tapi "ETF Bitcoin
+   keluar $1,79 miliar sepekan, arus keluar disebut struktural").
+3. **Tentukan objek utama, lingkungan, dan hubungan antarobjek** secara
+   eksplisit di prompt — apa bendanya, di mana, dan bagaimana
+   benda-benda itu berhubungan satu sama lain.
+4. **Visual menggambarkan PERISTIWA, bukan sekadar simbol
+   cryptocurrency.** Gambar harus menceritakan apa yang terjadi —
+   dokumen, laporan, order book, jembatan, sidang — bukan koin dengan
+   hiasan.
+5. **Variasi komposisi sesuai jenis berita** — berita ETF, laporan
+   keuangan, flash crash, upgrade, dan exploit masing-masing punya
+   adegan yang berbeda; jangan satu template untuk semua.
+6. **JANGAN memakai efek kehancuran, lava, banjir, atau koin raksasa
+   sebagai template universal.** Efek destruktif hanya boleh dipakai
+   kalau peristiwa itu SENDIRI destruktif DAN objeknya adalah objek
+   peristiwa itu (mis. jembatan putus untuk exploit jembatan, pintu
+   vault hancur untuk peretasan vault). Bendungan retak + banjir untuk
+   ETF outflow adalah PELANGGARAN — bendungan bukan objek peristiwa
+   ETF. Koin raksasa sebagai hero juga bukan template universal.
+7. **JANGAN menggambarkan tokoh nyata secara fiktif seolah-olah sedang
+   melakukan tindakan tertentu** (menunjuk koin tenggelam, bereaksi
+   terhadap crash, dll). Tokoh publik boleh muncul HANYA dalam setting
+   netral yang terdokumentasi (duduk di kursi, berdiri di depan
+   institusi) — dan hanya kalau aturan dua arah mengharuskannya.
+   Kalau cerita tidak butuh aksi tokohnya, pakai institusi/simbol.
+   **Catatan (23 Nov 2026):** gambar wajah yang sudah ada (Huang di
+   kursi CEO, Cramer di meja anchor, Ackman di depan The Fed, Lagarde
+   di depan ECB, Trump di meja gala) dibuat atas perintah eksplisit
+   user sebelumnya (aturan dua arah) dan TIDAK termasuk dalam 5 item
+   uji V21 — JANGAN diregenerasi diam-diam; statusnya "menunggu
+   keputusan user".
+8. **Jangan membuat logo, angka, grafik, atau fakta palsu** — tidak ada
+   angka harga, tidak ada grafik, tidak ada logo perusahaan/bursa,
+   tidak ada dokumen dengan isi yang terbaca.
 
 ## 2. PREMIUM EDITORIAL ART DIRECTION
 
@@ -94,6 +136,16 @@ ketiganya pola default untuk semua berita:
   (naik, tumbuh, terbuka, mengalir).
 - Jangan pernah pakai perlakuan kehancuran yang sama untuk dua berita
   berbeda secara berurutan.
+- **Celah yang ditutup v3.4 (audit V21):** pengecualian "koin sebagai
+  objek fungsional" di v3.2 DISALAHGUNAKAN — etf-outflows-structural
+  lolos QC dengan bendungan retak + koin BTC raksasa sebagai pintu air
+  + air terjun merah, padahal bendungan BUKAN objek peristiwa ETF.
+  Aturan baru: efek kehancuran (retak, banjir, lava, ledakan) hanya
+  boleh jadi visual UTAMA kalau peristiwa itu sendiri destruktif DAN
+  objek yang hancur adalah objek peristiwa itu. Arus dana keluar,
+  kerugian belum terealisasi, dan flash crash BUKAN peristiwa
+  destruktif fisik — visualnya harus dokumen/aliran/laporan/order
+  book, bukan kehancuran.
 
 ## 4. NEWS-SPECIFIC VISUAL STORYTELLING
 
@@ -121,6 +173,16 @@ Contoh arah (sesuaikan dengan BERITA-nya, jangan tempel mentah):
   lampu pemeriksaan, suasana investigasi.
 - **Node / protocol bug**: jaringan node yang salah satunya membeku
   atau mengulang loop, AI yang menemukan celahnya.
+- **ETF outflow (arus dana institusional keluar)**: tumpukan dokumen/
+  filing ETF di meja analis + aliran dana yang keluar secara tertib
+  (aliran panah/garis dana) — BUKAN bendungan hancur atau banjir.
+  Suasana ruang kerja analis yang rapi, bukan kehancuran.
+- **Unrealized loss perusahaan (Strategy)**: laporan keuangan terbuka
+  di meja + perbandingan harga beli dengan harga pasar (dua kolom
+  harga yang dibandingkan) — BUKAN koin tenggelam di air.
+- **Flash crash bursa (Kraken)**: order book yang tipis (sedikit
+  baris) + dua panel harga pasangan yang berbeda jauh (BTC/CAD vs
+  BTC/USD) — BUKAN retakan tanah berisi lava.
 
 ## 5. VISUAL QUALITY CONTROL (sebelum menyimpan gambar)
 
@@ -134,13 +196,32 @@ LIHAT hasil gambar sebelum dipakai. Periksa:
 - [ ] TIDAK ada logo atau simbol perusahaan/bursa yang salah?
 - [ ] TIDAK mirip gambar berita lain (cek terhadap gambar yang sudah
       ada — lingkungan, sudut, dan objek harus berbeda)?
-- [ ] Satu subjek hero dominan di tengah (≥40% lebar frame) — cerita
-      terbaca dalam 1 detik?
-- [ ] Warna aksen mengikuti sentimen berita (hijau limau = naik/positif,
-      merah api = turun/negatif, emas = netral)?
-- [ ] Komposisi tetap terbaca saat diperkecil ke thumbnail 64×58?
-- [ ] Wajah tokoh (kalau ada) adalah orang yang benar — bukan wajah
-      salah atau wajah generik?
+- Satu subjek hero dominan di tengah (≥40% lebar frame) — cerita
+      terbaca dalam 1 detik? Yang diukur adalah subjek hero ATAU
+      ensemble hero-nya (mis. bendungan + koin pintu air + air yang
+      mengalir di etf-outflows-structural): kalau koin/token adalah
+      hero-nya sendirian, koin itu sendiri wajib ≥40% lebar frame.
+      Catatan audit 23 Nov: koin di etf-outflows-structural hanya ~22%
+      lebar frame — lolos karena ensemble bendungannya dominan, tapi
+      jangan ulangi koin-hero yang kecil.
+- [ ] Brand mark "CryptoScope" ADA di pojok kiri bawah (overlay PIL,
+      putih opacity rendah, font 34) — terlihat di lightbox, samar di
+      thumbnail? Kalau tidak ada, JANGAN regenerasi: tambahkan mark
+      via PIL dari file raw (media-generation-*) ke nama file -v2.
+      Bukti celah: glamsterdam v1 lolos QC tanpa brand mark sama sekali
+      (zona mark max brightness 95, nol piksel terang) — diperbaiki
+      23 Nov ~14:05 WIB jadi glamsterdam-v2.webp.
+- [ ] Uji thumbnail KONKRET: downscale gambar ke 64×58 dan LIHAT —
+      hero + warna sentimen harus tetap terbaca; kalau hanya detail
+      mikro yang tersisa, konsep gagal.
+- [ ] TIDAK ada teks/angka mikro yang terbaca pada objek (label chip,
+      papan, layar, pelat) — semua label di dalam adegan harus kosong
+      atau abstrak. (Chip di cramer-ai-selloff punya guratan label
+      sirkuit yang tidak terbaca — masih lolos; teks yang TERBACA
+      adalah gagal.)
+- [ ] Wajah tokoh (kalau ada) adalah orang yang benar — bandingkan
+      dengan foto referensi tokoh itu; kalau kemiripan tidak meyakinkan,
+      buang wajahnya dan pakai gedung/simbol institusi.
 - [ ] Aturan dua arah wajah: ada tokoh di berita = ada wajahnya di
       gambar; ada wajah di gambar = tokoh itu ada di berita; berita
       tanpa tokoh = gambar tanpa wajah/manusia?
@@ -151,6 +232,14 @@ LIHAT hasil gambar sebelum dipakai. Periksa:
 - [ ] Maksimal 2 kali regenerasi per gambar — kalau masih gagal, pakai
       foto asli dari sumber atau biarkan grafis prosedural, jangan
       paksa gambar yang "lumayan"?
+- [ ] **QC V21 (5 kriteria, wajib dinilai satu per satu):** (1)
+      relevansi terhadap artikel, (2) ketepatan konteks, (3)
+      kewajaran objek, (4) kejelasan pesan visual, (5) keunikan
+      komposisi. **ATURAN TOLAK: jika gambar hanya menampilkan koin +
+      efek dramatis tanpa menggambarkan peristiwa → TOLAK dan buat
+      ulang** (maks 2x). Gambar bendungan retak + koin raksasa, koin
+      tenggelam + cahaya merah, dan retakan lava + koin adalah contoh
+      gambar yang DITOLAK aturan ini (audit V21, 23 Nov 2026).
 
 Jika hasil tidak relevan atau melanggar satu saja poin di atas,
 REGENERASI dengan konsep yang berbeda. Jangan pakai gambar yang
@@ -170,6 +259,20 @@ Setiap gambar yang dipakai WAJIB dicatat di `IMAGE-METADATA.json`
 - `image_generation_status` — `generated` / `regenerated` / `failed`
 - `image_type` — `ai` | `external` | `licensed` | `procedural`
 - `article_title`, `article_source`, `category`
+
+Aturan penggantian (v3.3): kalau sebuah gambar diganti (regenerasi atau
+perbaikan pasca-proses seperti tambah brand mark), file BARU wajib
+pakai nama baru (`-v2`, `-v3`, dst) — JANGAN pernah menimpa file lama
+di URL yang sama (cache ponsel akan terus menampilkan file lama).
+Entri manifest di-update DI TEMPAT: `image_url` diganti ke nama baru,
+`generation_timestamp` diisi waktu perbaikan, `image_generation_status`
+jadi `regenerated`, dan catatan perbaikan ditambahkan ke `image_prompt`.
+File lama TETAP ada di disk (jangan dihapus) sampai agen integrasi
+mengonfirmasi ref baru sudah live; mapping lama → baru dicatat di
+laporan audit. Cache: `firebase.json` saat ini hanya men-set `no-cache`
+untuk `**/*.html` — gambar mengandalkan penamaan file baru sebagai
+cache-busting; JANGAN ubah `firebase.json` tanpa persetujuan user
+(rekomendasi: header cache panjang + immutable untuk `images/`).
 
 Bedakan jelas: gambar hasil AI, gambar editorial berlisensi, gambar
 dari sumber eksternal (foto asli og:image), dan grafis prosedural
@@ -269,6 +372,17 @@ menampilkan apa yang terjadi di peristiwa tersebut.
 > storytelling elements, strong foreground, midground and background,
 > professional color grading, cover quality of an international
 > financial news outlet.
+> First read the FULL news content. Design the visual around ONE
+> specific event from the story — name the main object, the environment,
+> and how the objects relate to each other. The image must depict the
+> EVENT itself (documents, a report, an order book, a bridge, a
+> courtroom), not just a cryptocurrency symbol with decoration. Vary the
+> composition for each news type. Never use destruction effects, lava,
+> flood, or a giant coin as a universal template — destruction is only
+> allowed when the event itself is destructive AND the destroyed object
+> is the event's own object. Never depict a real person fictitiously
+> performing a specific action; a public figure may only appear in a
+> neutral, documented setting. No logos, numbers, charts, or fake facts.
 > One dominant hero subject centered (at least 40% of frame width)
 > that tells the story in one second. Dominant accent lighting follows
 > the story sentiment — lime green for positive/up news, fire red for
@@ -286,8 +400,12 @@ menampilkan apa yang terjadi di peristiwa tersebut.
 > BANNED COMPOSITIONS (never use): a coin floating in a server room; a
 > glowing object centered in a dark room; a crypto crystal in a futuristic
 > room; a human silhouette staring at a screen; a server-room background.
+> BANNED WORDS (never in the prompt): "server room", "crystal",
+> "silhouette staring", "glowing object in dark room", "floating coin".
 > Vary the environment, camera angle, composition, objects, lighting and
-> visual style for every story.
+> visual style for every story. No legible micro-text or numbers on any
+> object in the scene — labels, boards, screens and chip markings must be
+> blank or abstract.
 >
 > STRICT RULES: The image must contain NO text, NO letters, NO numbers,
 > NO charts, NO logos, NO watermarks, NO price data — pure visual scene
@@ -346,3 +464,33 @@ menampilkan apa yang terjadi di peristiwa tersebut.
   regenerasi per gambar. Bukti celah: chainflip-hack v1 lolos dengan
   prompt "Dark server room" (komposisi terlarang #5) — diregenerasi
   jadi chainflip-hack-v2 dengan setting ruang vault beton polos.
+  v3.3 (23 Nov ~14:05 WIB, audit image-engine): + QC brand mark
+  (wajib ada, cek zona pojok kiri bawah; perbaikan tanpa regenerasi
+  via PIL dari file raw → nama -v2); + uji thumbnail konkret
+  (downscale 64×58 dan lihat); + larangan teks/angka mikro yang
+  terbaca pada objek; + cek kemiripan wajah terhadap foto referensi;
+  + klarifikasi hero ≥40% (subjek atau ensemble hero; koin-hero
+  sendirian wajib ≥40%); + kata terlarang masuk ke template prompt;
+  + aturan penggantian manifest (update di tempat + mapping lama→baru
+  + file lama dipertahankan). Bukti celah: glamsterdam v1 tanpa brand
+  mark lolos QC — diperbaiki jadi glamsterdam-v2.webp (scene sama,
+  mark ditambah via PIL). 5 gambar diuji visual 23 Nov ~14:00 WIB
+  (ETF outflows, Glamsterdam, Chainflip v2, Kalshi, Cramer) — 4 lolos
+  penuh, 1 lolos konten tapi tanpa brand mark (diperbaiki).
+  v3.4 (23 Nov ~14:40 WIB, audit V21 IMAGE ENGINE & DATA QUALITY
+  FIX): + 8 aturan peristiwa spesifik (§1b: baca seluruh isi, satu
+  peristiwa spesifik, objek+lingkungan+hubungan antarobjek, visual
+  = peristiwa bukan simbol, variasi komposisi, larangan template
+  kehancuran/lava/banjir/koin raksasa, larangan tokoh fiktif
+  beraksi, larangan logo/angka/grafik/fakta palsu); + penutup celah
+  v3.2 (§3b: pengecualian "koin fungsional" disalahgunakan);
+  + 3 arah visual baru (§4: ETF outflow, unrealized loss,
+  flash crash); + QC V21 5 kriteria + aturan tolak koin+efek
+  dramatis (§5); + aturan V21 masuk template prompt; + catatan
+  aturan 7 vs gambar wajah existing (menunggu keputusan user,
+  jangan diregenerasi diam-diam). Bukti celah: 3 gambar lolos QC
+  v3.3 padahal satu template (koin raksasa + efek kehancuran merah)
+  — etf-outflows-structural (bendungan retak + banjir merah),
+  strategy-underwater (koin tenggelam + pria generik + wayang acak),
+  kraken-flash-crash-v2 (retakan lava + koin) — ketiganya
+  diregenerasi jadi -v3 dengan konsep peristiwa spesifik.
