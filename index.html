@@ -50,7 +50,21 @@ h1,h2,h3,.display{font-family:Sora,Inter,system-ui,sans-serif}
 header{position:sticky;top:0;z-index:50;background:rgba(4,7,15,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .hd-in{display:flex;align-items:center;gap:26px;height:66px}
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
-.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--orange2),var(--orange));display:grid;place-items:center;color:#fff;font-family:Sora,sans-serif;font-weight:800;font-size:20px;box-shadow:0 4px 16px rgba(247,147,26,.45)}
+/* ---------- mode terang ---------- */
+[data-theme="light"]{--bg:#eef2f8;--bg2:#e6ecf5;--panel:#ffffff;--panel2:#e9eff7;--line:#dbe3ee;--line2:#c2d0e4;--ink:#152238;--mut:#5b6a84}
+[data-theme="light"] body{background:radial-gradient(900px 480px at 85% -10%,rgba(47,123,255,.14),transparent 60%),radial-gradient(700px 420px at 8% 0%,rgba(255,123,55,.10),transparent 55%),var(--bg)}
+[data-theme="light"] header{background:rgba(238,242,248,.85)}
+[data-theme="light"] .ticker{background:rgba(255,255,255,.85)}
+[data-theme="light"] .ticker b{color:var(--ink)}
+[data-theme="light"] .hero:after{color:rgba(21,34,56,.04)}
+[data-theme="light"] .eyebrow{color:#0e7fd6}
+[data-theme="light"] .num{color:#0e7fd6}
+[data-theme="light"] .chip-float{background:rgba(255,255,255,.88);border-color:var(--line)}
+[data-theme="light"] .mkt-card,[data-theme="light"] .news-card,[data-theme="light"] .edu-card,[data-theme="light"] .princ{box-shadow:0 10px 28px rgba(20,50,100,.08)}
+.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--orange2),var(--orange));display:grid;place-items:center;color:#fff;font-family:Sora,sans-serif;font-weight:800;font-size:20px;box-shadow:0 0 0 1.5px rgba(255,255,255,.16),0 4px 16px rgba(247,147,26,.45);flex-shrink:0}
+.logo b .scope{background:linear-gradient(90deg,#ffc27a,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.theme-toggle{display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border-radius:20px;border:1px solid var(--line2);background:var(--panel);color:var(--ink);font-size:12.5px;font-weight:800;white-space:nowrap;cursor:pointer}
+.theme-toggle:hover{border-color:var(--blue)}
 .logo b{font-family:Sora,sans-serif;font-size:19px;letter-spacing:-.3px}
 .logo small{display:block;font-size:9.5px;letter-spacing:.24em;color:var(--mut);font-weight:700;text-transform:uppercase;margin-top:-3px}
 nav.main{display:flex;gap:4px;margin-left:8px}
@@ -212,15 +226,18 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
   .ft-nav .flinks{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
   .hero-stats{gap:18px}
   .chip-float{display:none}
+  .theme-toggle{padding:9px 11px}
+  .theme-toggle .theme-label{display:none}
 }
 </style>
+<script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="light"){document.documentElement.dataset.theme="light";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#eef2f8");}}}catch(e){}</script>
 </head>
 <body>
 <header>
   <div class="wrap hd-in">
     <a class="logo" href="index.html" aria-label="CryptoScope — Beranda">
       <span class="mark">C</span>
-      <span><b>CryptoScope</b><small>See Beyond The Market</small></span>
+      <span><b>Crypto<span class="scope">Scope</span></b><small>See Beyond The Market</small></span>
     </a>
     <nav class="main" id="mainNav" aria-label="Navigasi utama">
       <a href="cryptoscope-1.html#portal">Berita</a>
@@ -229,7 +246,7 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
       <a href="cryptoscope-1.html#market">Market</a>
       <a href="cryptoscope-1.html#analisis">Edukasi</a>
     </nav>
-    <div class="hd-cta"><a class="btn" href="cryptoscope-1.html">Jelajahi →</a></div>
+    <div class="hd-cta"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">🌙 <span class="theme-label">Gelap</span></button><a class="btn" href="cryptoscope-1.html">Jelajahi →</a></div>
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false">☰</button>
   </div>
 </header>
@@ -453,7 +470,7 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
   <div class="wrap">
     <div class="ft-grid">
       <div class="ft-brand">
-        <a class="logo" href="index.html" style="margin-bottom:14px"><span class="mark">C</span><span><b>CryptoScope</b><small>See Beyond The Market</small></span></a>
+        <a class="logo" href="index.html" style="margin-bottom:14px"><span class="mark">C</span><span><b>Crypto<span class="scope">Scope</span></b><small>See Beyond The Market</small></span></a>
         <p>Media berita dan edukasi cryptocurrency berbahasa Indonesia. Berita akurat dan fakta — Bitcoin, altcoin, Web3, dan market, diperbarui 24 jam.</p>
         <div class="socials">
           <a href="https://x.com/sanzsXbt" target="_blank" rel="noopener" aria-label="X CryptoScope">𝕏</a>
@@ -547,6 +564,22 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
       if(d.total_volume&&d.total_volume.usd)set('statVol','$'+(d.total_volume.usd/1e9).toFixed(0)+' Miliar');
       if(d.active_cryptocurrencies)set('statCoins',d.active_cryptocurrencies.toLocaleString('id-ID'));
     }).catch(function(){set('statDom','—');set('statVol','—');});
+
+/* --- Toggle tema gelap/terang (tersimpan di localStorage, sama seperti portal) --- */
+(function(){
+  var btn=document.getElementById("themeToggle");
+  var meta=document.querySelector('meta[name="theme-color"]');
+  function applyTheme(t){
+    document.documentElement.dataset.theme=(t==="light")?"light":"dark";
+    try{localStorage.setItem("cryptoscope-theme",t);}catch(e){}
+    if(meta){meta.setAttribute("content",t==="light"?"#eef2f8":"#04070f");}
+    if(btn){btn.innerHTML=(t==="light")?"☀️ <span class=\"theme-label\">Terang</span>":"🌙 <span class=\"theme-label\">Gelap</span>";}
+  }
+  if(btn){btn.addEventListener("click",function(){
+    applyTheme(document.documentElement.dataset.theme==="light"?"dark":"light");
+  });}
+  applyTheme(document.documentElement.dataset.theme==="light"?"light":"dark");
+})();
 })();
 </script>
 </body>

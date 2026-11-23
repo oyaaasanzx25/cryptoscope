@@ -17,8 +17,8 @@
 a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:245px 1fr}
 .sidebar{background:linear-gradient(165deg,#2e70d7,#1d55b4 70%,#17479b);color:#fff;padding:25px 17px;display:flex;flex-direction:column;gap:25px}
 @media(min-width:651px){.sidebar{position:sticky;top:0;height:100vh;overflow-y:auto}}
-.brand{display:flex;align-items:center;gap:10px;padding:0 9px;font-size:20px;font-weight:850;letter-spacing:-.7px}.brand-mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,#ffb35f,#ff7b37);display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 5px 15px #102e6c55}
-.brand span{color:#ffd39c}.side-label{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:#c6d9ff;padding:0 11px;margin-bottom:6px}
+.brand{display:flex;align-items:center;gap:11px;padding:0 9px}.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#ffb35f,#ff7b37);display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;box-shadow:0 0 0 1.5px #ffffff2e,0 6px 16px #102e6c55;flex-shrink:0}.brand-word{display:flex;flex-direction:column;line-height:1.05}.brand-name{font-size:20px;font-weight:850;letter-spacing:-.7px;color:#fff}.brand-name .brand-scope{background:linear-gradient(90deg,#ffc27a,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:8px;font-weight:700;letter-spacing:2.4px;color:#c6d9ff;margin-top:3px}
+.side-label{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:#c6d9ff;padding:0 11px;margin-bottom:6px}
 .nav{display:grid;gap:5px}.nav a{display:flex;align-items:center;gap:12px;padding:11px;border-radius:10px;color:#e0eaff;font-size:13px;transition:.2s}.nav a:hover,.nav a.active{background:#ffffff20;color:#fff}.ico{width:20px;text-align:center;font-size:16px}
 .sidebar-bottom{margin-top:auto}.tip{padding:14px;border:1px solid #ffffff32;background:#ffffff12;border-radius:13px;font-size:12px;color:#e6efff}.tip b{display:block;color:#fff;margin-bottom:5px}
 .main{min-width:0}.topbar{height:76px;background:#ffffffed;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px;position:sticky;top:0;z-index:4;backdrop-filter:blur(10px)}
@@ -34,7 +34,7 @@ a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.app{min
 .notice{margin-top:18px;background:#fff9ed;border:1px solid #f7e4c6;color:#89653c;border-radius:11px;padding:12px 14px;font-size:11px}
 footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(--line);background:#fff}
 @media(max-width:950px){.app{grid-template-columns:205px 1fr}.quick{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.content{padding:24px}}
-@media(max-width:650px){.app{display:block}.sidebar{padding:13px 14px;gap:12px}.brand{font-size:18px}.nav{display:flex;overflow:auto;gap:4px;padding-bottom:2px}.nav a{white-space:nowrap;padding:8px 10px;font-size:11px}.side-label,.sidebar-bottom{display:none}.topbar{height:60px;padding:0 15px}.top-actions{gap:9px}.top-actions .user-name{display:none}.content{padding:19px 14px 30px}.welcome{align-items:flex-start;flex-direction:column;margin-bottom:17px}.welcome h1{font-size:22px}.date{display:none}.hero{padding:21px;border-radius:15px}.hero-art{width:76px;height:76px;font-size:39px}.hero:after{font-size:125px;right:4%;top:-18px}.hero p{font-size:12px}.quick{gap:9px}.quick-card{padding:13px;min-height:108px}.columns{gap:13px}.section-head{margin-top:22px}.news-item{padding:13px}.news-thumb{width:54px;height:52px}.search input{padding:10px 10px 10px 35px;font-size:12px}.search span{top:6px;left:10px}footer{padding:19px 14px}}
+@media(max-width:650px){.app{display:block}.sidebar{padding:13px 14px;gap:12px}.brand-name{font-size:18px}.nav{display:flex;overflow:auto;gap:4px;padding-bottom:2px}.nav a{white-space:nowrap;padding:8px 10px;font-size:11px}.side-label,.sidebar-bottom{display:none}.topbar{height:60px;padding:0 15px}.top-actions{gap:9px}.top-actions .user-name{display:none}.content{padding:19px 14px 30px}.welcome{align-items:flex-start;flex-direction:column;margin-bottom:17px}.welcome h1{font-size:22px}.date{display:none}.hero{padding:21px;border-radius:15px}.hero-art{width:76px;height:76px;font-size:39px}.hero:after{font-size:125px;right:4%;top:-18px}.hero p{font-size:12px}.quick{gap:9px}.quick-card{padding:13px;min-height:108px}.columns{gap:13px}.section-head{margin-top:22px}.news-item{padding:13px}.news-thumb{width:54px;height:52px}.search input{padding:10px 10px 10px 35px;font-size:12px}.search span{top:6px;left:10px}footer{padding:19px 14px}}
 /* --- Portal berita (tambahan 23 Nov 2026; gaya lama tidak diubah) --- */
 .cat-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
 .pill-cat{border:1px solid var(--line);background:#fff;color:#33415c;font-size:11px;font-weight:800;letter-spacing:.3px;padding:8px 12px;border-radius:20px}
@@ -120,7 +120,7 @@ details.analysis-more summary::-webkit-details-marker{display:none}
 <body>
 <div class="app">
 <aside class="sidebar">
-  <a class="brand" href="#home"><span class="brand-mark">C</span>CRYPTO<span>SCOPE</span></a>
+  <a class="brand" href="#home"><span class="brand-mark">C</span><span class="brand-word"><span class="brand-name">CRYPTO<span class="brand-scope">SCOPE</span></span><span class="brand-tag">SEE BEYOND THE MARKET</span></span></a>
   <div><div class="side-label">Menu utama</div><nav class="nav">
     <a class="active" href="#home"><span class="ico">⌂</span> Beranda</a>
     <a href="#news"><span class="ico">▤</span> Berita Crypto</a>
