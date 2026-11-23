@@ -152,6 +152,17 @@ nav.main a:hover{color:#fff;background:rgba(120,170,255,.1)}
 .edu-card h3{margin:10px 0 8px;font-size:17px;line-height:1.4}
 .edu-card p{margin:0;color:var(--mut);font-size:14px}
 .edu-card .go{margin-top:16px;font-size:13.5px;font-weight:700;color:var(--cyan)}
+/* ---------- tentang ---------- */
+.about-lead{max-width:760px;color:#b8c6dd;font-size:16.5px;margin:0 0 34px}
+.about-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.princ{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:.25s}
+.princ:hover{border-color:var(--line2);transform:translateY(-2px)}
+.princ .num{font-family:Sora,sans-serif;font-size:13px;font-weight:800;color:var(--cyan);letter-spacing:.16em}
+.princ h3{margin:12px 0 6px;font-size:16px}
+.princ p{margin:0;color:var(--mut);font-size:14px}
+.about-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.about-stats b{display:block;font-family:Sora,sans-serif;font-size:22px}
+.about-stats span{font-size:12.5px;color:var(--mut)}
 /* ---------- cta band ---------- */
 .cta-band{margin:90px 0 0;background:linear-gradient(120deg,#0b2a5e,#123a7d 55%,#0b2a5e);border:1px solid rgba(120,170,255,.3);border-radius:24px;padding:52px 40px;text-align:center;position:relative;overflow:hidden}
 .cta-band::before{content:"₿";position:absolute;right:-30px;top:-70px;font-size:280px;font-weight:800;color:rgba(255,255,255,.05);font-family:Sora,sans-serif}
@@ -179,7 +190,7 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
   .coin-wrap{min-height:300px;order:-1}
   .coin{width:190px;height:190px;font-size:110px}
   .break-grid{grid-template-columns:1fr}
-  .mkt-grid,.news-grid,.edu-grid{grid-template-columns:1fr 1fr}
+  .mkt-grid,.news-grid,.edu-grid,.about-grid{grid-template-columns:1fr 1fr}
   .mkt-stats{grid-template-columns:1fr 1fr}
   .ft-grid{grid-template-columns:1fr 1fr}
   nav.main{display:none;position:absolute;top:66px;left:0;right:0;background:#050b16;border-bottom:1px solid var(--line);flex-direction:column;padding:12px 22px 18px;margin:0}
@@ -191,10 +202,14 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
 @media(max-width:600px){
   .sec{padding:60px 0 4px}
   .hero{padding:60px 0 20px}
-  .mkt-grid,.news-grid,.edu-grid{grid-template-columns:1fr}
+  .mkt-grid,.news-grid,.edu-grid,.about-grid{grid-template-columns:1fr}
   .break-main img{height:210px}
   .cta-band{padding:40px 22px}
-  .ft-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .ft-brand{grid-column:1/-1}
+  .ft-about{grid-column:1/-1;order:4}
+  .ft-contact{order:3}
+  .ft-nav .flinks{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
   .hero-stats{gap:18px}
   .chip-float{display:none}
 }
@@ -413,10 +428,31 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
   </div>
 </section>
 
+<section class="sec" id="tentang">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Tentang Kami</span><h2>Media crypto yang mengutamakan fakta</h2></div>
+    </div>
+    <p class="about-lead rv">CryptoScope adalah media berita dan edukasi cryptocurrency berbahasa Indonesia. Kami merangkum perkembangan Bitcoin, altcoin, Web3, dan pasar global — lalu menyajikannya dalam bahasa Indonesia yang jelas, dengan sumber yang selalu dicantumkan dan fakta yang bisa diverifikasi.</p>
+    <div class="about-grid">
+      <div class="princ rv"><span class="num">PRINSIP 01</span><h3>Akurat &amp; Terverifikasi</h3><p>Setiap berita dicek ke sumber aslinya sebelum tayang. Tanpa rumor tanpa sumber, tanpa angka yang dikarang.</p></div>
+      <div class="princ rv"><span class="num">PRINSIP 02</span><h3>Sumber Transparan</h3><p>Nama media sumber dan tautan artikel asli selalu dicantumkan di setiap berita, supaya pembaca bisa memeriksa sendiri kebenarannya.</p></div>
+      <div class="princ rv"><span class="num">PRINSIP 03</span><h3>Update 24 Jam</h3><p>Berita baru masuk ke portal begitu terbit — pagi, sore, atau tengah malam. Tidak menunggu besok.</p></div>
+      <div class="princ rv"><span class="num">PRINSIP 04</span><h3>Independen</h3><p>CryptoScope independen dan tidak terafiliasi dengan bursa, proyek, atau token mana pun. Analisis kami bukan saran investasi.</p></div>
+    </div>
+    <div class="about-stats rv">
+      <div><b>15</b><span>Berita terbaru setiap hari</span></div>
+      <div><b>5</b><span>Sumber global terpercaya</span></div>
+      <div><b>5</b><span>Kategori liputan</span></div>
+      <div><b>24 jam</b><span>Pembaruan tanpa henti</span></div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="ft-grid">
-      <div>
+      <div class="ft-brand">
         <a class="logo" href="index.html" style="margin-bottom:14px"><span class="mark">C</span><span><b>CryptoScope</b><small>See Beyond The Market</small></span></a>
         <p>Media berita dan edukasi cryptocurrency berbahasa Indonesia. Berita akurat dan fakta — Bitcoin, altcoin, Web3, dan market, diperbarui 24 jam.</p>
         <div class="socials">
@@ -424,19 +460,23 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
           <a href="https://instagram.com/ssannz_dill" target="_blank" rel="noopener" aria-label="Instagram CryptoScope">◈</a>
         </div>
       </div>
-      <div>
+      <div class="ft-nav">
         <h4>Navigasi</h4>
+        <div class="flinks">
         <a href="cryptoscope-1.html#portal">Berita</a>
         <a href="cryptoscope-1.html#bitcoin">Bitcoin</a>
         <a href="cryptoscope-1.html#altcoin">Altcoin</a>
         <a href="cryptoscope-1.html#market">Market</a>
         <a href="cryptoscope-1.html#analisis">Edukasi</a>
+        <a href="#tentang">Tentang Kami</a>
+        </div>
       </div>
-      <div>
+      <div class="ft-about">
         <h4>Tentang Kami</h4>
-        <p>CryptoScope adalah portal independen yang merangkum berita crypto global ke dalam bahasa Indonesia — dengan sumber yang selalu dicantumkan dan fakta yang bisa diverifikasi.</p>
+        <p>Media berita dan edukasi crypto berbahasa Indonesia — akurat, transparan, dan diperbarui 24 jam, dari Bitcoin sampai Web3.</p>
+        <a href="#tentang" style="color:#7db4ff;font-weight:700">Selengkapnya tentang kami →</a>
       </div>
-      <div>
+      <div class="ft-contact">
         <h4>Kontak</h4>
         <a href="mailto:iyasanz217@gmail.com">iyasanz217@gmail.com</a>
         <a href="cryptoscope-1.html">Beranda Berita</a>
@@ -504,7 +544,7 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
     .then(function(g){var d=g.data||{};
       if(d.total_market_cap&&d.total_market_cap.usd)set('statMcap','$'+(d.total_market_cap.usd/1e12).toFixed(2).replace('.',',')+' T');
       if(d.market_cap_percentage&&d.market_cap_percentage.btc)set('statDom',d.market_cap_percentage.btc.toFixed(1).replace('.',',')+'%');
-      if(d.total_volume&&d.total_volume.usd)set('statVol','$'+(d.total_volume.usd/1e9).toFixed(0)+' M');
+      if(d.total_volume&&d.total_volume.usd)set('statVol','$'+(d.total_volume.usd/1e9).toFixed(0)+' Miliar');
       if(d.active_cryptocurrencies)set('statCoins',d.active_cryptocurrencies.toLocaleString('id-ID'));
     }).catch(function(){set('statDom','—');set('statVol','—');});
 })();
