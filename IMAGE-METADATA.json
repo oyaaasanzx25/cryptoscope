@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updated": "2026-11-23T13:28:36+07:00",
-  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.2 — context-based, banned compositions, anti-default, QC checklist",
+  "updated": "2026-11-23T14:08:10+07:00",
+  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
   "images": [
     {
       "article_id": "btc-rebound",
@@ -37,12 +37,12 @@
       "category": "crypto",
       "article_title": "Bitcoin anjlok ke $17.000 di Kraken: flash crash pasangan BTC/CAD",
       "article_source": "BeInCrypto",
-      "image_url": "images/2026-11-23/kraken-flash-crash.webp",
-      "image_prompt": "Cracked trading floor with a glowing red fissure, a gold BTC coin on the edge, trading screens in the background — BTC/CAD flash crash on Kraken",
+      "image_url": "images/2026-11-23/kraken-flash-crash-v2.webp",
+      "image_prompt": "Cracked trading floor with a glowing red fissure, a gold BTC coin on the edge, trading screens in the background — BTC/CAD flash crash on Kraken. v3.3 fix 23 Nov ~14:10 WIB: v1 file lacked the PIL brand mark (QC gap, found by brand-mark sweep of all 15 live images) — same scene re-processed from raw media-generation-kraken-flash-crash with brand mark added, no re-generation.",
       "image_provider": "media.generate_image",
-      "generation_timestamp": "2026-11-23T11:02:43+07:00",
+      "generation_timestamp": "2026-11-23T14:10:00+07:00",
       "image_dimensions": "1920x1080",
-      "image_generation_status": "generated",
+      "image_generation_status": "regenerated",
       "image_type": "ai"
     },
     {
@@ -121,10 +121,10 @@
       "category": "top-3",
       "article_title": "Glamsterdam upgrade Ethereum mundur ke Mei 2027",
       "article_source": "—",
-      "image_url": "images/2026-11-23/glamsterdam.webp",
-      "image_prompt": "Amsterdam train station at dawn: arched glass roof, blank departure board, light-train departing, one track under construction with scaffolding and cranes, sunrise over Dutch rooftops — Glamsterdam upgrade delayed to May 2027 (v3 REGENERATION; v2 crystal-in-server-hall violated banned compositions)",
+      "image_url": "images/2026-11-23/glamsterdam-v2.webp",
+      "image_prompt": "Amsterdam train station at dawn: arched glass roof, blank departure board, light-train departing, one track under construction with scaffolding and cranes, sunrise over Dutch rooftops — Glamsterdam upgrade delayed to May 2027 (v3 REGENERATION; v2 crystal-in-server-hall violated banned compositions). v3.3 fix 23 Nov ~14:05 WIB: v1 file lacked the PIL brand mark (QC gap) — same v3 scene re-processed from raw media-generation-glamsterdam-v3 with brand mark added, no re-generation.",
       "image_provider": "media.generate_image",
-      "generation_timestamp": "2026-11-23T11:18:16+07:00",
+      "generation_timestamp": "2026-11-23T14:05:00+07:00",
       "image_dimensions": "1920x1080",
       "image_generation_status": "regenerated",
       "image_type": "ai"
@@ -349,6 +349,20 @@
       "image_prompt": "A giant AI processor chip glowing lime green rises like the sun over the grand hall of a global stock exchange at dawn — the marble trading floor below is cracked from the week's selloff, and lime-green morning light pours through the cracks and across the empty trading desks, while the dark storm clouds of the past week break apart above the glass dome. No faces, no people, no text/numbers/logos. Lime-green accent (positive sentiment), hero chip >=40% of frame, v3.1.",
       "image_provider": "media.generate_image",
       "generation_timestamp": "2026-11-23T13:15:00+07:00",
+      "image_dimensions": "1920x1080",
+      "image_generation_status": "generated",
+      "image_type": "ai"
+    },
+    {
+      "article_id": "hong-kong-licensing",
+      "slug": "hong-kong-licensing",
+      "category": "geopolitik",
+      "article_title": "Hong Kong terbitkan RUU lisensi kustodian dan penasihat kripto",
+      "article_source": "Cointelegraph",
+      "image_url": "images/2026-11-23/hong-kong-licensing.webp",
+      "image_prompt": "Legislative Council building of Hong Kong on the Victoria Harbour waterfront at dusk, grand colonnade lit in warm gold; foreground: one large official government document with a blank cover and a round gold wax seal with a bauhinia flower, paper edges catching golden light; Hong Kong skyline across the harbour under a deep amber sky, calm water reflecting the lights. The document and seal are the hero — the moment a new law is published. No people, no faces, no text. Gold accent for neutral regulatory news.",
+      "image_provider": "media.generate_image",
+      "generation_timestamp": "2026-11-23T14:08:10+07:00",
       "image_dimensions": "1920x1080",
       "image_generation_status": "generated",
       "image_type": "ai"
