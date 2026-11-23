@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2463c7">
+<meta name="description" content="CryptoScope — berita crypto Indonesia: Bitcoin, altcoin, Web3, market, dan analisis. Akurat dan fakta.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CryptoScope">
+<meta property="og:title" content="CryptoScope — See Beyond The Market">
+<meta property="og:description" content="Berita crypto Indonesia: Bitcoin, altcoin, Web3, market, dan analisis. Akurat dan fakta.">
+<meta property="og:url" content="https://cryptoscope-id.web.app/">
 <script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="dark"){document.documentElement.dataset.theme="dark";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#0d1420");}}}catch(e){}</script>
 <title>CryptoScope — See Beyond The Market</title>
 <style>
@@ -106,25 +112,12 @@ details.analysis-more summary::-webkit-details-marker{display:none}
 [data-theme="dark"] .q-purple{background:#241a45;color:#b9a5f5}
 [data-theme="dark"] .quick-card:hover{box-shadow:0 12px 25px rgba(0,0,0,.5)}
 @media(max-width:650px){.theme-toggle{padding:8px 10px}.theme-toggle .theme-label{display:none}}
-/* --- Login gate (23 Nov 2026): pengunjung wajib login Google dulu sebelum membaca portal --- */
-body.gate-locked .app{display:none}
-#loginGate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:20px;background:linear-gradient(165deg,#2e70d7,#1d55b4 70%,#17479b)}
-#loginGate.hidden{display:none}
-.login-card{background:var(--paper);color:var(--ink);border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.35);max-width:380px;width:100%;padding:32px 28px;text-align:center}
-.login-mark{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#ffb35f,#ff7b37);display:grid;place-items:center;color:#fff;font-weight:900;font-size:28px;margin:0 auto 14px;box-shadow:0 5px 15px #102e6c55}
-.login-card h1{margin:0 0 6px;font-size:22px;letter-spacing:-.5px}
-.login-card p{margin:0 0 18px;color:var(--muted);font-size:13px}
-.login-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:#fff;color:#202938;font-size:14px;font-weight:800}
-.login-btn:hover{border-color:#9ab9ee}
-.login-btn:disabled{opacity:.6;cursor:wait}
-.login-note{font-size:11px!important;margin:14px 0 0!important;min-height:15px}
+/* --- Login opsional (23 Nov 2026): tombol Masuk/Keluar di topbar --- */
 .logout-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:20px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:12px;font-weight:800;white-space:nowrap;flex-shrink:0}
 .logout-btn:hover{border-color:#9ab9ee}
 </style>
 </head>
-<body class="gate-locked">
-<div id="loginGate"><div class="login-card"><div class="login-mark">C</div><h1>CryptoScope</h1><p>Login dulu dengan akun Google untuk membaca berita crypto terbaru.</p><button class="login-btn" id="googleLoginBtn" type="button"><span>G</span> Login dengan Google</button><p class="login-note" id="loginMsg"></p></div></div>
-<script>setTimeout(function(){if(!window.__csGateReady){var m=document.getElementById("loginMsg");if(m)m.textContent="Login tidak bisa dimuat (cek koneksi internet), coba refresh halaman.";}},10000);</script>
+<body>
 <div class="app">
 <aside class="sidebar">
   <a class="brand" href="#home"><span class="brand-mark">C</span>CRYPTO<span>SCOPE</span></a>
@@ -142,7 +135,7 @@ body.gate-locked .app{display:none}
 <main class="main" id="home">
 <header class="topbar">
   <label class="search"><span>⌕</span><input id="searchInput" placeholder="Cari berita, aset, atau topik..." aria-label="Cari"></label>
-  <div class="top-actions"><span title="Notifikasi">♧</span><span class="user-name" id="userName">CryptoScope Reader</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">🌙 <span class="theme-label">Gelap</span></button><button class="logout-btn" id="logoutBtn" type="button">Keluar</button><span class="avatar">C</span></div>
+  <div class="top-actions"><span title="Notifikasi">♧</span><span class="user-name" id="userName">CryptoScope Reader</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">🌙 <span class="theme-label">Gelap</span></button><button class="logout-btn" id="loginBtn" type="button">Masuk</button><button class="logout-btn" id="logoutBtn" type="button" style="display:none">Keluar</button><span class="avatar">C</span></div>
 </header>
 <div class="content">
   <section class="welcome"><div><h1>Selamat datang di CryptoScope</h1><p>Pusat informasi dan wawasan dunia cryptocurrency.</p></div><div class="date" id="today">Crypto News Dashboard</div></section>
@@ -1017,7 +1010,6 @@ const firebaseConfig = {
   appId: "1:913089346916:web:7b1346ba6cc7f980028e71",
 };
 
-window.__csGateReady = true;
 let fbApp = null;
 
 try {
@@ -1052,42 +1044,35 @@ try {
   console.warn("Firestore tidak tersedia, memakai data statis:", e);
 }
 
-/* Login gate (23 Nov 2026): pengunjung wajib login Google dulu sebelum membaca portal. */
+/* Login opsional (23 Nov 2026): portal terbuka untuk semua; tombol Masuk di topbar buat yang mau login Google, kayak web lain. */
 (function () {
-  var gate = document.getElementById("loginGate");
-  var loginBtn = document.getElementById("googleLoginBtn");
-  var loginMsg = document.getElementById("loginMsg");
+  var loginBtn = document.getElementById("loginBtn");
   var logoutBtn = document.getElementById("logoutBtn");
   var userName = document.getElementById("userName");
-  if (!fbApp) { if (loginMsg) loginMsg.textContent = "Login tidak bisa dimuat, coba refresh halaman."; return; }
+  if (!fbApp) return;
   try {
     var auth = getAuth(fbApp);
     var provider = new GoogleAuthProvider();
     if (loginBtn) loginBtn.addEventListener("click", async function () {
       loginBtn.disabled = true;
-      if (loginMsg) loginMsg.textContent = "Membuka login Google…";
       try { await signInWithPopup(auth, provider); }
-      catch (e) {
-        if (loginMsg) loginMsg.textContent = "Login gagal, coba lagi. (" + (e && e.code ? e.code : "error") + ")";
-        loginBtn.disabled = false;
-      }
+      catch (e) { console.warn("Login gagal:", e); }
+      loginBtn.disabled = false;
     });
     if (logoutBtn) logoutBtn.addEventListener("click", function () { signOut(auth); });
     onAuthStateChanged(auth, function (user) {
       if (user) {
-        document.body.classList.remove("gate-locked");
-        if (gate) gate.classList.add("hidden");
+        if (loginBtn) loginBtn.style.display = "none";
+        if (logoutBtn) logoutBtn.style.display = "";
         if (userName) userName.textContent = user.displayName || user.email || "CryptoScope Reader";
-        if (loginBtn) loginBtn.disabled = false;
-        if (loginMsg) loginMsg.textContent = "";
       } else {
-        document.body.classList.add("gate-locked");
-        if (gate) gate.classList.remove("hidden");
+        if (loginBtn) loginBtn.style.display = "";
+        if (logoutBtn) logoutBtn.style.display = "none";
+        if (userName) userName.textContent = "CryptoScope Reader";
       }
     });
   } catch (e) {
-    console.warn("Login gate tidak aktif:", e);
-    if (loginMsg) loginMsg.textContent = "Login tidak bisa dimuat, coba refresh halaman.";
+    console.warn("Login tidak aktif:", e);
   }
 })();
 </script>
