@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-11-23T12:50:25+07:00",
+  "updated": "2026-11-23T13:15:00+07:00",
   "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3 — context-based, banned compositions, QC checklist",
   "images": [
     {
@@ -335,6 +335,20 @@
       "image_prompt": "A massive concrete dam wall at dusk, cracked open at its base, with one giant brass Bitcoin coin wedged like a sluice gate in the crack as a torrent of red-tinted water pours out through it into a dark river below; behind the dam, an empty institutional trading hall with rows of dark, switched-off monitors fading into shadow; cold steel-blue dusk sky above contrasted with harsh fire-red emergency light washing over the draining water and the coin. No faces, no people, no text/numbers/logos. Fire-red accent (negative sentiment), hero coin >=40% of frame, v3.1.",
       "image_provider": "media.generate_image",
       "generation_timestamp": "2026-11-23T12:50:25+07:00",
+      "image_dimensions": "1920x1080",
+      "image_generation_status": "generated",
+      "image_type": "ai"
+    },
+    {
+      "article_id": "nvidia-futures-rebound",
+      "slug": "nvidia-futures-rebound",
+      "category": "teknologi",
+      "article_title": "Futures Nvidia melonjak 6%, Nasdaq dan S&P 500 memantul setelah pekan terburuk",
+      "article_source": "BeInCrypto",
+      "image_url": "images/2026-11-23/nvidia-futures-rebound.webp",
+      "image_prompt": "A giant AI processor chip glowing lime green rises like the sun over the grand hall of a global stock exchange at dawn — the marble trading floor below is cracked from the week's selloff, and lime-green morning light pours through the cracks and across the empty trading desks, while the dark storm clouds of the past week break apart above the glass dome. No faces, no people, no text/numbers/logos. Lime-green accent (positive sentiment), hero chip >=40% of frame, v3.1.",
+      "image_provider": "media.generate_image",
+      "generation_timestamp": "2026-11-23T13:15:00+07:00",
       "image_dimensions": "1920x1080",
       "image_generation_status": "generated",
       "image_type": "ai"
