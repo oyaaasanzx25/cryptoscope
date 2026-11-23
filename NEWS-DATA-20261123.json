@@ -110,14 +110,14 @@
   },
   {
    "cat": "teknologi",
-   "title": "Pump.fun dihujani kritik usai minta pengguna impor private key saat hapus login dompet eksternal",
-   "summary": "Platform trading berbasis Solana, Pump.fun, mengakhiri login dompet eksternal di web dan meminta pengguna mengimpor private key agar akun lama yang terhubung dompet tetap bisa dipakai — langkah yang menuai kritik. Mulai 30 November, pengguna dengan sesi dompet yang masih aktif akan diminta menambah login email atau sosial (Google, Apple, GitHub); Pump.fun menyebut kunci yang diimpor dienkripsi di browser dan dipegang penyedia loginnya, Privy. Mantan CEO Mt. Gox Mark Karpelès menilai klaim \"end-to-end encrypted\" itu menyesatkan karena kunci dekripsi dipegang infrastruktur Privy. Migrasi ini hanya berlaku untuk login web; aplikasi seluler, API dan trading tidak terdampak.",
-   "source": "The Block",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 20:54 WIB",
-   "url": "https://www.theblock.co/news/ecosystems/2026-11-23-pump-fun-draws-criticism-over-private-key-imports-as-it-retires-external-wallet-sign-in-on-web-444926",
+   "title": "Senat AS soroti kembalinya Jensen Huang ke Nvidia meski didukung Trump",
+   "summary": "Dewan direksi Nvidia mengembalikan Jensen Huang sebagai CEO pada Senin, 11 hari setelah ia mengundurkan diri menyusul terungkapnya perselingkuhan — termasuk dengan Alice Huang, mantan eksekutif Megaspeed yang diduga pejabat AS bekerja untuk intelijen China. Dewan menyebut menerima masukan dari pejabat senior pemerintah AS dan yakin kembalinya Huang tidak menimbulkan risiko keamanan nasional; Presiden Donald Trump mendorong kembalinya Huang. Anggota Kongres skeptis: Senator Elizabeth Warren, Demokrat senior di Komite Perbankan Senat, menegaskan Huang, para eksekutif Nvidia, dan dewan masih berutang jawaban soal kepatuhan kontrol ekspor AS, dan pemerintahan Trump harus menjelaskan masukan apa yang diberikan dan oleh siapa. Huang dijadwalkan bersaksi tertutup di tiga komite DPR pada 1 Desember dan bersaksi terbuka di Komite Perbankan Senat pada 3 Desember; SEC juga menyelidiki pengungkapan Nvidia.",
+   "source": "CoinDesk",
+   "date": "24 Nov 2026",
+   "published": "24 Nov 2026",
+   "url": "https://www.coindesk.com/business/2026/11/23/nvidia-s-jensen-huang-faces-senate-scrutiny-despite-trump-backed-return-as-ceo",
    "type": "fakta",
-   "img": "images/2026-11-23/pump-fun-private-key-imports.webp"
+   "img": ""
   },
   {
    "cat": "teknologi",
@@ -154,25 +154,25 @@
   },
   {
    "cat": "breaking",
-   "title": "Peretas Binance pindahkan hampir $600 juta ETH lewat THORChain dan Chainflip",
-   "summary": "Dompet terkait peretasan Binance memindahkan sekitar $248 juta ETH pada Kamis dan $346 juta lagi pada Jumat, sebagian lewat THORChain dan Chainflip. Volume swap THORChain melonjak ke $239 juta dalam 24 jam.",
-   "source": "Cointelegraph",
-   "date": "22 Nov 2026",
-   "published": "23 Nov 2026 · 05:47 WIB",
-   "url": "https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest",
+   "title": "Hakim New York tolak blokir Kalshi untuk sementara, bursa prediksi tetap beroperasi",
+   "summary": "Hakim Melissa Crane dari Mahkamah Agung New York County menolak — untuk sementara — permintaan Jaksa Agung New York Letitia James untuk memerintahkan Kalshi berhenti beroperasi di negara bagian itu. James menggugat Kalshi sejak 31 Juli 2026 dengan tuduhan menjalankan bisnis judi tanpa lisensi; perintah yang diminta melarang Kalshi beroperasi 'di dalam atau dari' New York, mencakup kontrak olahraga, budaya, dan pemilu, serta melarang pengguna di bawah 21 tahun. Kalshi memperingatkan perintah itu akan menutup bursanya untuk semua pelanggan karena kantor pusatnya di New York dan bisa memaksa likuidasi posisi terbuka. Sebelumnya, hakim federal Lorna Schofield pada Jumat menolak permintaan darurat CFTC untuk memblokir penegakan hukum New York, dan hakim Vernon Broderick mengembalikan perkara itu ke pengadilan negara bagian pada Kamis. Sengketa yurisdiksi masih berlanjut; belum ada putusan soal apakah kontrak Kalshi melanggar hukum judi negara bagian.",
+   "source": "CoinDesk",
+   "date": "23 Nov 2026",
+   "published": "23 Nov 2026",
+   "url": "https://www.coindesk.com/policy/2026/11/23/new-york-judge-declines-to-block-kalshi-from-operating-in-the-state-for-now",
    "type": "fakta",
-   "img": "images/2026-11-23/binance-hackers.webp"
+   "img": ""
   },
   {
    "cat": "breaking",
-   "title": "Jembatan ACE Fusionist dieksploitasi, $2 juta dicuri lalu cadangan $3,7 juta dikuras",
-   "summary": "Penyerang mengeksploitasi akses bridge-minter Fusionist di BNB Chain dan mencetak token ACE palsu hingga kuadriliun, lalu menjualnya sekitar $2 juta dan mencuci $1,87 juta lewat Tornado Cash. Harga ACE anjlok, lalu trader membeli token murah itu dan menukarnya lewat jembatan hingga menguras 53,7 juta ACE asli senilai $3,7 juta — jembatan tersisa 0,08 ACE. Gate membatalkan perdagangan ACE/USDT pada rentang waktu serangan.",
+   "title": "Aturan bursa prediksi CFTC masuk tinjauan Gedung Putih di tengah sengketa yurisdiksi negara bagian-federal",
+   "summary": "Komisi Perdagangan Berjangka AS (CFTC) mengajukan rancangan aturan bursa prediksi ke Kantor Informasi dan Urusan Regulasi (OIRA) — divisi Kantor Manajemen dan Anggaran Gedung Putih — untuk ditinjau sebelum dipublikasikan. Aturan yang diusulkan sejak Juni ini menegaskan yurisdiksi CFTC atas kontrak event di bursa prediksi dan akan membatasi kontrak terkait perjudian, perang, terorisme, dan pembunuhan; lebih dari 1.300 komentar publik sudah masuk. Ketua CFTC Michael Selig bersikeras lembaganya memegang 'yurisdiksi eksklusif' karena kontrak prediksi adalah swap atas peristiwa masa depan, sementara negara-negara bagian menilainya sebagai bisnis judi ilegal yang menghindari regulasi dan pajak. Sengketa ini sudah menjadi gugatan di hampir belasan negara bagian dengan putusan pengadilan yang saling bertentangan; koalisi 44 jaksa agung menentang aturan itu pada Jumat, New Jersey meminta Mahkamah Agung AS turun tangan, dan mantan Komisioner Christy Goldsmith Romero menilai perkara ini bisa berakhir di Mahkamah Agung.",
    "source": "The Block",
-   "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 06:17 WIB",
-   "url": "https://www.theblock.co/news/defi/2026-11-22-a-2-million-exploit-leads-to-a-3-7-million-free-for-all-as-traders-empty-fusionists-ace-bridge-444838",
+   "date": "24 Nov 2026",
+   "published": "24 Nov 2026 · 01:30 WIB",
+   "url": "https://www.theblock.co/news/regulation/2026-11-23-cftc-prediction-market-rules-advance-white-house-review-amid-state-federal-jurisdiction-fight-445384",
    "type": "fakta",
-   "img": "images/2026-11-23/fusionist-ace-exploit.webp"
+   "img": "images/2026-11-24/cftc-prediction-market-rules.webp"
   }
  ]
 }
