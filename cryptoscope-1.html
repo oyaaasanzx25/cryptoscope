@@ -27,7 +27,7 @@ a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.app{min
 footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(--line);background:#fff}
 @media(max-width:950px){.app{grid-template-columns:205px 1fr}.quick{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.content{padding:24px}}
 @media(max-width:650px){.app{display:block}.sidebar{padding:13px 14px;gap:12px}.brand{font-size:18px}.nav{display:flex;overflow:auto;gap:4px;padding-bottom:2px}.nav a{white-space:nowrap;padding:8px 10px;font-size:11px}.side-label,.sidebar-bottom{display:none}.topbar{height:60px;padding:0 15px}.top-actions{gap:9px}.top-actions .user-name{display:none}.content{padding:19px 14px 30px}.welcome{align-items:flex-start;flex-direction:column;margin-bottom:17px}.welcome h1{font-size:22px}.date{display:none}.hero{padding:21px;border-radius:15px}.hero-art{width:76px;height:76px;font-size:39px}.hero:after{font-size:125px;right:4%;top:-18px}.hero p{font-size:12px}.quick{gap:9px}.quick-card{padding:13px;min-height:108px}.columns{gap:13px}.section-head{margin-top:22px}.news-item{padding:13px}.news-thumb{width:54px;height:52px}.search input{padding:10px 10px 10px 35px;font-size:12px}.search span{top:6px;left:10px}footer{padding:19px 14px}}
-/* --- Portal berita & Integrasi AI (tambahan 23 Nov 2026; gaya lama tidak diubah) --- */
+/* --- Portal berita (tambahan 23 Nov 2026; gaya lama tidak diubah) --- */
 .cat-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
 .pill-cat{border:1px solid var(--line);background:#fff;color:#33415c;font-size:11px;font-weight:800;letter-spacing:.3px;padding:8px 12px;border-radius:20px}
 .pill-cat:hover{border-color:#9ab9ee}
@@ -125,25 +125,7 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
     </div>
     <div class="panel"><div class="news-list" id="catNewsList"></div></div>
   </section>
-  <section id="ai">
-    <div class="section-head"><h3>Integrasi AI</h3><span style="font-size:12px;color:var(--muted)">Status: template lokal — AI belum aktif</span></div>
-    <div class="panel"><div class="panel-head"><b>Ringkasan &amp; judul otomatis</b><small>Disiapkan untuk API backend</small></div>
-    <div style="padding:16px 18px">
-      <p style="margin:0 0 10px;font-size:12px;color:#33415c">Tombol di bawah memakai backend proxy kalau sudah dikonfigurasi (AI_CONFIG.endpoint). Selama belum aktif, hasilnya memakai template lokal dari berita terpilih — dilabeli [Template], bukan hasil AI. API key disimpan di server dan <b>tidak pernah</b> disimpan di frontend atau di file ini.</p>
-      <div class="btn-row" style="margin-bottom:12px">
-        <button class="btn btn-primary" id="btnAiSummary" type="button">Ringkas Berita</button>
-        <button class="btn" id="btnAiTitle" type="button">Buat Judul Alternatif</button>
-        <button class="btn" id="btnAiCaption" type="button">Buat Caption</button>
-        <button class="btn" id="btnAiTranslate" type="button">Terjemahkan (EN)</button>
-      </div>
-      <div class="codebox" id="aiResult">AI memakai berita pertama dari kategori yang sedang aktif. Tekan salah satu tombol di atas. Hasil tampil di sini.</div>
-      <p style="margin:10px 0 0;font-size:11px;color:var(--muted)">Kontrak proxy: POST ke endpoint dengan JSON {task: "summary"|"title"|"caption"|"translate", text: "..."} → balas JSON {result: "..."}. Aktifkan dengan mengisi AI_CONFIG.endpoint di file ini (tanpa API key).</p>
-      <div class="codebox">AI_CONFIG = { enabled: false, provider: null, endpoint: '' }
-// Ringkasan otomatis + judul/caption via backend proxy.
-// Frontend tidak menyimpan API key.</div>
-    </div></div>
-  </section>
-  <div class="notice" id="analysis">Berita diperbarui harian oleh agen CryptoScope; harga BTC/ETH/SOL live dari CoinGecko (jam update tertera di panel market). Berita portal bisa dikelola lewat halaman Admin (database Firestore). AI belum aktif — tombol AI memakai template lokal sampai backend proxy dikonfigurasi. Selalu periksa sumber informasi; konten bukan saran investasi.</div>
+  <div class="notice" id="analysis">Berita diperbarui harian oleh agen CryptoScope; harga BTC/ETH/SOL live dari CoinGecko (jam update tertera di panel market). Berita portal bisa dikelola lewat halaman Admin (database Firestore). Selalu periksa sumber informasi; konten bukan saran investasi.</div>
 </div>
 <footer><b style="color:#334155">CRYPTOSCOPE</b> &nbsp;·&nbsp; See Beyond The Market. &nbsp;·&nbsp; Media informasi crypto berbahasa Indonesia.</footer>
 </main></div>
@@ -158,11 +140,6 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 </div>
 <script>
 document.getElementById('today').textContent=new Intl.DateTimeFormat('id-ID',{dateStyle:'full'}).format(new Date());
-
-/* Integrasi AI — BELUM AKTIF. Tidak ada API key, token, atau URL API di file ini.
-   Ringkasan otomatis + pembuatan judul/caption nantinya lewat backend proxy:
-   server yang memegang API key, frontend hanya memanggil endpoint backend. */
-const AI_CONFIG={enabled:false,provider:null,endpoint:'',notes:'Ringkasan otomatis dan judul/caption via backend proxy; API key disimpan di server, tidak pernah di frontend.'};
 
 /* Data berita 23 Nov 2026 — diriset dari pencarian berita, URL sumber verbatim.
    Sumber utama (perintah user 23 Nov 2026): CoinDesk, Cointelegraph, The Block, Decrypt, Reuters, BeInCrypto.
@@ -299,10 +276,6 @@ document.querySelectorAll(".quick-card").forEach(function(a){
    — foto itu yang tampil di kartu. Kalau sebuah berita tidak punya foto yang bisa
    dipakai, gambar digambar prosedural gaya referensi gelap dari data beritanya.
    Ketuk gambar untuk lihat besar + unduh. */
-function currentNews(){
-  const items=NEWS_DATA.filter(function(x){return (activeCat==="all"||x.cat===activeCat)&&(!activeType||x.type===activeType);});
-  return items[0]||NEWS_DATA[0];
-}
 function graphicDataURL(item,W,H){
   try{
     const cv=document.createElement("canvas");
@@ -586,11 +559,6 @@ function drawVisual(ctx,cat,x,y,w,h,W,title){
   ctx.fillStyle="rgba(255,123,55,0.7)";ctx.fillRect(x,y,w,2);
 }
 
-const SOCIAL_TAGS={crypto:["#Bitcoin","#Crypto","#CryptoScope","#BTC"],geopolitik:["#Geopolitik","#Dunia","#CryptoScope"],ekonomi:["#Ekonomi","#BI","#IHSG","#CryptoScope"],teknologi:["#AI","#Teknologi","#CryptoScope"],breaking:["#BreakingNews","#CryptoScope"]};
-function buildSocial(n){
-  const tags=(SOCIAL_TAGS[n.cat]||SOCIAL_TAGS.crypto).join(" ");
-  return n.title+" \u2014 "+n.summary+" Baca selengkapnya di CryptoScope. Sumber: "+n.source+". "+tags;
-}
 function drawAccentLines(ctx,text,x,y,maxW,lh,maxLines){
   const words=text.split(/\s+/);
   const lines=[];let line=[];let lw=0;
@@ -738,32 +706,6 @@ async function loadMarket(){
   }
 }
 loadMarket();
-
-/* Tombol AI: pakai backend proxy kalau AI_CONFIG.endpoint diisi; selama belum
-   aktif, hasil memakai template lokal dan dilabeli [Template], bukan hasil AI. */
-async function aiTask(task){
-  const res=document.getElementById("aiResult");
-  if(!res) return;
-  const n=currentNews();
-  const text=n.title+". "+n.summary;
-  if(AI_CONFIG.enabled&&AI_CONFIG.endpoint){
-    res.textContent="Memproses via backend\u2026";
-    try{
-      const r=await fetch(AI_CONFIG.endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({task:task,text:text})});
-      const d=await r.json();
-      res.textContent=d.result||"Backend tidak mengembalikan hasil.";
-    }catch(e){res.textContent="Gagal menghubungi backend AI: "+e.message;}
-    return;
-  }
-  if(task==="summary"){res.textContent="[Template] "+n.summary;}
-  else if(task==="title"){res.textContent="[Template] Judul alternatif: "+n.title;}
-  else if(task==="caption"){res.textContent="[Template] "+buildSocial(n);}
-  else if(task==="translate"){res.textContent="[Template] Terjemahan butuh AI aktif. Ringkasan asli: "+n.summary;}
-}
-["btnAiSummary","btnAiTitle","btnAiCaption","btnAiTranslate"].forEach(function(id){
-  const b=document.getElementById(id);
-  if(b) b.addEventListener("click",function(){ aiTask(id.replace("btnAi","").toLowerCase()); });
-});
 
 renderCatNews();
 wireTopNews();
