@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T18:05:00+07:00",
+ "updated": "2026-11-23T18:17:38+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -476,6 +476,20 @@
    "image_provider": "CoinDesk (og:image, downloaded to repo)",
    "generation_timestamp": "2026-11-23T18:05:00+07:00",
    "image_dimensions": "1075x605",
+   "image_generation_status": "external",
+   "image_type": "external"
+  },
+  {
+   "article_id": "bitcoin-rebounds-61k",
+   "slug": "bitcoin-rebounds-61k",
+   "category": "crypto",
+   "article_title": "Bitcoin rebound ke $61.300 usai anjlok ke level terendah sejak September 2024",
+   "article_source": "Decrypt",
+   "image_url": "images/2026-11-23/bitcoin-rebounds-61k.webp",
+   "image_prompt": "Real photo/graphic from source og:image (Bitcoin symbol with rising orange arrows on black background) — not AI generated; photo verified visually before use: clean, no logo of another media outlet, no watermark, no text overlay",
+   "image_provider": "Decrypt (og:image, downloaded to repo)",
+   "generation_timestamp": "2026-11-23T18:17:38+07:00",
+   "image_dimensions": "1366x455",
    "image_generation_status": "external",
    "image_type": "external"
   }
