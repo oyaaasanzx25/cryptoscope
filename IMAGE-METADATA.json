@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T19:25:00+07:00",
+ "updated": "2026-11-23T19:06:00+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -559,20 +559,6 @@
    "image_prompt": "Bright sunlit marble hall of a classical European central bank with tall stone columns; long stone table in center foreground with a neat stack of formal bond certificates, one open document on top showing a subtle abstract linked-block pattern with no readable text; at the far end a massive round bank vault door stands wide open with warm golden light pouring out; documents and open glowing vault connected by a soft golden light path across the marble floor. No people, no faces, no coins. Gold accent lighting (neutral sentiment). 16:9 editorial image, no text/numbers/logos. Concept: ECB approves tokenized securities from DLT Pilot Regime platforms as Eurosystem collateral from June 2027. QC: stranger test passed (open central-bank vault + bond documents = securities accepted as collateral); brand mark 'CryptoScope' overlaid via PIL bottom-left (font 34); 16:9 center crop; thumbnail 64x58 checked, vault glow + document stack readable. og:image rejected (branded Cointelegraph cartoon illustration with watermark + big BANK text). NOTE: an earlier parallel worker wrote a different concept (EU star ring + tokens) into this entry; the file on disk is the marble-hall/vault image described here — prompt corrected 19:06 WIB to match the actual file.",
    "image_provider": "media.generate_image",
    "generation_timestamp": "2026-11-23T19:04:00+07:00",
-   "image_dimensions": "1920x1080",
-   "image_generation_status": "generated",
-   "image_type": "ai"
-  },
-  {
-   "article_id": "cross-river-btc-loans",
-   "slug": "cross-river-btc-loans",
-   "category": "ekonomi",
-   "article_title": "Cross River Bank luncurkan pinjaman beragunan Bitcoin hingga $250.000 bersama LendingUSA",
-   "article_source": "The Block",
-   "image_url": "images/2026-11-23/cross-river-btc-loans.webp",
-   "image_prompt": "Cinematic photorealistic 3D editorial artwork, 16:9 landscape. A bright modern bank office in soft daylight: at the center of the frame, a large wooden desk holds a neat stack of loan agreement documents, with one small gold bitcoin coin resting on top of the papers as collateral — the coin is small and functional, not giant. Behind the desk, a massive round bank vault door stands wide open with warm golden light pouring out. On the side of the desk, a laptop shows a blank loan application form with no readable text. Tall windows let in soft daylight, professional calm institutional atmosphere, gold accent lighting (neutral sentiment). 16:9 editorial image, no text/numbers/logos. Concept: Cross River Bank (as loan originator) + LendingUSA launch bitcoin-secured loans of $10,000–$250,000 at 30/50/70% LTV, borrowers keep their BTC, qualified third-party custodian holds collateral. QC: stranger test passed (open bank vault + loan documents + small BTC coin = bitcoin-backed bank loan in one second); brand mark 'CryptoScope' overlaid via PIL bottom-left (font 34); 16:9 center crop to 1920x1080; thumbnail 64x58 checked. og:image rejected (generic giant pink BTC coin stock graphic from The Block, not the event).",
-   "image_provider": "media.generate_image",
-   "generation_timestamp": "2026-11-23T19:25:00+07:00",
    "image_dimensions": "1920x1080",
    "image_generation_status": "generated",
    "image_type": "ai"
