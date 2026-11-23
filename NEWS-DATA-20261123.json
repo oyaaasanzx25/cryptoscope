@@ -110,12 +110,12 @@
     },
     {
       "cat": "teknologi",
-      "title": "Senat AS soroti kembalinya Jensen Huang ke Nvidia meski didukung Trump",
-      "summary": "Dewan direksi Nvidia mengembalikan Jensen Huang sebagai CEO pada Senin, 11 hari setelah ia mengundurkan diri menyusul terungkapnya perselingkuhan — termasuk dengan Alice Huang, mantan eksekutif Megaspeed yang diduga pejabat AS bekerja untuk intelijen China. Dewan menyebut menerima masukan dari pejabat senior pemerintah AS dan yakin kembalinya Huang tidak menimbulkan risiko keamanan nasional; Presiden Donald Trump mendorong kembalinya Huang. Anggota Kongres skeptis: Senator Elizabeth Warren, Demokrat senior di Komite Perbankan Senat, menegaskan Huang, para eksekutif Nvidia, dan dewan masih berutang jawaban soal kepatuhan kontrol ekspor AS, dan pemerintahan Trump harus menjelaskan masukan apa yang diberikan dan oleh siapa. Huang dijadwalkan bersaksi tertutup di tiga komite DPR pada 1 Desember dan bersaksi terbuka di Komite Perbankan Senat pada 3 Desember; SEC juga menyelidiki pengungkapan Nvidia.",
-      "source": "CoinDesk",
+      "title": "Kepala AI Meta peringatkan superinteligensi makin dekat usai Claude bantu buktikan Hipotesis Riemann",
+      "summary": "Kepala AI Meta Alexandr Wang memperingatkan dalam esai 'Superintelligence is Arriving' bahwa superinteligensi sudah mendekat dan manusia mungkin tidak bisa mengendalikan sistem yang jauh lebih pintar dari dirinya; setahun ke depan, katanya, akan menentukan masa depan hidup berdampingan dengan mesin yang bisa memperbaiki dirinya sendiri. Pemicunya: matematikawan Anthropic Levent Alpöge mengumumkan Jumat bahwa ia bersama Claude telah membuktikan Hipotesis Riemann — konjektur soal bilangan prima yang tak terpecahkan sejak 1859 — lewat sekitar 17 juta baris kode Lean; komunitas Lean dan Mathlib mengesahkan Sabtu bahwa kode itu membuktikan pernyataan yang benar, meski penjelasan matematikanya dalam bentuk konvensional masih dikerjakan. Wang menyebut bukti itu pencapaian intelektual yang lebih besar dari bom atom dan menilai keterbatasan utama AI kini bukan lagi daya penalaran, melainkan pengetahuan spesialis dan perkakas — dan ia khawatir siklus perbaikan-diri rekursif bisa berjalan lebih cepat dari pengawasan manusia. Ia menolak 'penyerahan' otomatis masyarakat ke AI, namun kritikus seperti profesor NYU Andrew Gordon Wilson menilai lompatan itu berlebihan: membuktikan konjektur yang ada berbeda dari menciptakan kerangka matematika baru seperti kalkulus atau relativitas.",
+      "source": "Decrypt",
       "date": "24 Nov 2026",
-      "published": "24 Nov 2026",
-      "url": "https://www.coindesk.com/business/2026/11/23/nvidia-s-jensen-huang-faces-senate-scrutiny-despite-trump-backed-return-as-ceo",
+      "published": "24 Nov 2026 · 04:16 WIB",
+      "url": "https://decrypt.co/383846/why-one-math-proof-ai-experts-warning-humans-lose-control",
       "type": "fakta",
       "img": ""
     },
