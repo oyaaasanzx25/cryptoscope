@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T18:17:38+07:00",
+ "updated": "2026-11-23T18:20:51+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -485,13 +485,13 @@
    "category": "crypto",
    "article_title": "Bitcoin rebound ke $61.300 usai anjlok ke level terendah sejak September 2024",
    "article_source": "Decrypt",
-   "image_url": "images/2026-11-23/bitcoin-rebounds-61k.webp",
-   "image_prompt": "Real photo/graphic from source og:image (Bitcoin symbol with rising orange arrows on black background) — not AI generated; photo verified visually before use: clean, no logo of another media outlet, no watermark, no text overlay",
-   "image_provider": "Decrypt (og:image, downloaded to repo)",
-   "generation_timestamp": "2026-11-23T18:17:38+07:00",
-   "image_dimensions": "1366x455",
-   "image_generation_status": "external",
-   "image_type": "external"
+   "image_url": "images/2026-11-23/bitcoin-rebounds-61k-v2.webp",
+   "image_prompt": "v3.5 roller-coaster concept: a roller-coaster track in a financial district at dawn dives steeply into a dark storm-grey valley (weekend plunge to $55,298, lowest since Sep 2024) then sweeps sharply back up toward lime-green dawn light (Monday rebound above $61,300); glass towers behind, storm left, sunrise right; no people, no text/numbers/charts/logos. Replaces v1 external graphic (generic rising-arrows Bitcoin symbol, provenance unverified) — the true Decrypt og:image was a branded/watermarked coin photo, rejected per audit rules.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T18:20:51+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "regenerated",
+   "image_type": "ai"
   }
  ]
 }
