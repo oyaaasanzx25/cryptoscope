@@ -42,6 +42,10 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 .news-src b{display:inline;color:#33415c}
 .news-src a{color:var(--blue);font-weight:700;white-space:nowrap}
 .cat-empty{padding:20px 18px;color:var(--muted);font-size:12px;text-align:center}
+.analysis-body{padding:16px 18px;font-size:12px}
+.analysis-body h4{margin:14px 0 4px;font-size:12px;color:#33415c}
+.analysis-body h4:first-child{margin-top:0}
+.analysis-body p{margin:0 0 8px;color:#33415c}
 .field{margin-bottom:12px}
 .field label{display:block;font-size:11px;font-weight:800;color:#33415c;margin-bottom:5px}
 .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#f7f9fc;border-radius:10px;padding:10px 12px;outline:none;font:inherit;color:var(--ink)}
@@ -70,7 +74,7 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 <body>
 <div class="app">
 <aside class="sidebar">
-  <a class="brand" href="#"><span class="brand-mark">C</span>CRYPTO<span>SCOPE</span></a>
+  <a class="brand" href="#home"><span class="brand-mark">C</span>CRYPTO<span>SCOPE</span></a>
   <div><div class="side-label">Menu utama</div><nav class="nav">
     <a class="active" href="#home"><span class="ico">⌂</span> Beranda</a>
     <a href="#news"><span class="ico">▤</span> Berita Crypto</a>
@@ -78,7 +82,7 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
     <a href="#bitcoin"><span class="ico">₿</span> Bitcoin</a>
     <a href="#altcoin"><span class="ico">◆</span> Altcoin</a>
     <a href="#web3"><span class="ico">◇</span> Airdrop & Web3</a>
-    <a href="#analysis"><span class="ico">◷</span> Analisis</a>
+    <a href="#analisis"><span class="ico">◷</span> Analisis</a>
   </nav></div>
   <div class="sidebar-bottom"><div class="side-label">Tentang</div><div class="tip"><b>See Beyond The Market.</b>Informasi crypto Indonesia, disajikan lebih jelas dan mudah dipahami.</div></div>
 </aside>
@@ -90,29 +94,47 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 <div class="content">
   <section class="welcome"><div><h1>Selamat datang di CryptoScope</h1><p>Pusat informasi dan wawasan dunia cryptocurrency.</p></div><div class="date" id="today">Crypto News Dashboard</div></section>
   <section class="hero"><div class="hero-copy"><div class="eyebrow">CRYPTO NEWS · MARKET · WEB3</div><h2>Lihat lebih jauh.<br>Pahami pergerakan crypto.</h2><p>Berita, analisis, dan perkembangan aset digital dalam satu tempat.</p><a class="hero-btn" href="#news">Jelajahi berita&nbsp; →</a></div><div class="hero-art">₿</div></section>
-  <div class="section-head"><h3>Jelajahi kategori</h3><a href="#news">Lihat semua</a></div>
+  <section id="breaking">
+    <div class="section-head"><h3>Breaking News</h3><a href="#portal" id="breakingAll">Semua breaking →</a></div>
+    <div class="panel"><div class="news-list" id="breakingList"><div class="cat-empty">Memuat breaking news…</div></div></div>
+    <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Kriteria: berita berkategori Breaking yang terbit paling lama 3 hari sebelum berita terbaru di portal. Kalau tidak ada yang memenuhi syarat, seksi ini menampilkan "tidak ada breaking saat ini" — bukan berita lama yang dipaksakan jadi breaking.</p>
+  </section>
+  <div class="section-head"><h3>Jelajahi kategori</h3><a href="#news" id="seeAllCats">Lihat semua</a></div>
   <section class="quick">
     <a class="quick-card" href="#bitcoin"><span class="quick-icon q-orange">₿</span><b>Bitcoin</b><small>Berita dan perkembangan BTC</small></a>
     <a class="quick-card" href="#altcoin"><span class="quick-icon q-blue">◆</span><b>Altcoin</b><small>Ethereum dan aset lainnya</small></a>
     <a class="quick-card" href="#web3"><span class="quick-icon q-green">◇</span><b>Airdrop & Web3</b><small>Proyek dan ekosistem baru</small></a>
-    <a class="quick-card" href="#analysis"><span class="quick-icon q-purple">◷</span><b>Analisis</b><small>Wawasan dan ulasan pasar</small></a>
+    <a class="quick-card" href="#analisis"><span class="quick-icon q-purple">◷</span><b>Analisis</b><small>Wawasan dan ulasan pasar</small></a>
   </section>
   <div class="columns">
-    <section id="news"><div class="section-head"><h3>Berita terbaru</h3><a href="#news">Semua berita →</a></div>
+    <section id="news"><div class="section-head"><h3>Berita terbaru</h3><a href="#news" id="newsAll">Semua berita →</a></div>
       <div class="panel"><div class="panel-head"><b>Update CryptoScope</b><small id="newsStamp">Diperbarui 23 Nov 2026</small></div><div class="news-list" id="newsList">
         <article class="news-item"><div class="news-thumb">₿<img src="images/2026-11-23/etf-outflows-structural.webp" alt=""></div><div><span class="pill">BITCOIN</span><b>ETF Bitcoin keluar $1,79 miliar sepekan, analis: arus keluar kini "struktural"</b><small>$1,79 miliar keluar sepekan, terbesar sejak Juni · IBIT pimpin $1,37 miliar · BTC ke titik terendah siklus $55.100 · 23 Nov 2026</small></div></article>
-        <article class="news-item" id="altcoin"><div class="news-thumb">◆<img src="images/2026-11-23/glamsterdam.webp" alt=""></div><div><span class="pill">ALTCOIN</span><b>Upgrade Glamsterdam Ethereum bisa mundur ke Mei 2027</b><small>All Core Devs Call sinyal aktivasi mungkin baru Mei 2027 · Ethlabs dorong Ethereum post-quantum dan AI-proof · 22 Nov 2026</small></div></article>
+        <article class="news-item" id="altcoin"><div class="news-thumb">◆<img src="images/2026-11-23/glamsterdam-v2.webp" alt=""></div><div><span class="pill">ALTCOIN</span><b>Upgrade Glamsterdam Ethereum bisa mundur ke Mei 2027</b><small>All Core Devs Call sinyal aktivasi mungkin baru Mei 2027 · Ethlabs dorong Ethereum post-quantum dan AI-proof · 22 Nov 2026</small></div></article>
         <article class="news-item" id="web3"><div class="news-thumb">◇<img src="images/2026-11-23/fusionist-ace-exploit.webp" alt=""></div><div><span class="pill">WEB3</span><b>Jembatan ACE Fusionist dieksploitasi, $2 juta dicuri lalu cadangan $3,7 juta dikuras</b><small>Token ACE palsu dicetak kuadriliun · 53,7 juta ACE asli dikuras · jembatan tersisa 0,08 ACE · 23 Nov 2026</small></div></article>
       </div></div>
     </section>
-    <section id="market"><div class="section-head"><h3>Pantauan market</h3><a href="#market">Detail →</a></div>
+    <section id="market"><div class="section-head"><h3>Pantauan market</h3><a href="#market" id="marketDetail">Detail →</a></div>
       <div class="panel"><div class="panel-head"><b>Aset populer</b><small id="marketStamp" data-price-date="23 Nov 2026">Memuat harga live…</small></div><div class="market-list">
         <div class="asset" id="bitcoin"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Bitcoin</b><small>BTC</small></div></div><div class="asset-price" id="price-btc">$61.456<small>+4,31% hari ini</small></div></div>
         <div class="asset"><div class="asset-left"><span class="asset-icon">◆</span><div><b>Ethereum</b><small>ETH</small></div></div><div class="asset-price" id="price-eth">$1.722<small>+3,96% hari ini</small></div></div>
         <div class="asset"><div class="asset-left"><span class="asset-icon">◎</span><div><b>Solana</b><small>SOL</small></div></div><div class="asset-price" id="price-sol">$71,71<small>+4,22% hari ini</small></div></div>
       </div></div>
+      <div class="panel" style="margin-top:12px"><div class="panel-head"><b>Gambaran pasar</b><small id="globalStamp">Memuat data pasar…</small></div><div class="market-list">
+        <div class="asset"><div class="asset-left"><span class="asset-icon">◍</span><div><b>Total market cap</b><small>Seluruh aset crypto · USD</small></div></div><div class="asset-price" id="global-mcap">—<small>—</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Dominasi Bitcoin</b><small>Pangsa BTC dari total market cap</small></div></div><div class="asset-price" id="global-btc-dom">—<small>—</small></div></div>
+      </div></div>
     </section>
   </div>
+  <section id="trending">
+    <div class="section-head"><h3>Trending</h3><a href="#portal" id="trendingAll">Semua berita →</a></div>
+    <div class="panel"><div class="news-list">
+      <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="0" aria-label="Lihat gambar: ETF Bitcoin keluar $1,79 miliar sepekan"><div class="news-thumb">₿<img src="images/2026-11-23/etf-outflows-structural.webp" alt="" loading="lazy"></div></button><div><span class="pill">BITCOIN</span><b>ETF Bitcoin keluar $1,79 miliar sepekan, analis: arus keluar kini "struktural"</b><small>Arus keluar $1,79 miliar sepekan — terbesar sejak Juni; IBIT pimpin $1,37 miliar; Fear and Greed di 11, ketakutan ekstrem.</small><div class="news-src">Sumber: <b>The Block</b> · 23 Nov 2026 · <a href="https://www.theblock.co/news/markets/2026-11-23-spot-bitcoin-etfs-shed-1-79-billion-in-past-week-444857" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
+      <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="1" aria-label="Lihat gambar: Bitcoin Strategy 22% di bawah harga beli"><div class="news-thumb">₿<img src="images/2026-11-23/strategy-underwater.webp" alt="" loading="lazy"></div></button><div><span class="pill">BITCOIN</span><b>Bitcoin Strategy 22% di bawah harga beli, Schiff ramal bakal 'meledak'</b><small>BTC 22% di bawah harga beli rata-rata Strategy $75.400; saham MSTR anjlok hampir 47% dalam sebulan.</small><div class="news-src">Sumber: <b>BeInCrypto</b> · 23 Nov 2026 · <a href="https://beincrypto.com/strategy-net-reserve-bitcoin-below-cost/" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
+      <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="2" aria-label="Lihat gambar: Bitcoin anjlok ke $17.000 di Kraken"><div class="news-thumb">₿<img src="images/2026-11-23/kraken-flash-crash-v2.webp" alt="" loading="lazy"></div></button><div><span class="pill">BITCOIN</span><b>Bitcoin anjlok ke $17.000 di Kraken: flash crash pasangan BTC/CAD</b><small>BTC/CAD anjlok ke ~$16.900 dan bertahan hampir 14 jam; pasangan USD dan bursa lain tidak ikut jatuh.</small><div class="news-src">Sumber: <b>BeInCrypto</b> · 23 Nov 2026 · <a href="https://beincrypto.com/bitcoin-under-17000-kraken-flash-crash/" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
+    </div></div>
+    <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Kriteria: Pilihan editor — 3 berita dengan dampak pasar terbesar hari ini (23 Nov 2026), dipilih redaksi berdasarkan analisis agen CryptoScope dan angka di berita. Bukan berdasarkan jumlah klik, tayang, like, atau share — portal tidak melacak metrik tersebut.</p>
+  </section>
   <section id="portal">
     <div class="section-head"><h3>Berita berdasarkan kategori</h3><span id="portalCount" style="font-size:12px;color:var(--muted)">15 berita · 23 Nov 2026</span></div>
     <div class="cat-filters" role="group" aria-label="Filter kategori berita">
@@ -125,7 +147,35 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
     </div>
     <div class="panel"><div class="news-list" id="catNewsList"></div></div>
   </section>
-  <div class="notice" id="analysis">Berita diperbarui harian oleh agen CryptoScope; harga BTC/ETH/SOL live dari CoinGecko (jam update tertera di panel market). Berita portal bisa dikelola lewat halaman Admin (database Firestore). Selalu periksa sumber informasi; konten bukan saran investasi.</div>
+  <section id="analisis">
+    <div class="section-head"><h3>Analisis</h3><a href="#portal" id="analysisAll">Semua analisis →</a></div>
+    <p style="font-size:11px;color:var(--muted);margin:-6px 0 12px">Analisis oleh agen CryptoScope · 23 Nov 2026 14:03 WIB · bukan saran investasi; bukan prediksi harga.</p>
+    <div class="panel" style="margin-bottom:12px"><div class="panel-head"><b>ETF Bitcoin keluar $1,79 miliar sepekan, analis: arus keluar kini 'struktural'</b><small>The Block · 23 Nov 2026</small></div><div class="analysis-body">
+      <h4>Ringkasan</h4><p>ETF Bitcoin spot AS mencatat arus keluar bersih $1,79 miliar dalam sepekan — penarikan mingguan terbesar sejak pekan yang berakhir 26 Juni — dan ini pekan keempat berturut-turut dana keluar. IBIT BlackRock memimpin dengan $1,37 miliar. Sepanjang November sudah $4,14 miliar keluar, mendekati rekor bulanan Juni. Total aset bersih ETF Bitcoin kini $71,35 miliar, turun dari sekitar $110 miliar pada pertengahan September. Bitcoin sempat jatuh ke titik terendah siklus dekat $55.100 di akhir pekan, sementara ETF Ether juga keluar $314 juta — pekan kedelapan beruntun. Indeks Fear and Greed Bitcoin berada di 11, kategori ketakutan ekstrem.</p>
+      <h4>Kenapa ini penting</h4><p>ETF Bitcoin spot adalah jalur utama investor institusi dan ritel AS untuk masuk ke Bitcoin tanpa memegang BTC langsung, sehingga arus dananya menjadi barometer sentimen pasar yang paling diawasi. Empat pekan keluar beruntun — dengan November hampir memecahkan rekor bulanan — menunjukkan tekanan jual yang bukan insiden satu hari. Sebutan 'struktural' dari analis (bukan fakta terukur) menandakan sebagian pengamat menilai ini perubahan perilaku investor, bukan sekadar aksi ambil untung sesaat. Tekanan yang sama juga menimpa ETF Ether, jadi pelemahannya menyeluruh, bukan hanya Bitcoin.</p>
+      <h4>Dampak ke pasar</h4><p>Bukan prediksi harga. Penebusan ETF memaksa manajer dana menjual Bitcoin yang mendasarinya, sehingga arus keluar sebesar ini menambah tekanan jual di pasar spot. Aset bersih ETF yang menyusut dari sekitar $110 miliar menjadi $71,35 miliar berarti sekitar sepertiga nilai yang dikelola hilang dalam dua bulan, kombinasi penarikan dana dan penurunan harga. Indeks ketakutan ekstrem di 11 menandakan pasar sedang sangat takut — kondisi seperti ini secara historis memperbesar volatilitas ke dua arah, tetapi arah selanjutnya belum diketahui dan tidak bisa diprediksi dari angka ini saja.</p>
+      <h4>Risiko & hal yang belum diketahui</h4><p>Label 'struktural' adalah opini analis, bukan kesimpulan yang bisa diverifikasi dari data arus dana seminggu; arus ETF bisa berbalik cepat bila sentimen berubah, dan data dalam berita tidak menjelaskan siapa yang menarik dana atau alasannya. Belum diketahui apakah arus keluar November akan melewati rekor Juni atau justru berhenti. Indeks Fear and Greed adalah indikator sentimen, bukan alat peramal harga. Risiko tambahan: berita tidak menyebut kondisi likuiditas pasar spot saat penebusan besar terjadi.</p>
+      <h4>Penjelasan untuk pemula</h4><p>Bayangkan ETF Bitcoin seperti sebuah keranjang saham yang isinya Bitcoin. Orang membeli keranjang itu lewat bursa saham biasa. Kalau banyak orang ramai-ramai mengembalikan keranjangnya dan minta uangnya kembali, pengelola keranjang harus menjual Bitcoin di dalamnya — dan penjualan besar-besaran itu bisa menekan harga Bitcoin. Angka $1,79 miliar artinya dalam seminggu, uang yang ditarik keluar dari semua keranjang ETF Bitcoin itu jauh lebih besar daripada uang yang masuk.</p>
+      <div class="news-src">Sumber: <b>The Block</b> · <a href="https://www.theblock.co/news/markets/2026-11-23-spot-bitcoin-etfs-shed-1-79-billion-in-past-week-444857" target="_blank" rel="noopener">Baca sumber →</a> · <a href="#portal">Baca berita di portal →</a></div>
+    </div></div>
+    <div class="panel" style="margin-bottom:12px"><div class="panel-head"><b>Bitcoin Strategy 22% di bawah harga beli, Schiff ramal bakal 'meledak'</b><small>BeInCrypto · 23 Nov 2026</small></div><div class="analysis-body">
+      <h4>Ringkasan</h4><p>Bitcoin berada di $59.045 pada Minggu lalu lalu pulih ke $61.200, masih sekitar 28% di bawah sebulan lalu — dan di bawah harga beli rata-rata Strategy sekitar $75.400, sehingga tumpukan Bitcoin pemegang korporat terbesar itu kini 22% di bawah biaya. Saham MSTR ditutup di $77,80, anjlok hampir 47% dalam sebulan, dan saham preferen STRC di $93,60 dari nilai $100. Kritikus Bitcoin Peter Schiff meramal Strategy 'bakal meledak'. Strategy membalas bahwa cadangan bersihnya $35 miliar, semua BTC-nya tanpa jaminan, dan kas $5,1 miliar cukup untuk membayar dividen selama 3,4 tahun.</p>
+      <h4>Kenapa ini penting</h4><p>Strategy adalah pemegang Bitcoin korporat terbesar di dunia, sehingga kondisi keuangannya menjadi barometer kepercayaan pasar terhadap strategi 'beli Bitcoin dengan utang dan saham' yang ditiru banyak perusahaan lain. Ketika harga Bitcoin jatuh di bawah harga beli rata-rata perusahaan, pasar mulai mempertanyakan daya tahan model bisnisnya — dan itu terlihat dari sahamnya yang jatuh jauh lebih dalam daripada Bitcoin sendiri. Perdebatan publik antara Schiff dan Strategy juga memperbesar sorotan terhadap perusahaan ini.</p>
+      <h4>Dampak ke pasar</h4><p>Bukan prediksi harga. Saham MSTR anjlok hampir 47% dalam sebulan, jauh lebih dalam dari penurunan Bitcoin sekitar 28% — artinya pasar menghukum saham terkait Bitcoin lebih keras daripada Bitcoin itu sendiri, efek semacam pengungkit (leverage) terhadap sentimen. Saham preferen STRC yang diperdagangkan di bawah nilai nominalnya ($93,60 dari $100) menunjukkan pasar mulai meragukan kemampuan perusahaan membayar dividen sesuai janji. Namun dampak langsung ke harga Bitcoin dari berita ini belum diketahui: Strategy menyatakan tidak akan terpaksa menjual karena BTC-nya tidak dijaminkan, dan klaim itu belum diverifikasi pihak independen dalam berita ini.</p>
+      <h4>Risiko & hal yang belum diketahui</h4><p>Ramalan Schiff bahwa Strategy 'bakal meledak' adalah opini seorang kritikus lama Bitcoin, bukan fakta. Belum diketahui apakah Strategy akan menjual, menahan, atau justru menambah Bitcoin, dan belum diketahui detail utang serta kewajiban perusahaannya di luar klaim yang disampaikannya sendiri (cadangan bersih $35 miliar, kas $5,1 miliar). Risiko utama yang tidak terjawab berita ini: berapa lama perusahaan bisa bertahan bila harga Bitcoin tetap di bawah harga belinya, dan apakah pasar akan terus menekan saham preferennya. Penurunan harga saham tidak sama dengan kebangkrutan perusahaan.</p>
+      <h4>Penjelasan untuk pemula</h4><p>Strategy adalah perusahaan yang membeli Bitcoin dalam jumlah sangat besar, sebagian dengan uang pinjaman dan uang hasil menjual sahamnya. Rata-rata mereka membeli Bitcoin di harga sekitar $75.400, sedangkan harga sekarang sekitar $61.200 — jadi kalau dihitung di atas kertas, mereka sedang rugi sekitar 22%. Ini belum berarti perusahaannya bangkrut, sama seperti rumah yang harganya turun tidak otomatis membuat pemiliknya bangkrut — masalah baru muncul kalau mereka terpaksa menjual di harga rendah atau tidak bisa membayar utang dan dividen.</p>
+      <div class="news-src">Sumber: <b>BeInCrypto</b> · <a href="https://beincrypto.com/strategy-net-reserve-bitcoin-below-cost/" target="_blank" rel="noopener">Baca sumber →</a> · <a href="#portal">Baca berita di portal →</a></div>
+    </div></div>
+    <div class="panel" style="margin-bottom:12px"><div class="panel-head"><b>Bitcoin anjlok ke $17.000 di Kraken: flash crash pasangan BTC/CAD</b><small>BeInCrypto · 23 Nov 2026</small></div><div class="analysis-body">
+      <h4>Ringkasan</h4><p>Pasangan BTC/CAD di Kraken anjlok ke sekitar $16.900 (C$24.250) pada Jumat malam karena order book dolar Kanada yang tipis, dan harga rendah itu bertahan hampir 14 jam sebelum pulih. Harga Bitcoin di bursa lain dan pada pasangan dolar AS tetap di kisaran $55.000-$60.000. Kraken menyatakan tidak ada tanda peretasan dan semua order yang tereksekusi selama kejadian tetap berlaku.</p>
+      <h4>Kenapa ini penting</h4><p>Kejadian ini menunjukkan bahwa 'harga Bitcoin' bukanlah satu angka tunggal — harga bisa berbeda jauh antar bursa dan antar pasangan mata uang bila likuiditasnya tipis. Pasangan BTC/CAD yang sepi order membuat satu tekanan jual bisa menjatuhkan harga sampai 70% di bawah harga pasar global, dan harga yang salah itu bertahan hampir 14 jam. Ini pelajaran nyata tentang risiko struktur pasar, bukan soal Bitcoin itu sendiri, dan relevan bagi siapa pun yang trading di pasangan mata uang kecil atau bursa yang sepi.</p>
+      <h4>Dampak ke pasar</h4><p>Bukan prediksi harga. Dampak ke pasar Bitcoin secara keseluruhan kecil: pasangan dolar AS di Kraken dan di bursa lain tidak ikut jatuh, jadi ini bukan kejatuhan harga Bitcoin global, melainkan kecelakaan lokal di satu pasangan. Namun dampak ke trader yang terlibat bisa besar: order yang tereksekusi di harga sekitar $16.900 tetap berlaku menurut Kraken, sehingga pihak yang order belinya tereksekusi di harga rendah diuntungkan, sementara yang order jual atau stop-loss-nya tersentuh di harga itu dirugikan. Belum diketahui berapa banyak order dan berapa besar nilai yang tereksekusi selama 14 jam tersebut.</p>
+      <h4>Risiko & hal yang belum diketahui</h4><p>Penyebab yang disebutkan — order book dolar Kanada yang tipis — belum dijelaskan lebih jauh: belum diketahui mengapa order book itu begitu tipis, apakah ada order jual besar yang memicu, dan apakah Kraken akan mengubah pengamanan untuk pasangan yang sepi. Kraken menyatakan tidak ada tanda peretasan, tetapi penyebab pastinya tetap belum diketahui dari berita ini. Risiko yang tersisa bagi pengguna: pasangan mata uang non-USD yang sepi bisa mengalami hal serupa sewaktu-waktu, dan stop-loss di pasar seperti itu bisa tereksekusi di harga yang sangat merugikan.</p>
+      <h4>Penjelasan untuk pemula</h4><p>Bayangkan sebuah pasar kecil yang hanya ada satu penjual dan satu pembeli. Kalau penjualnya tiba-tiba menjual banyak dan tidak ada pembeli lain, harganya bisa jatuh bebas — bukan karena barangnya mendadak tidak berharga, tapi karena pasarnya sepi. Itulah yang terjadi di pasangan Bitcoin-dolar Kanada di Kraken: sedikit pembeli, harga jatuh ke $17.000, sementara di 'pasar besar' (pasangan dolar AS) harga Bitcoin tetap sekitar $55.000-$60.000. Jadi harga $17.000 itu harga di satu lapak yang sepi, bukan harga Bitcoin sedunia.</p>
+      <div class="news-src">Sumber: <b>BeInCrypto</b> · <a href="https://beincrypto.com/bitcoin-under-17000-kraken-flash-crash/" target="_blank" rel="noopener">Baca sumber →</a> · <a href="#portal">Baca berita di portal →</a></div>
+    </div></div>
+  </section>
+  <div class="notice">Berita diperbarui harian oleh agen CryptoScope; harga BTC/ETH/SOL live dari CoinGecko (jam update tertera di panel market). Berita portal bisa dikelola lewat halaman Admin (database Firestore). Selalu periksa sumber informasi; konten bukan saran investasi.</div>
 </div>
 <footer><b style="color:#334155">CRYPTOSCOPE</b> &nbsp;·&nbsp; See Beyond The Market. &nbsp;·&nbsp; Media informasi crypto berbahasa Indonesia.</footer>
 </main></div>
@@ -150,9 +200,9 @@ document.getElementById('today').textContent=new Intl.DateTimeFormat('id-ID',{da
 const NEWS_DATA=[
 {cat:"crypto",title:"ETF Bitcoin keluar $1,79 miliar sepekan, analis: arus keluar kini 'struktural'",summary:"ETF Bitcoin spot AS mencatat arus keluar bersih $1,79 miliar pekan lalu — penarikan mingguan terbesar sejak pekan yang berakhir 26 Juni — dan menjadi pekan keempat beruntun dana keluar. IBIT BlackRock memimpin dengan $1,37 miliar; sepanjang November sudah $4,14 miliar keluar, mendekati rekor bulanan Juni. Total aset bersih ETF Bitcoin kini $71,35 miliar, turun dari sekitar $110 miliar pada pertengahan September. Bitcoin jatuh ke titik terendah siklus dekat $55.100 di akhir pekan, sementara ETF Ether juga keluar $314 juta — pekan kedelapan beruntun. Indeks Fear and Greed Bitcoin di 11, ketakutan ekstrem.",source:"The Block",date:"23 Nov 2026",url:"https://www.theblock.co/news/markets/2026-11-23-spot-bitcoin-etfs-shed-1-79-billion-in-past-week-444857",type:"fakta",img:"images/2026-11-23/etf-outflows-structural.webp"},
 {cat:"crypto",title:"Bitcoin Strategy 22% di bawah harga beli, Schiff ramal bakal 'meledak'",summary:"Bitcoin di $59.045 pada Minggu lalu pulih ke $61.200, masih sekitar 28% di bawah sebulan lalu — di bawah harga beli rata-rata Strategy sekitar $75.400, sehingga tumpukan Bitcoin pemegang korporat terbesar itu kini 22% di bawah biaya. Saham MSTR ditutup $77,80, anjlok hampir 47% dalam sebulan, dan saham preferen STRC di $93,60 dari nilai $100. Peter Schiff meramal Strategy 'bakal meledak'; Strategy membalas cadangan bersihnya $35 miliar, semua BTC tanpa jaminan, dan kas $5,1 miliar cukup untuk 3,4 tahun dividen.",source:"BeInCrypto",date:"23 Nov 2026",url:"https://beincrypto.com/strategy-net-reserve-bitcoin-below-cost/",type:"fakta",img:"images/2026-11-23/strategy-underwater.webp"},
-{cat:"crypto",title:"Bitcoin anjlok ke $17.000 di Kraken: flash crash pasangan BTC/CAD",summary:"Pasangan BTC/CAD di Kraken anjlok ke sekitar $16.900 (C$24.250) pada Jumat malam karena order book dolar Kanada yang tipis, dan bertahan hampir 14 jam sebelum pulih. Harga BTC di bursa lain dan pasangan USD tetap di kisaran $55.000-$60.000; Kraken menyatakan tidak ada tanda peretasan dan semua order yang tereksekusi tetap berlaku.",source:"BeInCrypto",date:"23 Nov 2026",url:"https://beincrypto.com/bitcoin-under-17000-kraken-flash-crash/",type:"fakta",img:"images/2026-11-23/kraken-flash-crash.webp"},
+{cat:"crypto",title:"Bitcoin anjlok ke $17.000 di Kraken: flash crash pasangan BTC/CAD",summary:"Pasangan BTC/CAD di Kraken anjlok ke sekitar $16.900 (C$24.250) pada Jumat malam karena order book dolar Kanada yang tipis, dan bertahan hampir 14 jam sebelum pulih. Harga BTC di bursa lain dan pasangan USD tetap di kisaran $55.000-$60.000; Kraken menyatakan tidak ada tanda peretasan dan semua order yang tereksekusi tetap berlaku.",source:"BeInCrypto",date:"23 Nov 2026",url:"https://beincrypto.com/bitcoin-under-17000-kraken-flash-crash/",type:"fakta",img:"images/2026-11-23/kraken-flash-crash-v2.webp"},
 {cat:"geopolitik",title:"Separuh dompet undangan makan malam memecoin Trump berasal dari bursa luar negeri",summary:"Analisis Public Citizen menemukan 66 dari 130 dompet yang lolos ke makan malam memecoin Donald Trump menerima token TRUMP dari bursa yang melarang warga AS, seperti Binance global, Bybit, dan BloFin. Trump menggelar makan malam keduanya untuk pemegang TRUMP terbesar di Trump National Golf Club, Virginia, dengan 185 kursi berdasarkan kepemilikan. Token TRUMP kini di $0,89, turun 98,8% dari puncak $75,35.",source:"Cointelegraph",date:"23 Nov 2026",url:"https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges",type:"fakta",img:"images/2026-11-23/trump-memecoin-dinner-v2.webp"},
-{cat:"geopolitik",title:"Kalshi berpacu lawan perintah New York yang bisa menutup bursanya",summary:"Hakim federal mengembalikan kasus Kalshi ke Mahkamah Agung New York; Jaksa Agung Letitia James mengajukan perintah penahanan sementara. CFTC memperingatkan larangan itu akan memaksa Kalshi menghentikan semua operasi.",source:"CoinDesk",date:"20 Nov 2026",url:"https://www.coindesk.com/policy/2026/11/20/kalshi-races-to-get-ahead-of-new-york-order-that-could-shut-down-exchange",type:"fakta",img:"images/2026-11-23/kalshi-ny-order.webp"},
+{cat:"geopolitik",title:"Hong Kong terbitkan RUU lisensi kustodian dan penasihat kripto",summary:"Hong Kong menerbitkan RUU Layanan Aset Virtual (Amandemen) 2026 yang mewajibkan dealer, penasihat, manajer aset, dan kustodian kripto memperoleh lisensi atau terdaftar di Securities and Futures Commission (SFC), memperluas pengawasan dari bursa ke seluruh layanan aset virtual. RUU yang mengubah Ordonansi Anti Pencucian Uang ini juga mewajibkan bank dan penerbit stored-value facility yang diawasi Otoritas Moneter Hong Kong untuk mendaftar ke SFC bila menawarkan layanan aset virtual. Pembacaan pertama di Dewan Legislatif dijadwalkan 2 Desember; asosiasi industri meminta masa transisi 6–12 bulan agar bisnis tidak terpaksa berhenti saat permohonan diproses.",source:"Cointelegraph",date:"23 Nov 2026",url:"https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3Fttl%3D0%26_%3D1763850775866%26_t%3D1763850775866&utm_campaign=rss_partner_inbound",type:"fakta",img:"images/2026-11-23/hong-kong-licensing.webp"},
 {cat:"geopolitik",title:"China, AS, Rusia sepakati Deklarasi Menuju Perdamaian di Shenzhen",summary:"Trump, Xi Jinping, dan Putin bertemu di Shenzhen pada 19 Nov di sela KTT APEC dan menghasilkan Deklarasi Menuju Perdamaian berisi empat agenda: reformasi PBB, stabilitas energi, ICC, dan pengendalian risiko nuklir.",source:"BeritaNow",date:"23 Nov 2026",url:"https://beritanow.com/china-as-rusia-sepakati-deklarasi-perdamaian-ada-empat-agenda-besar",type:"fakta",img:"https://data.kelaskaryawan.com/beritanow/articles/img_6aff5bc5d9e7b.webp"},
 {cat:"ekonomi",title:"Ackman peringatkan The Fed bisa bikin kesalahan suku bunga di Desember",summary:"Miliarder Bill Ackman memperingatkan The Fed berisiko mendorong AS dan dunia ke resesi bila terus menaikkan suku bunga demi menekan inflasi ke 2%. Inflasi AS diperkirakan 3,8% pada Oktober; keputusan suku bunga berikutnya jatuh 9 Desember dengan peluang 91,2% kenaikan seperempat poin menurut CME FedWatch.",source:"Cointelegraph",date:"23 Nov 2026",url:"https://cointelegraph.com/markets/billionaire-bill-ackman-warns-fed-rate-hikes-could-trigger-recession",type:"analisis",img:"images/2026-11-23/ackman-fed-warning.webp"},
 {cat:"ekonomi",title:"Gejolak pasar hapus taruhan kenaikan suku bunga The Fed 50 bps di Desember",summary:"Gejolak pasar pekan lalu menghapus taruhan kenaikan suku bunga The Fed 50 basis poin pada pertemuan 8-9 Desember. CME FedWatch kini memberi peluang 88,6% untuk kenaikan 25 bps dan 11,4% suku bunga ditahan; sepekan sebelumnya pasar masih memberi peluang 11,5% untuk kenaikan 50 bps. Nasdaq 100 anjlok 5,5% pada Jumat dan Nvidia turun hampir 14%.",source:"CoinDesk",date:"23 Nov 2026",url:"https://www.coindesk.com/markets/2026/11/23/market-rout-kills-50-basis-points-december-fed-rate-hike-bets",type:"fakta",img:"images/2026-11-23/fed-50bp-bets-killed.webp"},
@@ -232,6 +282,60 @@ function renderCatNews(){
   });
   applySearch();
 }
+
+/* Breaking News: dirender dari NEWS_DATA (data-driven, bukan hardcode).
+   Kriteria: cat "breaking" dan terbit paling lama 3 hari sebelum tanggal
+   terbaru di NEWS_DATA. Kalau tidak ada yang memenuhi syarat, tampilkan
+   pesan jujur — bukan berita lama yang dipaksakan jadi breaking. */
+function renderBreaking(){
+  const list=document.getElementById("breakingList");
+  if(!list) return;
+  list.innerHTML="";
+  const m={Jan:1,Feb:2,Mar:3,Apr:4,Mei:5,Jun:6,Jul:7,Agu:8,Sep:9,Okt:10,Nov:11,Des:12};
+  function dkey(d){const p=(d||"").split(" ");if(p.length<3)return -1;return (+p[2])*10000+(m[p[1]]||0)*100+(+p[0]);}
+  let best=-1;
+  NEWS_DATA.forEach(function(n){const k=dkey(n.date);if(k>best)best=k;});
+  const items=NEWS_DATA.filter(function(n){
+    if(n.cat!=="breaking")return false;
+    const k=dkey(n.date);if(k<0||best<0)return false;
+    const bd=new Date(Math.floor(best/10000),Math.floor(best/100)%100-1,best%100);
+    const kd=new Date(Math.floor(k/10000),Math.floor(k/100)%100-1,k%100);
+    return (bd-kd)/86400000<=3;
+  });
+  if(!items.length){
+    const d=document.createElement("div");d.className="cat-empty";d.textContent="Tidak ada breaking news saat ini.";list.appendChild(d);return;
+  }
+  items.forEach(function(n){
+    const c=CATS[n.cat],badge=TYPE_BADGE[n.type]||TYPE_BADGE.fakta;
+    const art=document.createElement("article");art.className="news-item cat-news-item";
+    const th=document.createElement("div");th.className="news-thumb";th.style.background=c.thumb;th.textContent=c.icon;
+    const im=document.createElement("img");im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";
+    if(n.img){im.src=n.img;}
+    else{const gurl=graphicDataURL(n,480,600);if(gurl)im.src=gurl;}
+    im.onerror=function(){
+      if(n.img&&im.src===n.img){const gurl=graphicDataURL(n,480,600);if(gurl){im.src=gurl;}else{im.remove();}}
+      else{im.remove();}
+    };
+    th.appendChild(im);
+    const tb=document.createElement("button");tb.type="button";tb.className="thumb-btn";tb.setAttribute("aria-label","Lihat gambar: "+n.title);
+    tb.appendChild(th);tb.addEventListener("click",function(){openLightbox(n);});
+    art.appendChild(tb);
+    const body=document.createElement("div");
+    const pill=document.createElement("span");pill.className="pill";pill.textContent=c.label;body.appendChild(pill);
+    const bd=document.createElement("span");bd.className="badge "+badge[1];bd.textContent=badge[0];body.appendChild(bd);
+    const b=document.createElement("b");b.textContent=n.title;body.appendChild(b);
+    const sm=document.createElement("small");sm.textContent=n.summary;body.appendChild(sm);
+    const src=document.createElement("div");src.className="news-src";
+    src.appendChild(document.createTextNode("Sumber: "));
+    const sb=document.createElement("b");sb.textContent=n.source;src.appendChild(sb);
+    src.appendChild(document.createTextNode(" · "+n.date+" · "));
+    const a=document.createElement("a");a.href=n.url;a.target="_blank";a.rel="noopener";a.textContent="Baca sumber →";src.appendChild(a);
+    body.appendChild(src);
+    art.appendChild(body);list.appendChild(art);
+  });
+  applySearch();
+}
+
 document.querySelectorAll(".pill-cat").forEach(function(btn){
   btn.addEventListener("click",function(){
     document.querySelectorAll(".pill-cat").forEach(function(b){b.classList.remove("active");});
@@ -255,7 +359,7 @@ function goMenu(href){
   else if(href==="#bitcoin"){cat="crypto";}
   else if(href==="#altcoin"){cat="crypto";el=document.getElementById("altcoin");}
   else if(href==="#web3"){cat="crypto";el=document.getElementById("web3");}
-  else if(href==="#analysis"){cat="all";type="analisis";}
+  else if(href==="#analisis"){cat="all";type="analisis";}
   else{return;}
   activeCat=cat;activeType=type;clearSearch();syncPills(type?null:cat);renderCatNews();
   if(el)el.scrollIntoView({behavior:"smooth"});
@@ -706,9 +810,67 @@ async function loadMarket(){
   }
 }
 loadMarket();
+/* Gambaran pasar global dari CoinGecko (gratis, tanpa API key).
+   Hanya tampil kalau API berhasil; kalau gagal, tampilkan pesan jujur
+   dan angka tetap "—" — tidak pernah menampilkan angka lama/karangan. */
+async function loadGlobalMarket(){
+  const stamp=document.getElementById("globalStamp");
+  const ctl=new AbortController();const to=setTimeout(function(){ctl.abort();},8000);
+  try{
+    const r=await fetch("https://api.coingecko.com/api/v3/global",{signal:ctl.signal});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d=(await r.json()).data;
+    const mcap=d.total_market_cap&&d.total_market_cap.usd;
+    const chg=d.market_cap_change_percentage_24h_usd;
+    const dom=d.market_cap_percentage&&d.market_cap_percentage.btc;
+    if(typeof mcap!=="number"||typeof chg!=="number"||typeof dom!=="number") throw new Error("Format data tidak dikenal");
+    const fmtCap=function(v){return "$"+(v/1e12).toLocaleString("id-ID",{minimumFractionDigits:2,maximumFractionDigits:2})+" T";};
+    const fmtChg=function(v){return (v>=0?"+":"")+v.toLocaleString("id-ID",{minimumFractionDigits:2,maximumFractionDigits:2})+"% \u00b7 24j";};
+    const elCap=document.getElementById("global-mcap");
+    const elDom=document.getElementById("global-btc-dom");
+    if(elCap) elCap.innerHTML=fmtCap(mcap)+"<small>"+fmtChg(chg)+"</small>";
+    if(elDom) elDom.innerHTML=dom.toLocaleString("id-ID",{minimumFractionDigits:2,maximumFractionDigits:2})+"%<small>dari total market cap</small>";
+    if(stamp) stamp.textContent="Live \u00b7 "+new Intl.DateTimeFormat("id-ID",{hour:"2-digit",minute:"2-digit"}).format(new Date())+" WIB \u00b7 CoinGecko";
+    clearTimeout(to);
+  }catch(e){
+    clearTimeout(to);
+    if(stamp) stamp.textContent="Data pasar tidak tersedia \u00b7 offline \u2014 CoinGecko tidak terjangkau";
+  }
+}
+loadGlobalMarket();
 
 renderCatNews();
+renderBreaking();
 wireTopNews();
+/* Anchor seksi (temuan P1): samakan perilaku anchor dengan menu sidebar —
+   filter portal + scroll, bukan sekadar lompat anchor. */
+function showPortal(cat,type){
+  activeCat=cat;activeType=type||null;
+  const si=document.getElementById("searchInput");searchQ="";if(si)si.value="";
+  document.querySelectorAll(".pill-cat").forEach(function(b){b.classList.toggle("active",b.dataset.cat===cat);});
+  renderCatNews();
+  document.getElementById("portal").scrollIntoView({behavior:"smooth"});
+}
+(function(){
+  const hb=document.querySelector(".hero-btn");
+  if(hb) hb.addEventListener("click",function(e){e.preventDefault();goMenu("#news");});
+  const sa=document.getElementById("seeAllCats");
+  if(sa) sa.addEventListener("click",function(e){e.preventDefault();showPortal("all");});
+  const na=document.getElementById("newsAll");
+  if(na) na.addEventListener("click",function(e){e.preventDefault();showPortal("all");});
+  const md=document.getElementById("marketDetail");
+  if(md) md.addEventListener("click",function(e){e.preventDefault();goMenu("#market");});
+  const ba=document.getElementById("breakingAll");
+  if(ba) ba.addEventListener("click",function(e){e.preventDefault();showPortal("breaking");});
+  const ta=document.getElementById("trendingAll");
+  if(ta) ta.addEventListener("click",function(e){e.preventDefault();showPortal("all");});
+  const aa=document.getElementById("analysisAll");
+  if(aa) aa.addEventListener("click",function(e){e.preventDefault();goMenu("#analisis");});
+  document.querySelectorAll("[data-news-idx]").forEach(function(tb){
+    tb.addEventListener("click",function(){openLightbox(NEWS_DATA[+tb.dataset.newsIdx]);});
+  });
+})();
+
 initLightbox();
 </script>
 <script type="module">
@@ -753,6 +915,7 @@ try {
     const pc = document.getElementById("portalCount");
     if (pc) pc.textContent = NEWS_DATA.length + " berita · dari database";
     renderCatNews();
+    if(typeof renderBreaking==="function") renderBreaking();
   }
 } catch (e) {
   console.warn("Firestore tidak tersedia, memakai data statis:", e);
