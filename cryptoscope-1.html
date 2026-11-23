@@ -274,7 +274,7 @@ function goMenu(href){
   else if(href==="#web3"){cat="crypto";el=document.getElementById("web3");}
   else if(href==="#analysis"){cat="all";type="analisis";}
   else{return;}
-  activeCat=cat;activeType=type;clearSearch();syncPills(cat);renderCatNews();
+  activeCat=cat;activeType=type;clearSearch();syncPills(type?null:cat);renderCatNews();
   if(el)el.scrollIntoView({behavior:"smooth"});
 }
 document.querySelectorAll(".nav a").forEach(function(a){
