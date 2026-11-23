@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-24T01:05:00+07:00",
+ "updated": "2026-11-24T01:35:38+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -699,6 +699,20 @@
    "image_provider": "Decrypt (RSS enclosure / article image)",
    "generation_timestamp": "2026-11-24T00:33:59+07:00",
    "image_dimensions": "1024x512",
+   "image_generation_status": "external",
+   "image_type": "external"
+  },
+  {
+   "article_id": "cftc-prediction-market-rules",
+   "slug": "cftc-prediction-market-rules",
+   "category": "breaking",
+   "article_title": "Aturan bursa prediksi CFTC masuk tinjauan Gedung Putih di tengah sengketa yurisdiksi negara bagian-federal",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-24/cftc-prediction-market-rules.webp",
+   "image_prompt": "Original article image from The Block RSS media:content — real press photo of CFTC Chair Michael Selig speaking at a hearing; not AI generated",
+   "image_provider": "The Block (RSS media:content / article image)",
+   "generation_timestamp": "2026-11-24T01:35:38+07:00",
+   "image_dimensions": "1600x900",
    "image_generation_status": "external",
    "image_type": "external"
   }
