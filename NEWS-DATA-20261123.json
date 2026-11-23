@@ -99,14 +99,14 @@
   },
   {
    "cat": "ekonomi",
-   "title": "Lagarde: Eropa bisa kehilangan kendali atas pasar aset tokenisasi",
-   "summary": "Presiden ECB Christine Lagarde memperingatkan UE bisa kehilangan kesempatan membangun pasar tunggal aset tokenisasi tanpa aturan bersama. Pasar aset tradisional tertokenisasi di blockchain publik mencapai 23 miliar euro pada Maret, lima kali lipat setahun.",
-   "source": "CoinDesk",
-   "date": "20 Nov 2026",
-   "published": "20 Nov 2026 · 20:11 WIB",
-   "url": "https://www.coindesk.com/policy/2026/11/20/ecb-s-largarde-warns-europe-could-lose-control-of-growing-tokenized-asset-market",
+   "title": "OCBC dan StraitsX uji pembayaran stablecoin lintas batas untuk bisnis",
+   "summary": "OCBC, bank besar Singapura, meluncurkan pilot bersama StraitsX untuk pembayaran bisnis-ke-bisnis lintas batas memakai stablecoin. Uji coba ini menghubungkan penyelesaian stablecoin dengan rekening bank OCBC yang sudah dimiliki nasabah; StraitsX menyediakan infrastruktur dompet khusus untuk penagihan onchain dan kepatuhan, sementara OCBC menangani penukaran ke fiat. Pelanggan pertama yang ikut adalah NTT DOCOMO Asia, dan awalnya hanya aliran pembayaran lintas batas tertentu yang diuji.",
+   "source": "The Block",
+   "date": "23 Nov 2026",
+   "published": "23 Nov 2026 · 17:04 WIB",
+   "url": "https://www.theblock.co/news/business/2026-11-23-ocbc-straitsx-pilot-stablecoin-payments-444880",
    "type": "fakta",
-   "img": "images/2026-11-23/lagarde-tokenisasi.webp"
+   "img": "images/2026-11-23/ocbc-straitsx-stablecoin-pilot.webp"
   },
   {
    "cat": "teknologi",

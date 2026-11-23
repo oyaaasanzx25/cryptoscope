@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T09:05:26+00:00",
+ "updated": "2026-11-23T17:08:00+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -419,6 +419,20 @@
    "image_prompt": "Konsep: Jensen Huang, wajah dikenali, rambut abu-abu, kacamata, jaket kulit hitam, duduk di kursi CEO di ujung meja rapat panjang, diambil dari sudut kamera rendah; di latar depan tengah, sebuah map dokumen gelap tanpa label tergeletak di atas kayu mengilap di samping papan chip AI hijau menyala; bendera AS di jendela senja di belakang; cahaya senja dingin dengan aksen merah api dari samping, bayangan map jatuh panjang di atas meja — kursi CEO sudah disiapkan untuknya kembali, tetapi laporan intelijen tentang kontak mantan pasangannya dengan dinas rahasia China menggantung di atas keputusan dewan. Menceritakan satu peristiwa: desakan Trump agar Nvidia mempekerjakan lagi Huang yang terhalang laporan mata-mata New York Times (BeInCrypto). Hero Huang >=40% lebar frame, aksen merah api (sentimen negatif/tegang), tanpa teks/angka/logo/grafik, tanpa koin raksasa, tanpa server room/kristal/siluet. Crop 16:9 + brand mark CryptoScope via PIL.",
    "image_provider": "media.generate_image",
    "generation_timestamp": "2026-11-23T16:04:30+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "ocbc-straitsx-stablecoin-pilot",
+   "slug": "ocbc-straitsx-stablecoin-pilot",
+   "category": "ekonomi",
+   "article_title": "OCBC dan StraitsX uji pembayaran stablecoin lintas batas untuk bisnis",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/ocbc-straitsx-stablecoin-pilot.webp",
+   "image_prompt": "Konsep: satu koridor pembayaran kaca transparan yang elegan membentang diagonal di tengah frame, membawa aliran koin-koin kecil emas yang tertib dari gedung kantor bisnis di kiri ke menara bank modern di kanan — penyelesaian stablecoin mengalir ke rekening bank biasa; latar depan meja kayu dengan amplop bisnis tersegel dan tumpukan kertas kosong; latar belakang skyline Singapura saat senja dengan cahaya hangat keemasan; suasana institusional tenang dan konstruktif, tanpa wajah/manusia, tanpa teks/angka/logo/grafik, tanpa koin raksasa, tanpa server room/kristal/siluet. Crop 16:9 + brand mark CryptoScope via PIL.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T17:08:00+07:00",
    "image_dimensions": "1920x1080",
    "image_generation_status": "generated",
    "image_type": "ai"
