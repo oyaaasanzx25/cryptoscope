@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T19:06:00+07:00",
+ "updated": "2026-11-23T20:32:00+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -562,6 +562,62 @@
    "image_dimensions": "1920x1080",
    "image_generation_status": "generated",
    "image_type": "ai"
+  },
+  {
+   "article_id": "eth-quantum-threat",
+   "slug": "eth-quantum-threat",
+   "category": "teknologi",
+   "article_title": "Dompet Ethereum berisi ETH $72 miliar terancam serangan kuantum di masa depan",
+   "article_source": "CoinDesk",
+   "image_url": "images/2026-11-23/eth-quantum-threat.webp",
+   "image_prompt": "Key-cabinet wall concept v3.5: giant wooden key cabinet wall with hundreds of identical brass keys in neat rows, several hooks empty marked with small plain red ribbons, one brass key lying on the wooden counter in the center foreground; warm lamplight with fire-red accent glow above the empty hooks; no people, no faces, no text/numbers. Tells Ethereum wallets' exposed public keys threatened by future quantum attack.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T19:41:10+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "crossriver-btc-loans",
+   "slug": "crossriver-btc-loans",
+   "category": "ekonomi",
+   "article_title": "Bank Cross River luncurkan pinjaman beragun Bitcoin hingga $250.000 bersama LendingUSA",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/crossriver-btc-loans.webp",
+   "image_prompt": "Balance-scale concept v3.5: classic brass balance scale centered on a polished marble bank counter in an elegant old bank lobby with tall stone columns and warm golden light; left pan a neat stack of gold coins, right pan a neat stack of blank loan papers tied with a ribbon, pans perfectly balanced; no people, no faces, no readable text. Tells Bitcoin accepted as collateral for a formal bank loan without selling it.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T19:41:10+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "bitcoin-losing-streak-second-longest",
+   "slug": "bitcoin-losing-streak-second-longest",
+   "category": "crypto",
+   "article_title": "Bitcoin cetak tujuh pekan merah beruntun, terpanjang kedua sepanjang sejarah",
+   "article_source": "CoinDesk",
+   "image_url": "images/2026-11-23/bitcoin-losing-streak-second-longest.webp",
+   "image_prompt": "v3.5 staircase concept: a wide marble staircase inside a grand shadowy exchange hall descends in seven steps, each step lower than the one before, bathed in fire-red accent light — the seven steps are the seven straight losing weeks; a large golden Bitcoin coin rests on the top step and the staircase falls away toward a dark floor far below, telling a near-30% slide from the early-October high and the risk of sliding further toward the nine-week record; steps blank and unmarked, no numbers, no labels, no text; no people, no faces. QC: stranger test passed — gold BTC coin on top of a red-lit descending staircase reads as Bitcoin's prolonged slide in 1 second; thumbnail 64x58 keeps staircase + gold coin; brand mark present bottom-left. og:image rejected after viewing (CoinDesk chart 'Bitcoin weekly price change, 2026' with logo, text and numbers). Replaces the Cointelegraph BTC +12% item (same streak event, superseded by the record-streak angle).",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T19:41:00+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "strategy-saylor-457-btc",
+   "slug": "strategy-saylor-457-btc",
+   "category": "crypto",
+   "article_title": "Strategy borong 457 BTC lagi dan pindahkan $1 miliar cadangan ke kas umum",
+   "article_source": "Decrypt",
+   "image_url": "images/2026-11-23/strategy-saylor-457-btc.jpg",
+   "image_prompt": "Original editorial photo (NOT AI): Michael Saylor speaking on stage, gesturing, dark suit, blurred backdrop — viewed directly, clean, no logo, no watermark, no text, no branding. Face rule satisfied (public figure in the story). Decrypt og:image was a Strategy logo graphic (1024x512) and was NOT used. Photo saved 20:18 WIB by the parallel worker from the Strategy coverage; exact origin URL unconfirmed.",
+   "image_provider": "original",
+   "generation_timestamp": "2026-11-23T20:18:00+07:00",
+   "image_dimensions": "1600x900",
+   "image_generation_status": "original",
+   "image_type": "original-photo"
   }
  ]
 }
