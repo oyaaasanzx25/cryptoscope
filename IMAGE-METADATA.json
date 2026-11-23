@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T17:40:07+07:00",
+ "updated": "2026-11-23T18:05:00+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -464,6 +464,20 @@
    "image_dimensions": "1920x1080",
    "image_generation_status": "generated",
    "image_type": "ai"
+  },
+  {
+   "article_id": "korea-account-freezes",
+   "slug": "korea-account-freezes",
+   "category": "crypto",
+   "article_title": "Korea Selatan perluas pembekuan akun kripto dan perketat transfer ke luar negeri",
+   "article_source": "CoinDesk",
+   "image_url": "images/2026-11-23/korea-account-freezes.webp",
+   "image_prompt": "Real documentary photo from source og:image (FSC headquarters building, Seoul) — not AI generated; photo verified visually before use: clean, no logo of another media outlet, no watermark, no text overlay",
+   "image_provider": "CoinDesk (og:image, downloaded to repo)",
+   "generation_timestamp": "2026-11-23T18:05:00+07:00",
+   "image_dimensions": "1075x605",
+   "image_generation_status": "external",
+   "image_type": "external"
   }
  ]
 }
