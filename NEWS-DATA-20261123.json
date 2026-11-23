@@ -33,12 +33,12 @@
     },
     {
       "cat": "crypto",
-      "title": "BTCS jual 27.300 ETH senilai $44 juta untuk lunasi utang DeFi di Aave",
-      "summary": "Perusahaan blockchain tercatat Nasdaq BTCS menjual sekitar 27.300 Ether pada Jumat, 20 November, dan memakai hasilnya untuk melunasi pinjaman $43,8 juta di protokol peminjaman DeFi Aave di tengah anjloknya pasar kripto, menurut filing ke SEC AS pada Senin. Utang Aave BTCS terpangkas sekitar 81% menjadi sekitar $10,5 juta dengan loan-to-value sekitar 32%, dan perusahaan juga keluar sementara dari posisi liquidity pool di bisnis Imperium DeFi. Penjualan itu sekitar 53% dari gabungan kepemilikan ETH perusahaan sebelum penjualan; BTCS kini memegang sekitar 24.245 ETH dengan kas dan aset digital gabungan $61 juta. Langkah ini berlawanan dengan BitMine yang justru menambah 7.819 ETH pekan lalu. ETH diperdagangkan sekitar $1.743, turun 24,8% dalam 30 hari dan 37,7% dalam setahun.",
-      "source": "Cointelegraph",
+      "title": "Korea Utara cuci $247 juta hasil peretasan Binance lewat mixer Bitcoin",
+      "summary": "Peretas Korea Utara telah memindahkan setidaknya $247 juta dari peretasan Binance senilai $6,4 miliar lewat ‘coinjoin’ Bitcoin — teknik pencampuran yang menggabungkan dana banyak pengguna dalam satu transaksi agar jejaknya putus — menurut firma analitik blockchain Elliptic, sekitar sebulan setelah peretasan 29 Oktober. Hampir semuanya dikoordinasi satu orang: operator Kruw, koordinator coinjoin yang paling banyak dipakai pengguna Wasabi Wallet, yang ‘menolak memblokir dana semacam itu’, kata cofounder Elliptic Tom Robinson. Pencampuran melonjak setelah 17 November, ketika peretas mengosongkan lima dari sembilan alamat Ethereum terbesar terkait pencurian dan memindahkan sekitar 488.000 ETH (860 juta dolar), lalu menukarnya ke Bitcoin lewat jembatan Thorchain dan memasukkannya ke coinjoin, sering dalam hitungan jam — pola yang sama seperti setelah peretasan Bybit senilai $1,5 miliar awal 2025. Operasi ini mencakup lebih dari 27.000 dompet di sedikitnya 16 blockchain, sekitar 55 layanan, dan 90.000 transaksi. FBI menuding kelompok TraderTraitor Korea Utara sebagai pelakunya; Binance menyatakan akan menanggung semua kerugian nasabah. Baru sedikit yang benar-benar dicairkan: sekitar $2,85 miliar dibekukan dan sekitar $2,35 miliar masih parkir di alamat terkait pencurian, termasuk 18.270 BTC yang diambil langsung dari Binance dan belum bergerak sejak malam peretasan.",
+      "source": "Decrypt",
       "date": "24 Nov 2026",
-      "published": "24 Nov 2026 · 02:40 WIB",
-      "url": "https://cointelegraph.com/news/btcs-offloads-44m-eth-reduce-defi-debt-market-downturn?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "24 Nov 2026 · 03:36 WIB",
+      "url": "https://decrypt.co/383844/north-korea-247-million-binance-hack-bitcoin-mixers",
       "type": "fakta",
       "img": ""
     },
