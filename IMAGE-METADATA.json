@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T18:20:51+07:00",
+ "updated": "2026-11-23T18:42:09+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -492,6 +492,48 @@
    "image_dimensions": "1920x1080",
    "image_generation_status": "regenerated",
    "image_type": "ai"
+  },
+  {
+   "article_id": "visa-ai-agent-wallet",
+   "slug": "visa-ai-agent-wallet",
+   "category": "teknologi",
+   "article_title": "Visa luncurkan dompet agen AI eksperimental, agen terverifikasi bisa hasilkan OUSD dari tugas berbayar",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/visa-ai-agent-wallet.webp",
+   "image_prompt": "v3.5 Visa agent-wallet concept: a bright modern office desk in daylight, a dark-blue physical payment card lying on the desk beside an open laptop showing abstract task cards with soft glowing verified check badges (no readable text, no numbers), a sleek small robotic arm handing a glowing verification badge toward the card, the moment an AI agent is verified to take paid tasks and earn stablecoin rewards; city office window with warm daylight behind, strong foreground-midground-background depth, dramatic volumetric light, realistic materials, professional international financial magazine cover quality, high contrast sophisticated color grading, 16:9 landscape. No people, no faces, no text, no numbers, no charts, no logos. QC: stranger test passed — robot arm + verified badges + payment card read as AI-agent verification for paid tasks in 1 second; og:image route unavailable (The Block Cloudflare-blocked from VM).",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T18:30:00+07:00",
+   "image_dimensions": "2048x1152",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "btc-price-gains-12-percent",
+   "slug": "btc-price-gains-12-percent",
+   "category": "crypto",
+   "article_title": "Bitcoin naik 12% dari $55 ribu, tiga hal yang perlu diketahui minggu ini",
+   "article_source": "Cointelegraph",
+   "image_url": "images/2026-11-23/btc-price-gains-12-percent.webp",
+   "image_prompt": "v3.5 trading-floor ribbon concept: a bright modern stock-exchange trading floor on Monday morning, sunlight through tall windows; a large physical ribbon-like price line carved into the polished floor dives steeply into a dark trough with a faint red tint at its lowest point (two-year low $55,081) then sweeps sharply upward in bright lime green toward the morning light (12.3% rebound to $61,846); scattered trading papers and an overturned chair near the trough (weekend panic), background desks with small screens showing abstract green rising bars (stock futures rebounding), storm clouds breaking apart left, clear golden-green sunrise right; no people, no faces, no text/numbers/charts/logos. QC: stranger test passed — green ribbon rising out of a floor trough in a trading room reads as a sharp market rebound after a deep low in 1 second; thumbnail 64x58 keeps the green diagonal + storm/sunrise contrast; brand mark present bottom-left. Replaces the Decrypt rebound item (same event, superseded by fuller Cointelegraph version); og:image route unavailable (article images are all charts/screenshots with text).",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-23T18:40:00+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
+  },
+  {
+   "article_id": "japan-crypto-tax-audits",
+   "slug": "japan-crypto-tax-audits",
+   "category": "ekonomi",
+   "article_title": "Jepang perketat audit pajak kripto usai temukan penghasilan tersembunyi $24,5 juta",
+   "article_source": "CoinDesk",
+   "image_url": "images/2026-11-23/japan-crypto-tax-audits.webp",
+   "image_prompt": "Real documentary photo from source og:image (Japanese tax office exterior, NAMIHIRA Tax Office, Wikimedia Commons) — not AI generated; photo verified visually before use: clean, no logo of another media outlet, no watermark, no text overlay, no people",
+   "image_provider": "CoinDesk (og:image, downloaded to repo)",
+   "generation_timestamp": "2026-11-23T18:42:09+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "external",
+   "image_type": "external"
   }
  ]
 }

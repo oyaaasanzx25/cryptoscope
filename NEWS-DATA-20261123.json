@@ -33,14 +33,14 @@
   },
   {
    "cat": "crypto",
-   "title": "Korea Selatan terbitkan draf UU Aset Digital pekan ini, lisensi bursa dan stablecoin bank jadi sorotan",
-   "summary": "Komisi Jasa Keuangan Korea Selatan (FSC) akan merilis draf Digital Asset Basic Act pekan ini — kerangka hukum kripto komprehensif kedua setelah UU Perlindungan Pengguna Aset Virtual 2024. Draf itu diperkirakan memuat rezim lisensi bagi bisnis kripto, menggantikan sistem pemberitahuan saat ini, serta model konsorsium berbasis bank untuk stablecoin won — bank memegang lebih dari 50% — sesuai dorongan Presiden Lee Jae-myung dan bank sentral. Poin yang diperdebatkan: batas kepemilikan 15–20% bagi pemegang saham besar bursa kripto. Setelah dirilis, draf akan digabung dengan usulan anggota parlemen dan dibahas di Majelis Nasional.",
-   "source": "The Block",
+   "title": "Bitcoin naik 12% dari $55 ribu, tiga hal yang perlu diketahui minggu ini",
+   "summary": "Bitcoin melonjak ke $61.846 pada Senin, naik 12,3% dari titik terendah dua tahun $55.081 pada Sabtu, seiring futures saham AS memantul setelah aksi jual teknologi pekan lalu. Bitcoin mencetak candle mingguan merah ketujuh beruntun — pertama sejak pasar bearish 2022 — dengan likuidasi posisi long kripto mencapai $3,75 miliar. RSI harian menunjukkan divergensi bullish tentatif, sementara pasar menanti data inflasi PCE pada Rabu dan keputusan suku bunga The Fed pada Desember; CME FedWatch memberi peluang kenaikan 25 basis poin.",
+   "source": "Cointelegraph",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 17:11 WIB",
-   "url": "https://www.theblock.co/news/regulation/2026-11-23-south-korea-to-publish-draft-digital-asset-basic-act-444881",
+   "published": "23 Nov 2026 · 18:20 WIB",
+   "url": "https://cointelegraph.com/markets/btc-price-stock-futures-rebound-three-things-know-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "type": "fakta",
-   "img": "images/2026-11-23/korea-digital-asset-basic-act.webp"
+   "img": "images/2026-11-23/btc-price-gains-12-percent.webp"
   },
   {
    "cat": "geopolitik",
@@ -77,14 +77,14 @@
   },
   {
    "cat": "ekonomi",
-   "title": "Ackman peringatkan The Fed bisa bikin kesalahan suku bunga di Desember",
-   "summary": "Miliarder Bill Ackman memperingatkan The Fed berisiko mendorong AS dan dunia ke resesi bila terus menaikkan suku bunga demi menekan inflasi ke 2%. Inflasi AS diperkirakan 3,8% pada Oktober; keputusan suku bunga berikutnya jatuh 9 Desember dengan peluang 91,2% kenaikan seperempat poin menurut CME FedWatch.",
-   "source": "Cointelegraph",
+   "title": "Jepang perketat audit pajak kripto usai temukan penghasilan tersembunyi $24,5 juta",
+   "summary": "Jepang memperketat audit pajak terhadap trader kripto setelah menemukan penghasilan tersembunyi senilai $24,5 juta. Audit lapangan terhadap trader kripto perorangan rata-rata menemukan tambahan pajak 12,58 juta yen per kasus — hampir tiga kali lipat rata-rata audit standar otoritas pajak. Mulai 2027, Jepang akan menerima data perdagangan tahunan secara otomatis dari otoritas pajak luar negeri di bawah kerangka OECD untuk memeriksa aktivitas offshore.",
+   "source": "CoinDesk",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 09:47 WIB",
-   "url": "https://cointelegraph.com/markets/billionaire-bill-ackman-warns-fed-rate-hikes-could-trigger-recession",
-   "type": "analisis",
-   "img": "images/2026-11-23/ackman-fed-warning.webp"
+   "published": "23 Nov 2026 · 18:33 WIB",
+   "url": "https://www.coindesk.com/business/2026/11/23/japan-to-ramp-up-crypto-tax-audits-after-uncovering-usd24-5-million-in-hidden-income",
+   "type": "fakta",
+   "img": "images/2026-11-23/japan-crypto-tax-audits.webp"
   },
   {
    "cat": "ekonomi",
@@ -110,14 +110,14 @@
   },
   {
    "cat": "teknologi",
-   "title": "Kepala AI Meta: bukti Hipotesis Riemann jadi tanda superinteligensi sudah dekat",
-   "summary": "Kepala AI Meta Alexandr Wang menulis esai bahwa superinteligensi sudah dekat, berargumen dari klaim pembuktian Hipotesis Riemann — soal matematika berusia 167 tahun — yang ditemukan matematikawan Anthropic Levent Alpöge dengan bantuan model AI Claude dan disertifikasi komunitas Lean/Mathlib pada 21 November. Wang menyebut bukti itu datang dari 'pikiran asing' yang tak dipahami manusia, namun menolak anggapan superinteligensi tak terelakkan dan menyerukan masyarakat tidak menyerahkan kendali. Sementara itu Meta sendiri menggelontorkan belanja modal hingga 145 miliar dolar tahun ini untuk perlombaan AI yang sama.",
-   "source": "BeInCrypto",
+   "title": "Visa luncurkan dompet agen AI eksperimental, agen terverifikasi bisa hasilkan OUSD dari tugas berbayar",
+   "summary": "Visa Crypto Labs meluncurkan versi eksperimental dompet agen AI Visa CLI: pengguna AS yang memenuhi syarat bisa memverifikasi agen AI mereka dengan kartu Visa dan mendaftarkannya di Visa Agent Directory, lalu menghasilkan OUSD dari tugas berbayar di Taskmarket — survei berbayar, komposisi musik, riset pasar, hingga gaming. Dompet ini dibangun di atas Tempo memakai Machine Payments Protocol; Taskmarket menampilkan lebih dari 25 tugas terbuka dengan imbalan 10–50 OUSD. Peluncuran ini memperluas Trusted Agent Protocol Visa dari e-commerce ke dompet agen dan marketplace tugas.",
+   "source": "The Block",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 13:43 WIB",
-   "url": "https://beincrypto.com/superintelligence-inevitable-meta-ai-chief/",
+   "published": "23 Nov 2026 · 18:22 WIB",
+   "url": "https://www.theblock.co/news/business/2026-11-23-visa-launches-experimental-ai-agent-wallet-for-eligible-us-users-to-earn-ousd-from-paid-tasks-444903",
    "type": "fakta",
-   "img": "images/2026-11-23/meta-riemann-superintelligence.webp"
+   "img": "images/2026-11-23/visa-ai-agent-wallet.webp"
   },
   {
    "cat": "teknologi",
