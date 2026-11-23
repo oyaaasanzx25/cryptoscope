@@ -11,24 +11,24 @@
   "items": [
     {
       "cat": "crypto",
-      "title": "Bitcoin sentuh $64.500, naik 17% dari titik terendah — likuidasi kripto tembus $500 juta",
-      "summary": "Bitcoin menyentuh $64.505 di Bitstamp pada Senin, naik lebih dari 17% dari titik terendah 26 bulan di kisaran $55.000 pada Sabtu, setelah dewan Nvidia mengembalikan Jensen Huang sebagai CEO. Saham Nvidia melonjak 35% hingga $171,50 dan menambah sekitar $1 triliun kapitalisasi pasar, sementara S&P 500 naik 4,8% dan Nasdaq 6,8%. Reli ini mengejutkan penjual short: likuidasi kripto melampaui $500 juta dalam empat jam hingga pukul 16:00 UTC, menurut data CoinGlass. Analis Michaël van de Poppe menilai target berikutnya adalah rata-rata bergerak 21 hari di $69.014 dan 200 hari di $72.240.",
-      "source": "Cointelegraph",
-      "date": "23 Nov 2026",
-      "published": "23 Nov 2026 · 23:51 WIB",
-      "url": "https://cointelegraph.com/markets/bitcoin-rebounds-lows-nvidia-rally-sparks-500m-crypto-liquidations",
+      "title": "ETF Zcash 2x Grayscale anjlok 13% di hari pertama perdagangan",
+      "summary": "ETF Zcash 2x Grayscale (ZECX) anjlok lebih dari 13% ke $28,60 pada sesi perdagangan pertamanya, Senin, di NYSE Arca — ETF leveraged 2x pertama yang terikat Zcash. Dana ini memakai swap untuk menargetkan dua kali return harian dana spot ZCSH Grayscale, dikurangi biaya, dan debut kurang dari tiga bulan setelah ZCSH mulai diperdagangkan pada 25 Agustus. ZEC sempat melonjak 13% pada pagi hari mengikuti reli saham kripto setelah Jensen Huang kembali sebagai CEO Nvidia, tetapi menghapus seluruh kenaikan dan diperdagangkan datar di sekitar $792 pada saat publikasi. Grayscale menyebut privasi finansial sebagai salah satu peluang terpenting di kripto dan menilai Zcash berada di posisi terdepan; peluncuran ini menyusul kampanye iklan Zcash Grayscale pada 10 November, termasuk sampul penuh di Wall Street Journal.",
+      "source": "The Block",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 05:15 WIB",
+      "url": "https://www.theblock.co/news/business/2026-11-23-grayscale-launches-2x-zcash-etf-three-months-spot-fund-debut-445407",
       "type": "fakta",
       "img": ""
     },
     {
       "cat": "crypto",
-      "title": "Pengguna kripto kehilangan $613.000 dari dompet Trezor di iPhone 17",
-      "summary": "Seorang pengguna kripto kehilangan $613.000 dari dompet hardware Trezor Safe 7 yang dipasangkan dengan iPhone 17 Pro Max, meski mengaku tidak pernah menyetujui satu pun transaksi dan seed phrase-nya tidak pernah disimpan secara digital. Data blockchain menunjukkan seluruh transfer memakai tanda tangan pemilik sendiri — sekitar $580.000 USDT di jaringan TRON (sekitar 95% dari total), $23.400 USDC di Solana, dan $9.500 dari aplikasi Exodus. Tidak ada izin belanja lama yang dipakai: transfer 49.999 USDT yang dipersoalkan berjalan atas otoritas pemilik sendiri, menurut Onchain Lens. Safe 7 adalah model Bluetooth pertama Trezor; Trezor menyatakan chip nirkabelnya terisolasi dari kunci sehingga tautan yang diretas pun tidak bisa memindahkan dana. iOS 27.2.1 yang terpasang di ponsel korban (dirilis 9 November) memang memuat perbaikan Bluetooth, tetapi Onchain Lens tidak menemukan kaitan antara bug itu dan pencurian ini. Penyebab pastinya masih belum diketahui; Trezor maupun Exodus belum berkomentar.",
-      "source": "BeInCrypto",
-      "date": "23 Nov 2026",
-      "published": "24 Nov 2026 · 02:49 WIB",
-      "url": "https://beincrypto.com/trezor-wallet-drained-iphone-17-security/",
-      "type": "fakta",
+      "title": "Grayscale: Bitcoin dan altcoin besar tampak 'oversold', risiko AI bayangi prospek jangka pendek",
+      "summary": "Grayscale menilai bitcoin dan altcoin utama tampak oversold setelah sell-off pekan lalu, kata kepala riset Zach Pandl dalam catatan Senin. Bitcoin sempat jatuh ke sekitar $55.000 pada Sabtu — di bawah titik terendah sebelumnya sekitar $58.000 pada 30 Juni — turun 56% dari puncak Oktober 2025; bear market sudah berjalan setidaknya 411 hari, terpanjang dalam perbandingan Grayscale, tetapi juga yang terdangkal. Bitcoin kini diperdagangkan di atas $61.200. Produk ETP kripto global mencatat arus keluar lebih dari $2 miliar pekan lalu, stablecoin mengalami penebusan besar, open interest futures bitcoin dan ether kembali ke level terendah musim panas, dan trader opsi membayar premi tinggi untuk put. Pandl menilai ketidakpastian seputar AI — kembalinya Jensen Huang sebagai CEO Nvidia, hasil pemilu sela AS dan dampaknya terhadap pembangunan pusat data, serta IPO Anthropic — lebih menentukan harga jangka pendek daripada fundamental blockchain, yang menurutnya tetap solid; valuasi saat ini disebut 'titik masuk yang menarik' bagi investor jangka menengah dan panjang. Grayscale mengelola lebih dari $14 miliar aset dalam 40 produk investasi.",
+      "source": "The Block",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 05:18 WIB",
+      "url": "https://www.theblock.co/news/markets/2026-11-23-grayscale-bitcoin-altcoins-oversold-ai-risks-crypto-outlook-445418",
+      "type": "analisis",
       "img": ""
     },
     {
@@ -44,14 +44,14 @@
     },
     {
       "cat": "geopolitik",
-      "title": "Separuh dompet undangan makan malam memecoin Trump berasal dari bursa luar negeri",
-      "summary": "Analisis Public Citizen menemukan 66 dari 130 dompet yang lolos ke makan malam memecoin Donald Trump menerima token TRUMP dari bursa yang melarang warga AS, seperti Binance global, Bybit, dan BloFin. Trump menggelar makan malam keduanya untuk pemegang TRUMP terbesar di Trump National Golf Club, Virginia, dengan 185 kursi berdasarkan kepemilikan. Token TRUMP kini di $0,89, turun 98,8% dari puncak $75,35.",
-      "source": "Cointelegraph",
-      "date": "23 Nov 2026",
-      "published": "23 Nov 2026 · 07:53 WIB",
-      "url": "https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges",
+      "title": "Saham China jatuh ke titik terendah 16 bulan usai peringatan baru Trump soal chip AI",
+      "summary": "Saham China jatuh ke titik terendah 16 bulan pada Senin setelah AS mengumumkan pembatasan baru atas chip AI canggih. Shanghai Composite turun di bawah 3.500 poin, level terendah sejak awal Juli 2025; CSI 300 turun 0,6%; Hang Seng jatuh ke titik terendah 19 bulan dan Hang Seng Tech ke titik terendah 26 bulan. Saham chip AI memimpin penurunan dengan anjlok sekitar 5%, setelah AS menutup celah yang memungkinkan perusahaan China mengakses chip canggih lewat pusat data di luar negeri, dan Presiden Trump mengatakan pada Jumat bahwa Washington akan menghukum perusahaan AS yang membangun pusat data di luar negeri. Alibaba, Tencent, dan MiniMax termasuk yang paling banyak dijual. Dukungan Beijing belum banyak membantu: regulator memangkas rasio margin minimum menjadi 80% dan dana negara membeli ETF dalam jumlah rekor 90 miliar yuan pada Jumat. Wall Street sudah merasakan dampaknya: selloff saham AI pekan lalu mendorong S&P 500 ke wilayah koreksi.",
+      "source": "BeInCrypto",
+      "date": "24 Nov 2026",
+      "published": "24 Nov 2026 · 05:03 WIB",
+      "url": "https://beincrypto.com/china-stocks-16-month-low-us-chip-curbs/",
       "type": "fakta",
-      "img": "images/2026-11-23/trump-memecoin-dinner-v2.webp"
+      "img": ""
     },
     {
       "cat": "geopolitik",
