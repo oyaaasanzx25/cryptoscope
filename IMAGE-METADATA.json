@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-11-23T14:08:10+07:00",
+  "updated": "2026-11-23T14:16:00+07:00",
   "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
   "images": [
     {
@@ -366,6 +366,20 @@
       "image_dimensions": "1920x1080",
       "image_generation_status": "generated",
       "image_type": "ai"
+    },
+    {
+      "article_id": "ark-anthropic-146m",
+      "slug": "ark-anthropic-146m",
+      "category": "teknologi",
+      "article_title": "Ark borong saham Anthropic $146 juta, pangkas ETF staking ETH dan SOL",
+      "article_source": "The Block",
+      "image_url": "images/2026-11-23/ark-anthropic.webp",
+      "image_prompt": "Real documentary photo from source og:image (Cathie Wood speaking at a conference) — not AI generated; photo verified visually before use: clean, no logo, no watermark, no text",
+      "image_provider": "The Block (og:image, downloaded to repo)",
+      "generation_timestamp": "2026-11-23T14:16:00+07:00",
+      "image_dimensions": "1600x900",
+      "image_generation_status": "external",
+      "image_type": "external"
     }
   ]
 }
