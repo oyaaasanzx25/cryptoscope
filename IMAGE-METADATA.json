@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-23T20:32:00+07:00",
+ "updated": "2026-11-23T20:47:00+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -615,6 +615,20 @@
    "image_prompt": "Original editorial photo (NOT AI): Michael Saylor speaking on stage, gesturing, dark suit, blurred backdrop — viewed directly, clean, no logo, no watermark, no text, no branding. Face rule satisfied (public figure in the story). Decrypt og:image was a Strategy logo graphic (1024x512) and was NOT used. Photo saved 20:18 WIB by the parallel worker from the Strategy coverage; exact origin URL unconfirmed.",
    "image_provider": "original",
    "generation_timestamp": "2026-11-23T20:18:00+07:00",
+   "image_dimensions": "1600x900",
+   "image_generation_status": "original",
+   "image_type": "original-photo"
+  },
+  {
+   "article_id": "solo-bitcoin-miner-block-reward",
+   "slug": "solo-bitcoin-miner-block-reward",
+   "category": "crypto",
+   "article_title": "Penambang solo Bitcoin menangkan hadiah blok $191.000 meski peluang 1 banding 1.650",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-23/solo-bitcoin-miner-block-reward.jpg",
+   "image_prompt": "Original editorial photo (NOT AI): rows of Bitcoin ASIC mining machines with cooling fans in a mining facility, purple-blue lighting — viewed directly, clean, no logo, no watermark, no text, no branding, no people. The Block og:image / media:content from RSS: https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/getty-images-yyZwIVuwOA-unsplash-scaled.jpg (Getty/Unsplash mining-farm photo). Resolution 1600x900.",
+   "image_provider": "original",
+   "generation_timestamp": "2026-11-23T20:47:00+07:00",
    "image_dimensions": "1600x900",
    "image_generation_status": "original",
    "image_type": "original-photo"

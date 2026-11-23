@@ -11,14 +11,14 @@
  "items": [
   {
    "cat": "crypto",
-   "title": "ETF Bitcoin keluar $1,79 miliar sepekan, analis: arus keluar kini 'struktural'",
-   "summary": "ETF Bitcoin spot AS mencatat arus keluar bersih $1,79 miliar pekan lalu — penarikan mingguan terbesar sejak pekan yang berakhir 26 Juni — dan menjadi pekan keempat beruntun dana keluar. IBIT BlackRock memimpin dengan $1,37 miliar; sepanjang November sudah $4,14 miliar keluar, mendekati rekor bulanan Juni. Total aset bersih ETF Bitcoin kini $71,35 miliar, turun dari sekitar $110 miliar pada pertengahan September. Bitcoin jatuh ke titik terendah siklus dekat $55.100 di akhir pekan, sementara ETF Ether juga keluar $314 juta — pekan kedelapan beruntun. Indeks Fear and Greed Bitcoin di 11, ketakutan ekstrem.",
+   "title": "Penambang solo Bitcoin menangkan hadiah blok $191.000 meski peluang 1 banding 1.650",
+   "summary": "Seorang penambang solo Bitcoin memecahkan blok 977.057 pada Minggu dan meraup 3,129 BTC senilai sekitar $190.764 — terdiri dari subsidi blok 3,125 BTC plus 0,004 BTC biaya transaksi — lewat Solo CKPool, sebelum potongan biaya 2%. Penambang beralamat bc1q~zy9j itu hanya mengerahkan 11,1 TH/s, setara beberapa rig rumahan dan sekitar 0,000001% dari total hashrate jaringan Bitcoin 1,07 ZH/s; menurut pengembang CKpool Con Kolivas, penambang sekecil itu punya peluang sekitar 1 banding 1.650 untuk menemukan satu blok dalam setahun. Bukan yang pertama: pada April penambang CKpool lain meraup sekitar $210.000, dan pada November 2025 penambang 6 TH/s memenangkan blok senilai sekitar $265.000.",
    "source": "The Block",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 12:47 WIB",
-   "url": "https://www.theblock.co/news/markets/2026-11-23-spot-bitcoin-etfs-shed-1-79-billion-in-past-week-444857",
+   "published": "23 Nov 2026 · 20:37 WIB",
+   "url": "https://www.theblock.co/news/ecosystems/2026-11-23-solo-bitcoin-miner-beats-odds-wins-191000-block-reward-444919",
    "type": "fakta",
-   "img": "images/2026-11-23/etf-outflows-structural-v3.webp"
+   "img": "images/2026-11-23/solo-bitcoin-miner-block-reward.jpg"
   },
   {
    "cat": "crypto",
@@ -88,12 +88,12 @@
   },
   {
    "cat": "ekonomi",
-   "title": "rToken Bitget cetak rekor volume harian $200 juta di tengah volatilitas pasar",
-   "summary": "Bitget mencatat volume spot harian rToken — produk saham AS tokenisasi — lebih dari $200 juta pada Sabtu, 21 November, rekor tertinggi sejak produk itu diluncurkan Juni 2026. Volume kumulatif rToken mencapai sekitar $6,4 miliar, dengan lebih dari $3,3 miliar atau hampir 52% terjadi di luar jam bursa AS. Saham tokenisasi Nvidia (rNVDA) menyumbang sekitar 25% volume hari itu setelah laporan keuangan kuartal ketiga Nvidia, sementara akun institusional berkontribusi sekitar 38%. Bitget menyebut permintaan akses saham AS di luar jam bursa terus tumbuh; sejak Juli, rToken yang memenuhi syarat juga bisa dipakai sebagai margin dan agunan.",
+   "title": "Emas dan perak memantul usai pekan terburuk, laporan inflasi AS jadi penentu",
+   "summary": "Emas dan perak memantul tajam pada Senin setelah pekan terburuk dalam ingatan terakhir: emas spot naik sekitar 2% ke dekat $3.620 per ons, perak naik 2,4% ke $42,15, dan platinum naik 0,8% ke $1.309. Pekan lalu emas anjlok sekitar 9% — penurunan mingguan tertajam sejak Maret — hingga ke titik terendah 14 bulan, sementara perak longsor sekitar 15%. Pemicunya antara lain sinyal pejabat The Fed soal kenaikan suku bunga lanjutan yang menguatkan dolar AS, serta aksi jual saham teknologi yang memaksa investor menjual emas untuk menutup kerugian. Perhatian kini beralih ke laporan inflasi PCE AS hari Rabu — ukuran inflasi favorit The Fed — yang akan menentukan apakah pantulan ini bertahan; taruhan pasar atas kenaikan suku bunga Desember menurut CME FedWatch turun ke 93% dari hampir 100%.",
    "source": "BeInCrypto",
    "date": "23 Nov 2026",
-   "published": "23 Nov 2026 · 19:32 WIB",
-   "url": "https://beincrypto.com/bitget-rtoken-hits-record-200-million-daily-spot-volume/",
+   "published": "23 Nov 2026 · 20:05 WIB",
+   "url": "https://beincrypto.com/gold-silver-rebound-after-historic-weekly-plunge/",
    "type": "fakta",
    "img": ""
   },
