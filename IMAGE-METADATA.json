@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-11-23T11:52:00+07:00",
+  "updated": "2026-11-23T11:59:00+07:00",
   "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3 — context-based, banned compositions, QC checklist",
   "images": [
     {
@@ -79,7 +79,7 @@
       "category": "teknologi",
       "article_title": "Trump kembali desak Nvidia pekerjakan lagi Jensen Huang sebagai CEO",
       "article_source": "Cointelegraph",
-      "image_url": "images/2026-11-23/trump-nvidia-huang.webp",
+      "image_url": "images/2026-11-23/trump-nvidia-huang-v2.webp",
       "image_prompt": "Jensen Huang, recognizable face, seated back in the leather CEO chair at the head of a long boardroom table, glowing green GPU board on the table, US flag by the window at dusk — Trump urges Nvidia to rehire Jensen Huang as CEO",
       "image_provider": "media.generate_image",
       "generation_timestamp": "2026-11-23T11:48:26+07:00",
@@ -261,12 +261,12 @@
       "category": "geopolitik",
       "article_title": "Separuh dompet undangan makan malam memecoin Trump berasal dari bursa luar negeri",
       "article_source": "Cointelegraph",
-      "image_url": "images/2026-11-23/trump-memecoin-dinner.webp",
-      "image_prompt": "Long gala dinner table in an elegant American golf-club ballroom at night, one empty golden VIP chair at the far end as dominant hero, a gleaming golden memecoin and formal invitation on the white tablecloth, American flag blurred in background, warm chandelier light; gold accent, no text/numbers/logos. Concept: the empty golden chair at the president's table asks who really gets to sit there, after Public Citizen found 66 of 130 qualifying wallets got TRUMP tokens from non-US exchanges.",
+      "image_url": "images/2026-11-23/trump-memecoin-dinner-v2.webp",
+      "image_prompt": "Donald Trump, recognizable face, seated at the head of a long gala dinner table in an elegant American golf-club ballroom at night, gleaming golden memecoin and formal invitation on the white tablecloth before him, American flag behind, warm chandelier light, gold accent — half the wallets invited to Trump memecoin dinner got TRUMP tokens from foreign exchanges (v3.1 two-way face rule: story about Trump, image must show Trump)",
       "image_provider": "media.generate_image",
-      "generation_timestamp": "2026-11-23T11:48:32+07:00",
+      "generation_timestamp": "2026-11-23T11:59:00+07:00",
       "image_dimensions": "1920x1080",
-      "image_generation_status": "generated",
+      "image_generation_status": "regenerated",
       "image_type": "ai"
     }
   ]
