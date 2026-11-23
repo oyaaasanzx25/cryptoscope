@@ -99,17 +99,17 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
   </section>
   <div class="columns">
     <section id="news"><div class="section-head"><h3>Berita terbaru</h3><a href="#news">Semua berita →</a></div>
-      <div class="panel"><div class="panel-head"><b>Update CryptoScope</b><small>Konten contoh untuk desain</small></div><div class="news-list" id="newsList">
+      <div class="panel"><div class="panel-head"><b>Update CryptoScope</b><small id="newsStamp">Diperbarui 23 Nov 2026</small></div><div class="news-list" id="newsList">
         <article class="news-item"><div class="news-thumb">₿<img src="images/2026-11-23/etf-outflows-structural.webp" alt=""></div><div><span class="pill">BITCOIN</span><b>ETF Bitcoin keluar $1,79 miliar sepekan, analis: arus keluar kini "struktural"</b><small>$1,79 miliar keluar sepekan, terbesar sejak Juni · IBIT pimpin $1,37 miliar · BTC ke titik terendah siklus $55.100 · 23 Nov 2026</small></div></article>
         <article class="news-item" id="altcoin"><div class="news-thumb">◆<img src="images/2026-11-23/glamsterdam.webp" alt=""></div><div><span class="pill">ALTCOIN</span><b>Upgrade Glamsterdam Ethereum bisa mundur ke Mei 2027</b><small>All Core Devs Call sinyal aktivasi mungkin baru Mei 2027 · Ethlabs dorong Ethereum post-quantum dan AI-proof · 22 Nov 2026</small></div></article>
         <article class="news-item" id="web3"><div class="news-thumb">◇<img src="images/2026-11-23/fusionist-ace-exploit.webp" alt=""></div><div><span class="pill">WEB3</span><b>Jembatan ACE Fusionist dieksploitasi, $2 juta dicuri lalu cadangan $3,7 juta dikuras</b><small>Token ACE palsu dicetak kuadriliun · 53,7 juta ACE asli dikuras · jembatan tersisa 0,08 ACE · 23 Nov 2026</small></div></article>
       </div></div>
     </section>
     <section id="market"><div class="section-head"><h3>Pantauan market</h3><a href="#market">Detail →</a></div>
-      <div class="panel"><div class="panel-head"><b>Aset populer</b><small id="marketStamp">Memuat harga live…</small></div><div class="market-list">
-        <div class="asset" id="bitcoin"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Bitcoin</b><small>BTC</small></div></div><div class="asset-price" id="price-btc">$61.253<small>+3,58% hari ini</small></div></div>
-        <div class="asset"><div class="asset-left"><span class="asset-icon">◆</span><div><b>Ethereum</b><small>ETH</small></div></div><div class="asset-price" id="price-eth">$1.731<small>+4,52% hari ini</small></div></div>
-        <div class="asset"><div class="asset-left"><span class="asset-icon">◎</span><div><b>Solana</b><small>SOL</small></div></div><div class="asset-price" id="price-sol">$71,28<small>+2,94% hari ini</small></div></div>
+      <div class="panel"><div class="panel-head"><b>Aset populer</b><small id="marketStamp" data-price-date="23 Nov 2026">Memuat harga live…</small></div><div class="market-list">
+        <div class="asset" id="bitcoin"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Bitcoin</b><small>BTC</small></div></div><div class="asset-price" id="price-btc">$61.456<small>+4,31% hari ini</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">◆</span><div><b>Ethereum</b><small>ETH</small></div></div><div class="asset-price" id="price-eth">$1.722<small>+3,96% hari ini</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">◎</span><div><b>Solana</b><small>SOL</small></div></div><div class="asset-price" id="price-sol">$71,71<small>+4,22% hari ini</small></div></div>
       </div></div>
     </section>
   </div>
@@ -183,10 +183,13 @@ const NEWS_DATA=[
 {cat:"teknologi",title:"Trump kembali desak Nvidia pekerjakan lagi Jensen Huang sebagai CEO",summary:"Presiden AS Donald Trump kembali mendesak dewan Nvidia mempekerjakan lagi pendiri Jensen Huang lewat unggahan Truth Social pada Senin, setelah seruan serupa pada Jumat. Saham Nvidia turun 4% setelah dewan dilaporkan menolak mengembalikan Huang; Polymarket memberi peluang 37% Huang kembali sebelum 31 Des 2027.",source:"Cointelegraph",date:"23 Nov 2026",url:"https://cointelegraph.com/news/trump-renews-call-for-nvidia-to-rehire-jensen-huang-as-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",type:"fakta",img:"images/2026-11-23/trump-nvidia-huang-v2.webp"},
 {cat:"teknologi",title:"Cramer: kejatuhan saham AI bukan 2000, S&P 500 masuk koreksi",summary:"Pembawa acara CNBC Jim Cramer menilai kejatuhan saham AI bukan ulangan krisis dot-com 2000, meski S&P 500 dan Dow ditutup setidaknya 10% di bawah rekor — S&P 500 sekitar 12% di bawah puncak Oktober, masuk zona koreksi. Nvidia anjlok sekitar 14% meski labanya kuat dan Nasdaq menghapus seluruh kenaikan 2026; VIX ditutup di level tertinggi sejak April 2025. Cramer membedakan penurunan mekanis (1987, 2010) dari yang sistemis (2007–2009) dan menilai para pemimpin AI kini adalah perusahaan menguntungkan yang sahamnya naik terlalu tinggi.",source:"BeInCrypto",date:"23 Nov 2026",url:"https://beincrypto.com/cramer-says-ai-selloff-not-2000/",type:"analisis",img:"images/2026-11-23/cramer-ai-selloff.webp"},
 {cat:"teknologi",title:"Futures Nvidia melonjak 6%, Nasdaq dan S&P 500 memantul setelah pekan terburuk",summary:"Futures Nvidia melonjak 5,71% ke $132,70 pada Senin, sementara futures Nasdaq 100 naik 2,71% dan S&P 500 naik 2,12% — pantulan setelah Nasdaq 100 mencatat pekan terburuk sejak Maret 2020 dan S&P 500 masuk koreksi usai tujuh sesi beruntun melemah. Nvidia anjlok 14% pada Jumat dan 26% dalam sepekan, dan masih sekitar 50% di bawah level awal Oktober. Analis eToro menilai pantulan memang mungkin terjadi setelah saham teknologi menjadi sangat oversold; Goldman Sachs melihat peluang beli, sementara VIX sempat menyentuh level tertinggi sejak April 2025.",source:"BeInCrypto",date:"23 Nov 2026",url:"https://beincrypto.com/nvidia-futures-rip-as-markets-rebound/",type:"fakta",img:"images/2026-11-23/nvidia-futures-rebound.webp"},
-{cat:"breaking",title:"Chainflip diretas $12 juta, token FLIP anjlok 34%",summary:"Penyerang mengosongkan vault Ethereum dan Bitcoin Chainflip — sekitar $4,86 juta ETH dan stablecoin plus 122,86 BTC, total sekitar $12 juta — diduga memakai kunci signing yang sah. Dana dicuci lewat Tornado Cash dalam waktu kurang dari 10 menit. Chainflip menawarkan bounty 10% (sekitar $1,2 juta) bila 90% dana dikembalikan sebelum 23 Nov 18:38 UTC; jaringan masuk safe mode penuh.",source:"The Block",date:"21 Nov 2026",url:"https://www.theblock.co/news/defi/2026-11-21-chainflips-flip-drops-34-after-attacker-drains-4-86-million-from-vault-with-suspected-key-compromise-444804",type:"fakta",img:"images/2026-11-23/chainflip-hack.webp"},
+{cat:"breaking",title:"Chainflip diretas $12 juta, token FLIP anjlok 34%",summary:"Penyerang mengosongkan vault Ethereum dan Bitcoin Chainflip — sekitar $4,86 juta ETH dan stablecoin plus 122,86 BTC, total sekitar $12 juta — diduga memakai kunci signing yang sah. Dana dicuci lewat Tornado Cash dalam waktu kurang dari 10 menit. Chainflip menawarkan bounty 10% (sekitar $1,2 juta) bila 90% dana dikembalikan sebelum 23 Nov 18:38 UTC; jaringan masuk safe mode penuh.",source:"The Block",date:"21 Nov 2026",url:"https://www.theblock.co/news/defi/2026-11-21-chainflips-flip-drops-34-after-attacker-drains-4-86-million-from-vault-with-suspected-key-compromise-444804",type:"fakta",img:"images/2026-11-23/chainflip-hack-v2.webp"},
 {cat:"breaking",title:"Peretas Binance pindahkan hampir $600 juta ETH lewat THORChain dan Chainflip",summary:"Dompet terkait peretasan Binance memindahkan sekitar $248 juta ETH pada Kamis dan $346 juta lagi pada Jumat, sebagian lewat THORChain dan Chainflip. Volume swap THORChain melonjak ke $239 juta dalam 24 jam.",source:"Cointelegraph",date:"22 Nov 2026",url:"https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest",type:"fakta",img:"images/2026-11-23/binance-hackers.webp"},
 {cat:"breaking",title:"Jembatan ACE Fusionist dieksploitasi, $2 juta dicuri lalu cadangan $3,7 juta dikuras",summary:"Penyerang mengeksploitasi akses bridge-minter Fusionist di BNB Chain dan mencetak token ACE palsu hingga kuadriliun, lalu menjualnya sekitar $2 juta dan mencuci $1,87 juta lewat Tornado Cash. Harga ACE anjlok, lalu trader membeli token murah itu dan menukarnya lewat jembatan hingga menguras 53,7 juta ACE asli senilai $3,7 juta — jembatan tersisa 0,08 ACE. Gate membatalkan perdagangan ACE/USDT pada rentang waktu serangan.",source:"The Block",date:"23 Nov 2026",url:"https://www.theblock.co/news/defi/2026-11-22-a-2-million-exploit-leads-to-a-3-7-million-free-for-all-as-traders-empty-fusionists-ace-bridge-444838",type:"fakta",img:"images/2026-11-23/fusionist-ace-exploit.webp"}
 ];
+
+/* Cap berita: tanggal update terbaru dari NEWS_DATA (ganti placeholder lama). */
+(function(){var s=document.getElementById("newsStamp");if(!s)return;var m={Jan:1,Feb:2,Mar:3,Apr:4,Mei:5,Jun:6,Jul:7,Agu:8,Sep:9,Okt:10,Nov:11,Des:12},best="",bk=-1;NEWS_DATA.forEach(function(n){var p=(n.date||"").split(" ");if(p.length<3)return;var k=(+p[2])*10000+(m[p[1]]||0)*100+(+p[0]);if(k>bk){bk=k;best=n.date;}});if(best)s.textContent="Diperbarui "+best;})();
 
 const CATS={
  crypto:{label:"CRYPTO & BLOCKCHAIN",icon:"₿",thumb:"linear-gradient(135deg,#f6a34c,#e46e3f)"},
@@ -717,8 +720,9 @@ function drawNewsGraphic(cv,item,W,H){
    dan labelnya jujur bilang offline — tidak pernah pura-pura live. */
 async function loadMarket(){
   const stamp=document.getElementById("marketStamp");
+  const ctl=new AbortController();const to=setTimeout(function(){ctl.abort();},8000);
   try{
-    const r=await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true");
+    const r=await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true",{signal:ctl.signal});
     if(!r.ok) throw new Error("HTTP "+r.status);
     const d=await r.json();
     const fmt=function(v,dec){return v.toLocaleString("id-ID",{minimumFractionDigits:dec,maximumFractionDigits:dec});};
@@ -728,8 +732,9 @@ async function loadMarket(){
     setP("price-eth",d.ethereum.usd,0,d.ethereum.usd_24h_change);
     setP("price-sol",d.solana.usd,2,d.solana.usd_24h_change);
     if(stamp) stamp.textContent="Live \u00b7 "+new Intl.DateTimeFormat("id-ID",{hour:"2-digit",minute:"2-digit"}).format(new Date())+" WIB \u00b7 CoinGecko";
+    clearTimeout(to);
   }catch(e){
-    if(stamp) stamp.textContent="Harga 23 Nov 2026 \u00b7 offline \u2014 CoinGecko tidak terjangkau";
+    clearTimeout(to);var pd=stamp&&stamp.getAttribute("data-price-date");if(stamp) stamp.textContent="Harga "+(pd||"terakhir")+" \u00b7 offline \u2014 CoinGecko tidak terjangkau";
   }
 }
 loadMarket();

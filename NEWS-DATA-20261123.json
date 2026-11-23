@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-23",
+  "sources": [
+    "CoinDesk",
+    "Cointelegraph",
+    "The Block",
+    "Decrypt",
+    "BeInCrypto"
+  ],
+  "note": "Reuters tidak bisa dijangkau dari VM (DataDome block); 1 item lokal dipertahankan (Shenzhen)",
+  "items": [
+    {
+      "cat": "crypto",
+      "title": "ETF Bitcoin keluar $1,79 miliar sepekan, analis: arus keluar kini 'struktural'",
+      "summary": "ETF Bitcoin spot AS mencatat arus keluar bersih $1,79 miliar pekan lalu — penarikan mingguan terbesar sejak pekan yang berakhir 26 Juni — dan menjadi pekan keempat beruntun dana keluar. IBIT BlackRock memimpin dengan $1,37 miliar; sepanjang November sudah $4,14 miliar keluar, mendekati rekor bulanan Juni. Total aset bersih ETF Bitcoin kini $71,35 miliar, turun dari sekitar $110 miliar pada pertengahan September. Bitcoin jatuh ke titik terendah siklus dekat $55.100 di akhir pekan, sementara ETF Ether juga keluar $314 juta — pekan kedelapan beruntun. Indeks Fear and Greed Bitcoin di 11, ketakutan ekstrem.",
+      "source": "The Block",
+      "date": "23 Nov 2026",
+      "url": "https://www.theblock.co/news/markets/2026-11-23-spot-bitcoin-etfs-shed-1-79-billion-in-past-week-444857",
+      "type": "fakta",
+      "img": "images/2026-11-23/etf-outflows-structural.webp"
+    },
+    {
+      "cat": "crypto",
+      "title": "Bitcoin Strategy 22% di bawah harga beli, Schiff ramal bakal 'meledak'",
+      "summary": "Bitcoin di $59.045 pada Minggu lalu pulih ke $61.200, masih sekitar 28% di bawah sebulan lalu — di bawah harga beli rata-rata Strategy sekitar $75.400, sehingga tumpukan Bitcoin pemegang korporat terbesar itu kini 22% di bawah biaya. Saham MSTR ditutup $77,80, anjlok hampir 47% dalam sebulan, dan saham preferen STRC di $93,60 dari nilai $100. Peter Schiff meramal Strategy 'bakal meledak'; Strategy membalas cadangan bersihnya $35 miliar, semua BTC tanpa jaminan, dan kas $5,1 miliar cukup untuk 3,4 tahun dividen.",
+      "source": "BeInCrypto",
+      "date": "23 Nov 2026",
+      "url": "https://beincrypto.com/strategy-net-reserve-bitcoin-below-cost/",
+      "type": "fakta",
+      "img": "images/2026-11-23/strategy-underwater.webp"
+    },
+    {
+      "cat": "crypto",
+      "title": "Bitcoin anjlok ke $17.000 di Kraken: flash crash pasangan BTC/CAD",
+      "summary": "Pasangan BTC/CAD di Kraken anjlok ke sekitar $16.900 (C$24.250) pada Jumat malam karena order book dolar Kanada yang tipis, dan bertahan hampir 14 jam sebelum pulih. Harga BTC di bursa lain dan pasangan USD tetap di kisaran $55.000-$60.000; Kraken menyatakan tidak ada tanda peretasan dan semua order yang tereksekusi tetap berlaku.",
+      "source": "BeInCrypto",
+      "date": "23 Nov 2026",
+      "url": "https://beincrypto.com/bitcoin-under-17000-kraken-flash-crash/",
+      "type": "fakta",
+      "img": "images/2026-11-23/kraken-flash-crash.webp"
+    },
+    {
+      "cat": "geopolitik",
+      "title": "Separuh dompet undangan makan malam memecoin Trump berasal dari bursa luar negeri",
+      "summary": "Analisis Public Citizen menemukan 66 dari 130 dompet yang lolos ke makan malam memecoin Donald Trump menerima token TRUMP dari bursa yang melarang warga AS, seperti Binance global, Bybit, dan BloFin. Trump menggelar makan malam keduanya untuk pemegang TRUMP terbesar di Trump National Golf Club, Virginia, dengan 185 kursi berdasarkan kepemilikan. Token TRUMP kini di $0,89, turun 98,8% dari puncak $75,35.",
+      "source": "Cointelegraph",
+      "date": "23 Nov 2026",
+      "url": "https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges",
+      "type": "fakta",
+      "img": "images/2026-11-23/trump-memecoin-dinner-v2.webp"
+    },
+    {
+      "cat": "geopolitik",
+      "title": "Kalshi berpacu lawan perintah New York yang bisa menutup bursanya",
+      "summary": "Hakim federal mengembalikan kasus Kalshi ke Mahkamah Agung New York; Jaksa Agung Letitia James mengajukan perintah penahanan sementara. CFTC memperingatkan larangan itu akan memaksa Kalshi menghentikan semua operasi.",
+      "source": "CoinDesk",
+      "date": "20 Nov 2026",
+      "url": "https://www.coindesk.com/policy/2026/11/20/kalshi-races-to-get-ahead-of-new-york-order-that-could-shut-down-exchange",
+      "type": "fakta",
+      "img": "images/2026-11-23/kalshi-ny-order.webp"
+    },
+    {
+      "cat": "geopolitik",
+      "title": "China, AS, Rusia sepakati Deklarasi Menuju Perdamaian di Shenzhen",
+      "summary": "Trump, Xi Jinping, dan Putin bertemu di Shenzhen pada 19 Nov di sela KTT APEC dan menghasilkan Deklarasi Menuju Perdamaian berisi empat agenda: reformasi PBB, stabilitas energi, ICC, dan pengendalian risiko nuklir.",
+      "source": "BeritaNow",
+      "date": "23 Nov 2026",
+      "url": "https://beritanow.com/china-as-rusia-sepakati-deklarasi-perdamaian-ada-empat-agenda-besar",
+      "type": "fakta",
+      "img": "https://data.kelaskaryawan.com/beritanow/articles/img_6aff5bc5d9e7b.webp"
+    },
+    {
+      "cat": "ekonomi",
+      "title": "Ackman peringatkan The Fed bisa bikin kesalahan suku bunga di Desember",
+      "summary": "Miliarder Bill Ackman memperingatkan The Fed berisiko mendorong AS dan dunia ke resesi bila terus menaikkan suku bunga demi menekan inflasi ke 2%. Inflasi AS diperkirakan 3,8% pada Oktober; keputusan suku bunga berikutnya jatuh 9 Desember dengan peluang 91,2% kenaikan seperempat poin menurut CME FedWatch.",
+      "source": "Cointelegraph",
+      "date": "23 Nov 2026",
+      "url": "https://cointelegraph.com/markets/billionaire-bill-ackman-warns-fed-rate-hikes-could-trigger-recession",
+      "type": "analisis",
+      "img": "images/2026-11-23/ackman-fed-warning.webp"
+    },
+    {
+      "cat": "ekonomi",
+      "title": "Gejolak pasar hapus taruhan kenaikan suku bunga The Fed 50 bps di Desember",
+      "summary": "Gejolak pasar pekan lalu menghapus taruhan kenaikan suku bunga The Fed 50 basis poin pada pertemuan 8-9 Desember. CME FedWatch kini memberi peluang 88,6% untuk kenaikan 25 bps dan 11,4% suku bunga ditahan; sepekan sebelumnya pasar masih memberi peluang 11,5% untuk kenaikan 50 bps. Nasdaq 100 anjlok 5,5% pada Jumat dan Nvidia turun hampir 14%.",
+      "source": "CoinDesk",
+      "date": "23 Nov 2026",
+      "url": "https://www.coindesk.com/markets/2026/11/23/market-rout-kills-50-basis-points-december-fed-rate-hike-bets",
+      "type": "fakta",
+      "img": "images/2026-11-23/fed-50bp-bets-killed.webp"
+    },
+    {
+      "cat": "ekonomi",
+      "title": "Lagarde: Eropa bisa kehilangan kendali atas pasar aset tokenisasi",
+      "summary": "Presiden ECB Christine Lagarde memperingatkan UE bisa kehilangan kesempatan membangun pasar tunggal aset tokenisasi tanpa aturan bersama. Pasar aset tradisional tertokenisasi di blockchain publik mencapai 23 miliar euro pada Maret, lima kali lipat setahun.",
+      "source": "CoinDesk",
+      "date": "20 Nov 2026",
+      "url": "https://www.coindesk.com/policy/2026/11/20/ecb-s-largarde-warns-europe-could-lose-control-of-growing-tokenized-asset-market",
+      "type": "fakta",
+      "img": "images/2026-11-23/lagarde-tokenisasi.webp"
+    },
+    {
+      "cat": "teknologi",
+      "title": "Trump kembali desak Nvidia pekerjakan lagi Jensen Huang sebagai CEO",
+      "summary": "Presiden AS Donald Trump kembali mendesak dewan Nvidia mempekerjakan lagi pendiri Jensen Huang lewat unggahan Truth Social pada Senin, setelah seruan serupa pada Jumat. Saham Nvidia turun 4% setelah dewan dilaporkan menolak mengembalikan Huang; Polymarket memberi peluang 37% Huang kembali sebelum 31 Des 2027.",
+      "source": "Cointelegraph",
+      "date": "23 Nov 2026",
+      "url": "https://cointelegraph.com/news/trump-renews-call-for-nvidia-to-rehire-jensen-huang-as-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "type": "fakta",
+      "img": "images/2026-11-23/trump-nvidia-huang-v2.webp"
+    },
+    {
+      "cat": "teknologi",
+      "title": "Cramer: kejatuhan saham AI bukan 2000, S&P 500 masuk koreksi",
+      "summary": "Pembawa acara CNBC Jim Cramer menilai kejatuhan saham AI bukan ulangan krisis dot-com 2000, meski S&P 500 dan Dow ditutup setidaknya 10% di bawah rekor — S&P 500 sekitar 12% di bawah puncak Oktober, masuk zona koreksi. Nvidia anjlok sekitar 14% meski labanya kuat dan Nasdaq menghapus seluruh kenaikan 2026; VIX ditutup di level tertinggi sejak April 2025. Cramer membedakan penurunan mekanis (1987, 2010) dari yang sistemis (2007–2009) dan menilai para pemimpin AI kini adalah perusahaan menguntungkan yang sahamnya naik terlalu tinggi.",
+      "source": "BeInCrypto",
+      "date": "23 Nov 2026",
+      "url": "https://beincrypto.com/cramer-says-ai-selloff-not-2000/",
+      "type": "analisis",
+      "img": "images/2026-11-23/cramer-ai-selloff.webp"
+    },
+    {
+      "cat": "teknologi",
+      "title": "Futures Nvidia melonjak 6%, Nasdaq dan S&P 500 memantul setelah pekan terburuk",
+      "summary": "Futures Nvidia melonjak 5,71% ke $132,70 pada Senin, sementara futures Nasdaq 100 naik 2,71% dan S&P 500 naik 2,12% — pantulan setelah Nasdaq 100 mencatat pekan terburuk sejak Maret 2020 dan S&P 500 masuk koreksi usai tujuh sesi beruntun melemah. Nvidia anjlok 14% pada Jumat dan 26% dalam sepekan, dan masih sekitar 50% di bawah level awal Oktober. Analis eToro menilai pantulan memang mungkin terjadi setelah saham teknologi menjadi sangat oversold; Goldman Sachs melihat peluang beli, sementara VIX sempat menyentuh level tertinggi sejak April 2025.",
+      "source": "BeInCrypto",
+      "date": "23 Nov 2026",
+      "url": "https://beincrypto.com/nvidia-futures-rip-as-markets-rebound/",
+      "type": "fakta",
+      "img": "images/2026-11-23/nvidia-futures-rebound.webp"
+    },
+    {
+      "cat": "breaking",
+      "title": "Chainflip diretas $12 juta, token FLIP anjlok 34%",
+      "summary": "Penyerang mengosongkan vault Ethereum dan Bitcoin Chainflip — sekitar $4,86 juta ETH dan stablecoin plus 122,86 BTC, total sekitar $12 juta — diduga memakai kunci signing yang sah. Dana dicuci lewat Tornado Cash dalam waktu kurang dari 10 menit. Chainflip menawarkan bounty 10% (sekitar $1,2 juta) bila 90% dana dikembalikan sebelum 23 Nov 18:38 UTC; jaringan masuk safe mode penuh.",
+      "source": "The Block",
+      "date": "21 Nov 2026",
+      "url": "https://www.theblock.co/news/defi/2026-11-21-chainflips-flip-drops-34-after-attacker-drains-4-86-million-from-vault-with-suspected-key-compromise-444804",
+      "type": "fakta",
+      "img": "images/2026-11-23/chainflip-hack-v2.webp"
+    },
+    {
+      "cat": "breaking",
+      "title": "Peretas Binance pindahkan hampir $600 juta ETH lewat THORChain dan Chainflip",
+      "summary": "Dompet terkait peretasan Binance memindahkan sekitar $248 juta ETH pada Kamis dan $346 juta lagi pada Jumat, sebagian lewat THORChain dan Chainflip. Volume swap THORChain melonjak ke $239 juta dalam 24 jam.",
+      "source": "Cointelegraph",
+      "date": "22 Nov 2026",
+      "url": "https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest",
+      "type": "fakta",
+      "img": "images/2026-11-23/binance-hackers.webp"
+    },
+    {
+      "cat": "breaking",
+      "title": "Jembatan ACE Fusionist dieksploitasi, $2 juta dicuri lalu cadangan $3,7 juta dikuras",
+      "summary": "Penyerang mengeksploitasi akses bridge-minter Fusionist di BNB Chain dan mencetak token ACE palsu hingga kuadriliun, lalu menjualnya sekitar $2 juta dan mencuci $1,87 juta lewat Tornado Cash. Harga ACE anjlok, lalu trader membeli token murah itu dan menukarnya lewat jembatan hingga menguras 53,7 juta ACE asli senilai $3,7 juta — jembatan tersisa 0,08 ACE. Gate membatalkan perdagangan ACE/USDT pada rentang waktu serangan.",
+      "source": "The Block",
+      "date": "23 Nov 2026",
+      "url": "https://www.theblock.co/news/defi/2026-11-22-a-2-million-exploit-leads-to-a-3-7-million-free-for-all-as-traders-empty-fusionists-ace-bridge-444838",
+      "type": "fakta",
+      "img": "images/2026-11-23/fusionist-ace-exploit.webp"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updated": "2026-11-23T13:15:00+07:00",
-  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3 — context-based, banned compositions, QC checklist",
+  "updated": "2026-11-23T13:28:36+07:00",
+  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.2 — context-based, banned compositions, anti-default, QC checklist",
   "images": [
     {
       "article_id": "btc-rebound",
@@ -93,10 +93,10 @@
       "category": "breaking",
       "article_title": "Chainflip diretas $12 juta, token FLIP anjlok 34%",
       "article_source": "The Block",
-      "image_url": "images/2026-11-23/chainflip-hack.webp",
-      "image_prompt": "Dark server room, giant shattered circular steel vault door, red emergency light, gold coins scattered on the wet floor, vault empty and breached, no person anywhere. Tells a $12 million crypto vault hack.",
+      "image_url": "images/2026-11-23/chainflip-hack-v2.webp",
+      "image_prompt": "A vast stark concrete-and-steel cross-chain vault chamber, cold grey walls and a high ceiling; a giant circular steel vault door shattered open at its center, torn metal petals bent outward, fire-red emergency light spilling from the empty vault behind, gold coins spilled across the wet dark floor, empty steel vault shelves visible inside — Chainflip cross-chain vaults drained of $12M via suspected signing-key compromise, FLIP fell 34% (v3.2 regen: v1 setting was a banned server room; new setting is a bare concrete vault chamber, no server racks)",
       "image_provider": "media.generate_image",
-      "generation_timestamp": "2026-11-23T11:53:14+07:00",
+      "generation_timestamp": "2026-11-23T13:28:36+07:00",
       "image_dimensions": "1920x1080",
       "image_generation_status": "regenerated",
       "image_type": "ai"
