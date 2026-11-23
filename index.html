@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2463c7">
+<script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="dark"){document.documentElement.dataset.theme="dark";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#0d1420");}}}catch(e){}</script>
 <title>CryptoScope — See Beyond The Market</title>
 <style>
 :root{--blue:#2866ca;--blue2:#174ca8;--bg:#f3f6fb;--paper:#fff;--ink:#202938;--muted:#778296;--line:#e8edf5;--orange:#ff9b45;--cyan:#50c5d8;--green:#22a879;--purple:#9274e8;--shadow:0 8px 28px #1d35550c}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
 a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:245px 1fr}
 .sidebar{background:linear-gradient(165deg,#2e70d7,#1d55b4 70%,#17479b);color:#fff;padding:25px 17px;display:flex;flex-direction:column;gap:25px}
+@media(min-width:651px){.sidebar{position:sticky;top:0;height:100vh;overflow-y:auto}}
 .brand{display:flex;align-items:center;gap:10px;padding:0 9px;font-size:20px;font-weight:850;letter-spacing:-.7px}.brand-mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,#ffb35f,#ff7b37);display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 5px 15px #102e6c55}
 .brand span{color:#ffd39c}.side-label{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:#c6d9ff;padding:0 11px;margin-bottom:6px}
 .nav{display:grid;gap:5px}.nav a{display:flex;align-items:center;gap:12px;padding:11px;border-radius:10px;color:#e0eaff;font-size:13px;transition:.2s}.nav a:hover,.nav a.active{background:#ffffff20;color:#fff}.ico{width:20px;text-align:center;font-size:16px}
 .sidebar-bottom{margin-top:auto}.tip{padding:14px;border:1px solid #ffffff32;background:#ffffff12;border-radius:13px;font-size:12px;color:#e6efff}.tip b{display:block;color:#fff;margin-bottom:5px}
 .main{min-width:0}.topbar{height:76px;background:#ffffffed;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px;position:sticky;top:0;z-index:4;backdrop-filter:blur(10px)}
 .search{max-width:480px;flex:1;position:relative}.search input{width:100%;border:1px solid var(--line);background:#f7f9fc;border-radius:12px;padding:12px 15px 12px 42px;outline:none;color:var(--ink)}.search input:focus{border-color:#9ab9ee;background:#fff}.search span{position:absolute;left:14px;top:9px;color:#8a96a8;font-size:18px}
-.top-actions{display:flex;align-items:center;gap:16px;color:var(--muted)}.avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#e8f0ff;color:var(--blue);font-weight:800}
+.top-actions{display:flex;align-items:center;gap:16px;color:var(--muted)}.theme-toggle{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:20px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:12px;font-weight:800;white-space:nowrap;flex-shrink:0}.theme-toggle:hover{border-color:#9ab9ee}.avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#e8f0ff;color:var(--blue);font-weight:800}
 .content{padding:28px 32px 42px;max-width:1450px;margin:auto}.welcome{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.welcome h1{font-size:25px;margin:0 0 4px;letter-spacing:-.6px}.welcome p{margin:0;color:var(--muted)}.date{font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px}
 .hero{border-radius:18px;background:linear-gradient(110deg,#2159b7,#347ce0 62%,#52b7d2);color:white;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden;position:relative;box-shadow:0 12px 26px #2764c51c}.hero:after{content:"₿";position:absolute;right:9%;top:-42px;font-size:190px;font-weight:900;color:#ffffff12;transform:rotate(12deg)}.hero-copy{position:relative;z-index:1;max-width:600px}.eyebrow{font-size:10px;letter-spacing:1.5px;font-weight:800;color:#ffe0b9}.hero h2{font-size:clamp(24px,3vw,36px);line-height:1.12;margin:9px 0}.hero p{color:#e4efff;margin:0;max-width:520px}.hero-btn{display:inline-block;margin-top:16px;padding:10px 15px;border-radius:9px;background:#fff;color:#2359ad;font-size:12px;font-weight:800}
 .hero-art{position:relative;z-index:1;width:125px;height:125px;border:1px solid #ffffff55;border-radius:50%;display:grid;place-items:center;background:#ffffff16;font-size:66px;color:#ffd39c;flex-shrink:0}
@@ -73,6 +75,37 @@ details.analysis-more summary::-webkit-details-marker{display:none}
 .lb-body{padding:16px 18px}
 .lb-body b{display:block;font-size:15px;line-height:1.35;margin-bottom:4px}
 .lb-body small{color:var(--muted);font-size:11px;display:block;margin-bottom:12px}
+
+/* --- Mode gelap (toggle tema; mode terang di atas tidak diubah) --- */
+[data-theme="dark"]{color-scheme:dark;--blue:#5b8def;--blue2:#3b6fd4;--bg:#0d1420;--paper:#141d2e;--ink:#e8eef7;--muted:#93a1b8;--line:#24314a;--shadow:0 8px 28px rgba(0,0,0,.45)}
+[data-theme="dark"] .topbar{background:#101a2cee}
+[data-theme="dark"] .search input{background:#0d1526}
+[data-theme="dark"] .search input:focus{background:#131f38}
+[data-theme="dark"] .panel,[data-theme="dark"] .date,[data-theme="dark"] footer{background:var(--paper)}
+[data-theme="dark"] footer{color:#8fa0b8}
+[data-theme="dark"] footer b{color:#e8eef7!important}
+[data-theme="dark"] .notice{background:#2a2113;border-color:#4a3a1e;color:#e8c98a}
+[data-theme="dark"] .pill-cat{background:var(--paper);color:#dbe4f2}
+[data-theme="dark"] .badge-fakta{background:#0f2e26;color:#5fd3a8}
+[data-theme="dark"] .badge-analisis{background:#16294d;color:#8db4f5}
+[data-theme="dark"] .badge-belum{background:#33230f;color:#f5b45f}
+[data-theme="dark"] .pill{background:#33230f;color:#f5b45f}
+[data-theme="dark"] .news-src b,[data-theme="dark"] .analysis-body h4,[data-theme="dark"] .analysis-body p,[data-theme="dark"] .field label{color:#d5deec}
+[data-theme="dark"] .field input,[data-theme="dark"] .field select,[data-theme="dark"] .field textarea{background:#0d1526}
+[data-theme="dark"] .field input:focus,[data-theme="dark"] .field select:focus,[data-theme="dark"] .field textarea:focus{background:#131f38}
+[data-theme="dark"] .btn{background:var(--paper)}
+[data-theme="dark"] .codebox{background:#0d1526;color:#c8d3e4}
+[data-theme="dark"] .lb-card{background:var(--paper)}
+[data-theme="dark"] .avatar{background:#1b2c4d;color:#8db4f5}
+[data-theme="dark"] .asset-icon{background:#33230f;color:#f5b45f}
+[data-theme="dark"] .asset:nth-child(2) .asset-icon{background:#16294d;color:#8db4f5}
+[data-theme="dark"] .asset:nth-child(3) .asset-icon{background:#0f2e26;color:#5fd3a8}
+[data-theme="dark"] .q-orange{background:#33230f;color:#f5b45f}
+[data-theme="dark"] .q-blue{background:#16294d;color:#8db4f5}
+[data-theme="dark"] .q-green{background:#0f2e26;color:#5fd3a8}
+[data-theme="dark"] .q-purple{background:#241a45;color:#b9a5f5}
+[data-theme="dark"] .quick-card:hover{box-shadow:0 12px 25px rgba(0,0,0,.5)}
+@media(max-width:650px){.theme-toggle{padding:8px 10px}.theme-toggle .theme-label{display:none}}
 </style>
 </head>
 <body>
@@ -93,7 +126,7 @@ details.analysis-more summary::-webkit-details-marker{display:none}
 <main class="main" id="home">
 <header class="topbar">
   <label class="search"><span>⌕</span><input id="searchInput" placeholder="Cari berita, aset, atau topik..." aria-label="Cari"></label>
-  <div class="top-actions"><span title="Notifikasi">♧</span><span class="user-name">CryptoScope Reader</span><span class="avatar">C</span></div>
+  <div class="top-actions"><span title="Notifikasi">♧</span><span class="user-name">CryptoScope Reader</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">🌙 <span class="theme-label">Gelap</span></button><span class="avatar">C</span></div>
 </header>
 <div class="content">
   <section class="welcome"><div><h1>Selamat datang di CryptoScope</h1><p>Pusat informasi dan wawasan dunia cryptocurrency.</p></div><div class="date" id="today">Crypto News Dashboard</div></section>
@@ -932,6 +965,22 @@ function showPortal(cat,type){
 })();
 
 initLightbox();
+
+/* --- Toggle tema gelap/terang (pilihan tersimpan di localStorage) --- */
+(function(){
+  var btn=document.getElementById("themeToggle");
+  var meta=document.querySelector('meta[name="theme-color"]');
+  function applyTheme(t){
+    document.documentElement.dataset.theme=(t==="dark")?"dark":"light";
+    try{localStorage.setItem("cryptoscope-theme",t);}catch(e){}
+    if(meta){meta.setAttribute("content",t==="dark"?"#0d1420":"#2463c7");}
+    if(btn){btn.innerHTML=(t==="dark")?"☀️ <span class=\"theme-label\">Terang</span>":"🌙 <span class=\"theme-label\">Gelap</span>";}
+  }
+  if(btn){btn.addEventListener("click",function(){
+    applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+  });}
+  applyTheme(document.documentElement.dataset.theme==="dark"?"dark":"light");
+})();
 </script>
 <script type="module">
 /* Portal berita live dari Firestore (koleksi `news`, terbaru dulu, maks. 15).
