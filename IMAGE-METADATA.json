@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-24T01:35:38+07:00",
+ "updated": "2026-11-24T01:47:22+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -715,6 +715,20 @@
    "image_dimensions": "1600x900",
    "image_generation_status": "external",
    "image_type": "external"
+  },
+  {
+   "article_id": "us-stock-market-crashes-13-times",
+   "slug": "us-stock-market-crashes-13-times",
+   "category": "ekonomi",
+   "article_title": "Pasar saham AS anjlok 13 kali abad ini: apa yang ditunjukkan polanya?",
+   "article_source": "BeInCrypto",
+   "image_url": "images/2026-11-24/us-stock-market-crashes-13-times.webp",
+   "image_prompt": "Grand neoclassical stock-exchange hall at dawn; one long wide marble staircase centered — left flight descending steeply into shadow in fire-red light, right flight rising toward tall windows in lime-green light — literal image of a market that fell 11.6% from its record then surged about 5% in a day; blank paper slips scattered on the marble floor; no people, no faces, no screens, no charts, no numbers, no text, no logos. Concept: thirteen crashes since 2000, correction vs bear market crossroads.",
+   "image_provider": "media.generate_image",
+   "generation_timestamp": "2026-11-24T01:47:22+07:00",
+   "image_dimensions": "1920x1080",
+   "image_generation_status": "generated",
+   "image_type": "ai"
   }
  ]
 }
