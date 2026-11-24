@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-24T09:50:00+07:00",
+ "updated": "2026-11-24T10:12:40+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -841,6 +841,90 @@
    "image_dimensions": "480x600",
    "image_generation_status": "generated",
    "image_type": "procedural"
+  },
+  {
+   "article_id": "coinbase-ust-dismissed",
+   "slug": "coinbase-ust-dismissed",
+   "category": "breaking",
+   "article_title": "Pengadilan California batalkan gugatan Coinbase soal pembelian TerraUSD",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-24/proc-coinbase.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine, palet Slash) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T10:12:40+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "btc-reversal-64446",
+   "slug": "btc-reversal-64446",
+   "category": "crypto",
+   "article_title": "Bitcoin melonjak ke $64.446 usai Huang kembali jadi CEO Nvidia, lalu berbalik ke $61.200",
+   "article_source": "BeInCrypto",
+   "image_url": "images/2026-11-24/proc-btc-reversal.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine, palet Slash) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T10:12:40+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "trump-nvidia-15m",
+   "slug": "trump-nvidia-15m",
+   "category": "teknologi",
+   "article_title": "Trump klaim berjasa atas rebound Nvidia, sahamnya untung sampai $15 juta",
+   "article_source": "BeInCrypto",
+   "image_url": "images/2026-11-24/proc-trump-nvidia.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine, palet Slash) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T10:12:40+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "binance-court-freeze",
+   "slug": "binance-court-freeze",
+   "category": "breaking",
+   "article_title": "Perintah pengadilan AS bekukan aset kripto di Binance dan OKX, pengguna tak bersalah ikut terjebak",
+   "article_source": "BeInCrypto",
+   "image_url": "images/2026-11-24/proc-binance-freeze.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine, palet Slash) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T10:12:40+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "ethereum-foundation-security",
+   "slug": "ethereum-foundation-security",
+   "category": "crypto",
+   "article_title": "Ethereum Foundation gandakan tim keamanan protokol jelang perombakan anti-kuantum dan AI",
+   "article_source": "Cointelegraph",
+   "image_url": "images/2026-11-24/proc-ethereum-foundation.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine, palet Slash) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T10:12:40+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "coinbase-terra-lawsuit-dismissed",
+   "slug": "coinbase-terra-lawsuit-dismissed",
+   "category": "breaking",
+   "article_title": "Pengadilan California batalkan gugatan Coinbase soal pembelian TerraUSD",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-24/coinbase-terra-lawsuit-dismissed.webp",
+   "image_prompt": "Original article image from The Block og:image — real photo of a phone showing the Coinbase app; not AI generated",
+   "image_provider": "The Block (og:image / article image)",
+   "generation_timestamp": "2026-11-24T10:18:43+07:00",
+   "image_dimensions": "1600x900",
+   "image_generation_status": "external",
+   "image_type": "external"
   }
  ]
 }
