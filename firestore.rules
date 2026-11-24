@@ -3,7 +3,27 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /news/{docId} {
       allow read: if true;
-      allow create, update, delete: if request.auth != null && request.auth.token.email == 'iyasanz217@gmail.com';
+      // Tulis hanya admin (login Google iyasanz217@gmail.com) + validasi skema (E-02/D-02).
+      // createdAt wajib timestamp agar dokumen tidak hilang dari query portal (E-03).
+      allow create, update: if request.auth != null
+        && request.auth.token.email == 'iyasanz217@gmail.com'
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 200
+        && request.resource.data.summary is string
+        && request.resource.data.summary.size() <= 500
+        && request.resource.data.cat in ['crypto', 'geopolitik', 'ekonomi', 'teknologi', 'breaking']
+        && request.resource.data.type in ['fakta', 'analisis', 'belum-terkonfirmasi']
+        && request.resource.data.url is string
+        && request.resource.data.url.matches('^https?://.*')
+        && request.resource.data.source is string
+        && request.resource.data.date is string
+        && request.resource.data.createdAt is timestamp
+        && (!('img' in request.resource.data) || request.resource.data.img is string)
+        && (!('published' in request.resource.data) || request.resource.data.published is string)
+        && request.resource.data.keys().hasAll(['title', 'summary', 'cat', 'source', 'date', 'url', 'type', 'createdAt']);
+      allow delete: if request.auth != null
+        && request.auth.token.email == 'iyasanz217@gmail.com';
     }
   }
 }

@@ -120,9 +120,9 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
    Config Firebase web di bawah ini bersifat PUBLIK (bukan rahasia):
    keamanan diatur oleh Firestore Rules di konsol Firebase, bukan oleh config.
    Rules: baca publik, tulis hanya jika login Google dengan email iyasanz217@gmail.com. */
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, getDocs, query, orderBy, limit, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, reauthenticateWithPopup } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, getDocs, query, limit, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBer_ApDX_0ivVTEuHolzOisK4unmtUZls",
@@ -260,9 +260,15 @@ async function loadNews() {
   loading.textContent = "Memuat berita...";
   newsAdminList.appendChild(loading);
   try {
-    const snap = await getDocs(query(collection(db, "news"), orderBy("createdAt", "desc"), limit(50)));
+    const snap = await getDocs(query(collection(db, "news"), limit(50)));
     cachedNews = [];
     snap.forEach(function (d) { cachedNews.push(Object.assign({ id: d.id }, d.data())); });
+    cachedNews.sort(function(a,b){
+      var ta=a.createdAt&&a.createdAt.toMillis?a.createdAt.toMillis():0;
+      var tb=b.createdAt&&b.createdAt.toMillis?b.createdAt.toMillis():0;
+      if(ta!==tb) return tb-ta;
+      return String(b.date||"").localeCompare(String(a.date||""));
+    });
     renderAdminList();
   } catch (e) {
     newsAdminList.innerHTML = "";
@@ -311,6 +317,7 @@ function renderAdminList() {
     btnDel.addEventListener("click", async function () {
       if (!confirm("Hapus berita ini?\n\n" + (n.title || ""))) return;
       try {
+        await reauthenticateWithPopup(auth.currentUser, new GoogleAuthProvider());
         await deleteDoc(doc(db, "news", n.id));
         loadNews();
       } catch (e) {
