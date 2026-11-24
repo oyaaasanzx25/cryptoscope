@@ -729,6 +729,20 @@
       "image_dimensions": "1600x900",
       "image_generation_status": "external",
       "image_type": "external"
+    },
+    {
+      "article_id": "solana-etf-inflows",
+      "slug": "solana-etf-inflows",
+      "category": "crypto",
+      "article_title": "Solana kembali ke $72 saat ETF SOL catat inflow, akhiri 6 pekan outflow",
+      "article_source": "CoinCentral",
+      "image_url": "images/2026-11-24/solana-etf-inflows.webp",
+      "image_prompt": "Original article image from CoinCentral og:image — real photo of Solana logo on a phone screen; not AI generated",
+      "image_provider": "CoinCentral (og:image / article image)",
+      "generation_timestamp": "2026-11-24T07:07:00+07:00",
+      "image_dimensions": "1600x1064",
+      "image_generation_status": "external",
+      "image_type": "external"
     }
   ]
 }
