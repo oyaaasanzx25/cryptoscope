@@ -122,25 +122,25 @@
  },
  {
   "cat": "teknologi",
-  "title": "Z.ai rilis GLM-5.4, model AI yang diklaim berpikir seperti model empat kali lebih besar",
-  "summary": "Perusahaan AI China Z.ai merilis GLM-5.4 pada Senin, model 750 miliar parameter dengan arsitektur Loop Transformer yang memproses informasi lewat 28 lapisan jaringan saraf yang sama dua kali, sehingga diklaim memiliki kemampuan penalaran setara model 2-3 triliun parameter tanpa menambah parameter. Model ini mendukung konteks satu juta token, menerima gambar dan video, serta bisa menghasilkan hingga 128.000 token dalam satu respons. Dalam eksperimen pada model kecil 30 miliar parameter, teknik looping menaikkan akurasi AIME 2025 dari 19,17% ke 30,42% dan GPQA Diamond dari 47,58% ke 56,26%. Namun Z.ai belum mempublikasikan perbandingan benchmark flagship independen yang menunjukkan GLM-5.4 menyamai Claude atau GPT. Model tersedia lewat langganan coding mulai $18 per bulan; harga API GLM-5.4 belum diumumkan. Z.ai sendiri masuk daftar Entity List AS sejak Januari 2025.",
-  "source": "Decrypt",
+  "title": "Trump klaim berjasa atas rebound Nvidia, sahamnya untung sampai $15 juta",
+  "summary": "Presiden Donald Trump mengklaim berjasa atas rebound Nvidia, mengatakan kepada CNBC bahwa ia berbicara dengan dewan Nvidia — langsung maupun tidak langsung — dan meyakinkan para direktur bahwa CEO Jensen Huang tidak menimbulkan risiko keamanan nasional. Dewan kemudian memilih bulat mengembalikan Huang, yang mengundurkan diri 12 November di tengah skandal perselingkuhan dengan perempuan yang diduga terkait intelijen China, setelah sebelumnya menolak kembalinya. Saham Nvidia melonjak 31,5% dan menambah nilai pasar sekitar $954 miliar dalam sehari — rekor bagi perusahaan AS. Financial Times memperkirakan kepemilikan saham Nvidia Trump — 32.000 hingga 370.000 saham per 30 September menurut dokumen etikanya — naik $1,3 juta sampai $15 juta di atas kertas; dokumen itu memakai rentang, sehingga jumlah pastinya tidak bisa dipastikan. Trump menepis kekhawatiran gelembung AI, sementara S&P 500 baru memulihkan sekitar $3 triliun dari sekitar $8 triliun yang hilang dan masih sekitar $5 triliun di bawah rekor 6 Oktober. Tiga komite DPR berencana mewawancarai Huang pekan depan.",
+  "source": "BeInCrypto",
   "date": "24 Nov 2026",
-  "published": "24 Nov 2026 · 06:06 WIB",
-  "url": "https://decrypt.co/383851/chinas-zai-new-ai-model-glm-think-like-four-times-size",
+  "published": "24 Nov 2026 · 08:34 WIB",
+  "url": "https://beincrypto.com/trump-nvidia-rebound-shares-gain-15m/",
   "type": "fakta",
   "img": ""
  },
  {
   "cat": "breaking",
-  "title": "DOJ AS kejar $1,17 miliar USDC terkait peretasan Binance; Circle siap terbitkan token pengganti",
-  "summary": "Departemen Kehakiman AS (DOJ) mengajukan gugatan perampasan sipil pada Senin untuk memulihkan sekitar $1,17 miliar USDC terkait peretasan Binance pada 29 Oktober, dan meminta hakim federal mempertahankan pembekuan aset itu. Dana tersebut tersebar di 36 alamat pada 18 blockchain, dan penyelidik AS menuding peretas militer Korea Utara Lazarus Group/APT38 sebagai pelakunya. Circle telah memblokir akses ke USDC itu namun tidak bisa memindahkan token aslinya, dan setuju menerbitkan USDC baru senilai sama untuk diserahkan ke AS setelah ada putusan perampasan pengadilan. Binance menyebut kerugian peretasan sekitar $6,34 miliar dan telah mengganti seluruh aset terdampak dari dananya sendiri; DOJ menyebut otoritas AS telah membantu membekukan, menyita, atau mengembalikan lebih dari $2,9 miliar kripto sejak pencurian itu.",
-  "source": "The Block",
+  "title": "Perintah pengadilan AS bekukan aset kripto di Binance dan OKX, pengguna tak bersalah ikut terjebak",
+  "summary": "Hakim Colorado menandatangani perintah penahanan sementara pada 29 Oktober yang menargetkan Huione Group dan Xinbi, dua jaringan Asia Tenggara yang dituduh mencuci hasil kejahatan. Departemen Keuangan AS menyebut Huione mencuci sedikitnya $4 miliar pada 2021–2025, sementara Xinbi memproses lebih dari $24 miliar — sebagian besar USDT di TRON — menurut TRM Labs. Perintah itu memerintahkan Binance dan OKX membekukan akun yang terkait alamat deposit tertentu, dan pemberitahuan disampaikan ke 27.304 alamat TRON. Masalahnya, pelacakan blockchain juga bisa menjerat dana milik orang yang tak terkait: seorang trader di X mengaku sekitar 400.000 USDT miliknya terkunci, dan karena kasusnya disegel, layanan pelanggan Binance awalnya hanya bisa merujuk pada “Sealed Case Name”. Pengguna yang terdampak punya waktu hingga 24 November untuk menghubungi pengacara penggugat dan mengajukan keberatan; perintah berlaku hingga 27 November kecuali diperpanjang. Pada 23 November, Binance mengakui akun yang tak terkait bisa ikut terdampak dan menegaskan bursa tidak bisa melepas dana itu sendiri. Pada 18 November, Binance juga memperoleh perintah pembekuan global senilai $6,5 miliar dari pengadilan Abu Dhabi yang mencakup sekitar 26.000 dompet, termasuk pihak yang tidak dituduh melakukan kesalahan.",
+  "source": "BeInCrypto",
   "date": "24 Nov 2026",
-  "published": "24 Nov 2026 · 03:00 WIB",
-  "url": "https://www.theblock.co/news/regulation/2026-11-23-doj-1-17-billion-usdc-binance-hack-circle-replacement-tokens-445398",
+  "published": "24 Nov 2026 · 07:55 WIB",
+  "url": "https://beincrypto.com/crypto-asset-freezes-binance-court-order/",
   "type": "fakta",
-  "img": "images/2026-11-24/doj-usdc-binance-hack.webp"
+  "img": ""
  },
  {
   "cat": "breaking",
