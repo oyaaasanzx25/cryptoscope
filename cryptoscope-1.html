@@ -2,48 +2,54 @@
 <html lang="id">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#2463c7">
+<meta name="theme-color" content="#040406">
 <meta name="description" content="CryptoScope — berita crypto Indonesia: Bitcoin, altcoin, Web3, market, dan analisis. Akurat dan fakta.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CryptoScope">
 <meta property="og:title" content="CryptoScope — See Beyond The Market">
 <meta property="og:description" content="Berita crypto Indonesia: Bitcoin, altcoin, Web3, market, dan analisis. Akurat dan fakta.">
 <meta property="og:url" content="https://cryptoscope-id.web.app/">
-<script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="dark"){document.documentElement.dataset.theme="dark";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#0d1420");}}}catch(e){}</script>
+<script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="dark"){document.documentElement.dataset.theme="dark";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#040406");}}}catch(e){}</script>
 <title>CryptoScope — See Beyond The Market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#2866ca;--blue2:#174ca8;--bg:#f3f6fb;--paper:#fff;--ink:#202938;--muted:#778296;--line:#e8edf5;--orange:#ff9b45;--cyan:#50c5d8;--green:#22a879;--purple:#9274e8;--shadow:0 8px 28px #1d35550c}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+:root{--blue:#8a6d2f;--blue2:#6b551f;--gold:#ae9357;--gold-light:#8a6d2f;--amber:#cd8939;--copper:#a97c3f;--bg:#f4f1ec;--paper:#fff;--panel:#ffffff;--panel2:#faf8f4;--ink:#17150f;--muted:#6d675c;--line:#e2ddd2;--orange:#ff9b45;--cyan:#a97c3f;--green:#22a879;--purple:#9274e8;--shadow:none}
+*{box-sizing:border-box}
+:focus-visible{outline:2px solid #cc9166;outline-offset:2px}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+h1,h2,h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;letter-spacing:.01em}
 a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:245px 1fr}
-.sidebar{background:linear-gradient(165deg,#2e70d7,#1d55b4 70%,#17479b);color:#fff;padding:25px 17px;display:flex;flex-direction:column;gap:25px}
+.sidebar{background:var(--paper);color:var(--ink);padding:25px 17px;display:flex;flex-direction:column;gap:25px;border-right:1px solid var(--line)}
 @media(min-width:651px){.sidebar{position:sticky;top:0;height:100vh;overflow-y:auto}}
-.brand{display:flex;align-items:center;gap:11px;padding:0 9px}.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#ffb35f,#ff7b37);display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;box-shadow:0 0 0 1.5px #ffffff2e,0 6px 16px #102e6c55;flex-shrink:0}.brand-word{display:flex;flex-direction:column;line-height:1.05}.brand-name{font-size:20px;font-weight:850;letter-spacing:-.7px;color:#fff}.brand-name .brand-scope{background:linear-gradient(90deg,#ffc27a,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:8px;font-weight:700;letter-spacing:2.4px;color:#c6d9ff;margin-top:3px}
-.side-label{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:#c6d9ff;padding:0 11px;margin-bottom:6px}
-.nav{display:grid;gap:5px}.nav a{display:flex;align-items:center;gap:12px;padding:11px;border-radius:10px;color:#e0eaff;font-size:13px;transition:.2s}.nav a:hover,.nav a.active{background:#ffffff20;color:#fff}.ico{width:20px;text-align:center;font-size:16px}
-.sidebar-bottom{margin-top:auto}.tip{padding:14px;border:1px solid #ffffff32;background:#ffffff12;border-radius:13px;font-size:12px;color:#e6efff}.tip b{display:block;color:#fff;margin-bottom:5px}
-.main{min-width:0}.topbar{height:76px;background:#ffffffed;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px;position:sticky;top:0;z-index:4;backdrop-filter:blur(10px)}
-.search{max-width:480px;flex:1;position:relative}.search input{width:100%;border:1px solid var(--line);background:#f7f9fc;border-radius:12px;padding:12px 15px 12px 42px;outline:none;color:var(--ink)}.search input:focus{border-color:#9ab9ee;background:#fff}.search span{position:absolute;left:14px;top:9px;color:#8a96a8;font-size:18px}
-.top-actions{display:flex;align-items:center;gap:16px;color:var(--muted)}.theme-toggle{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:20px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:12px;font-weight:800;white-space:nowrap;flex-shrink:0}.theme-toggle:hover{border-color:#9ab9ee}.avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#e8f0ff;color:var(--blue);font-weight:800}
-.content{padding:28px 32px 42px;max-width:1450px;margin:auto}.welcome{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.welcome h1{font-size:25px;margin:0 0 4px;letter-spacing:-.6px}.welcome p{margin:0;color:var(--muted)}.date{font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px}
-.hero{border-radius:18px;background:linear-gradient(110deg,#2159b7,#347ce0 62%,#52b7d2);color:white;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden;position:relative;box-shadow:0 12px 26px #2764c51c}.hero:after{content:"₿";position:absolute;right:9%;top:-42px;font-size:190px;font-weight:900;color:#ffffff12;transform:rotate(12deg)}.hero-copy{position:relative;z-index:1;max-width:600px}.eyebrow{font-size:10px;letter-spacing:1.5px;font-weight:800;color:#ffe0b9}.hero h2{font-size:clamp(24px,3vw,36px);line-height:1.12;margin:9px 0}.hero p{color:#e4efff;margin:0;max-width:520px}.hero-btn{display:inline-block;margin-top:16px;padding:10px 15px;border-radius:9px;background:#fff;color:#2359ad;font-size:12px;font-weight:800}
-.hero-art{position:relative;z-index:1;width:125px;height:125px;border:1px solid #ffffff55;border-radius:50%;display:grid;place-items:center;background:#ffffff16;font-size:66px;color:#ffd39c;flex-shrink:0}
-.section-head{display:flex;justify-content:space-between;align-items:center;margin:27px 0 13px}.section-head h3{margin:0;font-size:17px}.section-head a{font-size:12px;color:var(--blue);font-weight:700}
-.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.quick-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:var(--shadow);min-height:118px;transition:.2s}.quick-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px #1d355516}.quick-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:19px;margin-bottom:10px}.q-orange{background:#fff0e2;color:#e98732}.q-blue{background:#e9f1ff;color:#3474d5}.q-green{background:#e3f8f0;color:#20a77a}.q-purple{background:#f0ebff;color:#8764db}.quick-card b{display:block;font-size:13px}.quick-card small{color:var(--muted);font-size:11px}
-.columns{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.85fr);gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.panel-head b{font-size:14px}.panel-head small{color:var(--muted);font-size:11px}.news-list{display:grid}.news-item{display:flex;gap:13px;padding:15px 18px;border-bottom:1px solid var(--line);align-items:center}.news-item:last-child{border:0}.news-thumb{width:64px;height:58px;flex-shrink:0;border-radius:10px;display:grid;place-items:center;font-size:27px;color:#fff;background:linear-gradient(135deg,#f6a34c,#e46e3f)}.news-item:nth-child(2) .news-thumb{background:linear-gradient(135deg,#438de4,#55c3d2)}.news-item:nth-child(3) .news-thumb{background:linear-gradient(135deg,#8d70df,#c18be5)}.news-item b{font-size:12px;display:block;line-height:1.35;margin:4px 0}.news-item small{font-size:10px;color:var(--muted)}.news-thumb{overflow:hidden;position:relative}.news-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.pill{font-size:9px;font-weight:800;letter-spacing:.6px;color:#d87b2d;background:#fff1e4;padding:4px 7px;border-radius:20px}
-.market-list{padding:4px 17px}.asset{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line);gap:10px}.asset:last-child{border:0}.asset-left{display:flex;align-items:center;gap:10px}.asset-icon{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fff2e4;color:#df8a34;font-weight:900}.asset:nth-child(2) .asset-icon{background:#e9edff;color:#6478cf}.asset:nth-child(3) .asset-icon{background:#e4f7f0;color:#269d79}.asset b{font-size:12px;display:block}.asset small{font-size:10px;color:var(--muted)}.asset-price{text-align:right;font-size:12px;font-weight:800}.asset-price small{display:block;color:var(--muted);font-weight:500}
-.notice{margin-top:18px;background:#fff9ed;border:1px solid #f7e4c6;color:#89653c;border-radius:11px;padding:12px 14px;font-size:11px}
-footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(--line);background:#fff}
+.brand{display:flex;align-items:center;gap:11px;padding:0 9px}.brand-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#d9bd7a,#ae9357 60%,#8a6d2f);display:grid;place-items:center;color:#040406;font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:22px;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 4px 16px rgba(174,147,87,.3);flex-shrink:0}.brand-word{display:flex;flex-direction:column;line-height:1.05}.brand-name{font-family:"Bodoni Moda",Georgia,serif;font-size:21px;font-weight:400;letter-spacing:.01em;color:var(--ink)}.brand-name .brand-scope{background:linear-gradient(90deg,#e8cd8a,#ae9357 60%,#d9bd7a);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:8px;font-weight:700;letter-spacing:2.4px;color:var(--muted);margin-top:3px}
+.side-label{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:var(--muted);padding:0 11px;margin-bottom:6px}
+.nav{display:grid;gap:5px}.nav a{display:flex;align-items:center;gap:12px;padding:11px;border-radius:10px;border-left:2px solid transparent;color:var(--muted);font-size:14px;transition:.2s}.nav a:hover{background:rgba(0,0,0,.04);color:var(--ink)}.nav a.active{background:rgba(0,0,0,.05);color:var(--ink);border-left-color:var(--gold);font-weight:600}.ico{width:20px;text-align:center;font-size:16px}
+.sidebar-bottom{margin-top:auto}.tip{padding:14px;border:1px solid var(--line);background:var(--paper);border-radius:10px;font-size:12px;color:var(--muted)}.tip b{display:block;color:var(--ink);margin-bottom:5px}
+.main{min-width:0}.topbar{height:64px;background:rgba(255,255,255,.85);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px;position:sticky;top:0;z-index:4;backdrop-filter:blur(40px)}
+.search{max-width:480px;flex:1;position:relative}.search input{width:100%;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:12px 15px 12px 42px;outline:none;color:var(--ink)}.search input:focus{border-color:var(--gold);background:var(--paper)}.search span{position:absolute;left:14px;top:9px;color:#8a96a8;font-size:18px}
+.top-actions{display:flex;align-items:center;gap:16px;color:var(--muted)}.theme-toggle{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:20px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:12px;font-weight:800;white-space:nowrap;flex-shrink:0}.theme-toggle:hover{border-color:var(--gold)}.avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(174,147,87,.14);color:var(--gold);font-weight:600}
+.content{padding:28px 32px 42px;max-width:1450px;margin:auto}.welcome{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.welcome h1{font-size:32px;line-height:1.125;margin:0 0 4px;letter-spacing:.01em}.welcome p{margin:0;color:var(--muted)}.date{font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+.hero{border-radius:10px;background:linear-gradient(201deg,#121317 13.96%,#0b0c0e);color:#fff;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden;position:relative;border:1px solid var(--line)}.hero:after{content:"₿";position:absolute;right:9%;top:-42px;font-size:190px;font-weight:400;font-family:"Bodoni Moda",Georgia,serif;color:#ffffff12;transform:rotate(12deg)}.hero-copy{position:relative;z-index:1;max-width:600px}.eyebrow{font-size:13px;letter-spacing:.18em;font-weight:600;color:#cc9166}.hero h2{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:clamp(28px,3vw,40px);line-height:1.125;letter-spacing:.01em;margin:9px 0}.hero p{color:#acafb9;margin:0;max-width:520px}.hero-btn{display:inline-block;margin-top:16px;padding:12px 20px;border-radius:9999px;background:#fff;color:#000;font-size:12px;font-weight:600}
+.hero-art{position:relative;z-index:1;width:125px;height:125px;border:1px solid rgba(174,147,87,.6);border-radius:50%;display:grid;place-items:center;background:rgba(174,147,87,.08);font-size:66px;font-family:"Bodoni Moda",Georgia,serif;font-weight:400;color:#d9bd7a;flex-shrink:0}
+.section-head{display:flex;justify-content:space-between;align-items:center;margin:27px 0 13px}.section-head h3{margin:0;font-size:26px;line-height:1.125;font-weight:400}.section-head a{font-size:12px;color:var(--blue);font-weight:700}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.quick-card{background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:17px;min-height:118px;transition:border-color .2s}.quick-card:hover{border-color:var(--gold)}.quick-icon{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--bg);display:grid;place-items:center;font-size:19px;margin-bottom:10px}.q-orange{background:rgba(205,137,57,.14);color:#cd8939}.q-blue{background:rgba(120,140,180,.14);color:#7d90b8}.q-green{background:rgba(90,160,130,.14);color:#5da184}.q-purple{background:rgba(150,130,200,.14);color:#9a8cc9}.quick-card b{display:block;font-size:13px;font-weight:600}.quick-card small{color:var(--muted);font-size:11px}
+.columns{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.85fr);gap:18px}.panel{background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;overflow:hidden}.panel-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.panel-head b{font-size:14px}.panel-head small{color:var(--muted);font-size:11px}.news-list{display:grid}.news-item{display:flex;gap:13px;padding:15px 18px;border-bottom:1px solid var(--line);align-items:center}.news-item:last-child{border:0}.news-thumb{width:64px;height:58px;flex-shrink:0;border-radius:10px;display:grid;place-items:center;font-size:27px;color:#d9bd7a;background:linear-gradient(201deg,#1c1d22,#0b0c0e)}.news-item:nth-child(2) .news-thumb{background:linear-gradient(201deg,#232830,#0b0c0e)}.news-item:nth-child(3) .news-thumb{background:linear-gradient(201deg,#262033,#0b0c0e)}.news-item b{font-size:12px;display:block;line-height:1.35;margin:4px 0;font-weight:500}.news-item small{font-size:10px;color:var(--muted)}.news-thumb{overflow:hidden;position:relative}.news-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.pill{font-size:11px;font-weight:600;letter-spacing:.6px;color:var(--copper);background:transparent;border:1px solid var(--line);padding:4px 7px;border-radius:20px}
+.market-list{padding:4px 17px}.asset{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line);gap:10px}.asset:last-child{border:0}.asset-left{display:flex;align-items:center;gap:10px}.asset-icon{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(174,147,87,.14);color:#d9bd7a;font-weight:400;font-family:"Bodoni Moda",Georgia,serif}.asset:nth-child(2) .asset-icon{background:rgba(120,140,180,.14);color:#8fa3c8}.asset:nth-child(3) .asset-icon{background:rgba(90,160,130,.14);color:#7fb89a}.asset b{font-size:12px;display:block;font-weight:500}.asset small{font-size:10px;color:var(--muted)}.asset-price{text-align:right;font-size:12px;font-weight:500}.asset-price small{display:block;color:var(--muted);font-weight:500}
+.notice{margin-top:18px;background:rgba(174,147,87,.08);border:1px solid rgba(174,147,87,.35);color:var(--muted);border-radius:10px;padding:12px 14px;font-size:11px}
+footer{padding:22px 32px;color:var(--muted);font-size:11px;border-top:1px solid var(--line);background:var(--paper)}
 @media(max-width:950px){.app{grid-template-columns:205px 1fr}.quick{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.content{padding:24px}}
 @media(max-width:650px){.app{display:block}.sidebar{padding:13px 14px;gap:12px}.brand-name{font-size:18px}.nav{display:flex;overflow:auto;gap:4px;padding-bottom:2px}.nav a{white-space:nowrap;padding:8px 10px;font-size:11px}.side-label,.sidebar-bottom{display:none}.topbar{height:60px;padding:0 15px}.top-actions{gap:9px}.top-actions .user-name{display:none}.content{padding:19px 14px 30px}.welcome{align-items:flex-start;flex-direction:column;margin-bottom:17px}.welcome h1{font-size:22px}.date{display:none}.hero{padding:21px;border-radius:15px}.hero-art{width:76px;height:76px;font-size:39px}.hero:after{font-size:125px;right:4%;top:-18px}.hero p{font-size:12px}.quick{gap:9px}.quick-card{padding:13px;min-height:108px}.columns{gap:13px}.section-head{margin-top:22px}.news-item{padding:13px}.news-thumb{width:54px;height:52px}.search input{padding:10px 10px 10px 35px;font-size:12px}.search span{top:6px;left:10px}footer{padding:19px 14px}}
 /* --- Portal berita (tambahan 23 Nov 2026; gaya lama tidak diubah) --- */
 .cat-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
-.pill-cat{border:1px solid var(--line);background:#fff;color:#33415c;font-size:11px;font-weight:800;letter-spacing:.3px;padding:8px 12px;border-radius:20px}
-.pill-cat:hover{border-color:#9ab9ee}
-.pill-cat.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.pill-cat{border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:11px;font-weight:600;letter-spacing:.3px;padding:8px 12px;border-radius:9999px}
+.pill-cat:hover{border-color:var(--gold)}
+.pill-cat.active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .badge{font-size:9px;font-weight:800;letter-spacing:.6px;padding:4px 7px;border-radius:20px;margin-left:5px}
-.badge-fakta{background:#e3f8f0;color:#1c8a66}
-.badge-analisis{background:#e9f1ff;color:#2866ca}
-.badge-belum{background:#fff1e4;color:#d87b2d}
+.badge-fakta{background:rgba(90,160,130,.14);color:#5da184}
+.badge-analisis{background:rgba(120,140,180,.14);color:#7d90b8}
+.badge-belum{background:rgba(205,137,57,.14);color:#cd8939}
 .cat-news-item{align-items:flex-start}
 .cat-news-item>div{min-width:0}
 .news-src{font-size:11px;color:var(--muted);margin-top:5px}
@@ -56,19 +62,19 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 .analysis-body p{margin:0 0 8px;color:#33415c}
 .field{margin-bottom:12px}
 .field label{display:block;font-size:11px;font-weight:800;color:#33415c;margin-bottom:5px}
-.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#f7f9fc;border-radius:10px;padding:10px 12px;outline:none;font:inherit;color:var(--ink)}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:#9ab9ee;background:#fff}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:10px 12px;outline:none;font:inherit;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);background:var(--paper)}
 .field textarea{min-height:74px;resize:vertical}
-.btn{display:inline-block;padding:10px 14px;border-radius:9px;border:1px solid var(--line);background:#fff;font-weight:800;font-size:12px;color:var(--ink)}
-.btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
-.btn-orange{background:linear-gradient(135deg,#ffb35f,#ff7b37);border:0;color:#fff}
+.btn{display:inline-block;padding:10px 14px;border-radius:6px;border:1px solid var(--line);background:var(--paper);font-weight:600;font-size:12px;color:var(--ink)}
+.btn-primary{background:#121317;border-color:#121317;color:#fff}
+.btn-orange{background:linear-gradient(135deg,#d9bd7a,#ae9357);border:0;color:#040406}
 .btn-row{display:flex;flex-wrap:wrap;gap:8px}
 #newsCanvas{max-width:100%;height:auto;border-radius:12px;display:block;background:#101114}
-.codebox{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:12px;font:11px/1.6 ui-monospace,Menlo,Consolas,monospace;overflow:auto;white-space:pre-wrap;word-break:break-word}
+.codebox{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px;font:11px/1.6 ui-monospace,Menlo,Consolas,monospace;overflow:auto;white-space:pre-wrap;word-break:break-word}
 @media(max-width:650px){.pill-cat{padding:7px 10px;font-size:10px}.cat-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.news-src a{white-space:normal}}
 
 .thumb-btn{background:none;border:0;padding:0;cursor:pointer;flex-shrink:0;border-radius:10px}
-.thumb-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.thumb-btn:focus-visible{outline:2px solid #cc9166;outline-offset:2px}
 .lb-hidden{display:none!important}
 details.analysis-more{margin:10px 0 4px}
 details.analysis-more summary{list-style:none;cursor:pointer}
@@ -76,45 +82,55 @@ details.analysis-more summary::-webkit-details-marker{display:none}
 .portal-more{display:flex;justify-content:center;margin:12px 0 4px}
 #lightbox{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:18px}
 .lb-backdrop{position:absolute;inset:0;background:#0b0e1acc}
-.lb-card{position:relative;background:#fff;border-radius:16px;max-width:480px;width:100%;max-height:92vh;overflow:auto;box-shadow:0 20px 60px #00000055}
-.lb-card img{width:100%;display:block;border-radius:16px 16px 0 0;background:#101527}
+.lb-card{position:relative;background:var(--paper);border-radius:12px;max-width:480px;width:100%;max-height:92vh;overflow:auto;box-shadow:0 20px 60px #00000055}
+.lb-card img{width:100%;display:block;border-radius:12px 12px 0 0;background:#101527}
 .lb-body{padding:16px 18px}
 .lb-body b{display:block;font-size:15px;line-height:1.35;margin-bottom:4px}
 .lb-body small{color:var(--muted);font-size:11px;display:block;margin-bottom:12px}
 
 /* --- Mode gelap (toggle tema; mode terang di atas tidak diubah) --- */
-[data-theme="dark"]{color-scheme:dark;--blue:#5b8def;--blue2:#3b6fd4;--bg:#0d1420;--paper:#141d2e;--ink:#e8eef7;--muted:#93a1b8;--line:#24314a;--shadow:0 8px 28px rgba(0,0,0,.45)}
-[data-theme="dark"] .topbar{background:#101a2cee}
-[data-theme="dark"] .search input{background:#0d1526}
-[data-theme="dark"] .search input:focus{background:#131f38}
+[data-theme="dark"]{color-scheme:dark;--blue:#ae9357;--blue2:#8a6d2f;--gold:#ae9357;--gold-light:#fff0cc;--amber:#cd8939;--copper:#cc9166;--bg:#040406;--paper:#121317;--panel:#121317;--panel2:#0b0c0e;--ink:#ffffff;--muted:#9194a1;--line:#2e3038;--shadow:none}
+[data-theme="dark"] .sidebar{background:#0b0c0e;color:var(--ink)}
+[data-theme="dark"] .brand-name{color:#fff}
+[data-theme="dark"] .side-label,[data-theme="dark"] .brand-tag{color:#777a88}
+[data-theme="dark"] .nav a{color:#9194a1}
+[data-theme="dark"] .nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+[data-theme="dark"] .nav a.active{background:#121317;color:#fff;border-left-color:var(--gold)}
+[data-theme="dark"] .tip{background:#121317;color:#9194a1}
+[data-theme="dark"] .topbar{background:rgba(4,4,6,.7)}
+[data-theme="dark"] .search input{background:#0b0c0e}
+[data-theme="dark"] .search input:focus{background:#121317}
 [data-theme="dark"] .panel,[data-theme="dark"] .date,[data-theme="dark"] footer{background:var(--paper)}
-[data-theme="dark"] footer{color:#8fa0b8}
-[data-theme="dark"] footer b{color:#e8eef7!important}
+[data-theme="dark"] footer{color:#777a88}
+[data-theme="dark"] footer b{color:#fff!important}
 [data-theme="dark"] .notice{background:#2a2113;border-color:#4a3a1e;color:#e8c98a}
-[data-theme="dark"] .pill-cat{background:var(--paper);color:#dbe4f2}
+[data-theme="dark"] .pill-cat{background:var(--paper);color:#e2e3e9}
+[data-theme="dark"] .pill-cat.active{background:#fff;border-color:#fff;color:#000}
 [data-theme="dark"] .badge-fakta{background:#0f2e26;color:#5fd3a8}
 [data-theme="dark"] .badge-analisis{background:#16294d;color:#8db4f5}
 [data-theme="dark"] .badge-belum{background:#33230f;color:#f5b45f}
-[data-theme="dark"] .pill{background:#33230f;color:#f5b45f}
-[data-theme="dark"] .news-src b,[data-theme="dark"] .analysis-body h4,[data-theme="dark"] .analysis-body p,[data-theme="dark"] .field label{color:#d5deec}
-[data-theme="dark"] .field input,[data-theme="dark"] .field select,[data-theme="dark"] .field textarea{background:#0d1526}
-[data-theme="dark"] .field input:focus,[data-theme="dark"] .field select:focus,[data-theme="dark"] .field textarea:focus{background:#131f38}
+[data-theme="dark"] .pill{background:transparent;color:#cc9166;border-color:#464853}
+[data-theme="dark"] .news-src b,[data-theme="dark"] .analysis-body h4,[data-theme="dark"] .analysis-body p,[data-theme="dark"] .field label{color:#e2e3e9}
+[data-theme="dark"] .field input,[data-theme="dark"] .field select,[data-theme="dark"] .field textarea{background:#0b0c0e}
+[data-theme="dark"] .field input:focus,[data-theme="dark"] .field select:focus,[data-theme="dark"] .field textarea:focus{background:#121317}
 [data-theme="dark"] .btn{background:var(--paper)}
-[data-theme="dark"] .codebox{background:#0d1526;color:#c8d3e4}
+[data-theme="dark"] .btn-primary{background:#fff;border-color:#fff;color:#000}
+[data-theme="dark"] .codebox{background:#0b0c0e;color:#c8d3e4}
 [data-theme="dark"] .lb-card{background:var(--paper)}
-[data-theme="dark"] .avatar{background:#1b2c4d;color:#8db4f5}
-[data-theme="dark"] .asset-icon{background:#33230f;color:#f5b45f}
-[data-theme="dark"] .asset:nth-child(2) .asset-icon{background:#16294d;color:#8db4f5}
-[data-theme="dark"] .asset:nth-child(3) .asset-icon{background:#0f2e26;color:#5fd3a8}
-[data-theme="dark"] .q-orange{background:#33230f;color:#f5b45f}
-[data-theme="dark"] .q-blue{background:#16294d;color:#8db4f5}
-[data-theme="dark"] .q-green{background:#0f2e26;color:#5fd3a8}
-[data-theme="dark"] .q-purple{background:#241a45;color:#b9a5f5}
-[data-theme="dark"] .quick-card:hover{box-shadow:0 12px 25px rgba(0,0,0,.5)}
+[data-theme="dark"] .avatar{background:rgba(174,147,87,.14);color:#d9bd7a}
+[data-theme="dark"] .asset-icon{background:rgba(174,147,87,.14);color:#d9bd7a}
+[data-theme="dark"] .asset:nth-child(2) .asset-icon{background:rgba(120,140,180,.14);color:#8fa3c8}
+[data-theme="dark"] .asset:nth-child(3) .asset-icon{background:rgba(90,160,130,.14);color:#7fb89a}
+[data-theme="dark"] .q-orange{background:rgba(205,137,57,.14);color:#cd8939}
+[data-theme="dark"] .q-blue{background:rgba(120,140,180,.14);color:#8fa3c8}
+[data-theme="dark"] .q-green{background:rgba(90,160,130,.14);color:#7fb89a}
+[data-theme="dark"] .q-purple{background:rgba(150,130,200,.14);color:#9a8cc9}
+[data-theme="dark"] .quick-card:hover{border-color:var(--gold)}
+[data-theme="dark"] .news-thumb{color:#d9bd7a}
 @media(max-width:650px){.theme-toggle{padding:8px 10px}.theme-toggle .theme-label{display:none}}
 /* --- Login opsional (23 Nov 2026): tombol Masuk/Keluar di topbar --- */
 .logout-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:20px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:12px;font-weight:800;white-space:nowrap;flex-shrink:0}
-.logout-btn:hover{border-color:#9ab9ee}
+.logout-btn:hover{border-color:var(--gold)}
 </style>
 </head>
 <body>
@@ -155,16 +171,16 @@ details.analysis-more summary::-webkit-details-marker{display:none}
   <div class="columns">
     <section id="news"><div class="section-head"><h3>Berita terbaru</h3><a href="#news" id="newsAll">Semua berita →</a></div>
       <div class="panel"><div class="panel-head"><b>Update CryptoScope</b><small id="newsStamp">Diperbarui 24 Nov 2026</small></div><div class="news-list" id="newsList">
-        <article class="news-item"><div class="news-thumb">◆</div><div><span class="pill">ALTCOIN</span><b>Ethereum Foundation gandakan tim keamanan protokol jelang perombakan anti-kuantum dan AI</b><small>Tim keamanan protokol digandakan · perombakan ubah penandatanganan validator &amp; verifikasi rollup · target transisi pasca-kuantum Des 2028 · 24 Nov 2026 · 07:36 WIB</small></div></article>
-        <article class="news-item" id="altcoin"><div class="news-thumb">◆</div><div><span class="pill">ALTCOIN</span><b>BitMine kini pegang hampir 5% suplai Ethereum, Tom Lee sebut ETH 'hard money' setara Bitcoin</b><small>BitMine pegang 6.085.564 ETH · 4,98% suplai ETH · total $11,1 miliar · 24 Nov 2026 · 07:33 WIB</small></div></article>
+        <article class="news-item"><div class="news-thumb">₿</div><div><span class="pill">BITCOIN</span><b>Bitcoin melonjak ke $64.446 usai Huang kembali jadi CEO Nvidia, lalu berbalik ke $61.200</b><small>BTC sempat $64.446 lalu berbalik ke ~$61.200 · Nasdaq +6,51% · 24 Nov 2026 · 09:00 WIB</small></div></article>
+        <article class="news-item" id="altcoin"><div class="news-thumb">◆</div><div><span class="pill">ALTCOIN</span><b>Ethereum Foundation gandakan tim keamanan protokol jelang perombakan anti-kuantum dan AI</b><small>Tim keamanan protokol digandakan · perombakan ubah penandatanganan validator &amp; verifikasi rollup · target transisi pasca-kuantum Des 2028 · 24 Nov 2026 · 07:36 WIB</small></div></article>
         <article class="news-item" id="web3"><div class="news-thumb">₿</div><div><span class="pill">BITCOIN</span><b>Korea Utara cuci $247 juta hasil peretasan Binance lewat mixer Bitcoin</b><small>$247 juta dicuci lewat coinjoin · hampir semua dikoordinasi operator Kruw · $2,85 miliar dibekukan · 24 Nov 2026 · 03:36 WIB</small></div></article>
       </div></div>
     </section>
     <section id="market"><div class="section-head"><h3>Pantauan market</h3><a href="#market" id="marketDetail">Detail →</a></div>
       <div class="panel"><div class="panel-head"><b>Aset populer</b><small id="marketStamp" data-price-date="24 Nov 2026">Memuat harga live…</small></div><div class="market-list">
-        <div class="asset" id="bitcoin"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Bitcoin</b><small>BTC</small></div></div><div class="asset-price" id="price-btc">$61.495<small>+0,92% hari ini</small></div></div>
-        <div class="asset"><div class="asset-left"><span class="asset-icon">◆</span><div><b>Ethereum</b><small>ETH</small></div></div><div class="asset-price" id="price-eth">$1.718<small>+0,26% hari ini</small></div></div>
-        <div class="asset"><div class="asset-left"><span class="asset-icon">◎</span><div><b>Solana</b><small>SOL</small></div></div><div class="asset-price" id="price-sol">$72,39<small>+2,61% hari ini</small></div></div>
+        <div class="asset" id="bitcoin"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Bitcoin</b><small>BTC</small></div></div><div class="asset-price" id="price-btc">$60.770<small>+0,11% hari ini</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">◆</span><div><b>Ethereum</b><small>ETH</small></div></div><div class="asset-price" id="price-eth">$1.702<small>-0,27% hari ini</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">◎</span><div><b>Solana</b><small>SOL</small></div></div><div class="asset-price" id="price-sol">$71,67<small>+1,85% hari ini</small></div></div>
       </div></div>
       <div class="panel" style="margin-top:12px"><div class="panel-head"><b>Gambaran pasar</b><small id="globalStamp">Memuat data pasar…</small></div><div class="market-list">
         <div class="asset"><div class="asset-left"><span class="asset-icon">◍</span><div><b>Total market cap</b><small>Seluruh aset crypto · USD</small></div></div><div class="asset-price" id="global-mcap">—<small>—</small></div></div>
@@ -175,8 +191,8 @@ details.analysis-more summary::-webkit-details-marker{display:none}
   <section id="trending">
     <div class="section-head"><h3>Trending</h3><a href="#portal" id="trendingAll">Semua berita →</a></div>
     <div class="panel"><div class="news-list">
-      <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="0" aria-label="Lihat gambar: Ethereum Foundation gandakan tim keamanan protokol jelang perombakan anti-kuantum dan AI"><div class="news-thumb">◆</div></button><div><span class="pill">ALTCOIN</span><b>Ethereum Foundation gandakan tim keamanan protokol jelang perombakan anti-kuantum dan AI</b><small>Perombakan lebih sulit dari Merge · tim keamanan digandakan · target pasca-kuantum &amp; pasca-AI Des 2028.</small><div class="news-src">Sumber: <b>Cointelegraph</b> · 24 Nov 2026 · 07:36 WIB · <a href="https://cointelegraph.com/news/ethereum-foundation-doubles-protocol-security-team-amid-ai-quantum-overhaul?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
-      <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="1" aria-label="Lihat gambar: BitMine kini pegang hampir 5% suplai Ethereum, Tom Lee sebut ETH 'hard money' setara Bitcoin"><div class="news-thumb">◆</div></button><div><span class="pill">ALTCOIN</span><b>BitMine kini pegang hampir 5% suplai Ethereum, Tom Lee sebut ETH 'hard money' setara Bitcoin</b><small>BitMine pegang 6,08 juta ETH · 4,98% suplai · staking hasilkan $245 juta/tahun.</small><div class="news-src">Sumber: <b>BeInCrypto</b> · 24 Nov 2026 · 07:33 WIB · <a href="https://beincrypto.com/tom-lee-hard-money-bitcoin-ethereum-bitmine/" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
+      <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="0" aria-label="Lihat gambar: Bitcoin melonjak ke $64.446 usai Huang kembali jadi CEO Nvidia, lalu berbalik ke $61.200"><div class="news-thumb">₿</div></button><div><span class="pill">BITCOIN</span><b>Bitcoin melonjak ke $64.446 usai Huang kembali jadi CEO Nvidia, lalu berbalik ke $61.200</b><small>BTC sempat $64.446 lalu berbalik ke ~$61.200 · Nasdaq +6,51% · sesi terbaik sejak April 2025.</small><div class="news-src">Sumber: <b>BeInCrypto</b> · 24 Nov 2026 · 09:00 WIB · <a href="https://beincrypto.com/bitcoin-reversal-huang-return-nasdaq/" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
+      <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="1" aria-label="Lihat gambar: Ethereum Foundation gandakan tim keamanan protokol jelang perombakan anti-kuantum dan AI"><div class="news-thumb">◆</div></button><div><span class="pill">ALTCOIN</span><b>Ethereum Foundation gandakan tim keamanan protokol jelang perombakan anti-kuantum dan AI</b><small>Perombakan lebih sulit dari Merge · tim keamanan digandakan · target pasca-kuantum &amp; pasca-AI Des 2028.</small><div class="news-src">Sumber: <b>Cointelegraph</b> · 24 Nov 2026 · 07:36 WIB · <a href="https://cointelegraph.com/news/ethereum-foundation-doubles-protocol-security-team-amid-ai-quantum-overhaul?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
       <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="2" aria-label="Lihat gambar: Korea Utara cuci $247 juta hasil peretasan Binance lewat mixer Bitcoin"><div class="news-thumb">₿</div></button><div><span class="pill">BITCOIN</span><b>Korea Utara cuci $247 juta hasil peretasan Binance lewat mixer Bitcoin</b><small>$247 juta dicuci lewat coinjoin · hampir semua dikoordinasi operator Kruw · $2,85 miliar dibekukan.</small><div class="news-src">Sumber: <b>Decrypt</b> · 24 Nov 2026 · 03:36 WIB · <a href="https://decrypt.co/383844/north-korea-247-million-binance-hack-bitcoin-mixers" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
     </div></div>
     <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Kriteria: Pilihan editor — 3 berita dengan dampak pasar terbesar hari ini (24 Nov 2026), dipilih redaksi berdasarkan analisis agen CryptoScope dan angka di berita. Bukan berdasarkan jumlah klik, tayang, like, atau share — portal tidak melacak metrik tersebut.</p>
@@ -229,7 +245,7 @@ details.analysis-more summary::-webkit-details-marker{display:none}
   </section>
   <div class="notice">Berita diperbarui harian oleh agen CryptoScope; harga BTC/ETH/SOL live dari CoinGecko (jam update tertera di panel market). Berita portal bisa dikelola lewat halaman Admin (database Firestore). Selalu periksa sumber informasi; konten bukan saran investasi.</div>
 </div>
-<footer><b style="color:#334155">CRYPTOSCOPE</b> &nbsp;·&nbsp; See Beyond The Market. &nbsp;·&nbsp; Media informasi crypto berbahasa Indonesia.</footer>
+<footer><b style="color:var(--ink);font-family:'Bodoni Moda',Georgia,serif;font-weight:400;letter-spacing:.01em">CRYPTOSCOPE</b> &nbsp;·&nbsp; See Beyond The Market. &nbsp;·&nbsp; Media informasi crypto berbahasa Indonesia.</footer>
 </main></div>
 <div id="lightbox" class="lb-hidden" role="dialog" aria-modal="true">
   <div class="lb-backdrop"></div>
@@ -271,9 +287,10 @@ document.getElementById('today').textContent=new Intl.DateTimeFormat('id-ID',{da
 // Insert 24 Nov 2026 07:55 WIB: BitMine/ETH 'hard money' (BeInCrypto, pub 07:33 WIB; beli 7.819 ETH pekan lalu, total 6.085.564 ETH = 4,98% suplai, total $11,1 miliar; 5.227.037 ETH di-staking ~$9 miliar, hasil ~$245 juta/tahun; Lee: suplai ETH +1,26% sejak 30 Jun 2025 ~0,9%/thn vs BTC 0,82%/thn, SOL 7,6%, XRP 5,4%, ADA 2,9%; ETH ~$1.727 Senin -28% sebulan, BMNR +11% ke $14,40, -54% YTD) gantikan Grayscale/oversold (crypto, terlemah — analisis, angka BTC $55.000/bear market sudah tercakup ekonomi). og:image DITOLAK setelah dilihat (grafis bermerek BeInCrypto: wajah Tom Lee + candlestick, watermark {in} di kiri bawah, bukan foto peristiwa); TANPA gambar AI (aturan user: foto ori saja, kalau tidak ada img kosong, grafis prosedural v4). img dikosongkan. Panel Berita terbaru ALTCOIN (gantikan Solana ETF 23 Nov) + Trending idx 1 ikut diperbarui. Basis: file LOKAL (112.618 byte, 00:49 WIB) — raw GitHub (111.319 byte) TERTINGGAL satu run watch, TIDAK ditimpa (pelajaran race 23 Nov).
 // Insert 24 Nov 2026 08:19 WIB: Perintah pengadilan AS bekukan kripto (BeInCrypto, pub 07:55 WIB; TRO hakim Colorado 29 Okt target Huione Group + Xinbi — Huione cuci ≥$4 miliar 2021–2025 per Treasury AS, Xinbi proses >$24 miliar mayoritas USDT di TRON per TRM Labs; Binance + OKX diperintah bekukan akun terkait alamat deposit, pemberitahuan ke 27.304 alamat TRON; pengguna tak terkait ikut kena — trader klaim ~400.000 USDT terkunci; batas keberatan 24 Nov, perintah berlaku s.d. 27 Nov; Binance akui 23 Nov akun tak terkait bisa terdampak, tak bisa lepas dana sendiri; + perintah Abu Dhabi 18 Nov $6,5 miliar cakup ~26.000 dompet) gantikan DOJ/USDC Binance (breaking, tertua 03:00 WIB). og:image DITOLAK setelah dilihat (screenshot dokumen perintah pengadilan — teks, bukan foto peristiwa); TANPA gambar AI (aturan user: foto ori saja, kalau tidak ada img kosong, grafis prosedural v4). img dikosongkan. Panel Berita terbaru tidak diubah (cerita regulasi, bukan harga).
 // Insert 24 Nov 2026 08:45 WIB: Trump/Nvidia $15 juta (BeInCrypto, pub 08:34 WIB; Trump klaim berjasa atas rebound Nvidia — bicara dengan dewan, yakinkan Huang bukan risiko keamanan nasional; dewan pilih bulat kembalikan Huang yang mundur 12 Nov; saham +31,5%, nilai pasar +~$954 miliar sehari, rekor perusahaan AS; FT: saham Trump 32.000–370.000 lembar per 30 Sep naik $1,3–$15 juta di atas kertas, dokumen pakai rentang jadi tak pasti; S&P 500 baru pulih ~$3 triliun dari ~$8 triliun hilang, masih ~$5 triliun di bawah rekor 6 Okt; tiga komite DPR wawancarai Huang pekan depan) gantikan Z.ai/GLM-5.4 (teknologi, terlemah — klaim benchmark belum terverifikasi independen). og:image BeInCrypto tidak bisa diambil dari VM (Cloudflare challenge); TANPA gambar AI (aturan user: foto ori saja, kalau tidak ada img kosong, grafis prosedural v4). img dikosongkan. Panel Berita terbaru tidak diubah (cerita saham/politik, bukan harga kripto).
+// Insert 24 Nov 2026 09:15 WIB: Bitcoin reversal/Huang (BeInCrypto, pub 09:00 WIB; BTC sempat $64.446 usai dewan Nvidia kembalikan Huang jadi CEO Senin, lalu berbalik ke ~$61.200, -5% dari puncak; Nasdaq justru +6,51% sesi terbaik sejak Apr 2025, Dow +3,01% ke 49.595,31, S&P +4,73%, Nvidia +31%; BTC 24 jam hanya +0,7%, pembeli di puncak -5%; pola diduga short squeeze, tak ada permintaan segar; Trump ke CNBC: ia bujuk dewan) gantikan BitMine/ETH (crypto, terlemah — akumulasi korporat + klaim 'hard money' Tom Lee). og:image DITOLAK setelah dilihat (screenshot grafik harga CoinGecko: angka harga + logo CoinGecko + teks UI, bukan foto peristiwa); TANPA gambar AI (aturan user: foto ori saja, kalau tidak ada img kosong, grafis prosedural v4). img dikosongkan. Panel Berita terbaru BITCOIN + Trending idx 0 ikut diperbarui.
 const NEWS_DATA=[
+{"cat":"crypto","title":"Bitcoin melonjak ke $64.446 usai Huang kembali jadi CEO Nvidia, lalu berbalik ke $61.200","summary":"Bitcoin sempat menyentuh $64.446 pada Senin setelah dewan Nvidia mengembalikan Jensen Huang sebagai CEO, lalu berbalik ke sekitar $61.200 — sementara Nasdaq justru bertahan naik 6,51%, sesi terbaiknya sejak April 2025. Dow Jones ditutup naik 3,01% ke 49.595,31 dan S&P 500 naik 4,73%, dengan saham Nvidia melonjak 31%. Dalam 24 jam Bitcoin hanya naik 0,7%, dan pembeli di dekat puncak kini merugi sekitar 5%. BeInCrypto menilai pola lonjakan lalu merosot itu menyerupai short squeeze — pembelian paksa atas taruhan bearish — yang tak bertahan karena tak ada permintaan segar; Presiden Trump mengatakan kepada CNBC bahwa ia membujuk dewan Nvidia mengambil keputusan itu.","source":"BeInCrypto","date":"24 Nov 2026","published":"24 Nov 2026 · 09:00 WIB","url":"https://beincrypto.com/bitcoin-reversal-huang-return-nasdaq/","type":"fakta","img":""},
 {"cat":"crypto","title":"Ethereum Foundation gandakan tim keamanan protokol jelang perombakan anti-kuantum dan AI","summary":"Ethereum Foundation menggandakan tim keamanan protokolnya sembari mempercepat perombakan pertahanan Ethereum terhadap ancaman komputer kuantum dan kecerdasan buatan. Dalam posting blog Senin, peneliti Ethereum Foundation Kev Wedderburn mengatakan perombakan itu akan mengubah cara validator menandatangani pesan, cara pengguna mengotorisasi transaksi, dan cara Ethereum memverifikasi data yang diposting rollup. “Upgrade ini lebih sulit dari Merge, dan waktu kita lebih sedikit,” kata Wedderburn, sambil mengakui pengembangan yang lebih cepat “membuat bug lebih mudah lolos”. Sebagai respons, yayasan memperluas tim keamanan protokolnya agar verifikasi formal dan pekerjaan keamanan bisa mengimbangi laju pengembangan. “Setiap lapisan protokol dan ekosistem harus beradaptasi dengan kenyataan bahwa pengerasan protokol kini menjadi prioritas tertinggi,” tambahnya. Awal bulan ini, peneliti Ethereum Foundation Justin Drake mematok target Desember 2028 untuk menyelesaikan transisi pasca-kuantum dan pasca-AI — setahun lebih cepat dari tenggat ketahanan kuantum yang diumumkan yayasan sebelumnya.","source":"Cointelegraph","date":"24 Nov 2026","published":"24 Nov 2026 · 07:36 WIB","url":"https://cointelegraph.com/news/ethereum-foundation-doubles-protocol-security-team-amid-ai-quantum-overhaul?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound","type":"fakta","img":""},
-{"cat":"crypto","title":"BitMine kini pegang hampir 5% suplai Ethereum, Tom Lee sebut ETH 'hard money' setara Bitcoin","summary":"BitMine membeli 7.819 ETH pekan lalu dan kini memegang 6.085.564 ETH — 4,98% dari total suplai Ethereum — dengan total kepemilikan kripto dan investasi mencapai $11,1 miliar, menurut pembaruan perusahaan Senin, 23 November. Dari jumlah itu, 5.227.037 ETH di-staking senilai sekitar $9 miliar dan menghasilkan pendapatan tahunan sekitar $245 juta, yang bisa naik menjadi $286 juta bila seluruhnya di-staking. Ketua BitMine Tom Lee, salah satu pendiri Fundstrat, menyebut Ethereum sebagai “hard money” setara Bitcoin: suplai ETH tumbuh 1,26% sejak 30 Juni 2025 atau sekitar 0,9% per tahun, nyaris sama dengan Bitcoin sekitar 0,82% per tahun, jauh di bawah Solana 7,6%, XRP 5,4%, dan Cardano 2,9%. Pasar sejauh ini belum merespons tesis itu: ETH diperdagangkan di dekat $1.727 pada Senin, turun hampir 28% dalam sebulan terakhir, sementara saham BitMine naik hampir 11% ke $14,40 pada hari yang sama namun masih turun sekitar 54% sepanjang tahun.","source":"BeInCrypto","date":"24 Nov 2026","published":"24 Nov 2026 · 07:33 WIB","url":"https://beincrypto.com/tom-lee-hard-money-bitcoin-ethereum-bitmine/","type":"fakta","img":""},
 {"cat":"crypto","title":"Korea Utara cuci $247 juta hasil peretasan Binance lewat mixer Bitcoin","summary":"Peretas Korea Utara telah memindahkan setidaknya $247 juta dari peretasan Binance senilai $6,4 miliar lewat ‘coinjoin’ Bitcoin — teknik pencampuran yang menggabungkan dana banyak pengguna dalam satu transaksi agar jejaknya putus — menurut firma analitik blockchain Elliptic, sekitar sebulan setelah peretasan 29 Oktober. Hampir semuanya dikoordinasi satu orang: operator Kruw, koordinator coinjoin yang paling banyak dipakai pengguna Wasabi Wallet, yang ‘menolak memblokir dana semacam itu’, kata cofounder Elliptic Tom Robinson. Pencampuran melonjak setelah 17 November, ketika peretas mengosongkan lima dari sembilan alamat Ethereum terbesar terkait pencurian dan memindahkan sekitar 488.000 ETH (860 juta dolar), lalu menukarnya ke Bitcoin lewat jembatan Thorchain dan memasukkannya ke coinjoin, sering dalam hitungan jam — pola yang sama seperti setelah peretasan Bybit senilai $1,5 miliar awal 2025. Operasi ini mencakup lebih dari 27.000 dompet di sedikitnya 16 blockchain, sekitar 55 layanan, dan 90.000 transaksi. FBI menuding kelompok TraderTraitor Korea Utara sebagai pelakunya; Binance menyatakan akan menanggung semua kerugian nasabah. Baru sedikit yang benar-benar dicairkan: sekitar $2,85 miliar dibekukan dan sekitar $2,35 miliar masih parkir di alamat terkait pencurian, termasuk 18.270 BTC yang diambil langsung dari Binance dan belum bergerak sejak malam peretasan.","source":"Decrypt","date":"24 Nov 2026","published":"24 Nov 2026 · 03:36 WIB","url":"https://decrypt.co/383844/north-korea-247-million-binance-hack-bitcoin-mixers","type":"fakta","img":""},
 {"cat":"geopolitik","title":"Zelensky: intelijen tunjukkan Rusia siapkan serangan baru ke Ukraina","summary":"Presiden Ukraina Volodymyr Zelensky mengatakan Senin malam bahwa intelijen menunjukkan Rusia sedang mempersiapkan serangan baru ke Ukraina, dan ia mendesak Amerika Serikat serta negara-negara lain memperhatikan hal itu karena pasokan sistem pertahanan udara bergantung pada keputusan mereka. Pasukan Rusia telah menghujani Kyiv dan kota-kota lain dengan serangan udara hampir tanpa henti sejak September. Zelensky tidak memberi kerangka waktu untuk serangan yang dimaksud. Ia menyatakan puas atas dukungan yang ia lihat dalam pertemuan Senin di majelis parlementer NATO, yang menurutnya menunjukkan Ukraina layak mendapat tempat di aliansi tersebut.","source":"Reuters","date":"23 Nov 2026","published":"24 Nov 2026 · 05:05 WIB","url":"https://www.reuters.com/world/zelenskiy-says-intelligence-shows-russia-planning-new-strikes-ukraine-2026-11-23/","type":"fakta","img":""},
 {"cat":"geopolitik","title":"Saham China jatuh ke titik terendah 16 bulan usai peringatan baru Trump soal chip AI","summary":"Saham China jatuh ke titik terendah 16 bulan pada Senin setelah AS mengumumkan pembatasan baru atas chip AI canggih. Shanghai Composite turun di bawah 3.500 poin, level terendah sejak awal Juli 2025; CSI 300 turun 0,6%; Hang Seng jatuh ke titik terendah 19 bulan dan Hang Seng Tech ke titik terendah 26 bulan. Saham chip AI memimpin penurunan dengan anjlok sekitar 5%, setelah AS menutup celah yang memungkinkan perusahaan China mengakses chip canggih lewat pusat data di luar negeri, dan Presiden Trump mengatakan pada Jumat bahwa Washington akan menghukum perusahaan AS yang membangun pusat data di luar negeri. Alibaba, Tencent, dan MiniMax termasuk yang paling banyak dijual. Dukungan Beijing belum banyak membantu: regulator memangkas rasio margin minimum menjadi 80% dan dana negara membeli ETF dalam jumlah rekor 90 miliar yuan pada Jumat. Wall Street sudah merasakan dampaknya: selloff saham AI pekan lalu mendorong S&P 500 ke wilayah koreksi.","source":"BeInCrypto","date":"24 Nov 2026","published":"24 Nov 2026 · 05:03 WIB","url":"https://beincrypto.com/china-stocks-16-month-low-us-chip-curbs/","type":"fakta","img":""},
@@ -293,11 +310,11 @@ const NEWS_DATA=[
 (function(){var s=document.getElementById("newsStamp");if(!s)return;var m={Jan:1,Feb:2,Mar:3,Apr:4,Mei:5,Jun:6,Jul:7,Agu:8,Sep:9,Okt:10,Nov:11,Des:12},best="",bk=-1;NEWS_DATA.forEach(function(n){var p=(n.date||"").split(" ");if(p.length<3)return;var k=(+p[2])*10000+(m[p[1]]||0)*100+(+p[0]);if(k>bk){bk=k;best=n.date;}});if(best)s.textContent="Diperbarui "+best;})();
 
 const CATS={
- crypto:{label:"CRYPTO & BLOCKCHAIN",icon:"₿",thumb:"linear-gradient(135deg,#f6a34c,#e46e3f)"},
- geopolitik:{label:"GEOPOLITIK",icon:"◍",thumb:"linear-gradient(135deg,#438de4,#55c3d2)"},
- ekonomi:{label:"EKONOMI GLOBAL",icon:"▥",thumb:"linear-gradient(135deg,#22a879,#50c5d8)"},
- teknologi:{label:"TEKNOLOGI & AI",icon:"◈",thumb:"linear-gradient(135deg,#8d70df,#c18be5)"},
- breaking:{label:"BREAKING NEWS",icon:"!",thumb:"linear-gradient(135deg,#e5484d,#ff7b37)"}
+ crypto:{label:"CRYPTO & BLOCKCHAIN",icon:"₿",thumb:"linear-gradient(201deg,#1c1d22,#0b0c0e)"},
+ geopolitik:{label:"GEOPOLITIK",icon:"◍",thumb:"linear-gradient(201deg,#232830,#0b0c0e)"},
+ ekonomi:{label:"EKONOMI GLOBAL",icon:"▥",thumb:"linear-gradient(201deg,#1e2a1e,#0b0c0e)"},
+ teknologi:{label:"TEKNOLOGI & AI",icon:"◈",thumb:"linear-gradient(201deg,#262033,#0b0c0e)"},
+ breaking:{label:"BREAKING NEWS",icon:"!",thumb:"linear-gradient(201deg,#2e1f1a,#0b0c0e)"}
 };
 const TYPE_BADGE={fakta:["FAKTA","badge-fakta"],analisis:["ANALISIS","badge-analisis"],"belum-terkonfirmasi":["BELUM TERKONFIRMASI","badge-belum"]};
 
@@ -1043,7 +1060,7 @@ initLightbox();
   function applyTheme(t){
     document.documentElement.dataset.theme=(t==="dark")?"dark":"light";
     try{localStorage.setItem("cryptoscope-theme",t);}catch(e){}
-    if(meta){meta.setAttribute("content",t==="dark"?"#0d1420":"#2463c7");}
+    if(meta){meta.setAttribute("content",t==="dark"?"#040406":"#f4f1ec");}
     if(btn){btn.innerHTML=(t==="dark")?"☀️ <span class=\"theme-label\">Terang</span>":"🌙 <span class=\"theme-label\">Gelap</span>";}
   }
   if(btn){btn.addEventListener("click",function(){
