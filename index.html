@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CryptoScope — The Future of Crypto Starts Here</title>
 <meta name="description" content="CryptoScope — berita, analisis, dan edukasi crypto dalam satu tempat. Bitcoin, altcoin, Web3, dan market — akurat dan fakta, diperbarui 24 jam.">
-<meta name="theme-color" content="#04070f">
+<meta name="theme-color" content="#040406">
 <link rel="canonical" href="https://cryptoscope-id.web.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CryptoScope">
@@ -18,77 +18,85 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CryptoScope","url":"https://cryptoscope-id.web.app/","inLanguage":"id","description":"Media berita dan edukasi cryptocurrency berbahasa Indonesia."}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#04070f; --bg2:#071022; --panel:#0a1526; --panel2:#0d1b31;
-  --line:rgba(120,170,255,.14); --line2:rgba(120,170,255,.22);
-  --blue:#2f7bff; --cyan:#38bdf8; --orange:#f7931a; --orange2:#ffb35f;
-  --ink:#eef4ff; --mut:#93a4c0; --mut2:#6b7d9c;
+  --bg:#040406; --bg2:#0b0c0e; --panel:#121317; --panel2:#0b0c0e;
+  --line:#2e3038; --line2:#464853;
+  --gold:#ae9357; --gold-light:#fff0cc; --amber:#cd8939; --copper:#cc9166;
+  --blue:#ae9357; --cyan:#cc9166; --orange:#f7931a; --orange2:#ffb35f;
+  --ink:#ffffff; --mut:#acafb9; --mut2:#777a88;
   --up:#22c55e; --down:#f43f5e;
-  --r:18px;
+  --r:10px;
 }
 *{box-sizing:border-box}
+:focus-visible{outline:2px solid #cc9166;outline-offset:2px}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 img{max-width:100%;display:block}
-h1,h2,h3,.display{font-family:Sora,Inter,system-ui,sans-serif}
+h1,h2,h3,.display{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;letter-spacing:.01em}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-.eyebrow{font-family:Sora,sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
-.sec{padding:84px 0 8px}
+.eyebrow{font-family:Inter,sans-serif;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
+.sec{padding:112px 0 8px}
 .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:30px}
-.sec-head h2{margin:6px 0 0;font-size:clamp(26px,3.4vw,38px);line-height:1.12;letter-spacing:-.5px}
+.sec-head h2{margin:6px 0 0;font-size:clamp(34px,4vw,52px);line-height:1.05;letter-spacing:.01em;font-weight:400}
 .sec-head p{margin:0;color:var(--mut);max-width:520px;font-size:15px}
-.more{white-space:nowrap;font-weight:700;font-size:14px;color:var(--cyan);text-decoration:none;border:1px solid var(--line2);padding:9px 16px;border-radius:999px;transition:.25s}
-.more:hover{border-color:var(--cyan);background:rgba(56,189,248,.08)}
+.more{white-space:nowrap;font-weight:600;font-size:14px;color:var(--ink);text-decoration:none;border:1px solid var(--line2);padding:9px 16px;border-radius:999px;transition:.25s}
+.more:hover{border-color:var(--gold);background:rgba(174,147,87,.08)}
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
 .badge.breaking{background:var(--down);color:#fff}
-.badge.cat{background:rgba(47,123,255,.16);color:#7db4ff;border:1px solid rgba(47,123,255,.35)}
+.badge.cat{background:rgba(174,147,87,.14);color:var(--gold-light);border:1px solid rgba(174,147,87,.4)}
 .badge.cat.orange{background:rgba(247,147,26,.14);color:#ffb35f;border-color:rgba(247,147,26,.4)}
 /* ---------- header ---------- */
-header{position:sticky;top:0;z-index:50;background:rgba(4,7,15,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:50;background:rgba(4,4,6,.7);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-bottom:1px solid var(--line)}
 .hd-in{display:flex;align-items:center;gap:26px;height:66px}
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
 /* ---------- mode terang ---------- */
-[data-theme="light"]{--bg:#eef2f8;--bg2:#e6ecf5;--panel:#ffffff;--panel2:#e9eff7;--line:#dbe3ee;--line2:#c2d0e4;--ink:#152238;--mut:#5b6a84}
-[data-theme="light"] body{background:radial-gradient(900px 480px at 85% -10%,rgba(47,123,255,.14),transparent 60%),radial-gradient(700px 420px at 8% 0%,rgba(255,123,55,.10),transparent 55%),var(--bg)}
-[data-theme="light"] header{background:rgba(238,242,248,.85)}
+[data-theme="light"]{--bg:#f4f1ec;--bg2:#ece7de;--panel:#ffffff;--panel2:#faf8f4;--line:#e2ddd2;--line2:#cfc7b8;--ink:#17150f;--mut:#6d675c;--mut2:#8a8378;--gold:#8a6d2f;--gold-light:#8a6d2f;--amber:#a06a2c;--copper:#a97c3f;--blue:#8a6d2f;--cyan:#a97c3f}
+[data-theme="light"] body{background:var(--bg)}
+[data-theme="light"] header{background:rgba(244,241,236,.85)}
 [data-theme="light"] .ticker{background:rgba(255,255,255,.85)}
 [data-theme="light"] .ticker b{color:var(--ink)}
+[data-theme="light"] .hero{background:var(--bg)}
 [data-theme="light"] .hero:after{color:rgba(21,34,56,.04)}
-[data-theme="light"] .eyebrow{color:#0e7fd6}
-[data-theme="light"] .num{color:#0e7fd6}
+[data-theme="light"] .eyebrow{color:#a97c3f}
+[data-theme="light"] .num{color:#a97c3f}
 [data-theme="light"] .chip-float{background:rgba(255,255,255,.88);border-color:var(--line)}
-[data-theme="light"] .mkt-card,[data-theme="light"] .news-card,[data-theme="light"] .edu-card,[data-theme="light"] .princ{box-shadow:0 10px 28px rgba(20,50,100,.08)}
-.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--orange2),var(--orange));display:grid;place-items:center;color:#fff;font-family:Sora,sans-serif;font-weight:800;font-size:20px;box-shadow:0 0 0 1.5px rgba(255,255,255,.16),0 4px 16px rgba(247,147,26,.45);flex-shrink:0}
-.logo b .scope{background:linear-gradient(90deg,#ffc27a,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+[data-theme="light"] .mkt-card,[data-theme="light"] .news-card,[data-theme="light"] .edu-card,[data-theme="light"] .princ{box-shadow:0 10px 28px rgba(60,45,10,.08)}
+[data-theme="light"] .hero-stats b,[data-theme="light"] .about-stats b,[data-theme="light"] .mkt-price,[data-theme="light"] .stat b{background:linear-gradient(103deg,#8a6d2f,#6b551f 50%,#8a6d2f);-webkit-background-clip:text;background-clip:text;color:transparent}
+[data-theme="light"] .cta-band h2{color:#fff}
+[data-theme="light"] .cta-band p{color:#e2e3e9}
+.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#d9bd7a,var(--gold) 60%,#8a6d2f);display:grid;place-items:center;color:#040406;font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:22px;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 4px 16px rgba(174,147,87,.35);flex-shrink:0}
+.logo b .scope{background:linear-gradient(90deg,#e8cd8a,#ae9357 60%,#d9bd7a);-webkit-background-clip:text;background-clip:text;color:transparent}
 .theme-toggle{display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border-radius:20px;border:1px solid var(--line2);background:var(--panel);color:var(--ink);font-size:12.5px;font-weight:800;white-space:nowrap;cursor:pointer}
-.theme-toggle:hover{border-color:var(--blue)}
-.logo b{font-family:Sora,sans-serif;font-size:19px;letter-spacing:-.3px}
+.theme-toggle:hover{border-color:var(--gold)}
+.logo b{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:21px;letter-spacing:.01em}
 .logo small{display:block;font-size:9.5px;letter-spacing:.24em;color:var(--mut);font-weight:700;text-transform:uppercase;margin-top:-3px}
 nav.main{display:flex;gap:4px;margin-left:8px}
-nav.main a{padding:8px 13px;border-radius:10px;text-decoration:none;font-size:14.5px;font-weight:600;color:#c6d3e8;transition:.2s}
-nav.main a:hover{color:#fff;background:rgba(120,170,255,.1)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;font-weight:800;text-decoration:none;border-radius:12px;padding:11px 20px;font-size:14.5px;box-shadow:0 8px 22px rgba(47,123,255,.35);transition:.25s;border:0;cursor:pointer}
-.btn:hover{transform:translateY(-1px);filter:brightness(1.1)}
-.btn.ghost{background:transparent;border:1px solid var(--line2);color:var(--ink);box-shadow:none}
-.btn.ghost:hover{border-color:var(--cyan);background:rgba(56,189,248,.07)}
+nav.main a{padding:8px 13px;border-radius:10px;text-decoration:none;font-size:14px;font-weight:400;color:var(--mut);transition:.2s}
+nav.main a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#ffffff;color:#000000;font-weight:600;text-decoration:none;border-radius:6px;padding:11px 20px;font-size:15px;letter-spacing:-.02em;box-shadow:none;transition:.15s cubic-bezier(.4,0,.2,1);border:0;cursor:pointer}
+.btn:hover{background:#e6e6e6;transform:none}
+.btn.ghost{background:transparent;border:1px solid var(--line2);color:var(--ink);box-shadow:none;border-radius:9999px}
+.btn.ghost:hover{border-color:var(--gold);background:rgba(174,147,87,.07)}
 .hd-cta{margin-left:auto}
+.hd-cta .btn{height:32px;padding:0 14px;border-radius:9999px;background:transparent;border:1px solid var(--line2);color:var(--ink);font-size:14px;font-weight:500;box-shadow:none}
+.hd-cta .btn:hover{border-color:var(--gold);background:transparent}
 .burger{display:none;margin-left:auto;background:none;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-size:19px;padding:7px 12px;cursor:pointer}
 /* ---------- hero ---------- */
-.hero{position:relative;padding:96px 0 30px;overflow:hidden}
+.hero{position:relative;padding:96px 0 30px;overflow:hidden;background:#000000}
 #net{position:absolute;inset:0;width:100%;height:100%;opacity:.85;pointer-events:none}
-.hero-glow{position:absolute;width:900px;height:520px;left:50%;top:-180px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(47,123,255,.28),transparent 65%);pointer-events:none}
+.hero-glow{position:absolute;width:900px;height:520px;left:50%;top:-180px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(174,147,87,.16),transparent 65%);pointer-events:none}
 .hero-in{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
-.hero h1{font-size:clamp(40px,6.2vw,76px);line-height:1.02;letter-spacing:-1.5px;margin:16px 0 20px;font-weight:800;text-transform:uppercase}
-.hero h1 .grad{background:linear-gradient(92deg,#60a5fa,#38bdf8 55%,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero h1 .org{color:var(--orange)}
-.hero p.sub{font-size:clamp(16px,2vw,19px);color:#b8c6dd;max-width:560px;margin:0 0 30px}
+.hero h1{font-family:"Bodoni Moda",Georgia,serif;font-size:clamp(40px,5vw,64px);line-height:1.05;letter-spacing:.01em;margin:16px 0 20px;font-weight:400;text-transform:none}
+.hero h1 em{font-style:italic}
+.hero p.sub{font-size:18px;line-height:1.375;letter-spacing:-.02em;color:var(--mut);max-width:560px;margin:0 0 30px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-cta .btn{padding:15px 28px;font-size:15.5px;border-radius:14px}
+.hero-cta .btn{padding:0 32px;height:40px;font-size:15px;border-radius:6px}
+.hero-cta .btn.ghost{border-radius:9999px}
 .hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
-.hero-stats b{display:block;font-family:Sora,sans-serif;font-size:22px}
+.hero-stats b{display:block;font-family:Inter,sans-serif;font-weight:500;font-size:22px;background:linear-gradient(103deg,#ae9357,#fff0cc 40%,#ae9357 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-stats span{font-size:12.5px;color:var(--mut)}
 .coin-wrap{position:relative;display:grid;place-items:center;min-height:340px}
 .coin{position:relative;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#ffd08a,#f7931a 55%,#c96a05);display:grid;place-items:center;font-size:150px;font-weight:800;color:#fff;text-shadow:0 6px 22px rgba(0,0,0,.35);box-shadow:0 0 0 14px rgba(247,147,26,.12),0 0 90px rgba(247,147,26,.45),inset 0 -12px 30px rgba(0,0,0,.25);animation:float 5.5s ease-in-out infinite}
@@ -96,102 +104,105 @@ nav.main a:hover{color:#fff;background:rgba(120,170,255,.1)}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-16px) rotate(4deg)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 .chart{position:absolute;bottom:6px;left:0;right:0;opacity:.9}
-.chip-float{position:absolute;background:rgba(10,21,38,.9);border:1px solid var(--line2);border-radius:12px;padding:9px 13px;font-size:13px;font-weight:700;box-shadow:0 10px 26px rgba(0,0,0,.45);backdrop-filter:blur(6px)}
+.chip-float{position:absolute;background:rgba(11,12,14,.85);border:1px solid var(--line2);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:500;box-shadow:0 10px 26px rgba(0,0,0,.45);backdrop-filter:blur(6px)}
 .chip-float small{display:block;font-size:10.5px;color:var(--mut);font-weight:600}
 .cf1{top:8px;left:-6px}.cf2{top:64px;right:-4px}.cf3{bottom:52px;right:6px}
 .up{color:var(--up)}.down{color:var(--down)}
 /* ticker */
-.ticker{margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:rgba(10,21,38,.55)}
+.ticker{margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:rgba(11,12,14,.6)}
 .ticker-track{display:flex;gap:0;width:max-content;animation:tick 46s linear infinite;padding:12px 0}
 .ticker:hover .ticker-track{animation-play-state:paused}
-.ticker-track span{font-size:13.5px;font-weight:600;color:#c6d3e8;padding:0 26px;white-space:nowrap}
+.ticker-track span{font-size:13.5px;font-weight:400;color:var(--mut);padding:0 26px;white-space:nowrap}
 .ticker-track b{color:#fff}
 .ticker-track .dot{color:var(--orange)}
 @keyframes tick{to{transform:translateX(-50%)}}
 /* ---------- breaking ---------- */
 .break-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:22px}
-.break-main{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--panel);text-decoration:none;display:block;transition:.3s}
-.break-main:hover{transform:translateY(-3px);border-color:var(--line2);box-shadow:0 18px 44px rgba(0,0,0,.45)}
+.break-main{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));text-decoration:none;display:block;transition:border-color .25s}
+.break-main:hover{border-color:var(--line2)}
+.break-main::after,.news-card::after,.mkt-card::after,.edu-card::after,.princ::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.6);border-radius:10px;mix-blend-mode:overlay;-webkit-mask-image:linear-gradient(#fff,transparent 70%);mask-image:linear-gradient(#fff,transparent 70%);pointer-events:none}
 .break-main img{width:100%;height:300px;object-fit:cover}
 .break-main .bm-body{padding:22px 24px 24px}
-.break-main h3{margin:10px 0 8px;font-size:clamp(19px,2.4vw,25px);line-height:1.3;letter-spacing:-.3px}
+.break-main h3{margin:10px 0 8px;font-size:clamp(20px,2.4vw,26px);line-height:1.3;letter-spacing:.01em;font-weight:400}
 .break-main p{margin:0;color:var(--mut);font-size:14.5px}
 .meta{font-size:12.5px;color:var(--mut2);margin-top:12px}
 .meta b{color:var(--mut)}
 .break-side{display:flex;flex-direction:column;gap:22px}
-.break-item{display:flex;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;text-decoration:none;transition:.25s;flex:1}
-.break-item:hover{transform:translateY(-2px);border-color:var(--line2)}
-.break-item .thumb{width:118px;min-width:118px;height:96px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#12294d,#0a1526);display:grid;place-items:center;font-size:34px;color:var(--orange);font-family:Sora,sans-serif;font-weight:800}
+.break-item{position:relative;display:flex;gap:16px;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:16px;text-decoration:none;transition:border-color .25s;flex:1}
+.break-item:hover{border-color:var(--line2)}
+.break-item .thumb{width:118px;min-width:118px;height:96px;border-radius:10px;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;font-size:34px;color:var(--gold);font-family:"Bodoni Moda",Georgia,serif;font-weight:400}
 .break-item .thumb img{width:100%;height:100%;object-fit:cover}
-.break-item h4{margin:6px 0 6px;font-size:15.5px;line-height:1.35}
+.break-item h4{margin:6px 0 6px;font-size:15.5px;line-height:1.35;font-weight:500}
 .break-item .meta{margin-top:4px}
 /* ---------- market ---------- */
 .mkt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.mkt-card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.25s}
-.mkt-card:hover{border-color:var(--line2);transform:translateY(-2px)}
+.mkt-card{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:24px;transition:border-color .25s}
+.mkt-card:hover{border-color:var(--line2)}
 .mkt-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.mkt-ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:Sora,sans-serif;font-weight:800;font-size:19px;color:#fff}
+.mkt-ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:20px;color:#fff}
 .ic-btc{background:linear-gradient(135deg,#ffb35f,#f7931a)}
 .ic-eth{background:linear-gradient(135deg,#8ea2ff,#627eea)}
 .ic-sol{background:linear-gradient(135deg,#9945ff,#14f195)}
-.mkt-top b{font-family:Sora,sans-serif;font-size:17px}
+.mkt-top b{font-family:Inter,sans-serif;font-weight:500;font-size:17px}
 .mkt-top small{display:block;color:var(--mut);font-size:12.5px}
-.mkt-price{font-family:Sora,sans-serif;font-size:30px;font-weight:800;letter-spacing:-.5px}
+.mkt-price{font-family:Inter,sans-serif;font-size:36px;font-weight:500;letter-spacing:-.02em;line-height:1.125;background:linear-gradient(103deg,#ae9357,#fff0cc 40%,#ae9357 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .mkt-chg{font-weight:700;font-size:14px}
 .mkt-bars{display:flex;align-items:flex-end;gap:4px;height:44px;margin-top:18px}
-.mkt-bars i{flex:1;background:linear-gradient(180deg,var(--cyan),rgba(56,189,248,.15));border-radius:3px 3px 0 0;opacity:.85}
+.mkt-bars i{flex:1;background:linear-gradient(180deg,var(--gold),rgba(174,147,87,.15));border-radius:3px 3px 0 0;opacity:.85}
 .mkt-note{margin-top:16px;font-size:12.5px;color:var(--mut2)}
 .mkt-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
 .stat span{font-size:12.5px;color:var(--mut);display:block}
-.stat b{font-family:Sora,sans-serif;font-size:19px}
+.stat b{font-family:Inter,sans-serif;font-weight:500;font-size:19px;background:linear-gradient(103deg,#ae9357,#fff0cc 40%,#ae9357 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* ---------- latest ---------- */
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.news-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:.25s}
-.news-card:hover{transform:translateY(-3px);border-color:var(--line2);box-shadow:0 16px 38px rgba(0,0,0,.4)}
-.news-thumb{height:170px;overflow:hidden;background:linear-gradient(135deg,#12294d,#0a1526 60%,#123);display:grid;place-items:center;position:relative}
+.news-card{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:border-color .25s}
+.news-card:hover{border-color:var(--line2)}
+.news-thumb{height:170px;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;position:relative}
 .news-thumb img{width:100%;height:100%;object-fit:cover}
-.news-thumb .ph{font-family:Sora,sans-serif;font-size:56px;font-weight:800;color:rgba(255,255,255,.16)}
+.news-thumb .ph{font-family:"Bodoni Moda",Georgia,serif;font-size:56px;font-weight:400;color:rgba(255,255,255,.16)}
 .news-thumb .badge{position:absolute;top:12px;left:12px}
 .news-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
-.news-body h3{margin:0 0 8px;font-size:16.5px;line-height:1.4}
+.news-body h3{margin:0 0 8px;font-size:16.5px;line-height:1.4;font-weight:500}
 .news-body p{margin:0;color:var(--mut);font-size:14px;flex:1}
 .news-src{margin-top:14px;font-size:12.5px;color:var(--mut2)}
 .news-src b{color:var(--mut)}
 /* ---------- edukasi ---------- */
 .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.edu-card{background:linear-gradient(160deg,#0c1a30,#081120);border:1px solid var(--line);border-radius:var(--r);padding:24px;text-decoration:none;transition:.25s;display:block}
-.edu-card:hover{transform:translateY(-3px);border-color:rgba(56,189,248,.5)}
-.edu-card .num{font-family:Sora,sans-serif;font-size:13px;font-weight:800;color:var(--cyan);letter-spacing:.16em}
-.edu-card h3{margin:10px 0 8px;font-size:17px;line-height:1.4}
+.edu-card{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:24px;text-decoration:none;transition:border-color .25s;display:block}
+.edu-card:hover{border-color:var(--gold)}
+.edu-card .num{font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:var(--copper);letter-spacing:.16em}
+.edu-card h3{margin:10px 0 8px;font-size:17px;line-height:1.4;font-weight:500}
 .edu-card p{margin:0;color:var(--mut);font-size:14px}
-.edu-card .go{margin-top:16px;font-size:13.5px;font-weight:700;color:var(--cyan)}
+.edu-card .go{margin-top:16px;font-size:13.5px;font-weight:600;color:var(--copper)}
 /* ---------- tentang ---------- */
-.about-lead{max-width:760px;color:#b8c6dd;font-size:16.5px;margin:0 0 34px}
+.about-lead{max-width:760px;color:var(--mut);font-size:18px;line-height:1.375;margin:0 0 34px}
 .about-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.princ{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:.25s}
-.princ:hover{border-color:var(--line2);transform:translateY(-2px)}
-.princ .num{font-family:Sora,sans-serif;font-size:13px;font-weight:800;color:var(--cyan);letter-spacing:.16em}
-.princ h3{margin:12px 0 6px;font-size:16px}
+.princ{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:22px;transition:border-color .25s}
+.princ:hover{border-color:var(--line2)}
+.princ .num{font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:var(--copper);letter-spacing:.16em}
+.princ h3{margin:12px 0 6px;font-size:16px;font-weight:500}
 .princ p{margin:0;color:var(--mut);font-size:14px}
 .about-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
-.about-stats b{display:block;font-family:Sora,sans-serif;font-size:22px}
+.about-stats b{display:block;font-family:Inter,sans-serif;font-weight:500;font-size:22px;background:linear-gradient(103deg,#ae9357,#fff0cc 40%,#ae9357 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .about-stats span{font-size:12.5px;color:var(--mut)}
 /* ---------- cta band ---------- */
-.cta-band{margin:90px 0 0;background:linear-gradient(120deg,#0b2a5e,#123a7d 55%,#0b2a5e);border:1px solid rgba(120,170,255,.3);border-radius:24px;padding:52px 40px;text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:"₿";position:absolute;right:-30px;top:-70px;font-size:280px;font-weight:800;color:rgba(255,255,255,.05);font-family:Sora,sans-serif}
-.cta-band h2{margin:0 0 10px;font-size:clamp(26px,3.6vw,40px);letter-spacing:-.5px}
-.cta-band p{margin:0 auto 26px;color:#c6d3e8;max-width:520px}
+.cta-band{margin:112px -22px 0;background:linear-gradient(rgba(0,0,0,0),#2e2a26);border:0;border-radius:0;padding:112px 40px 80px;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:"₿";position:absolute;right:-30px;top:-70px;font-size:280px;font-weight:400;color:rgba(255,255,255,.05);font-family:"Bodoni Moda",Georgia,serif}
+.cta-band::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");opacity:.3;-webkit-mask-image:linear-gradient(transparent,#000);mask-image:linear-gradient(transparent,#000);pointer-events:none}
+.cta-band h2,.cta-band p,.cta-band .btn{position:relative;z-index:1}
+.cta-band h2{margin:0 0 10px;font-size:clamp(34px,4vw,52px);line-height:1.125;letter-spacing:.01em;font-weight:400}
+.cta-band p{margin:0 auto 32px;color:var(--mut);max-width:520px;font-size:20px;line-height:1.5}
 /* ---------- footer ---------- */
-footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
+footer{margin-top:90px;border-top:1px solid var(--line);background:rgba(11,12,14,.5)}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px;padding:56px 0 34px}
-.ft-grid h4{font-family:Sora,sans-serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 16px;color:#fff}
-.ft-grid a{display:block;color:var(--mut);text-decoration:none;font-size:14px;padding:4px 0}
+.ft-grid h4{font-family:Inter,sans-serif;font-size:16px;font-weight:500;letter-spacing:.02em;text-transform:none;margin:0 0 16px;color:#fff}
+.ft-grid a{display:block;color:#9194a1;text-decoration:none;font-size:16px;line-height:1.375;padding:7px 0}
 .ft-grid a:hover{color:#fff}
 .ft-grid p{color:var(--mut);font-size:14px;margin:0 0 14px}
 .socials{display:flex;gap:10px;margin-top:16px}
-.socials a{width:38px;height:38px;border:1px solid var(--line2);border-radius:10px;display:grid;place-items:center;font-weight:800;font-size:15px;color:#c6d3e8;padding:0}
-.socials a:hover{border-color:var(--cyan);color:#fff;background:rgba(56,189,248,.1)}
+.socials a{width:38px;height:38px;border:1px solid var(--line2);border-radius:10px;display:grid;place-items:center;font-weight:600;font-size:15px;color:var(--mut);padding:0}
+.socials a:hover{border-color:var(--gold);color:#fff;background:rgba(174,147,87,.1)}
 .disclaimer{border-top:1px solid var(--line);padding:20px 0 26px;font-size:12.5px;color:var(--mut2);line-height:1.7}
 .disclaimer b{color:var(--mut)}
 /* reveal */
@@ -201,17 +212,19 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
 /* ---------- responsive ---------- */
 @media(max-width:960px){
   .hero-in{grid-template-columns:1fr;gap:20px}
-  .coin-wrap{min-height:300px;order:-1}
+  .coin-wrap{min-height:300px}
   .coin{width:190px;height:190px;font-size:110px}
   .break-grid{grid-template-columns:1fr}
   .mkt-grid,.news-grid,.edu-grid,.about-grid{grid-template-columns:1fr 1fr}
   .mkt-stats{grid-template-columns:1fr 1fr}
   .ft-grid{grid-template-columns:1fr 1fr}
-  nav.main{display:none;position:absolute;top:66px;left:0;right:0;background:#050b16;border-bottom:1px solid var(--line);flex-direction:column;padding:12px 22px 18px;margin:0}
+  nav.main{display:none;position:absolute;top:66px;left:0;right:0;background:#040406;border-bottom:1px solid var(--line);flex-direction:column;padding:12px 22px 18px;margin:0}
   nav.main.open{display:flex}
   nav.main a{padding:12px 10px;font-size:16px}
   .burger{display:block}
-  .hd-cta .btn{padding:10px 15px}
+  .hd-cta .btn{display:none}
+  .logo small{display:none}
+  .hd-in{gap:14px;padding:0 16px}
 }
 @media(max-width:600px){
   .sec{padding:60px 0 4px}
@@ -230,7 +243,7 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
   .theme-toggle .theme-label{display:none}
 }
 </style>
-<script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="light"){document.documentElement.dataset.theme="light";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#eef2f8");}}}catch(e){}</script>
+<script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="light"){document.documentElement.dataset.theme="light";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#f4f1ec");}}}catch(e){}</script>
 </head>
 <body>
 <header>
@@ -257,7 +270,7 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
   <div class="wrap hero-in">
     <div>
       <span class="eyebrow">CryptoScope — See Beyond The Market</span>
-      <h1>The Future of <span class="grad">Crypto</span> Starts <span class="org">Here</span></h1>
+      <h1>The future of crypto starts <em>here</em></h1>
       <p class="sub">Berita, analisis, dan edukasi crypto dalam satu tempat. Akurat dan fakta — diperbarui 24 jam, langsung dari sumbernya.</p>
       <div class="hero-cta">
         <a class="btn" href="cryptoscope-1.html">JELAJAHI BERITA →</a>
@@ -276,9 +289,9 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
       <div class="chip-float cf2">ETH <span class="down" id="chipEth">$1.710,29 · +0,04%</span><small>Ethereum · live</small></div>
       <div class="chip-float cf3">SOL <span class="up" id="chipSol">$72,11 · +2,50%</span><small>Solana · live</small></div>
       <svg class="chart" viewBox="0 0 400 90" fill="none" aria-hidden="true">
-        <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18" stroke="#ae9357" stroke-width="2.5" stroke-linecap="round"/>
         <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18 L400 90 L0 90 Z" fill="url(#cg)" opacity=".25"/>
-        <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></linearGradient></defs>
+        <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ae9357"/><stop offset="1" stop-color="#ae9357" stop-opacity="0"/></linearGradient></defs>
       </svg>
     </div>
   </div>
@@ -375,37 +388,37 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
         <div class="news-thumb"><span class="ph">₿</span><span class="badge cat orange">Crypto</span></div>
         <div class="news-body"><h3>Grayscale: Bitcoin dan altcoin besar tampak 'oversold', risiko AI bayangi pasar</h3>
         <p>Grayscale menilai Bitcoin dan altcoin besar sudah tampak oversold setelah koreksi panjang — tapi risiko dari sektor AI masih membayangi.</p>
-        <div class="news-src"><b>The Block</b> · 24 Nov 2026 · 05:18 WIB · <span style="color:#7db4ff">Baca di portal →</span></div></div>
+        <div class="news-src"><b>The Block</b> · 24 Nov 2026 · 05:18 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
       <a class="news-card rv" href="cryptoscope-1.html#portal">
         <div class="news-thumb"><span class="ph">Z</span><span class="badge cat orange">Crypto</span></div>
         <div class="news-body"><h3>ETF Zcash 2x Grayscale anjlok 13% di hari pertama perdagangan</h3>
         <p>ETF Zcash 2x Grayscale (ZECX) anjlok lebih dari 13% ke $28,60 pada sesi perdagangan pertamanya di NYSE Arca.</p>
-        <div class="news-src"><b>The Block</b> · 24 Nov 2026 · 05:15 WIB · <span style="color:#7db4ff">Baca di portal →</span></div></div>
+        <div class="news-src"><b>The Block</b> · 24 Nov 2026 · 05:15 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
       <a class="news-card rv" href="cryptoscope-1.html#portal">
         <div class="news-thumb"><span class="ph">¥</span><span class="badge cat">Geopolitik</span></div>
         <div class="news-body"><h3>Saham China jatuh ke titik terendah 16 bulan usai peringatan baru Trump</h3>
         <p>Bursa saham China merosot ke level terendah dalam 16 bulan setelah peringatan terbaru dari Presiden AS Donald Trump.</p>
-        <div class="news-src"><b>BeInCrypto</b> · 24 Nov 2026 · 05:03 WIB · <span style="color:#7db4ff">Baca di portal →</span></div></div>
+        <div class="news-src"><b>BeInCrypto</b> · 24 Nov 2026 · 05:03 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
       <a class="news-card rv" href="cryptoscope-1.html#portal">
         <div class="news-thumb"><span class="ph">AI</span><span class="badge cat">Teknologi</span></div>
         <div class="news-body"><h3>Kepala AI Meta peringatkan superinteligensi makin dekat usai Claude buktikan Hipotesis Riemann</h3>
         <p>Claude membantu membuktikan Hipotesis Riemann — kepala AI Meta menilai superinteligensi kini makin dekat.</p>
-        <div class="news-src"><b>Decrypt</b> · 24 Nov 2026 · 04:16 WIB · <span style="color:#7db4ff">Baca di portal →</span></div></div>
+        <div class="news-src"><b>Decrypt</b> · 24 Nov 2026 · 04:16 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
       <a class="news-card rv" href="cryptoscope-1.html#portal">
         <div class="news-thumb"><span class="ph">₿</span><span class="badge cat orange">Crypto</span></div>
         <div class="news-body"><h3>Korea Utara cuci $247 juta hasil peretasan Binance lewat mixer Bitcoin</h3>
         <p>Dana hasil peretasan Binance dicuci lewat mixer Bitcoin — penyelidik menuding kelompok Lazarus Korea Utara.</p>
-        <div class="news-src"><b>Decrypt</b> · 24 Nov 2026 · 03:36 WIB · <span style="color:#7db4ff">Baca di portal →</span></div></div>
+        <div class="news-src"><b>Decrypt</b> · 24 Nov 2026 · 03:36 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
       <a class="news-card rv" href="cryptoscope-1.html#portal">
         <div class="news-thumb"><img src="images/2026-11-24/doj-usdc-binance-hack.webp" alt="DOJ kejar 1,17 miliar USDC" loading="lazy"><span class="badge breaking">● Breaking</span></div>
         <div class="news-body"><h3>DOJ AS kejar $1,17 miliar USDC terkait peretasan Binance</h3>
         <p>DOJ mengajukan gugatan perampasan sipil untuk memulihkan sekitar $1,17 miliar USDC terkait peretasan Binance.</p>
-        <div class="news-src"><b>The Block</b> · 24 Nov 2026 · 03:00 WIB · <span style="color:#7db4ff">Baca di portal →</span></div></div>
+        <div class="news-src"><b>The Block</b> · 24 Nov 2026 · 03:00 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
     </div>
   </div>
@@ -440,7 +453,7 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
     <div class="cta-band rv">
       <h2>Siap melihat lebih jauh dari market?</h2>
       <p>15 berita terbaru, analisis mendalam, dan harga live — semua dalam satu portal. Gratis, tanpa perlu daftar.</p>
-      <a class="btn" href="cryptoscope-1.html" style="padding:15px 30px;font-size:15.5px">MULAI JELAJAHI →</a>
+      <a class="btn" href="cryptoscope-1.html" style="height:48px;padding:0 24px;font-size:16px;border-radius:9999px">Mulai jelajahi →</a>
     </div>
   </div>
 </section>
@@ -491,7 +504,7 @@ footer{margin-top:90px;border-top:1px solid var(--line);background:#03050a}
       <div class="ft-about">
         <h4>Tentang Kami</h4>
         <p>Media berita dan edukasi crypto berbahasa Indonesia — akurat, transparan, dan diperbarui 24 jam, dari Bitcoin sampai Web3.</p>
-        <a href="#tentang" style="color:#7db4ff;font-weight:700">Selengkapnya tentang kami →</a>
+        <a href="#tentang" style="color:var(--copper);font-weight:600">Selengkapnya tentang kami →</a>
       </div>
       <div class="ft-contact">
         <h4>Kontak</h4>
@@ -532,8 +545,8 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
       a.x+=a.vx;a.y+=a.vy;
       if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
       for(var j=i+1;j<nodes.length;j++){var b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;
-        if(d<150*150){ctx.strokeStyle='rgba(56,189,248,'+(0.14*(1-d/22500))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
-      ctx.fillStyle='rgba(120,190,255,.75)';ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,7);ctx.fill();}
+        if(d<150*150){ctx.strokeStyle='rgba(226,227,233,'+(0.12*(1-d/22500))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
+      ctx.fillStyle='rgba(226,227,233,.55)';ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,7);ctx.fill();}
     raf=requestAnimationFrame(step);}
   size();step();
   window.addEventListener('resize',function(){size();});
@@ -600,7 +613,7 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
   function applyTheme(t){
     document.documentElement.dataset.theme=(t==="light")?"light":"dark";
     try{localStorage.setItem("cryptoscope-theme",t);}catch(e){}
-    if(meta){meta.setAttribute("content",t==="light"?"#eef2f8":"#04070f");}
+    if(meta){meta.setAttribute("content",t==="light"?"#f4f1ec":"#040406");}
     if(btn){btn.innerHTML=(t==="light")?"☀️ <span class=\"theme-label\">Terang</span>":"🌙 <span class=\"theme-label\">Gelap</span>";}
   }
   if(btn){btn.addEventListener("click",function(){
