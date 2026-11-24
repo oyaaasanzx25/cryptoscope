@@ -1,6 +1,6 @@
 {
  "version": 3,
- "updated": "2026-11-24T07:37:39+07:00",
+ "updated": "2026-11-24T09:50:00+07:00",
  "spec": "CryptoScope IMAGE-DIRECTOR-PROMPT.md v3.3 — context-based, banned compositions, anti-default, QC checklist + brand-mark/thumbnail/micro-text checks",
  "images": [
   {
@@ -757,6 +757,90 @@
    "image_dimensions": "1920x1080",
    "image_generation_status": "external",
    "image_type": "external"
+  },
+  {
+   "article_id": "grayscale-oversold",
+   "slug": "grayscale-oversold",
+   "category": "crypto",
+   "article_title": "Grayscale: Bitcoin dan altcoin besar tampak 'oversold', risiko AI bayangi pasar",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-24/proc-grayscale-oversold.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T09:50:00+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "zcash-etf-2x",
+   "slug": "zcash-etf-2x",
+   "category": "crypto",
+   "article_title": "ETF Zcash 2x Grayscale anjlok 13% di hari pertama perdagangan",
+   "article_source": "The Block",
+   "image_url": "images/2026-11-24/proc-zcash-etf.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T09:50:00+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "china-stocks-16mo-low",
+   "slug": "china-stocks-16mo-low",
+   "category": "geopolitik",
+   "article_title": "Saham China jatuh ke titik terendah 16 bulan usai peringatan baru Trump",
+   "article_source": "BeInCrypto",
+   "image_url": "images/2026-11-24/proc-china-stocks.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T09:50:00+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "meta-ai-superintelligence",
+   "slug": "meta-ai-superintelligence",
+   "category": "teknologi",
+   "article_title": "Kepala AI Meta peringatkan superinteligensi makin dekat usai Claude buktikan Hipotesis Riemann",
+   "article_source": "Decrypt",
+   "image_url": "images/2026-11-24/proc-meta-ai.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T09:50:00+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "korea-utara-247m",
+   "slug": "korea-utara-247m",
+   "category": "crypto",
+   "article_title": "Korea Utara cuci $247 juta hasil peretasan Binance lewat mixer Bitcoin",
+   "article_source": "Decrypt",
+   "image_url": "images/2026-11-24/proc-korea-utara.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T09:50:00+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
+  },
+  {
+   "article_id": "kalshi-ny-judge",
+   "slug": "kalshi-ny-judge",
+   "category": "breaking",
+   "article_title": "Hakim New York tolak blokir Kalshi untuk sementara, bursa prediksi tetap beroperasi",
+   "article_source": "CoinDesk",
+   "image_url": "images/2026-11-24/proc-kalshi.png",
+   "image_prompt": "procedural v4 (drawNewsGraphic, portal engine) — pre-rendered to file for landing thumbs; no AI generation",
+   "image_provider": "procedural-v4",
+   "generation_timestamp": "2026-11-24T09:50:00+07:00",
+   "image_dimensions": "480x600",
+   "image_generation_status": "generated",
+   "image_type": "procedural"
   }
  ]
 }
