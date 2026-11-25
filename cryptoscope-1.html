@@ -362,7 +362,7 @@ function renderCatNews(){
   if(limitView&&items.length>20){
     const more=document.createElement("div");more.className="portal-more";
     const mb=document.createElement("button");mb.type="button";mb.className="btn";
-    if(!portalExpanded){mb.textContent="Tampilkan "+(items.length-6)+" berita lainnya";mb.addEventListener("click",function(){portalExpanded=true;renderCatNews();});}
+    if(!portalExpanded){mb.textContent="Tampilkan "+(items.length-shown.length)+" berita lainnya";mb.addEventListener("click",function(){portalExpanded=true;renderCatNews();});}
     else{mb.textContent="Tampilkan lebih sedikit";mb.addEventListener("click",function(){portalExpanded=false;renderCatNews();document.getElementById("portal").scrollIntoView({behavior:"smooth"});});}
     more.appendChild(mb);list.appendChild(more);
   }
@@ -991,6 +991,76 @@ safeRender(renderCatNews);
 safeRender(renderBreaking);
 safeRender(renderTopNews);
 safeRender(wireTopNews);
+
+/* Waktu item berita (perbaikan audit 25 Nov 2026): Admin memakai createdAt
+   Firestore; berita statis memakai `published` ("25 Nov 2026 · 08:40 WIB")
+   atau `date`. Dipakai saat menggabung berita Admin / news-data.json. */
+function itemTime(it){
+  if(!it) return 0;
+  if(it.createdAt&&typeof it.createdAt.toMillis==="function"){try{return it.createdAt.toMillis();}catch(e){return 0;}}
+  var p=String(it.published||it.date||"");
+  var m={Jan:0,Feb:1,Mar:2,Apr:3,Mei:4,Jun:5,Jul:6,Agu:7,Sep:8,Okt:9,Nov:10,Des:11};
+  var d=p.match(/(\d{1,2})\s+(Jan|Feb|Mar|Apr|Mei|Jun|Jul|Agu|Sep|Okt|Nov|Des)\s+(\d{4})(?:\s*·\s*(\d{1,2}):(\d{2}))?/);
+  if(!d) return 0;
+  return new Date(+d[3],m[d[2]],+d[1],+(d[4]||0),+(d[5]||0)).getTime();
+}
+/* Gabung daftar berita baru ke NEWS_DATA: urut terbaru dulu, buang duplikat
+   (URL/judul sama), maks. 4 per kategori, total maks. 20 — aturan portal. */
+function mergeNewsItems(extra){
+  var all=(extra||[]).concat(NEWS_DATA.slice());
+  all.sort(function(a,b){return itemTime(b)-itemTime(a);});
+  var seen={},perCat={},out=[];
+  all.forEach(function(it){
+    if(out.length>=20) return;
+    if(!it||typeof it.title!=="string"||!it.title) return;
+    var key=String(it.url||"").toLowerCase()||String(it.title||"").toLowerCase();
+    if(!key||seen[key]) return;
+    seen[key]=true;
+    var c=it.cat||"crypto";perCat[c]=perCat[c]||0;
+    if(perCat[c]>=4) return;
+    perCat[c]++;out.push(it);
+  });
+  return out;
+}
+/* Terapkan daftar berita baru ke portal + render ulang semua seksi yang
+   memakai NEWS_DATA (grid, Breaking, panel atas). */
+function applyNewsData(items){
+  if(!Array.isArray(items)||!items.length) return false;
+  NEWS_DATA.length=0;
+  items.forEach(function(it){NEWS_DATA.push(it);});
+  portalExpanded=false;
+  safeRender(renderCatNews);
+  safeRender(renderBreaking);
+  safeRender(renderTopNews);
+  safeRender(wireTopNews);
+  return true;
+}
+/* Data berita eksternal (news-data.json, perbaikan audit 25 Nov 2026):
+   portal memuat data terbaru dari file JSON terpisah supaya berita tidak
+   lagi hanya tertanam di HTML. Hanya dipakai kalau bentuknya valid DAN
+   item terbarunya setidaknya sebaru data di halaman — kalau fetch gagal
+   atau JSON lebih lama, portal tetap memakai NEWS_DATA tertanam. */
+(function loadNewsJson(){
+  function newest(list){var t=0;list.forEach(function(it){var x=itemTime(it);if(x>t)t=x;});return t;}
+  fetch("news-data.json",{cache:"no-store"}).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.json();
+  }).then(function(data){
+    if(!Array.isArray(data)||!data.length) return;
+    var ok=data.every(function(it){
+      return it&&typeof it.title==="string"&&it.title
+        &&typeof it.url==="string"&&/^https?:\/\//i.test(it.url)
+        &&typeof it.cat==="string"&&typeof it.summary==="string";
+    });
+    if(!ok) return;
+    if(newest(data)<newest(NEWS_DATA)) return;
+    var sameSet=data.length===NEWS_DATA.length&&data.every(function(it){
+      return NEWS_DATA.some(function(n){return String(n.url||"")===String(it.url||"");});
+    });
+    if(sameSet) return; /* isi sama dengan halaman: jangan render ulang */
+    applyNewsData(mergeNewsItems(data));
+  }).catch(function(e){console.warn("news-data.json tidak dipakai, memakai data tertanam:",e);});
+})();
 /* Pengaman Breaking News: kalau 2 detik setelah muat seksi masih menampilkan
    status loading, render ulang sekali (data statis sudah tersedia di halaman). */
 setTimeout(function(){
@@ -1053,7 +1123,7 @@ initLightbox();
    Config Firebase web di bawah ini bersifat PUBLIK (bukan rahasia):
    keamanan diatur oleh Firestore Rules di konsol Firebase, bukan oleh config. */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-import { getFirestore, collection, query, limit, getDocs } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import { getFirestore, collection, query, orderBy, limit, getDocs } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -1070,7 +1140,7 @@ let fbApp = null;
 try {
   fbApp = initializeApp(firebaseConfig);
   const db = getFirestore(fbApp);
-  const snap = await getDocs(query(collection(db, "news"), limit(15)));
+  const snap = await getDocs(query(collection(db, "news"), orderBy("createdAt", "desc"), limit(15)));
   if (!snap.empty) {
     const items = [];
     snap.forEach(function (d) {
@@ -1088,19 +1158,13 @@ try {
         createdAt: v.createdAt || null
       });
     });
-    items.sort(function(a,b){
-      var ta=a.createdAt&&a.createdAt.toMillis?a.createdAt.toMillis():0;
-      var tb=b.createdAt&&b.createdAt.toMillis?b.createdAt.toMillis():0;
-      if(ta!==tb) return tb-ta;
-      return String(b.date||"").localeCompare(String(a.date||""));
-    });
-    NEWS_DATA.length = 0;
-    items.forEach(function (it) { NEWS_DATA.push(it); });
-    const pc = document.getElementById("portalCount");
-    if (pc) pc.textContent = NEWS_DATA.length + " berita · dari database";
-    portalExpanded=false;
-    renderCatNews();
-    if(typeof renderBreaking==="function") renderBreaking();
+    /* Perbaikan audit 25 Nov 2026 (temuan Tinggi): berita Admin DIGABUNG ke
+       20 berita statis (Admin paling baru dulu, dedupe, maks. 4 per
+       kategori, total 20) — sebelumnya blok ini MENGHAPUS semua berita
+       statis dan portal hanya menampilkan berita Admin. */
+    if (typeof mergeNewsItems === "function" && typeof applyNewsData === "function") {
+      applyNewsData(mergeNewsItems(items));
+    }
   }
 } catch (e) {
   console.warn("Firestore tidak tersedia, memakai data statis:", e);

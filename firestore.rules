@@ -3,25 +3,39 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /news/{docId} {
       allow read: if true;
-      // Tulis hanya admin (login Google iyasanz217@gmail.com) + validasi skema (E-02/D-02).
-      // createdAt wajib timestamp agar dokumen tidak hilang dari query portal (E-03).
+      // Tulis hanya admin (login Google iyasanz217@gmail.com) + validasi skema.
+      // createdAt wajib timestamp agar dokumen tidak hilang dari query portal.
+      // Perketat 25 Nov 2026 (temuan audit Sedang): summary wajib isi, batas
+      // panjang source/url, format tanggal "25 Nov 2026", URL wajib https,
+      // img hanya kosong / https / path images/, tidak ada kolom di luar daftar.
       allow create, update: if request.auth != null
         && request.auth.token.email == 'iyasanz217@gmail.com'
         && request.resource.data.title is string
         && request.resource.data.title.size() > 0
         && request.resource.data.title.size() <= 200
         && request.resource.data.summary is string
+        && request.resource.data.summary.size() > 0
         && request.resource.data.summary.size() <= 500
         && request.resource.data.cat in ['crypto', 'geopolitik', 'ekonomi', 'teknologi', 'breaking']
         && request.resource.data.type in ['fakta', 'analisis', 'belum-terkonfirmasi']
         && request.resource.data.url is string
-        && request.resource.data.url.matches('^https?://.*')
+        && request.resource.data.url.size() > 0
+        && request.resource.data.url.size() <= 500
+        && request.resource.data.url.matches('^https://.+')
         && request.resource.data.source is string
+        && request.resource.data.source.size() > 0
+        && request.resource.data.source.size() <= 120
         && request.resource.data.date is string
+        && request.resource.data.date.matches('^\\d{1,2} (Jan|Feb|Mar|Apr|Mei|Jun|Jul|Agu|Sep|Okt|Nov|Des) \\d{4}$')
         && request.resource.data.createdAt is timestamp
-        && (!('img' in request.resource.data) || request.resource.data.img is string)
-        && (!('published' in request.resource.data) || request.resource.data.published is string)
-        && request.resource.data.keys().hasAll(['title', 'summary', 'cat', 'source', 'date', 'url', 'type', 'createdAt']);
+        && (!('img' in request.resource.data) || (request.resource.data.img is string
+          && (request.resource.data.img == ''
+            || request.resource.data.img.matches('^https://.+')
+            || request.resource.data.img.matches('^images/.+'))))
+        && (!('published' in request.resource.data) || (request.resource.data.published is string
+          && request.resource.data.published.matches('^\\d{1,2} (Jan|Feb|Mar|Apr|Mei|Jun|Jul|Agu|Sep|Okt|Nov|Des) \\d{4}( · \\d{2}:\\d{2} WIB)?$')))
+        && request.resource.data.keys().hasAll(['title', 'summary', 'cat', 'source', 'date', 'url', 'type', 'createdAt'])
+        && request.resource.data.keys().hasOnly(['title', 'summary', 'cat', 'source', 'date', 'url', 'type', 'createdAt', 'img', 'published']);
       allow delete: if request.auth != null
         && request.auth.token.email == 'iyasanz217@gmail.com';
     }
