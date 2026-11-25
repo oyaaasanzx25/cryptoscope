@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CryptoScope — The Future of Crypto Starts Here</title>
 <meta name="description" content="CryptoScope — berita, analisis, dan edukasi crypto dalam satu tempat. Bitcoin, altcoin, Web3, dan market — akurat dan fakta, diperbarui 24 jam.">
-<meta name="theme-color" content="#f5f6f8">
+<meta name="theme-color" content="#0b1018">
 <link rel="canonical" href="https://cryptoscope-id.web.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CryptoScope">
@@ -16,94 +16,91 @@
 <meta name="twitter:title" content="CryptoScope — The Future of Crypto Starts Here">
 <meta name="twitter:description" content="Berita, analisis, dan edukasi crypto dalam satu tempat.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CryptoScope","url":"https://cryptoscope-id.web.app/","inLanguage":"id","description":"Media berita dan edukasi cryptocurrency berbahasa Indonesia."}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f5f6f8; --bg2:#ffffff; --panel:#ffffff; --panel2:#f9fafb;
-  --line:#e5e7eb; --line2:#d1d5db;
-  --gold:#17694f; --gold-light:#17694f; --amber:#0f766e; --copper:#17694f;
-  --blue:#17694f; --cyan:#0f766e; --orange:#f7931a; --orange2:#ffb35f;
-  --ink:#111827; --mut:#6b7280; --mut2:#9ca3af;
-  --up:#0f9d58; --down:#dc2626;
+  --bg:#0b1018; --bg2:#0d1420; --panel:#111a27; --panel2:#0d1420;
+  --line:#263448; --line2:#263448;
+  --gold:#38d996; --gold-light:#38d996; --amber:#28765b; --copper:#38d996;
+  --blue:#38d996; --cyan:#38d996; --orange:#f7931a; --orange2:#ffb35f;
+  --ink:#edf3fb; --mut:#91a0b4; --mut2:#6b7a8d;
+  --up:#38d996; --down:#ff6878;
   --r:10px;
 }
 *{box-sizing:border-box}
-:focus-visible{outline:2px solid #cc9166;outline-offset:2px}
+:focus-visible{outline:2px solid #38d996;outline-offset:2px}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;font-family:Arial,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 img{max-width:100%;display:block}
-h1,h2,h3,.display{font-family:Inter,sans-serif;font-weight:800;letter-spacing:-.02em}
+h1,h2,h3,.display{font-family:Arial,sans-serif;font-weight:800;letter-spacing:-.02em}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-.eyebrow{font-family:Inter,sans-serif;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
+.eyebrow{font-family:Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
 .sec{padding:112px 0 8px}
 .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:30px}
 .sec-head h2{margin:6px 0 0;font-size:clamp(34px,4vw,52px);line-height:1.05;letter-spacing:-.02em;font-weight:800}
 .sec-head p{margin:0;color:var(--mut);max-width:520px;font-size:15px}
 .more{white-space:nowrap;font-weight:600;font-size:14px;color:var(--ink);text-decoration:none;border:1px solid var(--line2);padding:9px 16px;border-radius:999px;transition:.25s}
-.more:hover{border-color:var(--gold);background:rgba(174,147,87,.08)}
+.more:hover{border-color:var(--gold);background:rgba(56,217,150,.08)}
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
 .badge.breaking{background:var(--down);color:#fff}
-.badge.cat{background:rgba(23,105,79,.08);color:var(--gold-light);border:1px solid rgba(23,105,79,.35)}
+.badge.cat{background:rgba(56,217,150,.08);color:var(--gold-light);border:1px solid rgba(56,217,150,.35)}
 .badge.cat.orange{background:rgba(247,147,26,.14);color:#ffb35f;border-color:rgba(247,147,26,.4)}
 /* ---------- header ---------- */
-header{position:sticky;top:0;z-index:50;background:rgba(245,246,248,.85);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:50;background:rgba(13,20,32,.85);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-bottom:1px solid var(--line)}
 .hd-in{display:flex;align-items:center;gap:26px;height:66px}
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
-/* ---------- mode gelap (toggle): kembalikan tampilan Slash lama ---------- */
-[data-theme="dark"]{--bg:#040406;--bg2:#0b0c0e;--panel:#121317;--panel2:#0b0c0e;--line:#2e3038;--line2:#464853;--gold:#ae9357;--gold-light:#fff0cc;--amber:#cd8939;--copper:#cc9166;--blue:#ae9357;--cyan:#cc9166;--ink:#ffffff;--mut:#acafb9;--mut2:#777a88}
-[data-theme="dark"] body{background:var(--bg)}
-[data-theme="dark"] header{background:rgba(4,4,6,.7)}
-[data-theme="dark"] .hero{background:#000000}
-[data-theme="dark"] .hero-glow{background:radial-gradient(ellipse at center,rgba(174,147,87,.16),transparent 65%)}
-[data-theme="dark"] .ticker{background:rgba(11,12,14,.6)}
-[data-theme="dark"] .ticker-track b{color:#fff}
-[data-theme="dark"] .chip-float{background:rgba(11,12,14,.85);box-shadow:0 10px 26px rgba(0,0,0,.45)}
-[data-theme="dark"] .hero-stats b,[data-theme="dark"] .about-stats b,[data-theme="dark"] .mkt-price,[data-theme="dark"] .stat b{background:linear-gradient(103deg,#ae9357,#fff0cc 40%,#ae9357 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
-[data-theme="dark"] .mark{background:linear-gradient(135deg,#d9bd7a,var(--gold) 60%,#8a6d2f);color:#040406}
-[data-theme="dark"] .logo b .scope{background:linear-gradient(90deg,#e8cd8a,#ae9357 60%,#d9bd7a);-webkit-background-clip:text;background-clip:text;color:transparent}
-[data-theme="dark"] .btn{background:#ffffff;color:#000000}
-[data-theme="dark"] .btn:hover{background:#e6e6e6}
-[data-theme="dark"] .cta-band{background:linear-gradient(rgba(0,0,0,0),#2e2a26)}
-[data-theme="dark"] .cta-band h2{color:var(--ink)}
-[data-theme="dark"] .cta-band p{color:var(--mut)}
-[data-theme="dark"] .cta-band .btn{background:#ffffff;color:#000000}
-[data-theme="dark"] footer{background:rgba(11,12,14,.5)}
-[data-theme="dark"] .news-thumb .ph{color:rgba(255,255,255,.16)}
-[data-theme="dark"] .mkt-bars i{background:linear-gradient(180deg,var(--gold),rgba(174,147,87,.15))}
-[data-theme="dark"] nav.main{background:#040406}
-.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#0f766e,#17694f 60%,#0b4d3a);display:grid;place-items:center;color:#ffffff;font-family:Inter,sans-serif;font-weight:800;font-size:22px;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 4px 16px rgba(23,105,79,.35);flex-shrink:0}
-.logo b .scope{background:none;-webkit-background-clip:initial;background-clip:initial;color:#17694f;-webkit-text-fill-color:#17694f}
+/* ---------- mode terang (toggle): tampilan terang hijau sebelumnya ---------- */
+[data-theme="light"]{--bg:#f5f6f8;--bg2:#ffffff;--panel:#ffffff;--panel2:#f9fafb;--line:#e5e7eb;--line2:#d1d5db;--gold:#17694f;--gold-light:#17694f;--amber:#0f766e;--copper:#17694f;--blue:#17694f;--cyan:#0f766e;--orange:#f7931a;--orange2:#ffb35f;--ink:#111827;--mut:#6b7280;--mut2:#9ca3af;--up:#0f9d58;--down:#dc2626}
+[data-theme="light"] body{background:var(--bg)}
+[data-theme="light"] header{background:rgba(245,246,248,.85)}
+[data-theme="light"] .hero{background:#f5f6f8}
+[data-theme="light"] .hero-glow{background:radial-gradient(ellipse at center,rgba(23,105,79,.14),transparent 65%)}
+[data-theme="light"] .ticker{background:#ffffff}
+[data-theme="light"] .ticker-track b{color:#111827}
+[data-theme="light"] .chip-float{background:rgba(255,255,255,.92);box-shadow:0 10px 26px rgba(17,24,39,.10)}
+[data-theme="light"] .hero-stats b,[data-theme="light"] .about-stats b,[data-theme="light"] .mkt-price,[data-theme="light"] .stat b{color:#17694f}
+[data-theme="light"] .mark{background:linear-gradient(135deg,#0f766e,#17694f 60%,#0b4d3a);color:#ffffff;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 4px 16px rgba(23,105,79,.35)}
+[data-theme="light"] .logo b .scope{color:#17694f;-webkit-text-fill-color:#17694f}
+[data-theme="light"] .btn{background:#17694f;color:#ffffff}
+[data-theme="light"] .btn:hover{background:#0f766e}
+[data-theme="light"] .cta-band{background:linear-gradient(135deg,#0f766e,#17694f)}
+[data-theme="light"] .cta-band h2{color:#fff}
+[data-theme="light"] .cta-band p{color:rgba(255,255,255,.85)}
+[data-theme="light"] .cta-band .btn{background:#ffffff;color:#17694f}
+[data-theme="light"] footer{background:#111827}
+[data-theme="light"] .news-thumb .ph{color:rgba(17,24,39,.14)}
+[data-theme="light"] .mkt-bars i{background:linear-gradient(180deg,#17694f,rgba(23,105,79,.15))}
+[data-theme="light"] nav.main{background:#f5f6f8}
+.mark{width:38px;height:38px;border-radius:11px;background:#38d996;display:grid;place-items:center;color:#0b1018;font-family:Arial,sans-serif;font-weight:800;font-size:22px;box-shadow:0 0 0 1px rgba(56,217,150,.35),0 4px 16px rgba(56,217,150,.25);flex-shrink:0}
+.logo b .scope{background:none;-webkit-background-clip:initial;background-clip:initial;color:#38d996;-webkit-text-fill-color:#38d996}
 .theme-toggle{display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border-radius:20px;border:1px solid var(--line2);background:var(--panel);color:var(--ink);font-size:12.5px;font-weight:800;white-space:nowrap;cursor:pointer}
 .theme-toggle:hover{border-color:var(--gold)}
-.logo b{font-family:Inter,sans-serif;font-weight:800;font-size:21px;letter-spacing:-.02em}
+.logo b{font-family:Arial,sans-serif;font-weight:800;font-size:21px;letter-spacing:-.02em}
 .logo small{display:block;font-size:9.5px;letter-spacing:.24em;color:var(--mut);font-weight:700;text-transform:uppercase;margin-top:-3px}
 nav.main{display:flex;gap:4px;margin-left:8px}
 nav.main a{padding:8px 13px;border-radius:10px;text-decoration:none;font-size:14px;font-weight:400;color:var(--mut);transition:.2s}
-nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:#17694f;color:#ffffff;font-weight:600;text-decoration:none;border-radius:6px;padding:11px 20px;font-size:15px;letter-spacing:-.02em;box-shadow:none;transition:.15s cubic-bezier(.4,0,.2,1);border:0;cursor:pointer}
-.btn:hover{background:#0f766e;transform:none}
+nav.main a:hover{color:#edf3fb;background:rgba(56,217,150,.07)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#38d996;color:#0b1018;font-weight:600;text-decoration:none;border-radius:6px;padding:11px 20px;font-size:15px;letter-spacing:-.02em;box-shadow:none;transition:.15s cubic-bezier(.4,0,.2,1);border:0;cursor:pointer}
+.btn:hover{background:#2fbf82;transform:none}
 .btn.ghost{background:transparent;border:1px solid var(--line2);color:var(--ink);box-shadow:none;border-radius:9999px}
-.btn.ghost:hover{border-color:var(--gold);background:rgba(23,105,79,.07)}
+.btn.ghost:hover{border-color:var(--gold);background:rgba(56,217,150,.07)}
 .hd-cta{margin-left:auto}
 .hd-cta .btn{height:32px;padding:0 14px;border-radius:9999px;background:transparent;border:1px solid var(--line2);color:var(--ink);font-size:14px;font-weight:500;box-shadow:none}
 .hd-cta .btn:hover{border-color:var(--gold);background:transparent}
 .burger{display:none;margin-left:auto;background:none;border:1px solid var(--line2);border-radius:10px;color:var(--ink);font-size:19px;padding:7px 12px;cursor:pointer}
 /* ---------- hero ---------- */
-.hero{position:relative;padding:96px 0 30px;overflow:hidden;background:#f5f6f8}
+.hero{position:relative;padding:96px 0 30px;overflow:hidden;background:#0b1018}
 #net{position:absolute;inset:0;width:100%;height:100%;opacity:.85;pointer-events:none}
-.hero-glow{position:absolute;width:900px;height:520px;left:50%;top:-180px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(23,105,79,.14),transparent 65%);pointer-events:none}
+.hero-glow{position:absolute;width:900px;height:520px;left:50%;top:-180px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(56,217,150,.14),transparent 65%);pointer-events:none}
 .hero-in{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
-.hero h1{font-family:Inter,sans-serif;font-size:clamp(40px,5vw,64px);line-height:1.05;letter-spacing:-.02em;margin:16px 0 20px;font-weight:800;text-transform:none}
+.hero h1{font-family:Arial,sans-serif;font-size:clamp(40px,5vw,64px);line-height:1.05;letter-spacing:-.02em;margin:16px 0 20px;font-weight:800;text-transform:none}
 .hero h1 em{font-style:italic}
 .hero p.sub{font-size:18px;line-height:1.375;letter-spacing:-.02em;color:var(--mut);max-width:560px;margin:0 0 30px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero-cta .btn{padding:0 32px;height:40px;font-size:15px;border-radius:6px}
 .hero-cta .btn.ghost{border-radius:9999px}
 .hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
-.hero-stats b{display:block;font-family:Inter,sans-serif;font-weight:700;font-size:22px;color:#17694f}
+.hero-stats b{display:block;font-family:Arial,sans-serif;font-weight:700;font-size:22px;color:#38d996}
 .hero-stats span{font-size:12.5px;color:var(--mut)}
 .coin-wrap{position:relative;display:grid;place-items:center;min-height:340px}
 .coin{position:relative;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#ffd08a,#f7931a 55%,#c96a05);display:grid;place-items:center;font-size:150px;font-weight:800;color:#fff;text-shadow:0 6px 22px rgba(0,0,0,.35);box-shadow:0 0 0 14px rgba(247,147,26,.12),0 0 90px rgba(247,147,26,.45),inset 0 -12px 30px rgba(0,0,0,.25);animation:float 5.5s ease-in-out infinite}
@@ -111,16 +108,16 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-16px) rotate(4deg)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 .chart{position:absolute;bottom:6px;left:0;right:0;opacity:.9}
-.chip-float{position:absolute;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:500;box-shadow:0 10px 26px rgba(17,24,39,.10);backdrop-filter:blur(6px)}
+.chip-float{position:absolute;background:rgba(17,26,39,.92);border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:13px;font-weight:500;box-shadow:0 10px 26px rgba(0,0,0,.45);backdrop-filter:blur(6px)}
 .chip-float small{display:block;font-size:10.5px;color:var(--mut);font-weight:600}
 .cf1{top:8px;left:-6px}.cf2{top:64px;right:-4px}.cf3{bottom:52px;right:6px}
 .up{color:var(--up)}.down{color:var(--down)}
 /* ticker */
-.ticker{margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:#ffffff}
+.ticker{margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:#0d1420}
 .ticker-track{display:flex;gap:0;width:max-content;animation:tick 46s linear infinite;padding:12px 0}
 .ticker:hover .ticker-track{animation-play-state:paused}
 .ticker-track span{font-size:13.5px;font-weight:400;color:var(--mut);padding:0 26px;white-space:nowrap}
-.ticker-track b{color:#111827}
+.ticker-track b{color:#edf3fb}
 .ticker-track .dot{color:var(--gold)}
 @keyframes tick{to{transform:translateX(-50%)}}
 /* ---------- breaking ---------- */
@@ -137,7 +134,7 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 .break-side{display:flex;flex-direction:column;gap:22px}
 .break-item{position:relative;display:flex;gap:16px;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:16px;text-decoration:none;transition:border-color .25s;flex:1}
 .break-item:hover{border-color:var(--line2)}
-.break-item .thumb{width:118px;min-width:118px;height:96px;border-radius:10px;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;font-size:34px;color:var(--gold);font-family:Inter,sans-serif;font-weight:700}
+.break-item .thumb{width:118px;min-width:118px;height:96px;border-radius:10px;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;font-size:34px;color:var(--gold);font-family:Arial,sans-serif;font-weight:700}
 .break-item .thumb img{width:100%;height:100%;object-fit:cover}
 .break-item h4{margin:6px 0 6px;font-size:15.5px;line-height:1.35;font-weight:700}
 .break-item .meta{margin-top:4px}
@@ -146,21 +143,21 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 .mkt-card{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:24px;transition:border-color .25s}
 .mkt-card:hover{border-color:var(--line2)}
 .mkt-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.mkt-ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:Inter,sans-serif;font-weight:700;font-size:20px;color:#fff}
+.mkt-ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:Arial,sans-serif;font-weight:700;font-size:20px;color:#fff}
 .ic-btc{background:linear-gradient(135deg,#ffb35f,#f7931a)}
 .ic-eth{background:linear-gradient(135deg,#8ea2ff,#627eea)}
 .ic-sol{background:linear-gradient(135deg,#9945ff,#14f195)}
-.mkt-top b{font-family:Inter,sans-serif;font-weight:500;font-size:17px}
+.mkt-top b{font-family:Arial,sans-serif;font-weight:500;font-size:17px}
 .mkt-top small{display:block;color:var(--mut);font-size:12.5px}
-.mkt-price{font-family:Inter,sans-serif;font-size:36px;font-weight:700;letter-spacing:-.02em;line-height:1.125;color:#17694f}
+.mkt-price{font-family:Arial,sans-serif;font-size:36px;font-weight:700;letter-spacing:-.02em;line-height:1.125;color:#38d996}
 .mkt-chg{font-weight:700;font-size:14px}
 .mkt-bars{display:flex;align-items:flex-end;gap:4px;height:44px;margin-top:18px}
-.mkt-bars i{flex:1;background:linear-gradient(180deg,var(--gold),rgba(23,105,79,.15));border-radius:3px 3px 0 0;opacity:.85}
+.mkt-bars i{flex:1;background:linear-gradient(180deg,var(--gold),rgba(56,217,150,.15));border-radius:3px 3px 0 0;opacity:.85}
 .mkt-note{margin-top:16px;font-size:12.5px;color:var(--mut2)}
 .mkt-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
 .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
 .stat span{font-size:12.5px;color:var(--mut);display:block}
-.stat b{font-family:Inter,sans-serif;font-weight:700;font-size:19px;color:#17694f}
+.stat b{font-family:Arial,sans-serif;font-weight:700;font-size:19px;color:#38d996}
 /* ---------- latest ---------- */
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .news-card{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:border-color .25s}
@@ -168,7 +165,7 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 .news-thumb{height:170px;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;position:relative}
 .news-thumb img{width:100%;height:100%;object-fit:cover}
 .news-thumb img.proc{object-position:center 68%}
-.news-thumb .ph{font-family:Inter,sans-serif;font-size:56px;font-weight:800;color:rgba(17,24,39,.14)}
+.news-thumb .ph{font-family:Arial,sans-serif;font-size:56px;font-weight:800;color:rgba(237,243,251,.16)}
 .news-thumb .badge{position:absolute;top:12px;left:12px}
 .news-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
 .news-body h3{margin:0 0 8px;font-size:16.5px;line-height:1.4;font-weight:700}
@@ -179,7 +176,7 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .edu-card{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:24px;text-decoration:none;transition:border-color .25s;display:block}
 .edu-card:hover{border-color:var(--gold)}
-.edu-card .num{font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:var(--copper);letter-spacing:.16em}
+.edu-card .num{font-family:Arial,sans-serif;font-size:13px;font-weight:600;color:var(--copper);letter-spacing:.16em}
 .edu-card h3{margin:10px 0 8px;font-size:17px;line-height:1.4;font-weight:700}
 .edu-card p{margin:0;color:var(--mut);font-size:14px}
 .edu-card .go{margin-top:16px;font-size:13.5px;font-weight:600;color:var(--copper)}
@@ -188,25 +185,25 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 .about-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .princ{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:22px;transition:border-color .25s}
 .princ:hover{border-color:var(--line2)}
-.princ .num{font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:var(--copper);letter-spacing:.16em}
+.princ .num{font-family:Arial,sans-serif;font-size:13px;font-weight:600;color:var(--copper);letter-spacing:.16em}
 .princ h3{margin:12px 0 6px;font-size:16px;font-weight:700}
 .princ p{margin:0;color:var(--mut);font-size:14px}
 .about-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
-.about-stats b{display:block;font-family:Inter,sans-serif;font-weight:700;font-size:22px;color:#17694f}
+.about-stats b{display:block;font-family:Arial,sans-serif;font-weight:700;font-size:22px;color:#38d996}
 .about-stats span{font-size:12.5px;color:var(--mut)}
 /* ---------- cta band ---------- */
-.cta-band{margin:112px -22px 0;background:linear-gradient(135deg,#0f766e,#17694f);border:0;border-radius:0;padding:112px 40px 80px;text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:"₿";position:absolute;right:-30px;top:-70px;font-size:280px;font-weight:800;color:rgba(255,255,255,.08);font-family:Inter,sans-serif}
+.cta-band{margin:112px -22px 0;background:#15352e;border-top:1px solid #28765b;border-radius:0;padding:112px 40px 80px;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:"₿";position:absolute;right:-30px;top:-70px;font-size:280px;font-weight:800;color:rgba(255,255,255,.08);font-family:Arial,sans-serif}
 .cta-band::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");opacity:.3;-webkit-mask-image:linear-gradient(transparent,#000);mask-image:linear-gradient(transparent,#000);pointer-events:none}
 .cta-band h2,.cta-band p,.cta-band .btn{position:relative;z-index:1}
-.cta-band .btn{background:#ffffff;color:#17694f}
-.cta-band .btn:hover{background:#e5e7eb}
+.cta-band .btn{background:#38d996;color:#0b1018}
+.cta-band .btn:hover{background:#2fbf82}
 .cta-band h2{margin:0 0 10px;font-size:clamp(34px,4vw,52px);line-height:1.125;letter-spacing:-.02em;font-weight:800;color:#fff}
 .cta-band p{margin:0 auto 32px;color:rgba(255,255,255,.85);max-width:520px;font-size:20px;line-height:1.5}
 /* ---------- footer ---------- */
-footer{margin-top:90px;border-top:0;background:#111827}
+footer{margin-top:90px;border-top:1px solid #263448;background:#0d1420}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px;padding:56px 0 34px}
-.ft-grid h4{font-family:Inter,sans-serif;font-size:16px;font-weight:500;letter-spacing:.02em;text-transform:none;margin:0 0 16px;color:#fff}
+.ft-grid h4{font-family:Arial,sans-serif;font-size:16px;font-weight:500;letter-spacing:.02em;text-transform:none;margin:0 0 16px;color:#fff}
 .ft-grid a{display:block;color:#9194a1;text-decoration:none;font-size:16px;line-height:1.375;padding:7px 0}
 .ft-grid a:hover{color:#fff}
 .ft-grid p{color:var(--mut);font-size:14px;margin:0 0 14px}
@@ -251,7 +248,7 @@ footer{margin-top:90px;border-top:0;background:#111827}
   .theme-toggle .theme-label{display:none}
 }
 </style>
-<script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="dark"){document.documentElement.dataset.theme="dark";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#040406");}}}catch(e){}</script>
+<script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="light"){document.documentElement.dataset.theme="light";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#f5f6f8");}}}catch(e){}</script>
 </head>
 <body>
 <header>
@@ -267,7 +264,7 @@ footer{margin-top:90px;border-top:0;background:#111827}
       <a href="cryptoscope-1.html#market">Market</a>
       <a href="cryptoscope-1.html#analisis">Edukasi</a>
     </nav>
-    <div class="hd-cta"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">🌙 <span class="theme-label">Gelap</span></button><a class="btn" href="cryptoscope-1.html">Jelajahi →</a></div>
+    <div class="hd-cta"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">☀️ <span class="theme-label">Terang</span></button><a class="btn" href="cryptoscope-1.html">Jelajahi →</a></div>
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false">☰</button>
   </div>
 </header>
@@ -297,20 +294,20 @@ footer{margin-top:90px;border-top:0;background:#111827}
       <div class="chip-float cf2">ETH <span class="down" id="chipEth">$1.665,58 · -1,02%</span><small>Ethereum · live</small></div>
       <div class="chip-float cf3">SOL <span class="down" id="chipSol">$69,43 · -1,69%</span><small>Solana · live</small></div>
       <svg class="chart" viewBox="0 0 400 90" fill="none" aria-hidden="true">
-        <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18" stroke="#17694f" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18" stroke="#38d996" stroke-width="2.5" stroke-linecap="round"/>
         <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18 L400 90 L0 90 Z" fill="url(#cg)" opacity=".25"/>
-        <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17694f"/><stop offset="1" stop-color="#17694f" stop-opacity="0"/></linearGradient></defs>
+        <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38d996"/><stop offset="1" stop-color="#38d996" stop-opacity="0"/></linearGradient></defs>
       </svg>
     </div>
   </div>
   <div class="ticker" aria-label="Berita terbaru berjalan">
     <div class="ticker-track" id="tickerTrack">
+      <span><span class="dot">●</span> RUU kripto Korea Selatan bisa geser perlombaan stablecoin melampaui penerbitan token</span>
       <span><span class="dot">●</span> Chainflip mulai kembalikan dana penyedia likuiditas usai peretasan $12,6 juta, dana di posisi terbuka masih tertahan</span>
       <span><span class="dot">●</span> DEX Solana Velocity hentikan semua transaksi gara-gara bug, dua bulan usai relaunch</span>
       <span><span class="dot">●</span> BlackRock: pasar melebih-lebihkan kenaikan suku bunga The Fed, Bitcoin bisa lega</span>
       <span><span class="dot">●</span> Bank-bank AS minta akses dana The Fed di hari libur, margin futures Bitcoin ikut terdampak</span>
       <span><span class="dot">●</span> <b>BREAKING</b> — Utah bergerak cabut dakwaan pidana terhadap Kalshi setelah platform hentikan operasi</span>
-      <span><span class="dot">●</span> Trump siap beri pengampunan untuk CEO Nvidia Jensen Huang, tapi yakin tak diperlukan</span>
     </div>
     </div>
   </div>
@@ -415,6 +412,12 @@ footer{margin-top:90px;border-top:0;background:#111827}
     </div>
     <div class="news-grid">
       <a class="news-card rv" href="cryptoscope-1.html#portal">
+        <div class="news-thumb"><img class="proc" src="images/2026-11-25/proc-korea-stablecoin-bill.png" alt="RUU kripto Korea Selatan bisa geser perlombaan stablecoin melampaui penerbitan token" loading="lazy"><span class="badge cat orange">Crypto</span></div>
+        <div class="news-body"><h3>RUU kripto Korea Selatan bisa geser perlombaan stablecoin melampaui penerbitan token</h3>
+        <p>Komisi Jasa Keuangan (FSC) Korea Selatan merilis rancangan RUU aset digital yang pada awalnya membatasi penerbitan stablecoin berdenominasi won hanya untuk konsorsium yang saham mayoritasnya dipegang bank secara kolektif — meski perusahaan fintech atau teknologi masih bisa menjadi pemegang saham terbesar dibanding bank mana pun secara individu. Rancangan ini menyusul perdebatan regulasi berbulan-bulan: Bank of Korea mendorong penerbitan yang dipimpin bank, sementara FSC sebelumnya mendukung penerbitan oleh perusahaan nonbank. RUU masih harus lolos Majelis Nasional dan diperkirakan berlaku satu tahun setelah pengesahan.</p>
+        <div class="news-src"><b>Cointelegraph</b> · 25 Nov 2026 · 13:54 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
+      </a>
+      <a class="news-card rv" href="cryptoscope-1.html#portal">
         <div class="news-thumb"><img class="proc" src="images/2026-11-25/proc-chainflip-refunds.png" alt="Chainflip mulai kembalikan dana penyedia likuiditas usai peretasan $12,6 juta, dana di posisi terbuka masih tertahan" loading="lazy"><span class="badge cat orange">Crypto</span></div>
         <div class="news-body"><h3>Chainflip mulai kembalikan dana penyedia likuiditas usai peretasan $12,6 juta, dana di posisi terbuka masih tertahan</h3>
         <p>Chainflip Labs mulai mengembalikan saldo tersedia milik penyedia likuiditas ke dompet refund di lima jaringan — Solana, Arbitrum, Tron, BNB Chain, dan Polkadot Asset Hub — setelah pencurian 21 November dari vault Bitcoin dan Ethereum. Aset di posisi lending, strategi, atau range order terbuka kemungkinan masih tertahan; laporan insiden 23 November tidak mencantumkan total pengembalian atau jadwal kompensasi. Kerugian vault sekitar $12,6 juta dan layanan masih dijeda.</p>
@@ -443,12 +446,6 @@ footer{margin-top:90px;border-top:0;background:#111827}
         <div class="news-body"><h3>Utah bergerak cabut dakwaan pidana terhadap Kalshi setelah platform hentikan operasi</h3>
         <p>Kantor Jaksa Agung Utah Derek Brown mengajukan mosi pada Senin untuk mencabut 14 dakwaan pidana terhadap Kalshi tanpa prasangka — dakwaan bisa diajukan lagi jika Kalshi kembali beroperasi di Utah — setelah platform prediction market itu menghentikan operasinya di negara bagian tersebut.</p>
         <div class="news-src"><b>The Block</b> · 25 Nov 2026 · 10:59 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
-      </a>
-      <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-25/proc-trump-huang-pardon.png" alt="Trump siap beri pengampunan untuk CEO Nvidia Jensen Huang, tapi yakin tak diperlukan" loading="lazy"><span class="badge cat">Teknologi</span></div>
-        <div class="news-body"><h3>Trump siap beri pengampunan untuk CEO Nvidia Jensen Huang, tapi yakin tak diperlukan</h3>
-        <p>Presiden AS Donald Trump mengatakan kepada New York Post bahwa memberi pengampunan kepada CEO Nvidia Jensen Huang yang baru kembali menjabat adalah “selalu jadi opsi”, namun ia yakin hal itu tidak akan diperlukan. Huang</p>
-        <div class="news-src"><b>CoinDesk</b> · 25 Nov 2026 · 10:35 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
       </div>
   </div>
@@ -555,7 +552,7 @@ var burger=document.getElementById('burger'),nav=document.getElementById('mainNa
 burger.addEventListener('click',function(){var o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.textContent=o?'✕':'☰';});
 nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');burger.textContent='☰';}});
 /* Reveal saat scroll */
-var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+var io=new ArialsectionObserver(function(es){es.forEach(function(en){if(en.isArialsecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
 /* Ticker: gandakan isi agar marquee mulus */
 var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
@@ -573,8 +570,8 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
       a.x+=a.vx;a.y+=a.vy;
       if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
       for(var j=i+1;j<nodes.length;j++){var b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;
-        if(d<150*150){ctx.strokeStyle='rgba(23,105,79,'+(0.12*(1-d/22500))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
-      ctx.fillStyle='rgba(23,105,79,.45)';ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,7);ctx.fill();}
+        if(d<150*150){ctx.strokeStyle='rgba(56,217,150,'+(0.12*(1-d/22500))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
+      ctx.fillStyle='rgba(56,217,150,.45)';ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,7);ctx.fill();}
     raf=requestAnimationFrame(step);}
   size();step();
   window.addEventListener('resize',function(){size();});
@@ -644,13 +641,13 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
   function applyTheme(t){
     document.documentElement.dataset.theme=(t==="light")?"light":"dark";
     try{localStorage.setItem("cryptoscope-theme",t);}catch(e){}
-    if(meta){meta.setAttribute("content",t==="light"?"#f5f6f8":"#040406");}
+    if(meta){meta.setAttribute("content",t==="light"?"#f5f6f8":"#0b1018");}
     if(btn){btn.innerHTML=(t==="light")?"☀️ <span class=\"theme-label\">Terang</span>":"🌙 <span class=\"theme-label\">Gelap</span>";}
   }
   if(btn){btn.addEventListener("click",function(){
     applyTheme(document.documentElement.dataset.theme==="light"?"dark":"light");
   });}
-  applyTheme(document.documentElement.dataset.theme==="dark"?"dark":"light");
+  applyTheme(document.documentElement.dataset.theme==="light"?"light":"dark");
 })();
 })();
 </script>
