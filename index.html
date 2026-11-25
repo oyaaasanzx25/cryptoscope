@@ -643,5 +643,108 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
 })();
 })();
 </script>
+<script type="module">
+/* Landing live (refactor 25 Nov 2026): 6 kartu "Berita terbaru", seksi
+   Breaking, dan ticker dibaca dari sumber yang sama dengan portal
+   (news-data.json + berita Admin Firestore lewat news.js). HTML statis
+   tetap jadi fallback: kalau data gagal dimuat, kartu statis dibiarkan. */
+import { loadMergedNews, itemTime, pubTime } from "./news.js";
+
+const CAT_LABEL = { crypto: "Crypto", geopolitik: "Geopolitik", ekonomi: "Ekonomi", teknologi: "Teknologi", breaking: "Breaking" };
+const CAT_ICON = { crypto: "₿", breaking: "●", geopolitik: "◆", ekonomi: "◆", teknologi: "◆" };
+
+function esc(s) {
+  return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+/* Isi thumb kartu: foto kalau ada, kalau tidak pakai placeholder huruf
+   kategori (CSS .ph sudah ada di halaman). */
+function setThumb(thumb, item) {
+  if (!thumb) return;
+  var oldImg = thumb.querySelector("img");
+  var oldPh = thumb.querySelector(".ph");
+  if (item.img) {
+    if (oldPh) oldPh.remove();
+    if (!oldImg) { oldImg = document.createElement("img"); oldImg.loading = "lazy"; oldImg.alt = ""; thumb.prepend(oldImg); }
+    oldImg.src = item.img;
+    oldImg.alt = item.title || "";
+    if (String(item.img).indexOf("proc-") >= 0) oldImg.classList.add("proc");
+    else oldImg.classList.remove("proc");
+  } else {
+    if (oldImg) oldImg.remove();
+    if (!oldPh) { oldPh = document.createElement("span"); oldPh.className = "ph"; thumb.prepend(oldPh); }
+    oldPh.textContent = CAT_ICON[item.cat] || "◆";
+  }
+}
+
+function updateCard(card, item) {
+  if (!card || !item) return;
+  var h = card.querySelector("h3");
+  /* Judul lama dicatat dulu: kalau ceritanya sama dengan yang sudah tampil,
+     gambar prosedural statisnya dipertahankan (item tanpa img tidak punya
+     gambar sendiri); hanya cerita BARU tanpa img yang memakai placeholder. */
+  var oldTitle = h ? h.textContent : "";
+  if (h) h.textContent = item.title || "";
+  var p = card.querySelector("p");
+  if (p) p.textContent = (item.summary || "").slice(0, 220);
+  var bd = card.querySelector(".badge");
+  if (bd) {
+    bd.textContent = CAT_LABEL[item.cat] || "Crypto";
+    bd.className = "badge cat" + (item.cat === "crypto" ? " orange" : "");
+  }
+  var src = card.querySelector(".news-src");
+  if (src) src.innerHTML = "<b>" + esc(item.source || "") + "</b> · " + esc(pubTime(item)) + ' · <span style="color:var(--copper)">Baca di portal →</span>';
+  if (item.img || item.title !== oldTitle) setThumb(card.querySelector(".news-thumb"), item);
+}
+
+/* Breaking: hanya perbarui slot kalau ceritanya punya gambar — kalau tidak,
+   biarkan konten statis (sinkronisasi cron akan menggantinya dengan grafis
+   prosedural); teks baru tanpa gambar yang cocok lebih buruk daripada statis. */
+function updateBreakMain(el, item) {
+  if (!el || !item || !item.img) return;
+  var img = el.querySelector("img");
+  if (img) { img.src = item.img; img.alt = item.title || ""; }
+  var h = el.querySelector("h3");
+  if (h) h.textContent = item.title || "";
+  var p = el.querySelector("p");
+  if (p) p.textContent = item.summary || "";
+  var m = el.querySelector(".meta");
+  if (m) m.innerHTML = "<b>" + esc(item.source || "") + "</b> · " + esc(pubTime(item));
+}
+
+function updateBreakItem(el, item) {
+  if (!el || !item || !item.img) return;
+  var img = el.querySelector("img");
+  if (img) { img.src = item.img; img.alt = item.title || ""; }
+  var h = el.querySelector("h4");
+  if (h) h.textContent = item.title || "";
+  var m = el.querySelector(".meta");
+  if (m) m.innerHTML = "<b>" + esc(item.source || "") + "</b> · " + esc(pubTime(item));
+}
+
+try {
+  const items = await loadMergedNews();
+  if (items && items.length) {
+    const sorted = items.slice().sort(function (a, b) { return itemTime(b) - itemTime(a); });
+    document.querySelectorAll(".news-grid .news-card").forEach(function (card, i) {
+      if (sorted[i]) updateCard(card, sorted[i]);
+    });
+    const br = sorted.filter(function (n) { return n.cat === "breaking"; });
+    updateBreakMain(document.querySelector(".break-main"), br[0]);
+    document.querySelectorAll(".break-side .break-item").forEach(function (el, i) {
+      updateBreakItem(el, br[i + 1]);
+    });
+    const track = document.getElementById("tickerTrack");
+    if (track) {
+      const html = sorted.slice(0, 6).map(function (n) {
+        return '<span><span class="dot">●</span> ' + (n.cat === "breaking" ? "<b>BREAKING</b> — " : "") + esc(n.title) + "</span>";
+      }).join("");
+      track.innerHTML = html + html; /* gandakan agar marquee mulus */
+    }
+  }
+} catch (e) {
+  console.warn("Berita landing tidak dapat dimuat:", e);
+}
+</script>
 </body>
 </html>

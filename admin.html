@@ -117,21 +117,14 @@ footer{padding:22px 32px;color:#8792a4;font-size:11px;border-top:1px solid var(-
 </main></div>
 <script type="module">
 /* Admin CryptoScope — Firebase Auth (Google) + Firestore.
-   Config Firebase web di bawah ini bersifat PUBLIK (bukan rahasia):
-   keamanan diatur oleh Firestore Rules di konsol Firebase, bukan oleh config.
+   Config Firebase diambil dari firebase-config.js (satu sumber config
+   untuk portal, landing, dan admin — refactor 25 Nov 2026). Nilai config
+   bersifat PUBLIK (bukan rahasia): keamanan diatur Firestore Rules.
    Rules: baca publik, tulis hanya jika login Google dengan email iyasanz217@gmail.com. */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, reauthenticateWithPopup } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, getDocs, query, limit, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBer_ApDX_0ivVTEuHolzOisK4unmtUZls",
-  authDomain: "cryptoscope-id.firebaseapp.com",
-  projectId: "cryptoscope-id",
-  storageBucket: "cryptoscope-id.firebasestorage.app",
-  messagingSenderId: "913089346916",
-  appId: "1:913089346916:web:7b1346ba6cc7f980028e71"
-};
+import { firebaseConfig } from "./firebase-config.js";
 const ADMIN_EMAIL = "iyasanz217@gmail.com";
 
 const app = initializeApp(firebaseConfig);
