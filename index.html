@@ -552,7 +552,7 @@ var burger=document.getElementById('burger'),nav=document.getElementById('mainNa
 burger.addEventListener('click',function(){var o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.textContent=o?'✕':'☰';});
 nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');burger.textContent='☰';}});
 /* Reveal saat scroll */
-var io=new ArialsectionObserver(function(es){es.forEach(function(en){if(en.isArialsecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
 /* Ticker: gandakan isi agar marquee mulus */
 var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
