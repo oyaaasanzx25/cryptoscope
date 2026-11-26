@@ -332,6 +332,10 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
 [data-theme="dark"] .tbl-tab.active{background:#2563eb;border-color:#2563eb}
 [data-theme="dark"] .tbl-pg button.active{background:#2563eb;border-color:#2563eb}
 [data-theme="dark"] footer{background:var(--bg2)}
+.tbl-ic{width:26px;height:26px;border-radius:50%;flex-shrink:0}
+.coin-fb{display:inline-grid;place-items:center;background:#2563eb;color:#fff;font-weight:800;border-radius:50%;flex-shrink:0}
+.tp-ic.coin-fb{width:26px;height:26px;font-size:13px}
+.tbl-ic.coin-fb{width:26px;height:26px;font-size:13px}
 @media(max-width:960px){.top-panels{grid-template-columns:1fr}.cat-cards{grid-template-columns:1fr 1fr}.cvc-panels,.cvc-cats,.cvc-market{padding-top:40px}}
 @media(max-width:600px){.cat-cards{grid-template-columns:1fr 1fr}.strip-in{gap:4px 14px;padding:8px 16px}.tbl-rows{margin-left:0}}
 </style>
@@ -824,10 +828,25 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
   function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
   /* ---- Panel: Trending / Top Gainers / Top Losers ---- */
+  /* Ikon koin: lokal dulu (images/coins/<id>.png — di-host sendiri, selalu
+     tampil), gagal -> CDN CoinGecko, gagal lagi -> huruf simbol. */
+  function coinImg(c,cls){
+    var sym=esc((c.symbol||'?').toUpperCase());
+    var cdn=c.image||c.small||c.thumb||'';
+    return '<img class="'+cls+'" src="images/coins/'+c.id+'.png" data-cdn="'+cdn+'" data-sym="'+sym+'" alt="" loading="lazy" onerror="coinImgFallback(this)">';
+  }
+  window.coinImgFallback=function(el){
+    var cdn=el.getAttribute('data-cdn');
+    if(cdn&&el.getAttribute('data-tried')!=='cdn'){el.setAttribute('data-tried','cdn');el.src=cdn;return;}
+    var sp=document.createElement('span');
+    sp.className=el.className+' coin-fb';
+    sp.textContent=(el.getAttribute('data-sym')||'?').charAt(0);
+    el.replaceWith(sp);
+  };
   function tpRow(c,rank){
     var p24=pct(c.price_change_percentage_24h);
     return '<div class="tp-row"><span class="tp-rank">'+rank+'</span>'
-      +(c.image?'<img class="tp-ic" src="'+c.image+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')
+      +coinImg(c,'tp-ic')
       +'<span class="tp-name">'+esc(c.name)+'<small>'+esc((c.symbol||'').toUpperCase())+'</small></span>'
       +'<span class="tp-price">'+fmtUSD(c.current_price)+'<small class="'+(p24.up?'up':'down')+'">'+p24.t+'</small></span></div>';
   }
@@ -837,21 +856,30 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
     box.innerHTML=items.map(function(c,i){return tpRow(c,i+1);}).join('');
   }
   function loadPanels(){
-    fetchJSON('https://api.coingecko.com/api/v3/search/trending',8000).then(function(t){
-      var ids=(t.coins||[]).slice(0,3).map(function(x){return x.item&&x.item.id;}).filter(Boolean);
-      if(!ids.length)throw new Error('trending kosong');
-      return fetchJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+ids.join(',')+'&order=market_cap_desc&per_page=3&page=1&price_change_percentage=24h',8000)
-        .then(function(list){list.sort(function(a,b){return ids.indexOf(a.id)-ids.indexOf(b.id);});return list;});
-    }).then(function(list){fillPanel('[data-panel="trending"]',list,'Data trending tidak tersedia.');}).catch(function(){fillPanel('[data-panel="trending"]',null,'Data trending tidak tersedia — CoinGecko tidak terjangkau.');});
-    /* Gainers + Losers dari SATU panggilan: 100 teratas desc, 3 pertama =
-       gainers, 3 terakhir (setelah buang yang % null) = losers. */
-    fetchJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=percent_change_24h_desc&per_page=100&page=1&price_change_percentage=24h',10000)
+    /* Gainers + Losers dari SATU panggilan top-100 mcap, di-sort di browser:
+       API MENGABAIKAN order 24h-desc (kembalian selalu urutan mcap — BTC/ETH/
+       USDT — terbukti curl 26 Nov), jadi sort manual di sini wajib. */
+    fetchJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=24h',10000)
       .then(function(list){
         list=(list||[]).filter(function(c){return typeof c.price_change_percentage_24h==='number';});
-        fillPanel('[data-panel="gainers"]',list.slice(0,3),'Data tidak tersedia.');
-        fillPanel('[data-panel="losers"]',list.slice(-3).reverse(),'Data tidak tersedia.');
+        var desc=list.slice().sort(function(a,b){return b.price_change_percentage_24h-a.price_change_percentage_24h;});
+        var asc=list.slice().sort(function(a,b){return a.price_change_percentage_24h-b.price_change_percentage_24h;});
+        fillPanel('[data-panel="gainers"]',desc.slice(0,3),'Data tidak tersedia.');
+        fillPanel('[data-panel="losers"]',asc.slice(0,3),'Data tidak tersedia.');
       })
       .catch(function(){fillPanel('[data-panel="gainers"]',null,'Data tidak tersedia — CoinGecko tidak terjangkau.');fillPanel('[data-panel="losers"]',null,'Data tidak tersedia — CoinGecko tidak terjangkau.');});
+    /* Trending: SATU panggilan — data.price (USD) + data.price_change_percentage_24h.usd
+       + thumb sudah ada di respons /search/trending. */
+    fetchJSON('https://api.coingecko.com/api/v3/search/trending',8000).then(function(t){
+      var list=(t.coins||[]).slice(0,3).map(function(x){
+        var it=x.item||{};var d=it.data||{};
+        return {id:it.id,name:it.name,symbol:it.symbol,
+          current_price:typeof d.price==='number'?d.price:null,
+          price_change_percentage_24h:d.price_change_percentage_24h&&typeof d.price_change_percentage_24h.usd==='number'?d.price_change_percentage_24h.usd:null,
+          image:it.small||it.thumb||''};
+      });
+      fillPanel('[data-panel="trending"]',list,'Data trending tidak tersedia.');
+    }).catch(function(){fillPanel('[data-panel="trending"]',null,'Data trending tidak tersedia — CoinGecko tidak terjangkau.');});
   }
   setTimeout(loadPanels,4000);
 
@@ -877,7 +905,7 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
 
   /* ---- Tabel harga live ---- */
   var CAT_PARAM={all:'',defi:'decentralized-finance-defi',metaverse:'metaverse',nft:'non-fungible-tokens-nft'};
-  var tbl={view:'all',page:1,per:10,loading:false};
+  var tbl={view:'all',page:1,per:10,loading:false,cache:{}};
   function drawSpark(cv,prices,up){
     if(!cv||!prices||prices.length<2)return;
     var ctx=cv.getContext('2d');if(!ctx)return;
@@ -894,7 +922,7 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
     var p1=pct(c.price_change_percentage_1h_in_currency),p24=pct(c.price_change_percentage_24h),p7=pct(c.price_change_percentage_7d_in_currency);
     var up7=(c.price_change_percentage_7d_in_currency||0)>=0;
     return '<tr><td>'+rank+'</td>'
-      +'<td><span class="tbl-coin">'+(c.image?'<img src="'+c.image+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+esc(c.name)+'<small>'+esc((c.symbol||'').toUpperCase())+'</small></span></td>'
+      +'<td><span class="tbl-coin">'+coinImg(c,'tbl-ic')+esc(c.name)+'<small>'+esc((c.symbol||'').toUpperCase())+'</small></span></td>'
       +'<td class="tbl-num"><b>'+fmtUSD(c.current_price)+'</b></td>'
       +'<td class="tbl-num '+(p1.up?'up':'down')+'">'+p1.t+'</td>'
       +'<td class="tbl-num '+(p24.up?'up':'down')+'">'+p24.t+'</td>'
@@ -905,37 +933,60 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
   }
   function renderPagination(){
     var pg=document.getElementById('tablePagination');if(!pg)return;
+    var list=tbl.cache[tbl.view]||[];
+    var total=Math.max(1,Math.ceil(list.length/tbl.per));
+    if(tbl.page>total)tbl.page=total;
     var p=tbl.page,html='<button type="button" data-pg="prev"'+(p<=1?' disabled':'')+'>‹</button>';
-    var start=Math.max(1,p-1),end=start+3;
+    var start=Math.max(1,Math.min(p-1,total-3)),end=Math.min(total,start+3);
     for(var i=start;i<=end;i++)html+='<button type="button" data-pg="'+i+'"'+(i===p?' class="active"':'')+'>'+i+'</button>';
-    html+='<span style="color:var(--mut2);padding:0 4px">…</span><button type="button" data-pg="next">›</button>';
+    if(end<total)html+='<span style="color:var(--mut2);padding:0 4px">…</span><button type="button" data-pg="'+total+'">'+total+'</button>';
+    html+='<button type="button" data-pg="next"'+(p>=total?' disabled':'')+'>›</button>';
     pg.innerHTML=html;
     pg.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){
       var v=b.getAttribute('data-pg');
       if(v==='prev'){if(tbl.page>1)tbl.page--;}
-      else if(v==='next'){tbl.page++;}
+      else if(v==='next'){if(tbl.page<total)tbl.page++;}
       else{tbl.page=parseInt(v,10);}
-      loadTable();
+      renderTableRows();renderPagination();
     });});
   }
-  function loadTable(){
+  function renderTableRows(){
+    var body=document.getElementById('marketTableBody');if(!body)return;
+    var list=tbl.cache[tbl.view]||[];
+    var total=Math.max(1,Math.ceil(list.length/tbl.per));
+    if(tbl.page>total)tbl.page=total;
+    var slice=list.slice((tbl.page-1)*tbl.per,tbl.page*tbl.per);
+    if(!slice.length){body.innerHTML='<tr><td colspan="9" class="tbl-empty">Tidak ada data untuk tampilan ini.</td></tr>';return;}
+    body.innerHTML=slice.map(function(c,i){return tblRow(c,(tbl.page-1)*tbl.per+i+1);}).join('');
+    body.querySelectorAll('canvas.spark').forEach(function(cv){
+      var raw=cv.getAttribute('data-spark');if(!raw)return;
+      var prices=raw.split(',').map(function(x){return parseFloat(x);}).filter(function(x){return !isNaN(x);});
+      drawSpark(cv,prices,cv.getAttribute('data-up')==='1');
+    });
+    var st=document.getElementById('tableStamp');
+    if(st)st.textContent='Live · diperbarui '+new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'}).format(new Date())+' WIB · Sumber: CoinGecko API (tanpa kunci). Menampilkan 100 koin teratas berdasarkan kapitalisasi pasar. Harga dapat berubah sewaktu-waktu; bukan saran investasi.';
+  }
+  function loadTable(retry){
+    /* Cache per tampilan: fetch 100 koin SEKALI, paginasi/baris dihitung lokal
+       — klik halaman tidak panggil API lagi (rate limit). */
+    if(tbl.cache[tbl.view]){renderTableRows();renderPagination();return;}
     if(tbl.loading)return;tbl.loading=true;
     var body=document.getElementById('marketTableBody');if(!body){tbl.loading=false;return;}
     body.innerHTML='<tr><td colspan="9" class="tbl-empty">Memuat harga live dari CoinGecko…</td></tr>';
     var cat=CAT_PARAM[tbl.view]||'';
-    var url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page='+tbl.per+'&page='+tbl.page+'&sparkline=true&price_change_percentage=1h,24h,7d'+(cat?'&category='+cat:'');
+    var url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h,24h,7d'+(cat?'&category='+cat:'');
     fetchJSON(url,12000).then(function(list){
-      if(!list||!list.length){body.innerHTML='<tr><td colspan="9" class="tbl-empty">Tidak ada data untuk tampilan ini.</td></tr>';return;}
-      body.innerHTML=list.map(function(c,i){return tblRow(c,(tbl.page-1)*tbl.per+i+1);}).join('');
-      body.querySelectorAll('canvas.spark').forEach(function(cv){
-        var raw=cv.getAttribute('data-spark');if(!raw)return;
-        var prices=raw.split(',').map(function(x){return parseFloat(x);}).filter(function(x){return !isNaN(x);});
-        drawSpark(cv,prices,cv.getAttribute('data-up')==='1');
-      });
-      var st=document.getElementById('tableStamp');
-      if(st)st.textContent='Live · diperbarui '+new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'}).format(new Date())+' WIB · Sumber: CoinGecko API (tanpa kunci). Harga dapat berubah sewaktu-waktu; bukan saran investasi.';
+      if(!list||!list.length)throw new Error('kosong');
+      tbl.cache[tbl.view]=list;
+      tbl.page=1;
+      renderTableRows();
     }).catch(function(){
-      body.innerHTML='<tr><td colspan="9" class="tbl-empty">Harga tidak dapat dimuat — CoinGecko tidak terjangkau (mungkin batas permintaan). Coba muat ulang halaman.</td></tr>';
+      if(retry!==false){
+        if(body)body.innerHTML='<tr><td colspan="9" class="tbl-empty">CoinGecko sedang sibuk (batas permintaan) — mencoba lagi sebentar…</td></tr>';
+        setTimeout(function(){tbl.loading=false;loadTable(false);},4000);
+        return;
+      }
+      if(body)body.innerHTML='<tr><td colspan="9" class="tbl-empty">Harga tidak dapat dimuat — CoinGecko tidak terjangkau (mungkin batas permintaan). Coba muat ulang halaman.</td></tr>';
     }).finally(function(){tbl.loading=false;renderPagination();});
   }
   document.querySelectorAll('.tbl-tab').forEach(function(b){
