@@ -250,6 +250,90 @@ footer{margin-top:90px;border-top:0;background:#111827}
   .theme-toggle{padding:9px 11px}
   .theme-toggle .theme-label{display:none}
 }
+/* --- Redesign homepage CoinViewCenter 26 Nov 2026 — index.html SAJA; portal TIDAK diubah. Putih bersih + judul hitam tebal + aksen biru ala referensi; isi/fitur lama dipertahankan, hanya gaya + seksi baru (strip pasar, panel top coin, kartu kategori, tabel harga live CoinGecko). --- */
+:root:not([data-theme="dark"]){--bg:#ffffff;--bg2:#ffffff;--panel:#ffffff;--panel2:#f8fafc;--line:#e5e7eb;--line2:#d1d5db;--gold:#2563eb;--gold-light:#2563eb;--amber:#2563eb;--copper:#2563eb;--blue:#2563eb;--cyan:#2563eb;--ink:#0f172a;--mut:#5b6470;--mut2:#94a3b8}
+header{background:rgba(255,255,255,.88)}
+.hero{background:#ffffff}
+.hero-glow{background:radial-gradient(ellipse at center,rgba(37,99,235,.12),transparent 65%)}
+.mark{background:linear-gradient(135deg,#3b82f6,#2563eb 60%,#1d4ed8);box-shadow:0 0 0 1px rgba(255,255,255,.18),0 4px 16px rgba(37,99,235,.35)}
+.logo b .scope{color:#2563eb;-webkit-text-fill-color:#2563eb}
+.btn{background:#2563eb}
+.btn:hover{background:#1d4ed8}
+.hero-stats b,.mkt-price,.stat b,.about-stats b{color:var(--ink)}
+.badge.cat{background:rgba(37,99,235,.08);color:var(--gold-light);border:1px solid rgba(37,99,235,.35)}
+nav.main a:hover{background:rgba(37,99,235,.07);color:var(--ink)}
+.more:hover{background:rgba(37,99,235,.06)}
+.btn.ghost:hover{background:rgba(37,99,235,.06)}
+.cta-band{background:linear-gradient(135deg,#1d4ed8,#2563eb)}
+.cta-band .btn{color:#1d4ed8}
+.chart path{stroke:#2563eb}
+footer{background:#ffffff;border-top:1px solid var(--line)}
+.ft-grid h4{color:var(--ink)}
+.ft-grid a{color:var(--mut)}
+.ft-grid a:hover{color:var(--ink)}
+.disclaimer{border-top-color:var(--line)}
+/* strip pasar */
+.cvc-strip{border-bottom:1px solid var(--line);background:var(--panel);font-size:12.5px;color:var(--mut)}
+.strip-in{display:flex;flex-wrap:wrap;gap:6px 22px;padding:9px 22px}
+.strip-in b{color:var(--ink);font-weight:700;margin-left:4px}
+/* panel top coin */
+.cvc-panels{padding-top:56px}
+.top-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tp-panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.tp-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.tp-title{font-weight:800;font-size:15px}
+.tp-head a{font-size:13px;color:var(--blue);text-decoration:none;font-weight:600}
+.tp-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.tp-row:first-of-type{border-top:0}
+.tp-rank{color:var(--mut2);font-size:12px;width:14px;flex-shrink:0}
+.tp-ic{width:26px;height:26px;border-radius:50%;flex-shrink:0}
+.tp-name{flex:1;min-width:0;font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tp-name small{display:block;color:var(--mut);font-weight:500;font-size:11.5px}
+.tp-price{text-align:right;font-size:13.5px;font-weight:600;flex-shrink:0}
+.tp-price small{display:block;font-size:11.5px;font-weight:700}
+.tp-empty{color:var(--mut2);font-size:13px;padding:12px 0}
+/* kartu kategori */
+.cvc-cats{padding-top:56px}
+.cat-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cat-card{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;background:var(--panel)}
+.cat-img{position:relative;display:block;height:120px;background:linear-gradient(135deg,#1e3a8a,#2563eb);overflow:hidden}
+.cat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cat-ph{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;font-weight:800;color:rgba(255,255,255,.85)}
+.cat-cap{display:block;padding:14px 16px}
+.cat-cap b{display:block;font-size:14.5px}
+.cat-cap small{color:var(--mut);font-size:12.5px}
+/* tabel harga */
+.cvc-market{padding-top:56px}
+.cvc-title{font-size:clamp(28px,3.4vw,40px);line-height:1.15;letter-spacing:-.02em;font-weight:800;margin:0 0 10px}
+.cvc-sub{color:var(--mut);font-size:15px;margin:0 0 20px;max-width:720px}
+.cvc-sub b{color:var(--ink)}
+.tbl-tabs{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tbl-tab{border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:13px;font-weight:600;padding:8px 14px;border-radius:9999px;cursor:pointer}
+.tbl-tab.active{background:#2563eb;border-color:#2563eb;color:#fff}
+.tbl-rows{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)}
+.tbl-rows select{border:1px solid var(--line2);background:var(--panel);color:var(--ink);border-radius:8px;padding:6px 8px;font:inherit}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.cvc-table{width:100%;border-collapse:collapse;font-size:14px;min-width:860px}
+.cvc-table th{text-align:left;font-size:12px;color:var(--mut);font-weight:600;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--panel2);white-space:nowrap}
+.cvc-table td{padding:13px 14px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:middle}
+.cvc-table tr:last-child td{border-bottom:0}
+.cvc-table tbody tr:hover{background:var(--panel2)}
+.tbl-coin{display:flex;align-items:center;gap:10px;font-weight:600}
+.tbl-coin img{width:26px;height:26px;border-radius:50%}
+.tbl-coin small{color:var(--mut);font-weight:500;margin-left:2px}
+.tbl-num{text-align:right;font-variant-numeric:tabular-nums}
+.tbl-empty{text-align:center;color:var(--mut2);padding:26px 14px;white-space:normal}
+.spark{display:block}
+.tbl-pg{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:16px}
+.tbl-pg button{border:1px solid var(--line2);background:var(--panel);color:var(--ink);min-width:32px;height:32px;border-radius:8px;font:inherit;font-size:13px;cursor:pointer;padding:0 10px}
+.tbl-pg button.active{background:#2563eb;border-color:#2563eb;color:#fff;font-weight:700}
+.tbl-pg button:disabled{opacity:.45;cursor:default}
+.tbl-note{font-size:12.5px;color:var(--mut2);margin-top:14px}
+[data-theme="dark"] .tbl-tab.active{background:#2563eb;border-color:#2563eb}
+[data-theme="dark"] .tbl-pg button.active{background:#2563eb;border-color:#2563eb}
+[data-theme="dark"] footer{background:var(--bg2)}
+@media(max-width:960px){.top-panels{grid-template-columns:1fr}.cat-cards{grid-template-columns:1fr 1fr}.cvc-panels,.cvc-cats,.cvc-market{padding-top:40px}}
+@media(max-width:600px){.cat-cards{grid-template-columns:1fr 1fr}.strip-in{gap:4px 14px;padding:8px 16px}.tbl-rows{margin-left:0}}
 </style>
 <script>try{var __t=localStorage.getItem("cryptoscope-theme");if(__t==="dark"){document.documentElement.dataset.theme="dark";var __m=document.querySelector('meta[name="theme-color"]');if(__m){__m.setAttribute("content","#040406");}}}catch(e){}</script>
 </head>
@@ -271,6 +355,17 @@ footer{margin-top:90px;border-top:0;background:#111827}
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false">☰</button>
   </div>
 </header>
+
+<div class="cvc-strip" aria-label="Ringkasan pasar">
+  <div class="wrap strip-in">
+    <span>Crypto <b id="stripCryptos">—</b></span>
+    <span>Bursa <b id="stripMarkets">—</b></span>
+    <span>Kap Pasar <b id="stripMcap">—</b></span>
+    <span>Vol 24j <b id="stripVol">—</b></span>
+    <span>Dominasi BTC <b id="stripDomBtc">—</b></span>
+    <span>Dominasi ETH <b id="stripDomEth">—</b></span>
+  </div>
+</div>
 
 <section class="hero">
   <canvas id="net" aria-hidden="true"></canvas>
@@ -299,7 +394,7 @@ footer{margin-top:90px;border-top:0;background:#111827}
       <svg class="chart" viewBox="0 0 400 90" fill="none" aria-hidden="true">
         <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18" stroke="#17694f" stroke-width="2.5" stroke-linecap="round"/>
         <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18 L400 90 L0 90 Z" fill="url(#cg)" opacity=".25"/>
-        <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17694f"/><stop offset="1" stop-color="#17694f" stop-opacity="0"/></linearGradient></defs>
+        <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></linearGradient></defs>
       </svg>
     </div>
   </div>
@@ -313,6 +408,58 @@ footer{margin-top:90px;border-top:0;background:#111827}
       <span><span class="dot">●</span> Bitcoin kembali ke atas $60.000, ini level harga BTC, ETH, dan XRP yang wajib diawasi</span>
           </div>
     </div>
+  </div>
+</section>
+
+<section class="sec cvc-panels" id="topcoins">
+  <div class="wrap">
+    <div class="top-panels">
+      <div class="tp-panel">
+        <div class="tp-head"><span class="tp-title">Trending</span><a href="#harga">More ›</a></div>
+        <div class="tp-list" data-panel="trending"><div class="tp-empty">Memuat…</div></div>
+      </div>
+      <div class="tp-panel">
+        <div class="tp-head"><span class="tp-title">Top Gainers</span><a href="#harga">More ›</a></div>
+        <div class="tp-list" data-panel="gainers"><div class="tp-empty">Memuat…</div></div>
+      </div>
+      <div class="tp-panel">
+        <div class="tp-head"><span class="tp-title">Top Losers</span><a href="#harga">More ›</a></div>
+        <div class="tp-list" data-panel="losers"><div class="tp-empty">Memuat…</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cvc-cats" id="kategori">
+  <div class="wrap">
+    <div class="cat-cards">
+      <a class="cat-card" href="cryptoscope-1.html#portal" data-cat="crypto"><span class="cat-img"><img alt="" loading="lazy"><span class="cat-ph">₿</span></span><span class="cat-cap"><b>Crypto &amp; Blockchain</b><small data-cat-count>— berita</small></span></a>
+      <a class="cat-card" href="cryptoscope-1.html#portal" data-cat="teknologi"><span class="cat-img"><img alt="" loading="lazy"><span class="cat-ph">◆</span></span><span class="cat-cap"><b>Teknologi &amp; AI</b><small data-cat-count>— berita</small></span></a>
+      <a class="cat-card" href="cryptoscope-1.html#portal" data-cat="ekonomi"><span class="cat-img"><img alt="" loading="lazy"><span class="cat-ph">▥</span></span><span class="cat-cap"><b>Ekonomi Global</b><small data-cat-count>— berita</small></span></a>
+      <a class="cat-card" href="cryptoscope-1.html#portal" data-cat="geopolitik"><span class="cat-img"><img alt="" loading="lazy"><span class="cat-ph">◍</span></span><span class="cat-cap"><b>Geopolitik</b><small data-cat-count>— berita</small></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec cvc-market" id="harga">
+  <div class="wrap">
+    <h2 class="cvc-title rv">Harga Cryptocurrency Hari Ini Berdasarkan Kapitalisasi Pasar</h2>
+    <p class="cvc-sub">Kapitalisasi pasar crypto global saat ini mencapai <b id="subMcap">—</b>, <span id="subChg">—</span> dalam 24 jam terakhir.</p>
+    <div class="tbl-tabs" role="group" aria-label="Tampilan tabel">
+      <button class="tbl-tab active" data-view="all" type="button">Semua</button>
+      <button class="tbl-tab" data-view="defi" type="button">DeFi</button>
+      <button class="tbl-tab" data-view="metaverse" type="button">Metaverse</button>
+      <button class="tbl-tab" data-view="nft" type="button">NFT</button>
+      <span class="tbl-rows"><label for="rowsSelect">Tampilkan Baris</label><select id="rowsSelect"><option value="5">5</option><option value="10" selected>10</option></select></span>
+    </div>
+    <div class="tbl-wrap">
+      <table class="cvc-table">
+        <thead><tr><th>#</th><th>Nama</th><th>Harga</th><th>1j</th><th>24j</th><th>7h</th><th>Volume 24j</th><th>Kap Pasar</th><th>7 Hari Terakhir</th></tr></thead>
+        <tbody id="marketTableBody"><tr><td colspan="9" class="tbl-empty">Memuat harga live dari CoinGecko…</td></tr></tbody>
+      </table>
+    </div>
+    <div class="tbl-pg" id="tablePagination"></div>
+    <p class="tbl-note" id="tableStamp">Sumber: CoinGecko API (tanpa kunci). Harga dapat berubah sewaktu-waktu; bukan saran investasi.</p>
   </div>
 </section>
 
@@ -482,9 +629,10 @@ footer{margin-top:90px;border-top:0;background:#111827}
       </a>
     </div>
     <div class="cta-band rv">
-      <h2>Siap melihat lebih jauh dari market?</h2>
-      <p>20 berita terbaru, analisis mendalam, dan harga live — semua dalam satu portal. Gratis, tanpa perlu daftar.</p>
+      <h2>Be The First To Know About Crypto News</h2>
+      <p>Berita terbaru, analisis mendalam, dan harga live — semua dalam satu portal. Gratis, tanpa perlu daftar.</p>
       <a class="btn" href="cryptoscope-1.html" style="height:48px;padding:0 24px;font-size:16px;border-radius:9999px">Mulai jelajahi →</a>
+      <a class="btn" href="https://www.instagram.com/cryp.toscope/" target="_blank" rel="noopener" style="height:48px;padding:0 24px;font-size:16px;border-radius:9999px;background:transparent;border:1px solid rgba(255,255,255,.65);color:#fff;box-shadow:none">Instagram @cryp.toscope</a>
     </div>
   </div>
 </section>
@@ -574,8 +722,8 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
       a.x+=a.vx;a.y+=a.vy;
       if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
       for(var j=i+1;j<nodes.length;j++){var b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;
-        if(d<150*150){ctx.strokeStyle='rgba(56,217,150,'+(0.12*(1-d/22500))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
-      ctx.fillStyle='rgba(56,217,150,.45)';ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,7);ctx.fill();}
+        if(d<150*150){ctx.strokeStyle='rgba(37,99,235,'+(0.12*(1-d/22500))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
+      ctx.fillStyle='rgba(37,99,235,.45)';ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,7);ctx.fill();}
     raf=requestAnimationFrame(step);}
   size();step();
   window.addEventListener('resize',function(){size();});
@@ -631,9 +779,16 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
         if(d.market_cap_percentage&&d.market_cap_percentage.btc)set('statDom',d.market_cap_percentage.btc.toFixed(1).replace('.',',')+'%');
         if(d.total_volume&&d.total_volume.usd)set('statVol','$'+(d.total_volume.usd/1e9).toFixed(0)+' Miliar');
         if(d.active_cryptocurrencies)set('statCoins',d.active_cryptocurrencies.toLocaleString('id-ID'));
+        if(d.active_cryptocurrencies)set('stripCryptos',d.active_cryptocurrencies.toLocaleString('id-ID'));
+        if(d.markets)set('stripMarkets',d.markets.toLocaleString('id-ID'));
+        if(d.total_market_cap&&d.total_market_cap.usd)set('stripMcap','$'+(d.total_market_cap.usd/1e12).toFixed(2).replace('.',',')+' T');
+        if(d.total_volume&&d.total_volume.usd)set('stripVol','$'+(d.total_volume.usd/1e9).toFixed(0)+' Miliar');
+        if(d.market_cap_percentage&&d.market_cap_percentage.btc)set('stripDomBtc',d.market_cap_percentage.btc.toFixed(1).replace('.',',')+'%');
+        if(d.market_cap_percentage&&d.market_cap_percentage.eth)set('stripDomEth',d.market_cap_percentage.eth.toFixed(1).replace('.',',')+'%');
+        if(d.total_market_cap&&d.total_market_cap.usd&&d.market_cap_change_percentage_24h_usd!=null){var sm=document.getElementById('subMcap');if(sm)sm.textContent='$'+(d.total_market_cap.usd/1e12).toFixed(2).replace('.',',')+' triliun';var sc=document.getElementById('subChg');if(sc){var v=d.market_cap_change_percentage_24h_usd;sc.textContent=(v>=0?'meningkat ':'menurun ')+Math.abs(v).toFixed(2).replace('.',',')+'%';sc.className=v>=0?'up':'down';}}
       }).catch(function(){
         if(retry){setTimeout(function(){fetchGlobal(false);},2500);}
-        else{set('statDom','—');set('statVol','—');set('statMcap','—');set('statCoins','—');}
+        else{set('statDom','—');set('statVol','—');set('statMcap','—');set('statCoins','—');set('stripCryptos','—');set('stripMarkets','—');set('stripMcap','—');set('stripVol','—');set('stripDomBtc','—');set('stripDomEth','—');}
       });
   }
   setTimeout(function(){fetchGlobal(true);},1500);
@@ -653,6 +808,146 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
   });}
   applyTheme(document.documentElement.dataset.theme==="dark"?"dark":"light");
 })();
+})();
+</script>
+<script>
+/* --- Homepage CoinViewCenter 26 Nov 2026: panel top coin, kartu kategori,
+   tabel harga live (CoinGecko, tanpa kunci). Semua angka dari API live;
+   kalau API gagal, tampil pesan jujur — tidak pernah angka karangan.
+   Panggilan CoinGecko dijeda (tabel 2 dtk, gainers/losers 4 dtk, trending
+   6 dtk) supaya tidak menabrak 2 panggilan lama (harga 0 dtk, /global 1,5 dtk). --- */
+(function(){
+  function fetchJSON(url,ms){var ctl=new AbortController();var to=setTimeout(function(){ctl.abort();},ms);return fetch(url,{signal:ctl.signal}).then(function(r){clearTimeout(to);if(!r.ok)throw new Error('cg '+r.status);return r.json();}).catch(function(e){clearTimeout(to);throw e;});}
+  function fmtUSD(n){if(n==null||isNaN(n))return '—';if(n>=1000)return '$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});if(n>=1)return '$'+n.toFixed(2);return '$'+n.toFixed(4);}
+  function fmtBig(n){if(n==null||isNaN(n))return '—';if(n>=1e12)return '$'+(n/1e12).toFixed(2)+' T';if(n>=1e9)return '$'+(n/1e9).toFixed(2)+' M';if(n>=1e6)return '$'+(n/1e6).toFixed(2)+' jt';return '$'+Math.round(n).toLocaleString('en-US');}
+  function pct(v){if(v==null||isNaN(v))return {t:'—',up:true};return {t:(v>=0?'▲ +':'▼ −')+Math.abs(v).toFixed(2).replace('.',',')+'%',up:v>=0};}
+  function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  /* ---- Panel: Trending / Top Gainers / Top Losers ---- */
+  function tpRow(c,rank){
+    var p24=pct(c.price_change_percentage_24h);
+    return '<div class="tp-row"><span class="tp-rank">'+rank+'</span>'
+      +(c.image?'<img class="tp-ic" src="'+c.image+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')
+      +'<span class="tp-name">'+esc(c.name)+'<small>'+esc((c.symbol||'').toUpperCase())+'</small></span>'
+      +'<span class="tp-price">'+fmtUSD(c.current_price)+'<small class="'+(p24.up?'up':'down')+'">'+p24.t+'</small></span></div>';
+  }
+  function fillPanel(sel,items,emptyMsg){
+    var box=document.querySelector(sel);if(!box)return;
+    if(!items||!items.length){box.innerHTML='<div class="tp-empty">'+emptyMsg+'</div>';return;}
+    box.innerHTML=items.map(function(c,i){return tpRow(c,i+1);}).join('');
+  }
+  function loadPanels(){
+    fetchJSON('https://api.coingecko.com/api/v3/search/trending',8000).then(function(t){
+      var ids=(t.coins||[]).slice(0,3).map(function(x){return x.item&&x.item.id;}).filter(Boolean);
+      if(!ids.length)throw new Error('trending kosong');
+      return fetchJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+ids.join(',')+'&order=market_cap_desc&per_page=3&page=1&price_change_percentage=24h',8000)
+        .then(function(list){list.sort(function(a,b){return ids.indexOf(a.id)-ids.indexOf(b.id);});return list;});
+    }).then(function(list){fillPanel('[data-panel="trending"]',list,'Data trending tidak tersedia.');}).catch(function(){fillPanel('[data-panel="trending"]',null,'Data trending tidak tersedia — CoinGecko tidak terjangkau.');});
+    /* Gainers + Losers dari SATU panggilan: 100 teratas desc, 3 pertama =
+       gainers, 3 terakhir (setelah buang yang % null) = losers. */
+    fetchJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=percent_change_24h_desc&per_page=100&page=1&price_change_percentage=24h',10000)
+      .then(function(list){
+        list=(list||[]).filter(function(c){return typeof c.price_change_percentage_24h==='number';});
+        fillPanel('[data-panel="gainers"]',list.slice(0,3),'Data tidak tersedia.');
+        fillPanel('[data-panel="losers"]',list.slice(-3).reverse(),'Data tidak tersedia.');
+      })
+      .catch(function(){fillPanel('[data-panel="gainers"]',null,'Data tidak tersedia — CoinGecko tidak terjangkau.');fillPanel('[data-panel="losers"]',null,'Data tidak tersedia — CoinGecko tidak terjangkau.');});
+  }
+  setTimeout(loadPanels,4000);
+
+  /* ---- Kartu kategori: gambar + jumlah berita dari news-data.json ---- */
+  function loadCatCards(){
+    fetchJSON('news-data.json',8000).then(function(data){
+      var items=(data&&data.items)||data||[];
+      if(!Array.isArray(items))return;
+      var first={};
+      items.forEach(function(n){if(n.cat&&!first[n.cat])first[n.cat]=n;});
+      document.querySelectorAll('.cat-card').forEach(function(card){
+        var cat=card.getAttribute('data-cat');
+        var cnt=card.querySelector('[data-cat-count]');
+        if(cnt)cnt.textContent=items.filter(function(n){return n.cat===cat;}).length+' berita';
+        var it=first[cat];
+        var img=card.querySelector('.cat-img img');
+        var ph=card.querySelector('.cat-ph');
+        if(it&&it.img&&img){img.src=it.img;img.alt=it.title||'';if(ph)ph.style.display='none';}
+      });
+    }).catch(function(){/* biarkan ubin gradien + ikon */});
+  }
+  setTimeout(loadCatCards,1200);
+
+  /* ---- Tabel harga live ---- */
+  var CAT_PARAM={all:'',defi:'decentralized-finance-defi',metaverse:'metaverse',nft:'non-fungible-tokens-nft'};
+  var tbl={view:'all',page:1,per:10,loading:false};
+  function drawSpark(cv,prices,up){
+    if(!cv||!prices||prices.length<2)return;
+    var ctx=cv.getContext('2d');if(!ctx)return;
+    var W=cv.width=cv.offsetWidth||120,H=cv.height=36;
+    var step=Math.max(1,Math.floor(prices.length/48)),pts=[];
+    for(var i=0;i<prices.length;i+=step)pts.push(prices[i]);
+    var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),rg=(mx-mn)||1;
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle=up?'#0f9d58':'#dc2626';ctx.lineWidth=1.5;ctx.beginPath();
+    pts.forEach(function(v,i){var x=i/(pts.length-1)*(W-4)+2,y=H-4-((v-mn)/rg)*(H-8);if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});
+    ctx.stroke();
+  }
+  function tblRow(c,rank){
+    var p1=pct(c.price_change_percentage_1h_in_currency),p24=pct(c.price_change_percentage_24h),p7=pct(c.price_change_percentage_7d_in_currency);
+    var up7=(c.price_change_percentage_7d_in_currency||0)>=0;
+    return '<tr><td>'+rank+'</td>'
+      +'<td><span class="tbl-coin">'+(c.image?'<img src="'+c.image+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+esc(c.name)+'<small>'+esc((c.symbol||'').toUpperCase())+'</small></span></td>'
+      +'<td class="tbl-num"><b>'+fmtUSD(c.current_price)+'</b></td>'
+      +'<td class="tbl-num '+(p1.up?'up':'down')+'">'+p1.t+'</td>'
+      +'<td class="tbl-num '+(p24.up?'up':'down')+'">'+p24.t+'</td>'
+      +'<td class="tbl-num '+(p7.up?'up':'down')+'">'+p7.t+'</td>'
+      +'<td class="tbl-num">'+fmtBig(c.total_volume)+'</td>'
+      +'<td class="tbl-num">'+fmtBig(c.market_cap)+'</td>'
+      +'<td><canvas class="spark" width="120" height="36" data-spark="'+(c.sparkline_in_7d&&c.sparkline_in_7d.price?c.sparkline_in_7d.price.join(','):'')+'" data-up="'+(up7?1:0)+'"></canvas></td></tr>';
+  }
+  function renderPagination(){
+    var pg=document.getElementById('tablePagination');if(!pg)return;
+    var p=tbl.page,html='<button type="button" data-pg="prev"'+(p<=1?' disabled':'')+'>‹</button>';
+    var start=Math.max(1,p-1),end=start+3;
+    for(var i=start;i<=end;i++)html+='<button type="button" data-pg="'+i+'"'+(i===p?' class="active"':'')+'>'+i+'</button>';
+    html+='<span style="color:var(--mut2);padding:0 4px">…</span><button type="button" data-pg="next">›</button>';
+    pg.innerHTML=html;
+    pg.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){
+      var v=b.getAttribute('data-pg');
+      if(v==='prev'){if(tbl.page>1)tbl.page--;}
+      else if(v==='next'){tbl.page++;}
+      else{tbl.page=parseInt(v,10);}
+      loadTable();
+    });});
+  }
+  function loadTable(){
+    if(tbl.loading)return;tbl.loading=true;
+    var body=document.getElementById('marketTableBody');if(!body){tbl.loading=false;return;}
+    body.innerHTML='<tr><td colspan="9" class="tbl-empty">Memuat harga live dari CoinGecko…</td></tr>';
+    var cat=CAT_PARAM[tbl.view]||'';
+    var url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page='+tbl.per+'&page='+tbl.page+'&sparkline=true&price_change_percentage=1h,24h,7d'+(cat?'&category='+cat:'');
+    fetchJSON(url,12000).then(function(list){
+      if(!list||!list.length){body.innerHTML='<tr><td colspan="9" class="tbl-empty">Tidak ada data untuk tampilan ini.</td></tr>';return;}
+      body.innerHTML=list.map(function(c,i){return tblRow(c,(tbl.page-1)*tbl.per+i+1);}).join('');
+      body.querySelectorAll('canvas.spark').forEach(function(cv){
+        var raw=cv.getAttribute('data-spark');if(!raw)return;
+        var prices=raw.split(',').map(function(x){return parseFloat(x);}).filter(function(x){return !isNaN(x);});
+        drawSpark(cv,prices,cv.getAttribute('data-up')==='1');
+      });
+      var st=document.getElementById('tableStamp');
+      if(st)st.textContent='Live · diperbarui '+new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'}).format(new Date())+' WIB · Sumber: CoinGecko API (tanpa kunci). Harga dapat berubah sewaktu-waktu; bukan saran investasi.';
+    }).catch(function(){
+      body.innerHTML='<tr><td colspan="9" class="tbl-empty">Harga tidak dapat dimuat — CoinGecko tidak terjangkau (mungkin batas permintaan). Coba muat ulang halaman.</td></tr>';
+    }).finally(function(){tbl.loading=false;renderPagination();});
+  }
+  document.querySelectorAll('.tbl-tab').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.tbl-tab').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');tbl.view=b.getAttribute('data-view');tbl.page=1;loadTable();
+    });
+  });
+  var rs=document.getElementById('rowsSelect');
+  if(rs)rs.addEventListener('change',function(){tbl.per=parseInt(rs.value,10)||10;tbl.page=1;loadTable();});
+  renderPagination();
+  setTimeout(loadTable,2000);
 })();
 </script>
 <script type="module">
