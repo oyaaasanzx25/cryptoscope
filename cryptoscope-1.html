@@ -168,6 +168,89 @@ footer{padding:20px 16px}
 .sidebar .search{order:4;flex-basis:100%;max-width:none}
 .sidebar .top-actions{gap:9px}
 }
+/* --- Redesign DailyCoinDrip 26 Nov 2026 — portal (cryptoscope-1.html); homepage (index.html) TIDAK diubah. Layout ala DailyCoinDrip: header pill biru + jam UTC + Sync Feeds, strip Top Performers 5 koin + S&P/Nasdaq, pill filter + search, grid berita kartu gambar, sidebar Reddit Buzz. Semua id/fitur/JS lama dipertahankan; judul kembali sans (bukan serif editorial). --- */
+:root{--dcd-blue:#2563eb;--dcd-blue2:#3b82f6;--dcd-green:#22c55e;--dcd-red:#ef4444}
+:root:not([data-theme="light"]){--bg:#0a0e1a;--paper:#111828;--panel:#121829;--panel2:#0d1322;--line:#1e2638;--ink:#f1f5fb;--muted:#8b98ad}
+h1,h2,h3,.panel-head b,.news-item b,.analysis-body h4,.quick-card b{font-family:Arial,sans-serif}
+.section-head{border-top:0;padding-top:0}
+.section-head h3{font-size:26px;font-weight:800}
+#portal .section-head h3{font-size:30px}
+#portal .section-head{align-items:baseline}
+:root:not([data-theme="light"]) .sidebar{background:#0d1322}
+.sidebar .nav a{border-bottom:0;border-radius:9999px;padding:8px 14px;font-size:13px}
+.sidebar .nav a:hover{background:rgba(255,255,255,.08)}
+.sidebar .nav a.active{background:var(--dcd-blue);color:#fff;font-weight:700}
+.utc-clock{font-size:12px;font-weight:700;color:var(--muted);border:1px solid var(--line);background:var(--bg);border-radius:9999px;padding:8px 12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sync-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:10px;border:0;background:var(--dcd-blue);color:#fff;font-size:12px;font-weight:800;white-space:nowrap}
+.sync-btn:hover{background:#1d4ed8}
+.sync-btn:disabled{opacity:.7;cursor:default}
+@media(max-width:950px){.utc-clock{display:none}}
+.perf-strip{margin:4px 0 6px}
+.perf-head{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 12px}
+.perf-head b{font-size:16px;font-weight:800}
+.perf-head small{color:var(--muted);font-size:12px;margin-left:8px}
+.perf-note{font-size:11px;color:var(--muted)}
+.perf-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) 168px;gap:12px}
+.perf-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-height:106px;display:flex;flex-direction:column}
+.perf-top{display:flex;align-items:center;gap:8px}
+.perf-ico{width:28px;height:28px;border-radius:50%;background:#1a2236;display:grid;place-items:center;font-size:15px;color:var(--ink);position:relative;overflow:hidden;flex-shrink:0}
+.perf-ico img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.perf-top>b{font-size:13px;font-weight:700}
+.perf-top small{font-size:11px;color:var(--muted)}
+.hot-badge{margin-left:auto;font-size:9px;font-weight:800;letter-spacing:.5px;color:#4ade80;background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.35);padding:2px 6px;border-radius:9999px}
+.perf-price{font-size:19px;font-weight:800;margin-top:10px;font-variant-numeric:tabular-nums}
+.perf-bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto;padding-top:8px;gap:8px}
+.perf-chg{font-size:12px;font-weight:700;white-space:nowrap}
+.perf-bottom canvas{width:84px;height:28px;flex-shrink:0}
+.perf-idx{display:flex;flex-direction:column;gap:12px}
+.perf-idx-row{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:transparent;display:flex;flex-direction:column;gap:1px}
+.perf-idx-label{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.4px}
+.perf-idx-val{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.perf-idx-chg{font-size:11px;font-weight:700}
+@media(max-width:1200px){.perf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.perf-idx{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.perf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.perf-head b{font-size:14px}.perf-price{font-size:16px}}
+.cat-filters{align-items:center}
+.pill-cat{font-size:12px;letter-spacing:.4px;text-transform:uppercase;padding:9px 16px}
+.pill-cat.active{background:var(--dcd-blue);border-color:var(--dcd-blue);color:#fff}
+.pill-cat:hover{border-color:var(--dcd-blue2)}
+.filter-search{margin-left:auto;flex:0 1 260px;min-width:180px;max-width:260px}
+.filter-search input{padding:10px 12px 10px 38px;border-radius:9999px;font-size:12px}
+.filter-search span{top:7px;left:13px;font-size:15px}
+@media(max-width:650px){.cat-filters{flex-wrap:wrap;overflow:visible}.filter-search{flex:1 1 100%;max-width:none;margin-left:0}}
+.portal-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+.portal-grid-panel{background:transparent;border:0;overflow:visible}
+#catNewsList{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#catNewsList .cat-news-item{display:flex;flex-direction:column;gap:0;padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:linear-gradient(180deg,var(--panel),var(--panel2));align-items:stretch}
+#catNewsList .thumb-btn{width:100%;display:block;border-radius:0}
+#catNewsList .news-thumb{width:100%;height:170px;border-radius:0;font-size:40px}
+#catNewsList .card-body{padding:14px 16px 16px;display:flex;flex-direction:column;align-items:flex-start}
+#catNewsList .cat-news-item b{font-size:15px;line-height:1.35;margin:7px 0 5px;font-weight:700}
+#catNewsList .cat-news-item small{font-size:12px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#catNewsList .news-src{margin-top:9px}
+.card-chips{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:flex-start;padding:10px;pointer-events:none}
+.card-chip{background:rgba(10,14,26,.78);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:10px;font-weight:700;letter-spacing:.5px;padding:4px 8px;border-radius:9999px}
+.card-chip-cat{color:#bfdbfe;border-color:rgba(147,197,253,.55)}
+#catNewsList .portal-more{grid-column:1/-1}
+#catNewsList .cat-empty{grid-column:1/-1}
+@media(max-width:1200px){#catNewsList{grid-template-columns:repeat(2,minmax(0,1fr))}.portal-layout{grid-template-columns:minmax(0,1fr) 280px}}
+@media(max-width:950px){.portal-layout{grid-template-columns:1fr}.reddit-panel{position:static}}
+@media(max-width:650px){#catNewsList{grid-template-columns:1fr}#portal .section-head h3{font-size:24px}}
+.reddit-panel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:sticky;top:76px}
+.buzz-head{display:flex;align-items:center;gap:9px;margin-bottom:12px;flex-wrap:wrap}
+.buzz-ico{width:26px;height:26px;border-radius:50%;background:#ff4500;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;flex-shrink:0}
+.buzz-head b{font-size:16px;font-weight:800}
+.buzz-head small{margin-left:auto;font-size:11px;color:var(--muted)}
+.buzz-item{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.buzz-rank{font-size:20px;font-weight:800;color:var(--muted);line-height:1.2;flex-shrink:0;width:22px;text-align:center}
+.buzz-body{min-width:0}
+.buzz-title{display:block;font-size:13px;font-weight:600;line-height:1.4;color:var(--ink)}
+.buzz-title:hover{color:var(--dcd-blue2)}
+.buzz-meta{font-size:11px;color:var(--muted);margin-top:5px}
+.buzz-sub{display:inline-block;background:rgba(59,130,246,.14);border:1px solid rgba(59,130,246,.35);color:#93c5fd;font-size:10px;font-weight:700;padding:2px 7px;border-radius:9999px;margin-right:6px}
+.buzz-empty{font-size:12px;color:var(--muted);line-height:1.6;padding:8px 0}
+.buzz-empty a{color:var(--dcd-blue2);font-weight:700}
+.buzz-more{display:block;text-align:center;font-size:12px;font-weight:700;color:var(--dcd-blue2);padding-top:12px}
+
 </style>
 </head>
 <body>
@@ -184,11 +267,24 @@ footer{padding:20px 16px}
     <a href="#web3"><span class="ico">◇</span> Airdrop & Web3</a>
     <a href="#analisis"><span class="ico">◷</span> Analisis</a>
   </nav>
-  <label class="search"><span>⌕</span><input id="searchInput" placeholder="Cari berita..." aria-label="Cari"></label>
-  <div class="top-actions"><span title="Notifikasi">♧</span><span class="user-name" id="userName">CryptoScope Reader</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">☀️ <span class="theme-label">Terang</span></button><button class="logout-btn" id="loginBtn" type="button">Masuk</button><button class="logout-btn" id="logoutBtn" type="button" style="display:none">Keluar</button><span class="avatar">C</span></div>
+  <div class="top-actions"><span class="utc-clock" id="utcClock" title="Waktu UTC">--:--:-- UTC</span><button class="sync-btn" id="syncFeeds" type="button">↻ Sync Feeds</button><span title="Notifikasi">♧</span><span class="user-name" id="userName">CryptoScope Reader</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">☀️ <span class="theme-label">Terang</span></button><button class="logout-btn" id="loginBtn" type="button">Masuk</button><button class="logout-btn" id="logoutBtn" type="button" style="display:none">Keluar</button><span class="avatar">C</span></div>
 </aside>
 <main class="main" id="home">
 <div class="content">
+  <section class="perf-strip" aria-label="Top Performers">
+    <div class="perf-head"><div><b>↗ Top Performers</b><small>24h changes</small></div><span class="perf-note">Update tiap 5 menit</span></div>
+    <div class="perf-grid">
+      <div class="perf-card" data-perf="BTC"><div class="perf-top"><span class="perf-ico"><img src="images/coins/bitcoin.png" alt="" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png';}else{this.style.display='none';}"><b>₿</b></span><b>Bitcoin</b><small>BTC</small><span class="hot-badge">↗ HOT</span></div><div class="perf-price">$60.836</div><div class="perf-bottom"><span class="perf-chg" style="color:#22c55e">↗ +2,80%</span><canvas width="84" height="28"></canvas></div></div>
+      <div class="perf-card" data-perf="ETH"><div class="perf-top"><span class="perf-ico"><img src="images/coins/ethereum.png" alt="" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='https://coin-images.coingecko.com/coins/images/279/large/ethereum.png';}else{this.style.display='none';}"><b>◆</b></span><b>Ethereum</b><small>ETH</small><span class="hot-badge">↗ HOT</span></div><div class="perf-price">$1.701,19</div><div class="perf-bottom"><span class="perf-chg" style="color:#22c55e">↗ +2,70%</span><canvas width="84" height="28"></canvas></div></div>
+      <div class="perf-card" data-perf="SOL"><div class="perf-top"><span class="perf-ico"><img src="images/coins/solana.png" alt="" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='https://coin-images.coingecko.com/coins/images/4128/large/solana.png';}else{this.style.display='none';}"><b>◎</b></span><b>Solana</b><small>SOL</small><span class="hot-badge">↗ HOT</span></div><div class="perf-price">$71,02</div><div class="perf-bottom"><span class="perf-chg" style="color:#22c55e">↗ +2,90%</span><canvas width="84" height="28"></canvas></div></div>
+      <div class="perf-card" data-perf="XRP"><div class="perf-top"><span class="perf-ico"><img src="images/coins/ripple.png" alt="" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='https://coin-images.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png';}else{this.style.display='none';}"><b>X</b></span><b>Ripple</b><small>XRP</small><span class="hot-badge" style="display:none">↗ HOT</span></div><div class="perf-price">—</div><div class="perf-bottom"><span class="perf-chg" style="color:#8b98ad">Memuat…</span><canvas width="84" height="28"></canvas></div></div>
+      <div class="perf-card" data-perf="BNB"><div class="perf-top"><span class="perf-ico"><img src="images/coins/binancecoin.png" alt="" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='https://coin-images.coingecko.com/coins/images/825/large/bnb-icon2_2x.png';}else{this.style.display='none';}"><b>B</b></span><b>BNB</b><small>BNB</small><span class="hot-badge" style="display:none">↗ HOT</span></div><div class="perf-price">—</div><div class="perf-bottom"><span class="perf-chg" style="color:#8b98ad">Memuat…</span><canvas width="84" height="28"></canvas></div></div>
+      <div class="perf-idx">
+        <div class="perf-idx-row" id="perf-spx"><span class="perf-idx-label">S&amp;P 500</span><b class="perf-idx-val">7.182,78</b><span class="perf-idx-chg" style="color:#ef4444">−0,25%</span></div>
+        <div class="perf-idx-row" id="perf-ndx"><span class="perf-idx-label">NASDAQ</span><b class="perf-idx-val">23.585,80</b><span class="perf-idx-chg" style="color:#ef4444">−0,62%</span></div>
+      </div>
+    </div>
+  </section>
   <section class="welcome"><div><h1>Selamat datang di CryptoScope</h1><p>Pusat informasi dan wawasan dunia cryptocurrency.</p></div><div class="date" id="today">Crypto News Dashboard</div></section>
   <section class="hero"><div class="hero-copy"><div class="eyebrow">CRYPTO NEWS · MARKET · WEB3</div><h2>Lihat lebih jauh.<br>Pahami pergerakan crypto.</h2><p>Berita, analisis, dan perkembangan aset digital dalam satu tempat.</p><a class="hero-btn" href="#news">Jelajahi berita&nbsp; →</a></div><div class="hero-art">₿</div></section>
   <section id="breaking">
@@ -206,9 +302,9 @@ footer{padding:20px 16px}
   <div class="columns">
     <section id="news"><div class="section-head"><h3>Berita terbaru</h3><a href="#news" id="newsAll">Semua berita →</a></div>
       <div class="panel"><div class="panel-head"><b>Update CryptoScope</b><small id="newsStamp">Diperbarui 26 Nov 2026</small></div><div class="news-list" id="newsList">
+<article class="news-item"><div class="news-thumb">◆</div><div><span class="pill">ALTCOIN</span><b>SBI bawa saham Jepang ke Solana, investor harus tunggu lima hari untuk cairkan dana</b><small>SBI Solana Global mulai beroperasi penuh pada 25 November untuk mendistribusikan aset keuangan Jepang lewat Solana, lewat usaha patungan… · 26 Nov 2026 · 11:30 WIB</small></div></article>
 <article class="news-item"><div class="news-thumb">◇</div><div><span class="pill">WEB3</span><b>Dompet trader Ansem diretas lewat Bullpen, host podcast 1000x: 'keluar selagi masih bisa'</b><small>Trader kripto Ansem mengatakan dompet Solananya diretas setelah ia mengimpor private key ke aplikasi trading Bullpen. Bullpen menyebut dampaknya… · 26 Nov 2026 · 10:20 WIB</small></div></article>
 <article class="news-item"><div class="news-thumb">◇</div><div><span class="pill">WEB3</span><b>LayerZero gandeng Samsung Card, Kakao Pay, dan ZAN jadi validator blockchain Zero</b><small>LayerZero menunjuk Kakao Pay, Samsung Card, dan ZAN sebagai validator genesis untuk Zero, blockchain Layer-1 barunya yang dijadwalkan meluncur 30 November… · 26 Nov 2026 · 09:22 WIB</small></div></article>
-<article class="news-item"><div class="news-thumb">◇</div><div><span class="pill">WEB3</span><b>Oracle anjlok 70% dari puncak, utang AI bikin arus kas negatif</b><small>Saham Oracle (ORCL) anjlok sekitar 70% sejak puncaknya pada 2025, ketika valuasinya melampaui $900 miliar — kini mendekati $300 miliar… · 26 Nov 2026 · 09:15 WIB</small></div></article>
 
 
 </div></div>
@@ -227,9 +323,9 @@ footer{padding:20px 16px}
     <section id="saham"><div class="section-head"><h3>Saham</h3><a href="#saham" id="sahamDetail">Indonesia &amp; Amerika →</a></div>
       <div class="panel"><div class="panel-head"><b>Indeks saham</b><small>Diperbarui 26 Nov 2026</small></div><div class="market-list">
         <div class="asset"><div class="asset-left"><span class="asset-icon">▲</span><div><b>IHSG</b><small>Bursa Efek Indonesia</small></div></div><div class="asset-price">5.297,46<small>+1,9% · sesi I 26 Nov</small></div></div>
-        <div class="asset"><div class="asset-left"><span class="asset-icon">▼</span><div><b>S&amp;P 500</b><small>Amerika Serikat</small></div></div><div class="asset-price">7.182,78<small>−0,25% · tutup 25 Nov</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">▼</span><div><b>S&amp;P 500</b><small>Amerika Serikat</small></div></div><div class="asset-price" id="saham-spx">7.182,78<small>−0,25% · tutup 25 Nov</small></div></div>
         <div class="asset"><div class="asset-left"><span class="asset-icon">▲</span><div><b>Dow Jones</b><small>Amerika Serikat</small></div></div><div class="asset-price">50.182,95<small>+0,33% · tutup 25 Nov</small></div></div>
-        <div class="asset"><div class="asset-left"><span class="asset-icon">▼</span><div><b>Nasdaq</b><small>Amerika Serikat</small></div></div><div class="asset-price">23.585,80<small>−0,62% · tutup 25 Nov</small></div></div>
+        <div class="asset"><div class="asset-left"><span class="asset-icon">▼</span><div><b>Nasdaq</b><small>Amerika Serikat</small></div></div><div class="asset-price" id="saham-nasdaq">23.585,80<small>−0,62% · tutup 25 Nov</small></div></div>
       </div></div>
       <div class="panel" style="margin-top:12px"><div class="panel-head"><b>Berita saham</b><small>Indonesia &amp; Amerika</small></div><div class="news-list">
 <article class="news-item"><div class="news-thumb">▲</div><div><span class="pill">SAHAM</span><b>IHSG melesat nyaris 2% sesi I, juara bursa Asia</b><small>IHSG ke 5.297,46 (+1,9%) sesi I Kamis 26/11, penguatan tertinggi di Asia; BBCA kontributor terbesar, +3% ke Rp6.000.</small><div class="news-src">Sumber: <b>Bloomberg Technoz</b> · 26 Nov 2026 · <a href="https://www.bloombergtechnoz.com/detail-news/128956/melesat-nyaris-2-ihsg-juara-di-bursa-asia" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
@@ -244,12 +340,12 @@ footer{padding:20px 16px}
     <div class="section-head"><h3>Trending</h3><a href="#portal" id="trendingAll">Semua berita →</a></div>
     <div class="panel"><div class="news-list">
       <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="2" aria-label="Lihat gambar: Fidelity ajukan ETF spot Chainlink ke SEC, target listing Nasdaq ticker FLNK"><div class="news-thumb">₿</div></button><div><span class="pill">WEB3</span><b>Fidelity ajukan ETF spot Chainlink ke SEC, target listing Nasdaq ticker FLNK</b><small>Fidelity mengajukan Form S-1 ke SEC untuk meluncurkan ETF spot Chainlink, Fidelity Chainlink Fund, yang akan memegang LINK secara langsung dan diperdagangkan di Nasdaq dengan ticker FLNK. Dana ini tidak akan men-stake LINK-nya, dan pemegang saham tidak menerima imbalan staking. Anchorage Digital Bank, BitGo Bank & Trust, dan Coinbase Custody ditunjuk sebagai kustodian. Grayscale dan Bitwise sudah lebih dulu menawarkan ETF spot Chainlink AS, dengan aset masing-masing sekitar $112 juta dan $42 juta per 24 November. Pengajuan ini menyusul penambahan LINK, AAVE, dan UNI ke platform perdagangan kripto ritel Fidelity sehari sebelumnya.</small><div class="news-src">Sumber: <b>The Block</b> · 26 Nov 2026 · 02:32 WIB · <a href="https://www.theblock.co/news/business/2026-11-25-fidelity-chainlink-etf-nasdaq-listing-446735" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
-            <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="3" aria-label="Lihat gambar: Outflow ETF Bitcoin November hampir $5 miliar, IBIT terburuk sepanjang sejarah"><div class="news-thumb">₿</div></button><div><span class="pill">BITCOIN</span><b>Outflow ETF Bitcoin November hampir $5 miliar, IBIT terburuk sepanjang sejarah</b><small>ETF Bitcoin spot AS mencatat outflow bersih $231,56 juta pada 24 November, hari keenam beruntun, dengan BlackRock IBIT menyumbang $175,30 juta. Total outflow November kini $4,94 miliar — IBIT saja kehilangan $4,17 miliar, bulan terburuk sepanjang sejarah dengan hanya satu hari inflow bersih. Tekanan juga datang dari ancaman tarif baru Trump dan serangan siber ke Departemen Keuangan AS.</small><div class="news-src">Sumber: <b>Crypto News</b> · 26 Nov 2026 · 07:15 WIB · <a href="https://cryptonews.com/news/crypto-news-bitcoin-trump-tariffs-ibit-etf-outflows/" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
+            <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="3" aria-label="Lihat gambar: SBI bawa saham Jepang ke Solana, investor harus tunggu lima hari untuk cairkan dana"><div class="news-thumb">◆</div></button><div><span class="pill">ALTCOIN</span><b>SBI bawa saham Jepang ke Solana, investor harus tunggu lima hari untuk cairkan dana</b><small>SBI Solana Global mulai beroperasi penuh pada 25 November untuk mendistribusikan aset keuangan Jepang lewat Solana, lewat usaha patungan SBI Holdings, Sumitomo Mitsui Financial Group, dan Solana Foundation. Investor profesional yang memenuhi syarat bisa memakai USDC untuk membeli eksposur ke dana saham dividen Jepang lewat token JX di HashKey Earn, platform berlisensi di Hong Kong — JX diterbitkan DigiFT di Solana pada Juli sebagai tanda terima deposito yang terkait dengan dana SBI Japan High Dividend Equity Fund. Untuk keluar, investor mengajukan penebusan dan HashKey memperkirakan penyelesaian dalam lima hari kerja (T+5) sesuai kalender dealing penerbit, dengan minimum langganan 5.000 USDC, minimum penebusan 750.000 JX, dan biaya penebusan 0,1%. JX tidak mendukung deposit atau penarikan dompet eksternal, transfer antar pengguna, atau perdagangan sekunder — keluar hanya lewat penebusan di HashKey Earn, dengan payout dalam USDC.</small><div class="news-src">Sumber: <b>CryptoSlate</b> · 26 Nov 2026 · 11:30 WIB · <a href="https://cryptoslate.com/sbi-brings-japanese-stocks-to-solana-but-investors-face-a-five-day-wait-to-cash-out/" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
       <article class="news-item"><button type="button" class="thumb-btn" data-news-idx="16" aria-label="Lihat gambar: Oracle anjlok 70% dari puncak, utang AI bikin arus kas negatif"><div class="news-thumb">◇</div></button><div><span class="pill">WEB3</span><b>Oracle anjlok 70% dari puncak, utang AI bikin arus kas negatif</b><small>Saham Oracle (ORCL) anjlok sekitar 70% sejak puncaknya pada 2025, ketika valuasinya melampaui $900 miliar — kini mendekati $300 miliar. Pembangunan AI yang didanai utang membuat arus kas bebas negatif $23,7 miliar pada tahun fiskal 2026, ditambah defisit $5 miliar pada kuartal pertama tahun fiskal 2027. Oracle menjual obligasi $10 miliar pada 4 November dengan kupon 7%–8,65% plus saham $10 miliar, sementara S&amp;P memangkas peringkatnya ke BBB- pada Juli dan biaya asuransi gagal bayar lima tahunnya mencetak rekor 356 basis poin. Di sisi lain, Oracle masih memegang backlog kontrak $664 miliar dan menargetkan pendapatan minimal $90 miliar pada tahun fiskal 2027 serta arus kas bebas positif pada paruh kedua tahun fiskal 2028 — nasibnya bergantung pada kontrak OpenAI senilai $300 miliar yang mulai berjalan 2027.</small><div class="news-src">Sumber: <b>BeInCrypto</b> · 26 Nov 2026 · 09:15 WIB · <a href="https://beincrypto.com/oracle-stock-falls-70-ai-debt/" target="_blank" rel="noopener">Baca sumber →</a></div></div></article>
     </div></div>
     <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Kriteria: Pilihan editor — 3 berita dengan dampak pasar terbesar hari ini (26 Nov 2026), dipilih redaksi berdasarkan analisis agen CryptoScope dan angka di berita. Bukan berdasarkan jumlah klik, tayang, like, atau share — portal tidak melacak metrik tersebut.</p>  </section>
   <section id="portal">
-    <div class="section-head"><h3>Berita berdasarkan kategori</h3><span id="portalCount" style="font-size:12px;color:var(--muted)">20 berita · 26 Nov 2026</span></div>
+    <div class="section-head"><h3><span style="color:var(--dcd-blue)">#</span> Berita Crypto Terbaru</h3><span id="portalCount" style="font-size:12px;color:var(--muted)">20 artikel</span></div>
     <div class="cat-filters" role="group" aria-label="Filter kategori berita">
       <button class="pill-cat active" data-cat="all" type="button">Semua</button>
       <button class="pill-cat" data-cat="crypto" type="button">Crypto &amp; Blockchain</button>
@@ -257,8 +353,16 @@ footer{padding:20px 16px}
       <button class="pill-cat" data-cat="ekonomi" type="button">Ekonomi Global</button>
       <button class="pill-cat" data-cat="teknologi" type="button">Teknologi &amp; AI</button>
       <button class="pill-cat" data-cat="breaking" type="button">Breaking News</button>
+      <label class="search filter-search"><span>⌕</span><input id="searchInput" placeholder="Cari berita..." aria-label="Cari"></label>
     </div>
-    <div class="panel"><div class="news-list" id="catNewsList"></div></div>
+    <div class="portal-layout">
+    <div class="panel portal-grid-panel"><div class="news-list" id="catNewsList"></div></div>
+    <aside class="reddit-panel" aria-label="Reddit Buzz">
+      <div class="buzz-head"><span class="buzz-ico">r/</span><b>Reddit Buzz</b><small id="redditStamp">baru saja</small></div>
+      <div id="redditBuzzList"><div class="buzz-empty">Memuat postingan Reddit…</div></div>
+      <a class="buzz-more" href="https://www.reddit.com/r/CryptoCurrency/top/" target="_blank" rel="noopener">Lihat Reddit →</a>
+    </aside>
+    </div>
   </section>
   <section id="analisis">
     <div class="section-head"><h3>Analisis</h3><a href="#portal" id="analysisAll">Semua analisis →</a></div>
@@ -382,11 +486,14 @@ function renderCatNews(){
     };
     th.appendChild(im);
     if(n.imgNote){const nt=document.createElement("span");nt.className="img-note";nt.textContent=n.imgNote;th.appendChild(nt);}
+    const chips=document.createElement("div");chips.className="card-chips";
+    const cs=document.createElement("span");cs.className="card-chip card-chip-src";cs.textContent=n.source||"CryptoScope";chips.appendChild(cs);
+    const cc=document.createElement("span");cc.className="card-chip card-chip-cat";cc.textContent=c.label;chips.appendChild(cc);
+    th.appendChild(chips);
     const tb=document.createElement("button");tb.type="button";tb.className="thumb-btn";tb.setAttribute("aria-label","Lihat gambar: "+n.title);
     tb.appendChild(th);tb.addEventListener("click",function(){openLightbox(n);});
     art.appendChild(tb);
-    const body=document.createElement("div");
-    const pill=document.createElement("span");pill.className="pill";pill.textContent=c.label;body.appendChild(pill);
+    const body=document.createElement("div");body.className="card-body";
     const bd=document.createElement("span");bd.className="badge "+badge[1];bd.textContent=badge[0];body.appendChild(bd);
     const b=document.createElement("b");b.textContent=n.title;body.appendChild(b);
     const sm=document.createElement("small");sm.textContent=n.summary;body.appendChild(sm);
@@ -1100,6 +1207,94 @@ initLightbox();
     applyTheme(document.documentElement.dataset.theme==="light"?"dark":"light");
   });}
   applyTheme(document.documentElement.dataset.theme==="light"?"light":"dark");
+})();
+
+/* --- DailyCoinDrip 26 Nov 2026: jam UTC, Sync Feeds, strip Top Performers, Reddit Buzz. --- */
+(function(){
+  var clk=document.getElementById("utcClock");
+  function tickClock(){ if(!clk) return; var d=new Date(); function p(x){return (x<10?"0":"")+x;} clk.textContent=p(d.getUTCHours())+":"+p(d.getUTCMinutes())+":"+p(d.getUTCSeconds())+" UTC"; }
+  tickClock(); setInterval(tickClock,1000);
+  var sy=document.getElementById("syncFeeds");
+  if(sy) sy.addEventListener("click",function(){ sy.disabled=true; sy.textContent="\u21bb Syncing\u2026"; location.reload(); });
+  function fmtUSD(v){ return "$"+v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2}); }
+  function drawSpark(cv,prices,up){
+    try{
+      var ctx=cv.getContext("2d"); var w=cv.width,h=cv.height; ctx.clearRect(0,0,w,h);
+      if(!prices||prices.length<2) return;
+      var step=Math.max(1,Math.floor(prices.length/24)); var pts=[]; for(var i=0;i<prices.length;i+=step) pts.push(prices[i]);
+      var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts); if(mx===mn){mx=mn+1;}
+      ctx.strokeStyle=up?"#22c55e":"#ef4444"; ctx.lineWidth=1.6; ctx.beginPath();
+      pts.forEach(function(p,i){ var x=2+(w-4)*i/(pts.length-1); var y=2+(h-4)*(1-(p-mn)/(mx-mn)); if(i===0)ctx.moveTo(x,y); else ctx.lineTo(x,y); });
+      ctx.stroke();
+    }catch(e){}
+  }
+  function fillIdx(rowId,srcId){
+    var row=document.getElementById(rowId); if(!row) return;
+    var src=document.getElementById(srcId);
+    var ve=row.querySelector(".perf-idx-val"), ce=row.querySelector(".perf-idx-chg");
+    if(!src){ if(ve) ve.textContent="\u2014"; return; }
+    var val=(src.childNodes[0]?src.childNodes[0].textContent:"").trim();
+    var sm=src.querySelector("small"); var chg=sm?sm.textContent.split("\u00b7")[0].trim():"";
+    if(ve) ve.textContent=val||"\u2014";
+    if(ce){ ce.textContent=chg||""; ce.style.color=(chg.indexOf("\u2212")>=0||chg.indexOf("-")>=0)?"#ef4444":"#22c55e"; }
+  }
+  function fillStripFromMarket(){
+    var m=null; try{ m=readMarket(); }catch(e){}
+    if(!m) return;
+    m.forEach(function(it){
+      var card=document.querySelector('[data-perf="'+it.sym+'"]'); if(!card) return;
+      var pe=card.querySelector(".perf-price"); if(pe) pe.textContent=it.price;
+      var ce=card.querySelector(".perf-chg");
+      if(ce){ var t=(it.up?"\u2197 ":"\u2198 ")+it.chg.replace(/\s*\u00b7\s*24j/,""); ce.textContent=t; ce.style.color=it.up?"#22c55e":"#ef4444"; }
+      var hb=card.querySelector(".hot-badge"); if(hb) hb.style.display=it.up?"":"none";
+    });
+  }
+  async function loadPerformers(){
+    fillStripFromMarket();
+    fillIdx("perf-spx","saham-spx"); fillIdx("perf-ndx","saham-nasdaq");
+    var ctl=new AbortController(); var to=setTimeout(function(){ctl.abort();},8000);
+    try{
+      var r=await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,ripple,binancecoin&price_change_percentage=24h&sparkline=true&per_page=5",{signal:ctl.signal});
+      if(!r.ok) throw new Error("HTTP "+r.status);
+      var d=await r.json();
+      d.forEach(function(c){
+        var card=document.querySelector('[data-perf="'+c.symbol.toUpperCase()+'"]'); if(!card) return;
+        var pe=card.querySelector(".perf-price"); if(pe) pe.textContent=fmtUSD(c.current_price);
+        var chg=c.price_change_percentage_24h||0;
+        var ce=card.querySelector(".perf-chg");
+        if(ce){ ce.textContent=(chg>=0?"\u2197 +":"\u2198 ")+chg.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2})+"%"; ce.style.color=chg>=0?"#22c55e":"#ef4444"; }
+        var hb=card.querySelector(".hot-badge"); if(hb) hb.style.display=chg>0?"":"none";
+        var cv=card.querySelector("canvas"); if(cv) drawSpark(cv,c.sparkline_in_7d&&c.sparkline_in_7d.price,chg>=0);
+      });
+    }catch(e){ /* fallback statis tetap tampil */ }
+    finally{ clearTimeout(to); }
+  }
+  setTimeout(loadPerformers,3000);
+  async function loadRedditBuzz(){
+    var list=document.getElementById("redditBuzzList"); if(!list) return;
+    var stamp=document.getElementById("redditStamp");
+    try{
+      var r=await fetch("reddit-buzz.json"); if(!r.ok) throw new Error("HTTP "+r.status);
+      var d=await r.json();
+      if(stamp&&d.updated) stamp.textContent=d.updated;
+      if(!d.posts||!d.posts.length) throw new Error("empty");
+      list.innerHTML="";
+      d.posts.slice(0,5).forEach(function(p,i){
+        var it=document.createElement("div"); it.className="buzz-item";
+        var rk=document.createElement("span"); rk.className="buzz-rank"; rk.textContent=(i+1); it.appendChild(rk);
+        var bd=document.createElement("div"); bd.className="buzz-body";
+        var a=document.createElement("a"); a.href=p.url||"#"; a.target="_blank"; a.rel="noopener"; a.className="buzz-title"; a.textContent=p.title; bd.appendChild(a);
+        var meta=document.createElement("div"); meta.className="buzz-meta";
+        var chip=document.createElement("span"); chip.className="buzz-sub"; chip.textContent="r/"+p.subreddit; meta.appendChild(chip);
+        meta.appendChild(document.createTextNode(" "+(p.age||"")+(p.author?" \u00b7 u/"+p.author:"")));
+        bd.appendChild(meta);
+        it.appendChild(bd); list.appendChild(it);
+      });
+    }catch(e){
+      list.innerHTML='<div class="buzz-empty">Reddit belum bisa dijangkau dari server CryptoScope, jadi panel ini masih kosong. Begitu akses Reddit pulih, postingan teratas muncul otomatis di sini.<br><a href="https://www.reddit.com/r/CryptoCurrency/top/" target="_blank" rel="noopener">Buka Reddit \u2192</a></div>';
+    }
+  }
+  loadRedditBuzz();
 })();
 </script>
 <script type="module">
