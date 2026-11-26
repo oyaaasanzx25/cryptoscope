@@ -1,42 +1,42 @@
 {
- "next_retry": "2026-11-26T19:07:34+07:00",
+ "updated": "26 Nov 2026 · 19:17 WIB",
+ "status": "ok",
+ "next_retry": "2026-11-26T20:17:14+07:00",
  "posts": [
   {
-   "age": "17 jam lalu",
-   "author": "varadero332",
-   "subreddit": "CryptoCurrency",
    "title": "who else is buying these black friday deals?",
+   "subreddit": "CryptoCurrency",
+   "author": "varadero332",
+   "age": "18 jam lalu",
    "url": "https://www.reddit.com/r/CryptoCurrency/comments/1y5e5h2/who_else_is_buying_these_black_friday_deals/"
   },
   {
-   "age": "19 jam lalu",
-   "author": "MegaMaak",
-   "subreddit": "CryptoCurrency",
    "title": "Nvidia Settles Investor Suit Over Crypto Mining for $290 Million",
+   "subreddit": "CryptoCurrency",
+   "author": "MegaMaak",
+   "age": "20 jam lalu",
    "url": "https://www.reddit.com/r/CryptoCurrency/comments/1y5b47n/nvidia_settles_investor_suit_over_crypto_mining/"
   },
   {
-   "age": "3 jam lalu",
-   "author": "Itchy-Acanthaceae841",
-   "subreddit": "CryptoCurrency",
    "title": "I miss the old crypto days…",
+   "subreddit": "CryptoCurrency",
+   "author": "Itchy-Acanthaceae841",
+   "age": "4 jam lalu",
    "url": "https://www.reddit.com/r/CryptoCurrency/comments/1y5vzu1/i_miss_the_old_crypto_days/"
   },
   {
-   "age": "10 jam lalu",
-   "author": "Better-County8600",
-   "subreddit": "CryptoCurrency",
    "title": "The average person's crypto knowledge",
+   "subreddit": "CryptoCurrency",
+   "author": "Better-County8600",
+   "age": "11 jam lalu",
    "url": "https://www.reddit.com/r/CryptoCurrency/comments/1y5nq5d/the_average_persons_crypto_knowledge/"
   },
   {
-   "age": "6 jam lalu",
-   "author": "AutoModerator",
-   "subreddit": "CryptoCurrency",
    "title": "Daily Crypto Discussion",
+   "subreddit": "CryptoCurrency",
+   "author": "AutoModerator",
+   "age": "7 jam lalu",
    "url": "https://www.reddit.com/r/CryptoCurrency/comments/1y5si7n/daily_crypto_discussion/"
   }
- ],
- "status": "ok",
- "updated": "26 Nov 2026 · 18:07 WIB"
+ ]
 }
