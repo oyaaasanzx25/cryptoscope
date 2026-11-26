@@ -146,13 +146,35 @@ footer{padding:26px 36px}
 #newsList .news-item:first-child b,#breakingList .news-item:first-child b{font-size:18px}
 footer{padding:20px 16px}
 }
+/* --- Topbar nav 26 Nov 2026 — menu pindah dari sidebar kiri ke bar atas (ala Bloomberg/CoinDesk/Reuters); homepage TIDAK diubah. Isi/fitur sama persis, cuma posisi. --- */
+.app{display:block}
+.sidebar{position:sticky;top:0;z-index:10;height:auto;overflow:visible;flex-direction:row;align-items:center;gap:8px;padding:0 12px;border-right:0;border-bottom:1px solid var(--line)}
+.sidebar .brand-name{font-size:19px}
+.sidebar .brand-mark{width:32px;height:32px;font-size:19px;border-radius:9px}
+.sidebar .nav{display:flex;flex-direction:row;gap:2px;overflow-x:auto;flex:1;min-width:0;padding:0;scrollbar-width:none}
+.sidebar .nav::-webkit-scrollbar{display:none}
+.sidebar .nav a{white-space:nowrap;padding:8px 6px;font-size:13px;border-left:0;border-bottom:2px solid transparent;border-radius:8px}
+.sidebar .nav .ico{display:none}
+.sidebar .nav a.active{border-bottom-color:var(--gold)}
+.sidebar .search{flex:1 1 140px;min-width:120px;max-width:150px}
+.sidebar .theme-toggle{padding:8px 9px}
+.sidebar .logout-btn{padding:8px 10px}
+.sidebar .top-actions{margin-left:auto;flex-shrink:0;gap:10px}
+@media(max-width:1400px){.sidebar .user-name{display:none}.sidebar .top-actions>span[title="Notifikasi"]{display:none}.sidebar .theme-toggle .theme-label{display:none}}
+@media(max-width:950px){.sidebar{gap:12px;padding:0 16px}}
+@media(max-width:650px){
+.sidebar{flex-wrap:wrap;padding:10px 14px;gap:10px}
+.sidebar .nav{order:3;flex-basis:100%}
+.sidebar .search{order:4;flex-basis:100%;max-width:none}
+.sidebar .top-actions{gap:9px}
+}
 </style>
 </head>
 <body>
 <div class="app">
 <aside class="sidebar">
   <a class="brand" href="#home"><span class="brand-mark">C</span><span class="brand-word"><span class="brand-name">CRYPTO<span class="brand-scope">SCOPE</span></span><span class="brand-tag">SEE BEYOND THE MARKET</span></span></a>
-  <div><div class="side-label">Menu utama</div><nav class="nav">
+  <nav class="nav">
     <a class="active" href="#home"><span class="ico">⌂</span> Beranda</a>
     <a href="#news"><span class="ico">▤</span> Berita Crypto</a>
     <a href="#market"><span class="ico">▥</span> Market</a>
@@ -161,14 +183,11 @@ footer{padding:20px 16px}
     <a href="#altcoin"><span class="ico">◆</span> Altcoin</a>
     <a href="#web3"><span class="ico">◇</span> Airdrop & Web3</a>
     <a href="#analisis"><span class="ico">◷</span> Analisis</a>
-  </nav></div>
-  <div class="sidebar-bottom"><div class="side-label">Tentang</div><div class="tip"><b>See Beyond The Market.</b>Informasi crypto Indonesia, disajikan lebih jelas dan mudah dipahami.</div></div>
+  </nav>
+  <label class="search"><span>⌕</span><input id="searchInput" placeholder="Cari berita..." aria-label="Cari"></label>
+  <div class="top-actions"><span title="Notifikasi">♧</span><span class="user-name" id="userName">CryptoScope Reader</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">☀️ <span class="theme-label">Terang</span></button><button class="logout-btn" id="loginBtn" type="button">Masuk</button><button class="logout-btn" id="logoutBtn" type="button" style="display:none">Keluar</button><span class="avatar">C</span></div>
 </aside>
 <main class="main" id="home">
-<header class="topbar">
-  <label class="search"><span>⌕</span><input id="searchInput" placeholder="Cari berita, aset, atau topik..." aria-label="Cari"></label>
-  <div class="top-actions"><span title="Notifikasi">♧</span><span class="user-name" id="userName">CryptoScope Reader</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode gelap atau terang">☀️ <span class="theme-label">Terang</span></button><button class="logout-btn" id="loginBtn" type="button">Masuk</button><button class="logout-btn" id="logoutBtn" type="button" style="display:none">Keluar</button><span class="avatar">C</span></div>
-</header>
 <div class="content">
   <section class="welcome"><div><h1>Selamat datang di CryptoScope</h1><p>Pusat informasi dan wawasan dunia cryptocurrency.</p></div><div class="date" id="today">Crypto News Dashboard</div></section>
   <section class="hero"><div class="hero-copy"><div class="eyebrow">CRYPTO NEWS · MARKET · WEB3</div><h2>Lihat lebih jauh.<br>Pahami pergerakan crypto.</h2><p>Berita, analisis, dan perkembangan aset digital dalam satu tempat.</p><a class="hero-btn" href="#news">Jelajahi berita&nbsp; →</a></div><div class="hero-art">₿</div></section>
