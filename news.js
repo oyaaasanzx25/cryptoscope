@@ -1,11 +1,13 @@
 /* news.js — fungsi berita bersama CryptoScope (dipakai portal + landing).
    Sumber data (refactor 25 Nov 2026 — tabel audit):
-   1) news-data.json — 20 berita statis (4 per kategori), diperbarui oleh
-      cron pantau berita / cron harian. File publik di repo root.
+   1) news-data.json — maks. 50 berita statis (kuota per kategori, lihat
+      CATEGORY_QUOTAS di bawah), diperbarui oleh cron pantau berita /
+      cron harian. File publik di repo root.
    2) Koleksi Firestore `news` — berita yang dibuat lewat halaman Admin
       (login Google iyasanz217@gmail.com), terbaru dulu, maks. 15.
-   Keduanya digabung (terbaru dulu, tanpa duplikat, maks. 4 per kategori,
-   total 20) — portal/landing TIDAK lagi menanam data berita di HTML.
+   Keduanya digabung (terbaru dulu, tanpa duplikat, maks. 50 total,
+   kuota per kategori) — portal/landing TIDAK lagi menanam data berita
+   di HTML.
    Config Firebase diambil dari firebase-config.js (nilai publik).
    Firebase dimuat DINAMIS (import() + try/catch): kalau CDN Firebase tidak
    terjangkau, berita statis tetap tampil — portal tidak pernah kosong. */
@@ -59,35 +61,67 @@ export function isValidNewsItem(it) {
     && typeof it.cat === "string" && typeof it.summary === "string");
 }
 
+/* Taksonomi 8 kategori (upgrade 50 artikel, 27 Nov 2026) + kuota maks.
+   per kategori. Kategori boleh di bawah kuota — jangan isi berita lemah
+   demi mengejar angka. Total gabungan (statis + Admin) maks. 50.
+   `breaking` BUKAN kategori: item breaking pakai field boolean
+   `breaking: true` dan tetap punya `cat` topiknya. */
+export const CATEGORY_QUOTAS = {
+  bitcoin: 10, ethereum: 8, regulasi: 6, etf: 6,
+  blockchain: 5, ai: 5, ekonomi: 5, exchange: 5
+};
+export const TOTAL_MAX = 50;
+
+/* Pemetaan kategori lama (sebelum 27 Nov 2026) ke taksonomi baru — untuk
+   dokumen Admin Firestore lama yang masih memakai key lama. */
+const LEGACY_CATS = { crypto: "bitcoin", geopolitik: "regulasi", teknologi: "ai", breaking: "bitcoin" };
+
+function normCat(c) {
+  if (typeof c === "string" && CATEGORY_QUOTAS[c]) return c;
+  if (typeof c === "string" && LEGACY_CATS[c]) return LEGACY_CATS[c];
+  return "bitcoin";
+}
+
+/* Normalisasi judul untuk dedupe tahap kedua: lowercase, buang semua
+   non-huruf/angka, rapatkan spasi. */
+export function normTitle(t) {
+  return String(t || "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").replace(/\s+/g, " ").trim();
+}
+
 /* Gabung daftar berita baru (mis. Admin) ke daftar dasar: urut terbaru
-   dulu, buang duplikat (URL/judul sama), maks. 4 per kategori, total 20. */
+   dulu, buang duplikat (URL sama, lalu judul ternormalisasi sama),
+   kuota per kategori, total maks. 50. */
 export function mergeNewsItems(extra, base) {
   var all = (extra || []).concat((base || []).slice());
   all.sort(function (a, b) { return itemTime(b) - itemTime(a); });
-  var seen = {}, perCat = {}, out = [];
+  var seenUrl = {}, seenTitle = {}, perCat = {}, out = [];
   all.forEach(function (it) {
-    if (out.length >= 20) return;
+    if (out.length >= TOTAL_MAX) return;
     if (!it || typeof it.title !== "string" || !it.title) return;
-    var key = String(it.url || "").toLowerCase() || String(it.title || "").toLowerCase();
-    if (!key || seen[key]) return;
-    seen[key] = true;
-    var c = it.cat || "crypto"; perCat[c] = perCat[c] || 0;
-    if (perCat[c] >= 4) return;
+    var urlKey = String(it.url || "").toLowerCase();
+    if (urlKey && seenUrl[urlKey]) return;
+    var titleKey = normTitle(it.title);
+    if (titleKey && seenTitle[titleKey]) return;
+    var c = normCat(it.cat);
+    perCat[c] = perCat[c] || 0;
+    if (perCat[c] >= CATEGORY_QUOTAS[c]) return;
+    if (urlKey) seenUrl[urlKey] = true;
+    if (titleKey) seenTitle[titleKey] = true;
     perCat[c]++; out.push(it);
   });
   return out;
 }
 
-/* Muat news-data.json (gagal / tidak valid -> [] , pemanggil memakai
-   sumber lain atau membiarkan fallback statis di halaman). */
+/* Muat news-data.json (gagal -> [] , pemanggil memakai sumber lain atau
+   membiarkan fallback statis di halaman). Item yang tidak valid dibuang
+   per item — item valid tetap tampil (bukan all-or-nothing). */
 export async function fetchNewsJson() {
   try {
     const r = await fetch("news-data.json", { cache: "no-store" });
     if (!r.ok) return [];
     const data = await r.json();
     if (!Array.isArray(data) || !data.length) return [];
-    if (!data.every(isValidNewsItem)) return [];
-    return data;
+    return data.filter(isValidNewsItem);
   } catch (e) {
     console.warn("news-data.json tidak dapat dimuat:", e);
     return [];
@@ -114,6 +148,7 @@ export async function fetchAdminNews(n) {
         url: v.url || "#",
         type: v.type || "fakta",
         img: v.img || "",
+        breaking: v.breaking === true,
         createdAt: v.createdAt || null
       });
     });
@@ -124,7 +159,7 @@ export async function fetchAdminNews(n) {
   }
 }
 
-/* Muat semua sumber sekaligus, gabung jadi 20 berita portal. */
+/* Muat semua sumber sekaligus, gabung jadi maks. 50 berita portal. */
 export async function loadMergedNews() {
   const [json, admin] = await Promise.all([fetchNewsJson(), fetchAdminNews(15)]);
   if (!json.length && !admin.length) return [];
