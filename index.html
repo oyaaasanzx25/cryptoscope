@@ -137,7 +137,7 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 .break-side{display:flex;flex-direction:column;gap:22px}
 .break-item{position:relative;display:flex;gap:16px;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;padding:16px;text-decoration:none;transition:border-color .25s;flex:1}
 .break-item:hover{border-color:var(--line2)}
-.break-item .thumb{width:118px;min-width:118px;height:96px;border-radius:10px;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;font-size:34px;color:var(--gold);font-family:Inter,sans-serif;font-weight:700}
+.break-item .thumb{width:120px;min-width:120px;aspect-ratio:16/9;height:auto;border-radius:10px;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;font-size:34px;color:var(--gold);font-family:Inter,sans-serif;font-weight:700}
 .break-item .thumb img{width:100%;height:100%;object-fit:cover}
 .break-item h4{margin:6px 0 6px;font-size:15.5px;line-height:1.35;font-weight:700}
 .break-item .meta{margin-top:4px}
@@ -165,7 +165,7 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .news-card{position:relative;background:linear-gradient(201deg,var(--panel) 13.96%,var(--panel2));border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:border-color .25s}
 .news-card:hover{border-color:var(--line2)}
-.news-thumb{height:170px;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;position:relative}
+.news-thumb{aspect-ratio:16/9;height:auto;overflow:hidden;background:linear-gradient(201deg,var(--panel),var(--panel2));display:grid;place-items:center;position:relative}
 .news-thumb img{width:100%;height:100%;object-fit:cover}
 .news-thumb img.proc{object-position:center 68%}
 .news-thumb .ph{font-family:Inter,sans-serif;font-size:56px;font-weight:800;color:rgba(17,24,39,.14)}
@@ -296,7 +296,7 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
 .cvc-cats{padding-top:56px}
 .cat-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .cat-card{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;background:var(--panel)}
-.cat-img{position:relative;display:block;height:120px;background:linear-gradient(135deg,#1e3a8a,#2563eb);overflow:hidden}
+.cat-img{position:relative;display:block;aspect-ratio:16/9;height:auto;background:linear-gradient(135deg,#1e3a8a,#2563eb);overflow:hidden}
 .cat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .cat-ph{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;font-weight:800;color:rgba(255,255,255,.85)}
 .cat-cap{display:block;padding:14px 16px}
@@ -474,7 +474,7 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
     </div>
     <div class="break-grid">
       <a class="break-main rv" href="cryptoscope-1.html#breaking">
-        <img class="proc" src="images/2026-11-27/proc-bitmart-shortfall.png" alt="BitMart defisit US$319,5 juta, hanya US$1,9 juta tersedia untuk nasabah" loading="eager">
+        <img src="images/2026-11-27/bitmart-shortfall.webp" alt="BitMart defisit US$319,5 juta, hanya US$1,9 juta tersedia untuk nasabah" loading="eager">
         <div class="bm-body">
           <span class="badge breaking">● Breaking News</span>
           <h3>BitMart defisit US$319,5 juta, hanya US$1,9 juta tersedia untuk nasabah</h3>
@@ -484,13 +484,13 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
       </a>
       <div class="break-side">
         <a class="break-item rv" href="cryptoscope-1.html#breaking">
-          <span class="thumb"><img src="images/2026-11-27/proc-binance-withdrawal-recovery.png" alt="Binance pulihkan semua penarikan empat minggu usai peretasan US$6,3 miliar" loading="lazy"></span>
+          <span class="thumb"><img src="images/2026-11-27/binance-withdrawal-recovery.webp" alt="Binance pulihkan semua penarikan empat minggu usai peretasan US$6,3 miliar" loading="lazy"></span>
           <span><span class="badge breaking">● Breaking</span>
           <h4>Binance pulihkan semua penarikan empat minggu usai peretasan US$6,3 miliar</h4>
           <span class="meta"><b>Cointelegraph</b> · 27 Nov 2026 · 04:33 WIB</span></span>
         </a>
         <a class="break-item rv" href="cryptoscope-1.html#breaking">
-          <span class="thumb"><img src="images/2026-11-26/proc-bitcoin-reserve-20-year-lockup.png" alt="Pemerintah AS bisa dilarang jual cadangan Bitcoin strategis selama 20 tahun" loading="lazy"></span>
+          <span class="thumb"><img src="images/2026-11-27/us-bitcoin-reserve-20-years.webp" alt="Pemerintah AS bisa dilarang jual cadangan Bitcoin strategis selama 20 tahun" loading="lazy"></span>
           <span><span class="badge breaking">● Breaking</span>
           <h4>Pemerintah AS bisa dilarang jual cadangan Bitcoin strategis selama 20 tahun</h4>
           <span class="meta"><b>CryptoSlate</b> · 26 Nov 2026 · 20:40 WIB</span></span>
@@ -565,37 +565,37 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
     </div>
     <div class="news-grid">
 <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="https://cryptoslate.com/wp-content/uploads/2026/11/nvidia-claims-court-gate.webp" alt="Pemegang saham Nvidia era boom mining kripto 2017 bisa klaim bagian dari penyelesaian US$290 juta" loading="lazy"><span class="badge cat">Ekonomi</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/nvidia-mining-claim.webp" alt="Pemegang saham Nvidia era boom mining kripto 2017 bisa klaim bagian dari penyelesaian US$290 juta" loading="lazy"><span class="badge cat">Ekonomi</span></div>
         <div class="news-body"><h3>Pemegang saham Nvidia era boom mining kripto 2017 bisa klaim bagian dari penyelesaian US$290 juta</h3>
         <p>Investor yang membeli saham biasa Nvidia pada 10 Agustus 2017–15 November 2018 bisa berbagi penyelesaian tunai US$290 juta yang diusulkan atas klaim pemegang saham soal pengungkapan Nvidia tentang permintaan dari penambang kripto. Para pihak mengajukan kesepakatan itu pada 24 November dan meminta persetujuan awal pengadilan federal Oakland. Penggugat menuding Nvidia dan Jensen Huang menyesatkan investor soal seberapa besar penambang kripto berkontribusi pada penjualan chip grafis yang dipasarkan untuk gaming; Nvidia dan Huang membantah berbuat salah dan kesepakatan itu tidak memuat pengakuan tanggung jawab. Sidang persetujuan awal dijadwalkan 4 Februari 2027; pembayaran memerlukan persetujuan akhir dan perintah pengadilan terpisah, dengan klaim diajukan paling lambat 90 hari setelah tanggal pemberitahuan.</p>
         <div class="news-src"><b>CryptoSlate</b> · 27 Nov 2026 · 09:10 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
 <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-bitcoin-extreme-fear-buy-signal.png" alt="Bitcoin dalam ketakutan ekstrem: sinyal beli bersejarah, tapi bisa jadi jebakan?" loading="lazy"><span class="badge cat">Crypto</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/bitcoin-extreme-fear-buy-signal.webp" alt="Bitcoin dalam ketakutan ekstrem: sinyal beli bersejarah, tapi bisa jadi jebakan?" loading="lazy"><span class="badge cat">Crypto</span></div>
         <div class="news-body"><h3>Bitcoin dalam ketakutan ekstrem: sinyal beli bersejarah, tapi bisa jadi jebakan?</h3>
         <p>Indeks Fear &amp; Greed Bitcoin berada di 12 — zona ketakutan ekstrem — setelah Bitcoin masuk zona itu sejak 14 November. Pembacaan mingguan di bawah 20 secara historis menandai dasar harga Bitcoin, tapi 2026 belum memberi imbalan bagi pembeli awal: sejak pembacaan ekstrem 21 Januari, Bitcoin turun 26% hingga pertengahan November, dan studi Februari 2026 mencatat imbal hasil 90 hari rata-rata hanya 2,4% setelah pembacaan di bawah 25. Arus dana institusional masih keluar: ETF spot Bitcoin AS mencatat arus keluar bersih sekitar US$4,71 miliar hingga 24 November — rekor bulanan. Peluang kenaikan suku bunga The Fed pada Desember kini di atas 90% menurut FedWatch CME, sementara Bitcoin menutup tujuh candle mingguan merah beruntun — baru ketiga kalinya dalam sejarah.</p>
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 08:42 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
 <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-morpho-eurcv-vault-shortfall.png" alt="Vault stablecoin euro terbesar Morpho kekurangan €13,8 juta untuk penarikan deposan terbesar" loading="lazy"><span class="badge cat">Crypto</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/morpho-eurcv-vault-shortfall.webp" alt="Vault stablecoin euro terbesar Morpho kekurangan €13,8 juta untuk penarikan deposan terbesar" loading="lazy"><span class="badge cat">Crypto</span></div>
         <div class="news-body"><h3>Vault stablecoin euro terbesar Morpho kekurangan €13,8 juta untuk penarikan deposan terbesar</h3>
         <p>Vault EURCV terbesar Morpho, Steakhouse Prime di Ethereum, menampung deposito 144,3 juta EURCV dengan likuiditas tersedia 107,2 juta EURCV — kekurangan sekitar €13,8 juta bila deposan terbesarnya menarik seluruh posisinya. Alamat teratas itu memegang 121 juta EURCV atau 83,8% isi vault, menurut data Morpho per 26 November. Laporan European Banking Authority (EBA) 25 November menyebut lebih dari separuh EURCV yang beredar disuplai ke sebuah vault Morpho pada Juli. Penarikan biasa mengembalikan EURCV ke dompet pengguna, sementara penebusan langsung menjadi euro lewat penerbit SG-FORGE hanya berlaku bagi penduduk Kawasan Ekonomi Eropa yang lolos pemeriksaan, dengan euro cair paling lambat hari kerja terakhir bulan berikutnya.</p>
         <div class="news-src"><b>CryptoSlate</b> · 27 Nov 2026 · 07:50 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
 <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-kucoin-delist-monero.png" alt="KuCoin delist Monero, XMR anjlok 10,5% saat Grayscale tegaskan dukung Zcash" loading="lazy"><span class="badge cat">Crypto</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/kucoin-delist-monero.webp" alt="KuCoin delist Monero, XMR anjlok 10,5% saat Grayscale tegaskan dukung Zcash" loading="lazy"><span class="badge cat">Crypto</span></div>
         <div class="news-body"><h3>KuCoin delist Monero, XMR anjlok 10,5% saat Grayscale tegaskan dukung Zcash</h3>
         <p>KuCoin mengumumkan akan mendelist Monero (XMR) pada 30 November — bursa besar kedua bulan ini yang mencopot koin privasi itu setelah MEXC menghentikan perdagangan spot XMR dan mendelist kontrak perpetual-nya awal November. KuCoin sudah menangguhkan deposit XMR dan berencana menutup penarikan pada 31 Desember. XMR jatuh 10,5% ke US$449,98 pada Kamis malam, memperpanjang penurunan dari sekitar US$625 pada 3 November. Delisting ini terjadi menjelang aturan anti-pencucian uang Uni Eropa yang mulai 10 Juli 2027 akan melarang perusahaan keuangan — termasuk penyedia layanan aset kripto — memelihara akun anonim atau akun yang menyamarkan transaksi lewat “anonymity-enhancing coins”. Di sisi lain, Grayscale menegaskan komitmennya pada Zcash: kepala riset Zach Pandl menyebut Zcash “teknologi yang lebih kuat” karena memakai pendekatan shielding dengan zero-knowledge proofs, bukan obfuscation seperti ring signature Monero. ETF spot Zcash Grayscale yang meluncur 25 Agustus sempat mencapai aset US$1 miliar pada 24 September, kini US$406 juta; ZEC diperdagangkan sekitar US$770 setelah sempat menyentuh US$1.653 pada 26 September.
         <div class="news-src"><b>Cointelegraph</b> · 27 Nov 2026 · 07:35 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
 <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-bitcoin-bear-market-411-days.png" alt="Bear market Bitcoin tembus 411 hari, terpanjang dalam sejarah — tapi belum separah 2022" loading="lazy"><span class="badge cat">Crypto</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/bitcoin-bear-market-411-days.webp" alt="Bear market Bitcoin tembus 411 hari, terpanjang dalam sejarah — tapi belum separah 2022" loading="lazy"><span class="badge cat">Crypto</span></div>
         <div class="news-body"><h3>Bear market Bitcoin tembus 411 hari, terpanjang dalam sejarah — tapi belum separah 2022</h3>
         <p>Bear market Bitcoin sudah berjalan 411 hari per 23 November menurut Grayscale — yang terpanjang dalam sejarah — dengan penurunan 56% dari puncak, jauh di bawah kejatuhan 75–77% pada 2022. Sejumlah perbedaan kunci tetap ada: The Fed baru menaikkan suku bunga sekali sebesar 25 basis poin tahun ini, berbanding 425 basis poin sepanjang 2022, dan inflasi AS 3,7% pada September berbanding 9,1% di puncak 2022. S&P 500 dan Dow memang terkoreksi lebih dari 10% dari rekor pada 20 November, tapi itu koreksi, bukan bear market seperti Juni 2022. Peretasan Binance senilai US$6,3 miliar pada 29 Oktober juga berbeda dari runtuhnya FTX: janji Binance menutup kerugian sejauh ini mencegah penularan berantai. Kepala riset CoinShares James Butterfill melihat bear market berlanjut karena aksi jual whale, sementara tanpa kegagalan besar baru, bear market yang lebih dangkal ini bisa pulih lebih lambat.
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 07:30 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
 <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-nvidia-server-shipment-halt.png" alt="Nvidia hentikan pengiriman server AI ke empat negara Asia Tenggara" loading="lazy"><span class="badge cat">Teknologi</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/nvidia-server-shipment-halt.webp" alt="Nvidia hentikan pengiriman server AI ke empat negara Asia Tenggara" loading="lazy"><span class="badge cat">Teknologi</span></div>
         <div class="news-body"><h3>Nvidia hentikan pengiriman server AI ke empat negara Asia Tenggara</h3>
         <p>Nvidia meminta mitra manufakturnya menghentikan pengiriman server yang berisi chip AI ke Malaysia, Singapura, Thailand, dan Indonesia, menurut laporan Financial Times yang dikutip Reuters. Langkah ini menyusul kekhawatiran penyelundupan chip ke Tiongkok — Washington sebelumnya menutup celah yang memungkinkan perusahaan Tiongkok mengakses chip Nvidia dan menambah pengawasan terhadap penyelundupan. Saham Nvidia ditutup turun 3,9% ke US$149,30 pada Rabu, dan S&amp;P menempatkan rating kredit perusahaan dalam pantauan kemungkinan downgrade.
         <div class="news-src"><b>AIdapted</b> · 27 Nov 2026 · 07:00 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
