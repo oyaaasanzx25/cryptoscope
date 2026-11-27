@@ -860,7 +860,16 @@ function drawVisual(ctx,cat,x,y,w,h,W,title){
     cg.addColorStop(0,"#ffe08a");cg.addColorStop(0.6,"#f5b301");cg.addColorStop(1,"#b97e00");
     ctx.fillStyle=cg;ctx.beginPath();ctx.arc(cx,cy,r,0,7);ctx.fill();
     ctx.fillStyle="#3a2a00";ctx.font="900 "+Math.round(r*1.1)+"px Arial,sans-serif";
-    ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText("\u20bf",cx,cy+r*0.06);
+    ctx.textAlign="center";ctx.textBaseline="middle";
+    /* Simbol Bitcoin digambar vektor (B + dua garis vertikal), bukan karakter U+20BF:
+       glyph itu tidak ada di font Arial Windows 7 sehingga canvas menggambar kotak kosong. */
+    ctx.fillText("B",cx,cy+r*0.06);
+    var bwB=ctx.measureText("B").width;
+    ctx.strokeStyle="#3a2a00";ctx.lineWidth=Math.max(2,r*0.09);
+    ctx.beginPath();
+    ctx.moveTo(cx-bwB*0.18,cy-r*0.42);ctx.lineTo(cx-bwB*0.18,cy+r*0.52);
+    ctx.moveTo(cx+bwB*0.18,cy-r*0.42);ctx.lineTo(cx+bwB*0.18,cy+r*0.52);
+    ctx.stroke();
     ctx.textAlign="left";
   }else if(cat==="geopolitik"){
     const cx=x+w*0.5,cy=sy+sh2*0.55,r=Math.min(w,sh2)*0.4;
@@ -1002,7 +1011,8 @@ function drawNewsGraphic(cv,item,W,H){
   ctx.fillStyle="#fff";
   ctx.font="900 "+Math.round(W*0.55)+"px Arial,sans-serif";
   ctx.textAlign="right";ctx.textBaseline="bottom";
-  ctx.fillText(c.icon,W-pad*0.4,H*0.99);
+  var wIcon=c.icon;if(wIcon&&wIcon.charCodeAt(0)===0x20bf)wIcon="B";
+  ctx.fillText(wIcon,W-pad*0.4,H*0.99);
   ctx.restore();
   ctx.textAlign="left";ctx.textBaseline="alphabetic";
   ctx.strokeStyle="rgba(255,255,255,0.04)";ctx.lineWidth=1;
@@ -1032,13 +1042,18 @@ function drawNewsGraphic(cv,item,W,H){
   drawVisual(ctx,cat,pad,visY,W-2*pad,visH,W,title);
   let y=visY+visH+Math.round(H*0.032);
   ctx.fillStyle="#fff";
-  const fs=Math.round(W*0.058);
-  ctx.font="800 "+fs+"px Arial,sans-serif";
-  y=drawAccentLines(ctx,title,pad,y,W-2*pad,fs*1.16,5);
-  const ruleY=H-Math.round(H*0.045);
-  /* v4: strip harga di bawah caption — kanvas terisi sampai footer, tidak ada ruang kosong */
+  const ruleY=H-Math.round(H*0.06);
   const stripH=Math.round(H*0.085);
   const stripY=ruleY-stripH-Math.round(H*0.012);
+  /* Judul panjang (3 baris) di kanvas 16:9 menabrak strip harga - kecilkan font sampai muat. */
+  let fs=Math.round(W*0.058);
+  const titleLines=function(f){ctx.font="800 "+f+"px Arial,sans-serif";let n=1,lw=0;title.split(" ").forEach(function(w){const wW=ctx.measureText(w+" ").width;if(lw+wW>W-2*pad&&lw>0){n++;lw=wW;}else lw+=wW;});return n;};
+  let lh=1.16;
+  while(y+titleLines(fs)*fs*lh>stripY-8&&fs>Math.round(W*0.030)){fs=Math.round(fs*0.92);}
+  if(y+titleLines(fs)*fs*lh>stripY-8){lh=1.05;}
+  ctx.font="800 "+fs+"px Arial,sans-serif";
+  y=drawAccentLines(ctx,title,pad,y,W-2*pad,fs*lh,5);
+  /* v4: strip harga di bawah caption - kanvas terisi sampai footer, tidak ada ruang kosong */
   if(caption){
     const cfs=Math.round(W*0.026);
     ctx.font="400 "+cfs+"px Arial,sans-serif";
@@ -1055,7 +1070,7 @@ function drawNewsGraphic(cv,item,W,H){
   ctx.fillStyle="#9194a1";
   const ffs=Math.round(W*0.02);
   ctx.font="400 "+ffs+"px Arial,sans-serif";
-  ctx.fillText("Sumber: "+n.source+" \u00b7 "+pubTime(n)+" \u00b7 cryptoscope",pad,ruleY+12);
+  ctx.textBaseline="top";ctx.fillText("Sumber: "+n.source+" \u00b7 "+pubTime(n)+" \u00b7 cryptoscope",pad,ruleY+10);
 }/* Harga market live dari CoinGecko (gratis, tanpa API key).
    Kalau fetch gagal (offline / diblokir), harga statis di HTML tetap tampil
    dan labelnya jujur bilang offline — tidak pernah pura-pura live. */
