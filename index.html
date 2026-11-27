@@ -206,6 +206,8 @@ nav.main a:hover{color:#111827;background:rgba(23,105,79,.07)}
 /* ---------- footer ---------- */
 footer{margin-top:90px;border-top:0;background:#111827}
 .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px;padding:56px 0 34px}
+.ft-grid>*{min-width:0}
+.ft-grid a{overflow-wrap:anywhere}
 .ft-grid h4{font-family:Inter,sans-serif;font-size:16px;font-weight:500;letter-spacing:.02em;text-transform:none;margin:0 0 16px;color:#fff}
 .ft-grid a{display:block;color:#9194a1;text-decoration:none;font-size:16px;line-height:1.375;padding:7px 0}
 .ft-grid a:hover{color:#fff}
@@ -225,7 +227,7 @@ footer{margin-top:90px;border-top:0;background:#111827}
   .break-grid{grid-template-columns:1fr}
   .mkt-grid,.news-grid,.edu-grid,.about-grid{grid-template-columns:1fr 1fr}
   .mkt-stats{grid-template-columns:1fr 1fr}
-  .ft-grid{grid-template-columns:1fr 1fr}
+  .ft-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   nav.main{display:none;position:absolute;top:66px;left:0;right:0;background:#ffffff;border-bottom:1px solid var(--line);flex-direction:column;padding:12px 22px 18px;margin:0}
   nav.main.open{display:flex}
   nav.main a{padding:12px 10px;font-size:16px}
@@ -240,8 +242,9 @@ footer{margin-top:90px;border-top:0;background:#111827}
   .mkt-grid,.news-grid,.edu-grid,.about-grid{grid-template-columns:1fr}
   .break-main img{height:210px}
   .cta-band{padding:40px 22px}
-  .ft-grid{grid-template-columns:1fr 1fr}
-  .ft-brand{grid-column:1/-1}
+  .ft-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ft-brand{grid-column:1/-1;min-width:0}
+  .ft-brand .logo{flex-shrink:1;min-width:0}
   .ft-about{grid-column:1/-1;order:4}
   .ft-contact{order:3}
   .ft-nav .flinks{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
@@ -362,10 +365,10 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
 
 <div class="cvc-strip" aria-label="Ringkasan pasar">
   <div class="wrap strip-in">
-    <span>Crypto <b id="stripCryptos">21.239</b></span>
+    <span>Crypto <b id="stripCryptos">21.244</b></span>
     <span>Bursa <b id="stripMarkets">1.525</b></span>
     <span>Kap Pasar <b id="stripMcap">$2,13 T</b></span>
-    <span>Vol 24j <b id="stripVol">$54 Miliar</b></span>
+    <span>Vol 24j <b id="stripVol">$55 Miliar</b></span>
     <span>Dominasi BTC <b id="stripDomBtc">58,0%</b></span>
     <span>Dominasi ETH <b id="stripDomEth">9,9%</b></span>
   </div>
@@ -384,7 +387,7 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
         <a class="btn ghost" href="#market">Lihat Market ↓</a>
       </div>
       <div class="hero-stats">
-        <div><b>50</b><span>Berita terbaru</span></div>
+        <div><b>Live</b><span>Berita terbaru</span></div>
         <div><b>8</b><span>Kategori liputan</span></div>
         <div><b>24 jam</b><span>Pembaruan berita</span></div>
         <div><b id="heroDate">—</b><span>Edisi hari ini</span></div>
@@ -392,9 +395,9 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
     </div>
     <div class="coin-wrap" aria-hidden="true">
       <div class="coin">₿</div>
-      <div class="chip-float cf1">BTC <span class="up" id="chipBtc">$61.572 · +1,69%</span><small>Bitcoin · live</small></div>
-      <div class="chip-float cf2">ETH <span class="up" id="chipEth">$1.727,34 · +2,16%</span><small>Ethereum · live</small></div>
-      <div class="chip-float cf3">SOL <span class="up" id="chipSol">$72,91 · +2,79%</span><small>Solana · live</small></div>
+      <div class="chip-float cf1">BTC <span class="up" id="chipBtc">$61.529 · +1,62%</span><small>Bitcoin · live</small></div>
+      <div class="chip-float cf2">ETH <span class="up" id="chipEth">$1.728,26 · +2,20%</span><small>Ethereum · live</small></div>
+      <div class="chip-float cf3">SOL <span class="up" id="chipSol">$72,95 · +2,96%</span><small>Solana · live</small></div>
       <svg class="chart" viewBox="0 0 400 90" fill="none" aria-hidden="true">
         <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18" stroke="#17694f" stroke-width="2.5" stroke-linecap="round"/>
         <path d="M0 78 L40 66 L80 70 L120 48 L160 56 L200 34 L240 44 L280 22 L320 30 L360 12 L400 18 L400 90 L0 90 Z" fill="url(#cg)" opacity=".25"/>
@@ -403,7 +406,7 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
     </div>
   </div>
   <div class="ticker" aria-label="Berita terbaru berjalan">
-    <div class="ticker-track" id="tickerTrack"><span><span class="dot">●</span> <b>BREAKING</b> — Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech</span><span><span class="dot">●</span> <b>BREAKING</b> — Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga</span><span><span class="dot">●</span> Rencana pertahanan kuantum Ethereum bisa tunda upgrade anti-sensor Hegota</span><span><span class="dot">●</span> Dolar dekati rekor kemenangan beruntun terpanjang sejak 2024, sebagian analis nilai reli sudah berakhir</span><span><span class="dot">●</span> Emas melonjak ke US$3.600 dan perak ke US$43 saat saham teknologi pulih</span><span><span class="dot">●</span> Industri kripto Jepang gandeng SEAL untuk perkuat respons peretasan</span><span><span class="dot">●</span> <b>BREAKING</b> — Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech</span><span><span class="dot">●</span> <b>BREAKING</b> — Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga</span><span><span class="dot">●</span> Rencana pertahanan kuantum Ethereum bisa tunda upgrade anti-sensor Hegota</span><span><span class="dot">●</span> Dolar dekati rekor kemenangan beruntun terpanjang sejak 2024, sebagian analis nilai reli sudah berakhir</span><span><span class="dot">●</span> Emas melonjak ke US$3.600 dan perak ke US$43 saat saham teknologi pulih</span><span><span class="dot">●</span> Industri kripto Jepang gandeng SEAL untuk perkuat respons peretasan</span></div>
+    <div class="ticker-track" id="tickerTrack"><span><span class="dot">●</span> <b>BREAKING</b> — Monero anjlok 11%, penurunan harian terbesar sejak Juni usai KuCoin delist XMR</span><span><span class="dot">●</span> <b>BREAKING</b> — Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech</span><span><span class="dot">●</span> <b>BREAKING</b> — Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga</span><span><span class="dot">●</span> Rencana pertahanan kuantum Ethereum bisa tunda upgrade anti-sensor Hegota</span><span><span class="dot">●</span> Dolar dekati rekor kemenangan beruntun terpanjang sejak 2024, sebagian analis nilai reli sudah berakhir</span><span><span class="dot">●</span> Emas melonjak ke US$3.600 dan perak ke US$43 saat saham teknologi pulih</span><span><span class="dot">●</span> <b>BREAKING</b> — Monero anjlok 11%, penurunan harian terbesar sejak Juni usai KuCoin delist XMR</span><span><span class="dot">●</span> <b>BREAKING</b> — Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech</span><span><span class="dot">●</span> <b>BREAKING</b> — Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga</span><span><span class="dot">●</span> Rencana pertahanan kuantum Ethereum bisa tunda upgrade anti-sensor Hegota</span><span><span class="dot">●</span> Dolar dekati rekor kemenangan beruntun terpanjang sejak 2024, sebagian analis nilai reli sudah berakhir</span><span><span class="dot">●</span> Emas melonjak ke US$3.600 dan perak ke US$43 saat saham teknologi pulih</span></div>
   </div>
 </section>
 
@@ -444,7 +447,7 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
 <section class="sec cvc-market" id="harga">
   <div class="wrap">
     <h2 class="cvc-title rv">Harga Cryptocurrency Hari Ini Berdasarkan Kapitalisasi Pasar</h2>
-    <p class="cvc-sub">Kapitalisasi pasar crypto global saat ini mencapai <b id="subMcap">—</b>, <span id="subChg">—</span> dalam 24 jam terakhir.</p>
+    <p class="cvc-sub">Kapitalisasi pasar crypto global saat ini mencapai <b id="subMcap">$2,13 triliun</b>, <span id="subChg" class="down">menurun 1,11%</span> dalam 24 jam terakhir.</p>
     <div class="tbl-tabs" role="group" aria-label="Tampilan tabel">
       <button class="tbl-tab active" data-view="all" type="button">Semua</button>
       <button class="tbl-tab" data-view="defi" type="button">DeFi</button>
@@ -471,26 +474,26 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
     </div>
     <div class="break-grid">
       <a class="break-main rv" href="cryptoscope-1.html#breaking">
-        <img src="images/2026-11-26/proc-novatech-judgment.png" alt="Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech" loading="eager">
+        <img src="images/2026-11-27/proc-monero-xmr-slide-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Monero anjlok 11%, penurunan harian terbesar sejak Juni usai KuCoin delist XMR" loading="eager">
         <div class="bm-body">
           <span class="badge breaking">● Breaking News</span>
-          <h3>Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech</h3>
-          <p>Jaksa Agung New York Letitia James memperoleh putusan pengadilan senilai US$1,37 miliar terhadap Cynthia dan Eddy Petion, pendiri perusahaan perdagangan kripto dan valas NovaTech yang sudah tutup, atas skema investasi yang menipu ratusan ribu orang. Putusan itu mencakup US$1,13 miliar dana investor dan US$232,5 juta bunga, menyusul putusan default pada Agustus 2025 setelah pasangan itu melarikan diri dan tidak menanggapi gugatan yang diajukan pada Juni 2024. NovaTech dituding menargetkan komunitas imigran, terutama warga Haiti di New York, lewat kelompok doa dan media sosial dengan janji imbal hasil tinggi; lebih dari 11.000 warga New York kehilangan puluhan juta dolar.</p>
-          <div class="meta"><b>Cointelegraph</b> · 27 Nov 2026 · 14:19 WIB</div>
+          <h3>Monero anjlok 11%, penurunan harian terbesar sejak Juni usai KuCoin delist XMR</h3>
+          <p>Monero (XMR) anjlok lebih dari 11% pada Kamis, penurunan harian terbesar sejak 4 Juni, setelah KuCoin — bursa kripto terbesar ke-12 berdasarkan volume 24 jam — mengumumkan akan menghentikan perdagangan XMR pada 30 November. XMR sempat menyentuh US$430 dan diperdagangkan sekitar US$464, turun 22% sepanjang November dan 14% sepanjang kuartal. Delisting ini menyusul langkah serupa MEXC awal bulan ini; menurut TRM Labs, 73 bursa sudah mendelist XMR sepanjang 2025, sehingga perdagangannya kini terkonsentrasi di segelintir bursa offshore. Komunitas Monero merilis dompet Eigenwallet dengan fitur atomic swap BTC–XMR, sementara upgrade privasi FCMP++ masih menjalani audit keamanan.</p>
+          <div class="meta"><b>CoinDesk</b> · 27 Nov 2026 · 14:33 WIB</div>
         </div>
       </a>
       <div class="break-side">
         <a class="break-item rv" href="cryptoscope-1.html#breaking">
-          <span class="thumb"><img src="images/2026-11-27/proc-nasdaq-volatility-fed-hike.png" alt="Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga" loading="lazy"></span>
+          <span class="thumb"><img src="images/2026-11-26/proc-novatech-judgment-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech" loading="lazy"></span>
+          <span><span class="badge breaking">● Breaking</span>
+          <h4>Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech</h4>
+          <span class="meta"><b>Cointelegraph</b> · 27 Nov 2026 · 14:19 WIB</span></span>
+        </a>
+        <a class="break-item rv" href="cryptoscope-1.html#breaking">
+          <span class="thumb"><img src="images/2026-11-27/proc-nasdaq-volatility-fed-hike-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga" loading="lazy"></span>
           <span><span class="badge breaking">● Breaking</span>
           <h4>Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga</h4>
           <span class="meta"><b>BeInCrypto</b> · 27 Nov 2026 · 14:15 WIB</span></span>
-        </a>
-        <a class="break-item rv" href="cryptoscope-1.html#breaking">
-          <span class="thumb"><img src="images/2026-11-27/thorchain-binance-laundering.webp" alt="Aset curian Binance US$600 juta lebih dicuci lewat THORChain" loading="lazy"></span>
-          <span><span class="badge breaking">● Breaking</span>
-          <h4>Aset curian Binance US$600 juta lebih dicuci lewat THORChain</h4>
-          <span class="meta"><b>Odaily</b> · 27 Nov 2026 · 07:06 WIB</span></span>
         </a>
       </div>
     </div>
@@ -506,30 +509,30 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
     <div class="mkt-grid">
       <div class="mkt-card rv">
         <div class="mkt-top"><span class="mkt-ic ic-btc">₿</span><span><b>Bitcoin</b><small>BTC / USD</small></span></div>
-        <div class="mkt-price" id="priceBtc">$61.572</div>
-        <div class="mkt-chg up" id="chgBtc">▲ +1,69% (24j)</div>
+        <div class="mkt-price" id="priceBtc">$61.529</div>
+        <div class="mkt-chg up" id="chgBtc">▲ +1,62% (24j)</div>
         <div class="mkt-bars" aria-hidden="true"><i style="height:38%"></i><i style="height:55%"></i><i style="height:44%"></i><i style="height:68%"></i><i style="height:58%"></i><i style="height:82%"></i><i style="height:74%"></i><i style="height:100%"></i></div>
       </div>
       <div class="mkt-card rv">
         <div class="mkt-top"><span class="mkt-ic ic-eth">Ξ</span><span><b>Ethereum</b><small>ETH / USD</small></span></div>
-        <div class="mkt-price" id="priceEth">$1.727,34</div>
-        <div class="mkt-chg up" id="chgEth">▲ +2,16% (24j)</div>
+        <div class="mkt-price" id="priceEth">$1.728,26</div>
+        <div class="mkt-chg up" id="chgEth">▲ +2,20% (24j)</div>
         <div class="mkt-bars" aria-hidden="true"><i style="height:70%"></i><i style="height:52%"></i><i style="height:64%"></i><i style="height:46%"></i><i style="height:58%"></i><i style="height:40%"></i><i style="height:50%"></i><i style="height:36%"></i></div>
       </div>
       <div class="mkt-card rv">
         <div class="mkt-top"><span class="mkt-ic ic-sol">◎</span><span><b>Solana</b><small>SOL / USD</small></span></div>
-        <div class="mkt-price" id="priceSol">$72,91</div>
-        <div class="mkt-chg up" id="chgSol">▲ +2,79% (24j)</div>
+        <div class="mkt-price" id="priceSol">$72,95</div>
+        <div class="mkt-chg up" id="chgSol">▲ +2,96% (24j)</div>
         <div class="mkt-bars" aria-hidden="true"><i style="height:34%"></i><i style="height:48%"></i><i style="height:42%"></i><i style="height:60%"></i><i style="height:55%"></i><i style="height:76%"></i><i style="height:88%"></i><i style="height:100%"></i></div>
       </div>
     </div>
     <div class="mkt-stats">
-      <div class="stat rv"><span>Total kapitalisasi pasar</span><b id="statMcap">$2,11 T</b></div>
-      <div class="stat rv"><span>Dominasi Bitcoin</span><b id="statDom">57,9%</b></div>
-      <div class="stat rv"><span>Volume perdagangan 24j</span><b id="statVol">$89,2 Miliar</b></div>
-      <div class="stat rv"><span>Aset kripto aktif</span><b id="statCoins">21.248</b></div>
+      <div class="stat rv"><span>Total kapitalisasi pasar</span><b id="statMcap">$2,13 T</b></div>
+      <div class="stat rv"><span>Dominasi Bitcoin</span><b id="statDom">58,0%</b></div>
+      <div class="stat rv"><span>Volume perdagangan 24j</span><b id="statVol">$55 Miliar</b></div>
+      <div class="stat rv"><span>Aset kripto aktif</span><b id="statCoins">21.244</b></div>
     </div>
-    <p class="mkt-note">Sumber harga: CoinGecko API (tanpa kunci). Jika API tidak merespons, halaman menampilkan harga terakhir yang terverifikasi pada 27 Nov 2026 · 09:48 WIB.</p>
+    <p class="mkt-note">Sumber harga: CoinGecko API (tanpa kunci). Jika API tidak merespons, halaman menampilkan harga terakhir yang terverifikasi pada 27 Nov 2026 · 14:49 WIB.</p>
   </div>
 </section>
 
@@ -562,12 +565,12 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
       <a class="more" href="cryptoscope-1.html#portal">Semua berita →</a>
     </div>
     <a class="break-main rv" href="cryptoscope-1.html#portal">
-      <img src="images/2026-11-26/proc-novatech-judgment.png" alt="Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech" loading="eager">
+      <img src="images/2026-11-27/proc-monero-xmr-slide-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Monero anjlok 11%, penurunan harian terbesar sejak Juni usai KuCoin delist XMR" loading="eager">
       <div class="bm-body">
-        <span class="badge cat">Regulasi &amp; Kebijakan</span>
-        <h3>Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech</h3>
-        <p>Jaksa Agung New York Letitia James memperoleh putusan pengadilan senilai US$1,37 miliar terhadap Cynthia dan Eddy Petion, pendiri perusahaan perdagangan kripto dan valas NovaTech yang sudah tutup, atas skema investasi yang menipu ratusan ribu orang. Putusan itu mencakup US$1,13 miliar dana investor dan US$232,5 juta bunga, menyusul putusan default pada Agustus 2025 setelah pasangan itu melarikan diri dan tidak menanggapi gugatan yang diajukan pada Juni 2024. NovaTech dituding menargetkan komunitas imigran, terutama warga Haiti di New York, lewat kelompok doa dan media sosial dengan janji imbal hasil tinggi; lebih dari 11.000 warga New York kehilangan puluhan juta dolar.</p>
-        <div class="meta"><b>Cointelegraph</b> · 27 Nov 2026 · 14:19 WIB</div>
+        <span class="badge cat">Exchange &amp; Industri</span>
+        <h3>Monero anjlok 11%, penurunan harian terbesar sejak Juni usai KuCoin delist XMR</h3>
+        <p>Monero (XMR) anjlok lebih dari 11% pada Kamis, penurunan harian terbesar sejak 4 Juni, setelah KuCoin — bursa kripto terbesar ke-12 berdasarkan volume 24 jam — mengumumkan akan menghentikan perdagangan XMR pada 30 November. XMR sempat menyentuh US$430 dan diperdagangkan sekitar US$464, turun 22% sepanjang November dan 14% sepanjang kuartal. Delisting ini menyusul langkah serupa MEXC awal bulan ini; menurut TRM Labs, 73 bursa sudah mendelist XMR sepanjang 2025, sehingga perdagangannya kini terkonsentrasi di segelintir bursa offshore. Komunitas Monero merilis dompet Eigenwallet dengan fitur atomic swap BTC–XMR, sementara upgrade privasi FCMP++ masih menjalani audit keamanan.</p>
+        <div class="meta"><b>CoinDesk</b> · 27 Nov 2026 · 14:33 WIB</div>
       </div>
     </a>
   </div>
@@ -581,28 +584,28 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
     </div>
     <div class="news-grid">
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-nasdaq-volatility-fed-hike.png" alt="Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
+        <div class="news-thumb"><img class="proc" src="images/2026-11-26/proc-novatech-judgment-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech" loading="lazy"><span class="badge cat">Regulasi &amp; Kebijakan</span></div>
+        <div class="news-body"><h3>Jaksa Agung New York kantongi putusan US$1,37 miliar atas pendiri NovaTech</h3>
+        <p>Jaksa Agung New York Letitia James memperoleh putusan pengadilan senilai US$1,37 miliar terhadap Cynthia dan Eddy Petion, pendiri perusahaan perdagangan kripto dan valas NovaTech yang sudah tutup, atas skema investasi ya</p>
+        <div class="news-src"><b>Cointelegraph</b> · 27 Nov 2026 · 14:19 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
+      </a>
+                  <a class="news-card rv" href="cryptoscope-1.html#portal">
+        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-nasdaq-volatility-fed-hike-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
         <div class="news-body"><h3>Nasdaq 100 berayun paling liar sejak April 2025, The Fed hampir pasti naikkan bunga</h3>
         <p>Rata-rata rentang intraday Nasdaq 100 selama lima sesi terakhir mencapai 3,8% — ayunan terlebar sejak April 2025 dan tertinggi kedua sejak bear market 2022. Pemicunya berlapis: CEO Nvidia Jensen Huang mengundurkan diri a</p>
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 14:15 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/ethereum-quantum-hegota.webp" alt="Rencana pertahanan kuantum Ethereum bisa tunda upgrade anti-sensor Hegota" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/ethereum-quantum-hegota.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Rencana pertahanan kuantum Ethereum bisa tunda upgrade anti-sensor Hegota" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
         <div class="news-body"><h3>Rencana pertahanan kuantum Ethereum bisa tunda upgrade anti-sensor Hegota</h3>
         <p>Developer inti Ethereum tetap menaruh proposal anti-sensor transaksi FOCIL dalam jadwal upgrade Hegota pada pertemuan 26 November, namun menunda keputusan final soal cakupan upgrade tersebut. Dua peneliti berbeda pendapa</p>
         <div class="news-src"><b>CryptoSlate</b> · 27 Nov 2026 · 13:40 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/blockchain-jepang-seal.webp" alt="Industri kripto Jepang gandeng SEAL untuk perkuat respons peretasan" loading="lazy"><span class="badge cat">Blockchain &amp; Web3</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/blockchain-jepang-seal.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Industri kripto Jepang gandeng SEAL untuk perkuat respons peretasan" loading="lazy"><span class="badge cat">Blockchain &amp; Web3</span></div>
         <div class="news-body"><h3>Industri kripto Jepang gandeng SEAL untuk perkuat respons peretasan</h3>
         <p>Kelompok keamanan siber industri kripto Jepang, JPCrypto-ISAC, menandatangani nota kesepahaman dengan organisasi nirlaba AS Security Alliance (SEAL) untuk memperkuat deteksi dan respons terhadap serangan siber. Kerja sam</p>
         <div class="news-src"><b>Cointelegraph</b> · 27 Nov 2026 · 12:22 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
-      </a>
-                  <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-burry-ai-debt.png" alt="Michael Burry soroti laporan: utang AI dinilai salah harga seperti subprime 2007" loading="lazy"><span class="badge cat">AI &amp; Teknologi</span></div>
-        <div class="news-body"><h3>Michael Burry soroti laporan: utang AI dinilai salah harga seperti subprime 2007</h3>
-        <p>Michael Burry merekomendasikan laporan Groundbreaker 20 November yang menilai credit default swaps (CDS) memberi harga utang AI jauh lebih buruk daripada rating lembaga pemeringkat. Swap Oracle mengimplikasikan probabili</p>
-        <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 12:00 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
     </div>
   </div>
@@ -615,111 +618,111 @@ footer{background:#ffffff;border-top:1px solid var(--line)}
     </div>
     <div class="news-grid">
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-us-dollar-streak.png" alt="Dolar dekati rekor kemenangan beruntun terpanjang sejak 2024, sebagian analis nilai reli sudah berakhir" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
+        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-us-dollar-streak-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Dolar dekati rekor kemenangan beruntun terpanjang sejak 2024, sebagian analis nilai reli sudah berakhir" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
         <div class="news-body"><h3>Dolar dekati rekor kemenangan beruntun terpanjang sejak 2024, sebagian analis nilai reli sudah berakhir</h3>
         <p>Indeks dolar AS (DXY) naik sekitar 1,9% pada November dan menuju kenaikan bulanan ketiga beruntun — terpanjang sejak 2024 — setelah menyentuh level tertinggi 20 bulan pekan ini, didorong pasar yang sepenuhnya memperhitun</p>
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 12:56 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/ekonomi-emas-perak-rebound-3600.webp" alt="Emas melonjak ke US$3.600 dan perak ke US$43 saat saham teknologi pulih" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/ekonomi-emas-perak-rebound-3600.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Emas melonjak ke US$3.600 dan perak ke US$43 saat saham teknologi pulih" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
         <div class="news-body"><h3>Emas melonjak ke US$3.600 dan perak ke US$43 saat saham teknologi pulih</h3>
         <p>Harga emas melonjak di atas US$3.600 per ons pada Jumat (27/11), diperdagangkan di US$3.632,80 atau naik 1,84% dalam sehari, sementara perak menembus US$43 ke US$43,49 — setelah keduanya sempat menyentuh level terendah d</p>
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 12:30 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/ripple-xrpl-lending.webp" alt="Rencana pinjaman Ripple di XRP Ledger makin dekat: vault tembus ambang validator" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/ripple-xrpl-lending-v2.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Rencana pinjaman Ripple di XRP Ledger makin dekat: vault tembus ambang validator" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
         <div class="news-body"><h3>Rencana pinjaman Ripple di XRP Ledger makin dekat: vault tembus ambang validator</h3>
         <p>Dua upgrade fondasi pinjaman native di XRP Ledger makin dekat aktif: Single Asset Vault (XLS-65) sudah didukung 29 dari 35 validator tepercaya per 26 November — melewati ambang 80% — sehingga masa tunggu dua minggu berja</p>
         <div class="news-src"><b>CoinDesk</b> · 27 Nov 2026 · 12:06 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-tether-usdt-contraction.png" alt="Pasokan USDT susut US$8,1 miliar dalam 60 hari, Bitcoin kehilangan bahan bakar reli" loading="lazy"><span class="badge cat orange">Bitcoin</span></div>
+        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-burry-ai-debt-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Michael Burry soroti laporan: utang AI dinilai salah harga seperti subprime 2007" loading="lazy"><span class="badge cat">AI &amp; Teknologi</span></div>
+        <div class="news-body"><h3>Michael Burry soroti laporan: utang AI dinilai salah harga seperti subprime 2007</h3>
+        <p>Michael Burry merekomendasikan laporan Groundbreaker 20 November yang menilai credit default swaps (CDS) memberi harga utang AI jauh lebih buruk daripada rating lembaga pemeringkat. Swap Oracle mengimplikasikan probabili</p>
+        <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 12:00 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
+      </a>
+                  <a class="news-card rv" href="cryptoscope-1.html#portal">
+        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-tether-usdt-contraction-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Pasokan USDT susut US$8,1 miliar dalam 60 hari, Bitcoin kehilangan bahan bakar reli" loading="lazy"><span class="badge cat orange">Bitcoin</span></div>
         <div class="news-body"><h3>Pasokan USDT susut US$8,1 miliar dalam 60 hari, Bitcoin kehilangan bahan bakar reli</h3>
         <p>Pasokan gabungan USDT di Ethereum dan Tron turun US$8,1 miliar dalam 60 hari, hampir seluruhnya dari Ethereum, menurut data CryptoQuant — kontraksi 60 hari terbesar sejak Agustus 2022. Tether membakar US$4 miliar pada 2 </p>
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 11:56 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-ethereum-glamsterdam.png" alt="Upgrade Glamsterdam Ethereum lolos uji Desember, 15.000 smart contract berisiko kehabisan gas" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
+        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-ethereum-glamsterdam-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Upgrade Glamsterdam Ethereum lolos uji Desember, 15.000 smart contract berisiko kehabisan gas" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
         <div class="news-body"><h3>Upgrade Glamsterdam Ethereum lolos uji Desember, 15.000 smart contract berisiko kehabisan gas</h3>
         <p>Pengembang inti Ethereum sepakat melanjutkan spesifikasi Glamsterdam apa adanya, termasuk aturan EIP-8037 yang menaikkan tajam biaya pembuatan data permanen di blockchain. Hingga 15.000 dari sekitar 90 juta smart contrac</p>
         <div class="news-src"><b>CoinDesk</b> · 27 Nov 2026 · 11:29 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-eba-usdt-defi.png" alt="EBA: USDT mendominasi pinjaman DeFi, UE diminta kaji pembatasan" loading="lazy"><span class="badge cat">Regulasi &amp; Kebijakan</span></div>
+        <div class="news-thumb"><img class="proc" src="images/2026-11-27/proc-eba-usdt-defi-v2.png" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="EBA: USDT mendominasi pinjaman DeFi, UE diminta kaji pembatasan" loading="lazy"><span class="badge cat">Regulasi &amp; Kebijakan</span></div>
         <div class="news-body"><h3>EBA: USDT mendominasi pinjaman DeFi, UE diminta kaji pembatasan</h3>
         <p>Otoritas Perbankan Eropa (EBA) menemukan Tether (USDT) beserta versi bridged-nya USDT0 memimpin pinjaman stablecoin di Aave, Fluid, dan Spark dalam snapshot 30 Juli yang diterbitkan 25 November — dan juga dominan di Just</p>
         <div class="news-src"><b>CryptoSlate</b> · 27 Nov 2026 · 11:20 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/asean-digital-payments.webp" alt="Tiongkok, Jepang, Korea Selatan dan ASEAN bentuk kelompok kerja pembayaran digital dan regulasi kripto" loading="lazy"><span class="badge cat">Regulasi &amp; Kebijakan</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/asean-digital-payments.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Tiongkok, Jepang, Korea Selatan dan ASEAN bentuk kelompok kerja pembayaran digital dan regulasi kripto" loading="lazy"><span class="badge cat">Regulasi &amp; Kebijakan</span></div>
         <div class="news-body"><h3>Tiongkok, Jepang, Korea Selatan dan ASEAN bentuk kelompok kerja pembayaran digital dan regulasi kripto</h3>
         <p>Tiongkok, Jepang, Korea Selatan, dan negara-negara anggota ASEAN sepakat membentuk kelompok kerja khusus untuk pembayaran digital lintas batas dan regulasi aset digital. Keputusan diambil deputi keuangan dan bank sentral</p>
         <div class="news-src"><b>The Block</b> · 27 Nov 2026 · 11:18 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/tokyo-core-inflation.webp" alt="Inflasi inti Tokyo 2,9%, tertinggi 16 bulan, perkuat peluang kenaikan bunga BOJ Desember" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/tokyo-core-inflation.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Inflasi inti Tokyo 2,9%, tertinggi 16 bulan, perkuat peluang kenaikan bunga BOJ Desember" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
         <div class="news-body"><h3>Inflasi inti Tokyo 2,9%, tertinggi 16 bulan, perkuat peluang kenaikan bunga BOJ Desember</h3>
         <p>Inflasi inti Tokyo naik ke 2,9% year-on-year pada November — tertinggi dalam 16 bulan, naik dari 2,6% pada Oktober, meski sedikit di bawah perkiraan 3,0%. Inflasi headline naik ke 2,8%, sementara ukuran yang mengecualika</p>
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 11:16 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/houthi-saudi-refinery-oil.webp" alt="Houthi serang tiga kilang Saudi dalam lima hari, Brent naik 4,5% dalam sepekan" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/houthi-saudi-refinery-oil.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Houthi serang tiga kilang Saudi dalam lima hari, Brent naik 4,5% dalam sepekan" loading="lazy"><span class="badge cat">Ekonomi Global</span></div>
         <div class="news-body"><h3>Houthi serang tiga kilang Saudi dalam lima hari, Brent naik 4,5% dalam sepekan</h3>
         <p>Houthi Yaman yang didukung Iran menyerang tiga kilang Arab Saudi dalam lima hari: Rabigh pada Minggu — Houthi mengklaim serangan langsung sementara pasukan pimpinan Saudi menyebut drone dicegat; Ras Tanura pada Rabu — ki</p>
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 09:56 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
-                  <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/bitcoin-strc-saylor-mstr.webp" alt="STRC Saylor kalahkan Bitcoin 45 poin, tapi saham MSTR Strategy anjlok hampir separuh" loading="lazy"><span class="badge cat orange">Bitcoin</span></div>
-        <div class="news-body"><h3>STRC Saylor kalahkan Bitcoin 45 poin, tapi saham MSTR Strategy anjlok hampir separuh</h3>
-        <p>Saham preferen STRC Strategy mencatat imbal hasil 13% setahun termasuk distribusi, sementara Bitcoin turun 32% dalam periode yang sama menurut grafik yang dibagikan Michael Saylor — selisih 45 poin. Namun saham biasa MST</p>
-        <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 09:43 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
-      </a>
 
       </div>
-    <div style="text-align:center;margin-top:28px"><a class="btn" href="cryptoscope-1.html#portal">Lihat Semua 50 Berita →</a></div>
+    <div style="text-align:center;margin-top:28px"><a class="btn" href="cryptoscope-1.html#portal">Lihat Semua Berita →</a></div>
   </div>
 </section>
 
 <section class="sec" id="trending-news">
   <div class="wrap">
     <div class="sec-head rv">
-      <div><span class="eyebrow">Trending</span><h2>Berita Trending</h2></div>
+      <div><span class="eyebrow">Lainnya</span><h2>Berita Lainnya</h2></div>
       <a class="more" href="cryptoscope-1.html#portal">Semua berita →</a>
     </div>
     <div class="news-grid">
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/nvidia-mining-claim.webp" alt="Pemegang saham Nvidia era boom mining kripto 2017 bisa klaim bagian dari penyelesaian US$290 juta" loading="lazy"><span class="badge cat">Regulasi &amp; Kebijakan</span></div>
+        <div class="news-thumb"><img class="proc" src="images/2026-11-27/bitcoin-strc-saylor-mstr.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="STRC Saylor kalahkan Bitcoin 45 poin, tapi saham MSTR Strategy anjlok hampir separuh" loading="lazy"><span class="badge cat orange">Bitcoin</span></div>
+        <div class="news-body"><h3>STRC Saylor kalahkan Bitcoin 45 poin, tapi saham MSTR Strategy anjlok hampir separuh</h3>
+        <p>Saham preferen STRC Strategy mencatat imbal hasil 13% setahun termasuk distribusi, sementara Bitcoin turun 32% dalam periode yang sama menurut grafik yang dibagikan Michael Saylor — selisih 45 poin. Namun saham biasa MST</p>
+        <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 09:43 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
+      </a>
+                  <a class="news-card rv" href="cryptoscope-1.html#portal">
+        <div class="news-thumb"><img src="images/2026-11-27/nvidia-mining-claim.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Pemegang saham Nvidia era boom mining kripto 2017 bisa klaim bagian dari penyelesaian US$290 juta" loading="lazy"><span class="badge cat">Regulasi &amp; Kebijakan</span></div>
         <div class="news-body"><h3>Pemegang saham Nvidia era boom mining kripto 2017 bisa klaim bagian dari penyelesaian US$290 juta</h3>
         <p>Investor yang membeli saham biasa Nvidia pada 10 Agustus 2017–15 November 2018 bisa berbagi penyelesaian tunai US$290 juta yang diusulkan atas klaim pemegang saham soal pengungkapan Nvidia tentang permintaan dari penamba</p>
         <div class="news-src"><b>CryptoSlate</b> · 27 Nov 2026 · 09:10 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/ai-bug-bounty.webp" alt="Platform bug bounty kripto lawan banjir laporan AI dengan AI" loading="lazy"><span class="badge cat">AI &amp; Teknologi</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/ai-bug-bounty.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Platform bug bounty kripto lawan banjir laporan AI dengan AI" loading="lazy"><span class="badge cat">AI &amp; Teknologi</span></div>
         <div class="news-body"><h3>Platform bug bounty kripto lawan banjir laporan AI dengan AI</h3>
         <p>Platform bug bounty kripto memperluas pemakaian AI untuk memilah banjir laporan kerentanan berbantuan AI. HackenProof menyebut pada Oktober sudah memakai AI untuk men-triage 70% laporan secara otonom penuh dengan target </p>
         <div class="news-src"><b>Cointelegraph</b> · 27 Nov 2026 · 08:47 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/bitcoin-extreme-fear.webp" alt="Bitcoin masuk zona extreme fear, sinyal beli historis atau jebakan?" loading="lazy"><span class="badge cat orange">Bitcoin</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/bitcoin-extreme-fear.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Bitcoin masuk zona extreme fear, sinyal beli historis atau jebakan?" loading="lazy"><span class="badge cat orange">Bitcoin</span></div>
         <div class="news-body"><h3>Bitcoin masuk zona extreme fear, sinyal beli historis atau jebakan?</h3>
         <p>Indeks Fear and Greed Bitcoin kini di angka 12, zona extreme fear, setelah berada di sana sejak 14 November. Secara historis, pembacaan mingguan di bawah 20 selalu menandai dasar Bitcoin — namun sepanjang 2026 sinyal ini</p>
         <div class="news-src"><b>BeInCrypto</b> · 27 Nov 2026 · 08:42 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
                   <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/morpho-euro-vault.webp" alt="Vault euro stablecoin terbesar Morpho kekurangan €13,8 juta untuk penarikan deposan terbesar" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
+        <div class="news-thumb"><img src="images/2026-11-27/morpho-euro-vault.webp" onerror="var s=document.createElement('span');s.className='ph';s.textContent='◆';if(this.parentNode)this.parentNode.insertBefore(s,this);this.remove();" alt="Vault euro stablecoin terbesar Morpho kekurangan €13,8 juta untuk penarikan deposan terbesar" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
         <div class="news-body"><h3>Vault euro stablecoin terbesar Morpho kekurangan €13,8 juta untuk penarikan deposan terbesar</h3>
         <p>Vault terbesar Morpho untuk EUR CoinVertible (EURCV) tercatat kekurangan likuiditas sekitar 13,8 juta EURCV dibanding kebutuhan penarikan penuh deposan terbesarnya pada 26 November. Aplikasi Morpho menunjukkan likuiditas</p>
         <div class="news-src"><b>CryptoSlate</b> · 27 Nov 2026 · 07:50 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
       </a>
-                  <a class="news-card rv" href="cryptoscope-1.html#portal">
-        <div class="news-thumb"><img src="images/2026-11-27/privacy-kucoin-monero.webp" alt="KuCoin delist Monero, Zcash justru didukung Grayscale" loading="lazy"><span class="badge cat">Ethereum &amp; Altcoin</span></div>
-        <div class="news-body"><h3>KuCoin delist Monero, Zcash justru didukung Grayscale</h3>
-        <p>KuCoin akan menghapus Monero (XMR) dari perdagangannya pada 30 November — bursa besar kedua bulan ini setelah MEXC — dan menutup penarikan pada 31 Desember. XMR anjlok 10,5% ke US$449,98, melanjutkan penurunan dari sekit</p>
-        <div class="news-src"><b>Cointelegraph</b> · 27 Nov 2026 · 07:35 WIB · <span style="color:var(--copper)">Baca di portal →</span></div></div>
-      </a>
 
     </div>
-    <div style="text-align:center;margin-top:28px"><a class="btn" href="cryptoscope-1.html#portal">Lihat Semua 50 Berita →</a></div>
+    <div style="text-align:center;margin-top:28px"><a class="btn" href="cryptoscope-1.html#portal">Lihat Semua Berita →</a></div>
   </div>
 </section>
 <section class="sec" id="edukasi">
@@ -849,13 +852,13 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
   window.addEventListener('resize',function(){size();});
   document.addEventListener('visibilitychange',function(){if(document.hidden){cancelAnimationFrame(raf);}else{raf=requestAnimationFrame(step);}});
 })();
-/* Harga live CoinGecko (fallback = angka terverifikasi 27 Nov 2026 · 09:48 WIB).
+/* Harga live CoinGecko (fallback = angka terverifikasi 27 Nov 2026 · 14:49 WIB).
    Pola portal: timeout AbortController, fetch /global dijeda 1,5 detik (tidak
    bersamaan, hindari 429), retry 1x untuk /global. Kalau fetch gagal, label
    berubah jadi "offline" — harga fallback tetap tampil sebagai data terakhir
    yang terverifikasi, tidak pernah diklaim live. */
 (function(){
-  var FALLBACK_STAMP="27 Nov 2026 · 09:48 WIB";
+  var FALLBACK_STAMP="27 Nov 2026 · 14:49 WIB";
   function fmt(n,d){return n.toLocaleString('en-US',{minimumFractionDigits:d===0?0:2,maximumFractionDigits:d===0?0:2});}
   function set(id,txt){var el=document.getElementById(id);if(el)el.textContent=txt;}
   function chg(id,v){var el=document.getElementById(id);if(!el)return;
@@ -869,12 +872,22 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
     var note=document.querySelector('.mkt-note');
     if(note)note.textContent='Offline — menampilkan harga terakhir yang terverifikasi pada '+FALLBACK_STAMP+'. Harga akan diperbarui otomatis saat CoinGecko kembali terjangkau. Sumber harga: CoinGecko API (tanpa kunci).';
   }
-  function markLive(){
+  function markLive(when){
     var h=document.querySelector('#market h2');if(h)h.textContent='Harga crypto, live';
     var note=document.querySelector('.mkt-note');
-    if(note)note.textContent='Live · diperbarui '+new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'}).format(new Date())+' WIB · Sumber harga: CoinGecko API (tanpa kunci).';
+    if(note)note.textContent='Live · data per '+new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'}).format(when||new Date())+' WIB · Sumber harga: CoinGecko API (tanpa kunci).';
   }
+  /* Kompatibilitas browser lama (temuan audit 1): AbortController tidak ada di
+     Chrome <66 / Safari <11.1 — tanpa guard, fetchJSON throw sinkron dan
+     "Memuat…" tinggal selamanya. Fallback: fetch tanpa signal + timeout manual. */
+  var HAS_FETCH=typeof fetch==='function';
+  var HAS_AC=typeof AbortController!=='undefined';
   function fetchJSON(url,ms){
+    if(!HAS_FETCH)return Promise.reject(new Error('no fetch'));
+    if(!HAS_AC){
+      var to2;
+      return Promise.race([fetch(url).then(function(r){if(!r.ok)throw new Error('cg '+r.status);return r.json();}),new Promise(function(_,rej){to2=setTimeout(function(){rej(new Error('timeout'));},ms);})]).then(function(v){clearTimeout(to2);return v;},function(e){clearTimeout(to2);throw e;});
+    }
     var ctl=new AbortController();var to=setTimeout(function(){ctl.abort();},ms);
     return fetch(url,{signal:ctl.signal}).then(function(r){clearTimeout(to);if(!r.ok)throw new Error('cg '+r.status);return r.json();}).catch(function(e){clearTimeout(to);throw e;});
   }
@@ -890,7 +903,7 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
       var cb=document.getElementById('chipBtc');if(cb)cb.className=d.bitcoin.usd_24h_change>=0?'up':'down';
       var ce=document.getElementById('chipEth');if(ce)ce.className=d.ethereum.usd_24h_change>=0?'up':'down';
       var cs=document.getElementById('chipSol');if(cs)cs.className=d.solana.usd_24h_change>=0?'up':'down';
-      markLive();
+      markLive(new Date());
     }).catch(function(){markOffline();});
   function fetchGlobal(retry){
     fetchJSON('https://api.coingecko.com/api/v3/global',15000)
@@ -908,7 +921,10 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
         if(d.total_market_cap&&d.total_market_cap.usd&&d.market_cap_change_percentage_24h_usd!=null){var sm=document.getElementById('subMcap');if(sm)sm.textContent='$'+(d.total_market_cap.usd/1e12).toFixed(2).replace('.',',')+' triliun';var sc=document.getElementById('subChg');if(sc){var v=d.market_cap_change_percentage_24h_usd;sc.textContent=(v>=0?'meningkat ':'menurun ')+Math.abs(v).toFixed(2).replace('.',',')+'%';sc.className=v>=0?'up':'down';}}
       }).catch(function(){
         if(retry){setTimeout(function(){fetchGlobal(false);},2500);}
-        else{set('statDom','—');set('statVol','—');set('statMcap','—');set('statCoins','—');set('stripCryptos','—');set('stripMarkets','—');set('stripMcap','—');set('stripVol','—');set('stripDomBtc','—');set('stripDomEth','—');}
+        else{/* Jangan timpa nilai fallback statis yang sudah ada — hanya isi '—' bila elemen masih kosong (temuan audit 2). */
+          ['statDom','statVol','statMcap','statCoins','stripCryptos','stripMarkets','stripMcap','stripVol','stripDomBtc','stripDomEth'].forEach(function(id){var el=document.getElementById(id);if(el&&!el.textContent.trim())el.textContent='—';});
+          var sm=document.getElementById('subMcap');if(sm&&!sm.textContent.trim())sm.textContent='$2,13 triliun';
+          var sc=document.getElementById('subChg');if(sc&&!sc.textContent.trim()){sc.textContent='menurun 1,11%';sc.className='down';}}
       });
   }
   setTimeout(function(){fetchGlobal(true);},1500);
@@ -934,10 +950,42 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
 /* --- Homepage CoinViewCenter 26 Nov 2026: panel top coin, kartu kategori,
    tabel harga live (CoinGecko, tanpa kunci). Semua angka dari API live;
    kalau API gagal, tampil pesan jujur — tidak pernah angka karangan.
-   Panggilan CoinGecko dijeda (tabel 2 dtk, gainers/losers 4 dtk, trending
-   6 dtk) supaya tidak menabrak 2 panggilan lama (harga 0 dtk, /global 1,5 dtk). --- */
+   Panggilan CoinGecko: harga 0 dtk, /global 1,5 dtk, tabel+panel berbagi
+   SATU panggilan coins/markets (tabel 0,5 dtk, panel 1 dtk; cache 60 dtk),
+   trending 1 dtk. --- */
 (function(){
-  function fetchJSON(url,ms){var ctl=new AbortController();var to=setTimeout(function(){ctl.abort();},ms);return fetch(url,{signal:ctl.signal}).then(function(r){clearTimeout(to);if(!r.ok)throw new Error('cg '+r.status);return r.json();}).catch(function(e){clearTimeout(to);throw e;});}
+  /* Kompatibilitas browser lama (temuan audit 1): Promise.finally tidak ada di
+     Chrome <63 — polyfill bila belum ada; AbortController tidak ada di
+     Chrome <66 — fetchJSON fallback ke fetch tanpa signal + timeout manual. */
+  if(typeof Promise!=='undefined'&&Promise.prototype&&!Promise.prototype.finally){Promise.prototype.finally=function(f){var P=this.constructor;return this.then(function(v){return P.resolve(f()).then(function(){return v;});},function(e){return P.resolve(f()).then(function(){throw e;});});};}
+  var HAS_FETCH2=typeof fetch==='function';
+  var HAS_AC2=typeof AbortController!=='undefined';
+  function fetchJSON(url,ms){
+    if(!HAS_FETCH2)return Promise.reject(new Error('no fetch'));
+    if(!HAS_AC2){var to2;return Promise.race([fetch(url).then(function(r){if(!r.ok)throw new Error('cg '+r.status);return r.json();}),new Promise(function(_,rej){to2=setTimeout(function(){rej(new Error('timeout'));},ms);})]).then(function(v){clearTimeout(to2);return v;},function(e){clearTimeout(to2);throw e;});}
+    var ctl=new AbortController();var to=setTimeout(function(){ctl.abort();},ms);return fetch(url,{signal:ctl.signal}).then(function(r){clearTimeout(to);if(!r.ok)throw new Error('cg '+r.status);return r.json();}).catch(function(e){clearTimeout(to);throw e;});
+  }
+  /* ---- Data market bersama (temuan audit 9): SATU panggilan coins/markets
+     per_page=100 untuk panel + tabel (tampilan 'all'), cache localStorage
+     60 detik + dedupe panggilan yang sedang berjalan. Kategori lain
+     (DeFi/Metaverse/NFT) tetap panggil sendiri saat tab diklik. ---- */
+  var CG_KEY='cryptoscope-markets-v1',CG_TTL=60000;
+  var cgShared={list:null,at:0,promise:null};
+  function cgReadCache(){try{var raw=localStorage.getItem(CG_KEY);if(!raw)return null;var o=JSON.parse(raw);if(!o||!o.at||!Array.isArray(o.list))return null;if(Date.now()-o.at>CG_TTL)return null;return o;}catch(e){return null;}}
+  function cgWriteCache(list){try{localStorage.setItem(CG_KEY,JSON.stringify({at:Date.now(),list:list}));}catch(e){}}
+  function getMarketsAll(){
+    if(cgShared.list&&Date.now()-cgShared.at<CG_TTL)return Promise.resolve(cgShared.list);
+    if(cgShared.promise)return cgShared.promise;
+    var cached=cgReadCache();
+    if(cached){cgShared.list=cached.list;cgShared.at=cached.at;return Promise.resolve(cached.list);}
+    var url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h,24h,7d';
+    cgShared.promise=fetchJSON(url,12000).then(function(list){
+      if(!list||!list.length)throw new Error('kosong');
+      cgShared.list=list;cgShared.at=Date.now();cgWriteCache(list);
+      cgShared.promise=null;return list;
+    },function(e){cgShared.promise=null;throw e;});
+    return cgShared.promise;
+  }
   function fmtUSD(n){if(n==null||isNaN(n))return '—';if(n>=1000)return '$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});if(n>=1)return '$'+n.toFixed(2);return '$'+n.toFixed(4);}
   function fmtBig(n){if(n==null||isNaN(n))return '—';if(n>=1e12)return '$'+(n/1e12).toFixed(2)+' T';if(n>=1e9)return '$'+(n/1e9).toFixed(2)+' M';if(n>=1e6)return '$'+(n/1e6).toFixed(2)+' jt';return '$'+Math.round(n).toLocaleString('en-US');}
   function pct(v){if(v==null||isNaN(v))return {t:'—',up:true};return {t:(v>=0?'▲ +':'▼ −')+Math.abs(v).toFixed(2).replace('.',',')+'%',up:v>=0};}
@@ -975,7 +1023,7 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
     /* Gainers + Losers dari SATU panggilan top-100 mcap, di-sort di browser:
        API MENGABAIKAN order 24h-desc (kembalian selalu urutan mcap — BTC/ETH/
        USDT — terbukti curl 26 Nov), jadi sort manual di sini wajib. */
-    fetchJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=24h',10000)
+    getMarketsAll()
       .then(function(list){
         list=(list||[]).filter(function(c){return typeof c.price_change_percentage_24h==='number';});
         var desc=list.slice().sort(function(a,b){return b.price_change_percentage_24h-a.price_change_percentage_24h;});
@@ -997,31 +1045,29 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
       fillPanel('[data-panel="trending"]',list,'Data trending tidak tersedia.');
     }).catch(function(){fillPanel('[data-panel="trending"]',null,'Data trending tidak tersedia — CoinGecko tidak terjangkau.');});
   }
-  setTimeout(loadPanels,4000);
+  setTimeout(loadPanels,1000);
 
-  /* ---- Kartu kategori: gambar + jumlah berita dari news-data.json ---- */
-  function loadCatCards(){
-    fetchJSON('news-data.json',8000).then(function(data){
-      var items=(data&&data.items)||data||[];
-      if(!Array.isArray(items))return;
-      var first={};
-      items.forEach(function(n){if(n.cat&&!first[n.cat])first[n.cat]=n;});
-      document.querySelectorAll('.cat-card').forEach(function(card){
-        var cat=card.getAttribute('data-cat');
-        var cnt=card.querySelector('[data-cat-count]');
-        if(cnt)cnt.textContent=items.filter(function(n){return n.cat===cat;}).length+' berita';
-        var it=first[cat];
-        var img=card.querySelector('.cat-img img');
-        var ph=card.querySelector('.cat-ph');
-        if(it&&it.img&&img){img.src=it.img;img.alt=it.title||'';if(ph)ph.style.display='none';}
-      });
-    }).catch(function(){/* biarkan ubin gradien + ikon */});
-  }
-  setTimeout(loadCatCards,1200);
+  /* ---- Kartu kategori: gambar + jumlah berita dari data GABUNGAN
+     (news-data.json + Admin Firestore, temuan audit 21) — dipanggil modul
+     landing setelah loadMergedNews(); tanpa itu kartu memakai angka statis. ---- */
+  window.renderCatCards=function(items){
+    if(!Array.isArray(items)||!items.length)return;
+    var first={};
+    items.forEach(function(n){if(n.cat&&!first[n.cat])first[n.cat]=n;});
+    document.querySelectorAll('.cat-card').forEach(function(card){
+      var cat=card.getAttribute('data-cat');
+      var cnt=card.querySelector('[data-cat-count]');
+      if(cnt)cnt.textContent=items.filter(function(n){return n.cat===cat;}).length+' berita';
+      var it=first[cat];
+      var img=card.querySelector('.cat-img img');
+      var ph=card.querySelector('.cat-ph');
+      if(it&&it.img&&img){img.src=it.img;img.alt=it.title||'';img.onerror=function(){img.remove();if(ph)ph.style.display='';};if(ph)ph.style.display='none';}
+    });
+  };
 
   /* ---- Tabel harga live ---- */
   var CAT_PARAM={all:'',defi:'decentralized-finance-defi',metaverse:'metaverse',nft:'non-fungible-tokens-nft'};
-  var tbl={view:'all',page:1,per:10,loading:false,cache:{}};
+  var tbl={view:'all',page:1,per:10,loading:false,cache:{},stamp:{}};
   function drawSpark(cv,prices,up){
     if(!cv||!prices||prices.length<2)return;
     var ctx=cv.getContext('2d');if(!ctx)return;
@@ -1080,21 +1126,24 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
       drawSpark(cv,prices,cv.getAttribute('data-up')==='1');
     });
     var st=document.getElementById('tableStamp');
-    if(st)st.textContent='Live · diperbarui '+new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'}).format(new Date())+' WIB · Sumber: CoinGecko API (tanpa kunci). Menampilkan 100 koin teratas berdasarkan kapitalisasi pasar. Harga dapat berubah sewaktu-waktu; bukan saran investasi.';
+    if(st)st.textContent='Live · data per '+new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'}).format(new Date(tbl.stamp[tbl.view]||Date.now()))+' WIB · Sumber: CoinGecko API (tanpa kunci). Menampilkan 100 koin teratas berdasarkan kapitalisasi pasar. Harga dapat berubah sewaktu-waktu; bukan saran investasi.';
   }
   function loadTable(retry){
     /* Cache per tampilan: fetch 100 koin SEKALI, paginasi/baris dihitung lokal
-       — klik halaman tidak panggil API lagi (rate limit). */
+       — klik halaman tidak panggil API lagi (rate limit). Tampilan 'all'
+       memakai getMarketsAll() bersama panel (temuan audit 9). */
     if(tbl.cache[tbl.view]){renderTableRows();renderPagination();return;}
     if(tbl.loading)return;tbl.loading=true;
     var body=document.getElementById('marketTableBody');if(!body){tbl.loading=false;return;}
     body.innerHTML='<tr><td colspan="9" class="tbl-empty">Memuat harga live dari CoinGecko…</td></tr>';
-    var cat=CAT_PARAM[tbl.view]||'';
-    var url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h,24h,7d'+(cat?'&category='+cat:'');
-    fetchJSON(url,12000).then(function(list){
+    var p;
+    if(tbl.view==='all'){p=getMarketsAll();}
+    else{var cat=CAT_PARAM[tbl.view]||'';var url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h,24h,7d'+(cat?'&category='+cat:'');p=fetchJSON(url,12000);}
+    p.then(function(list){
       if(!list||!list.length)throw new Error('kosong');
       tbl.cache[tbl.view]=list;
       tbl.page=1;
+      tbl.stamp[tbl.view]=(tbl.view==='all'&&cgShared.at)||Date.now();
       renderTableRows();
     }).catch(function(){
       if(retry!==false){
@@ -1114,11 +1163,22 @@ var tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
   var rs=document.getElementById('rowsSelect');
   if(rs)rs.addEventListener('change',function(){tbl.per=parseInt(rs.value,10)||10;tbl.page=1;loadTable();});
   renderPagination();
-  setTimeout(loadTable,2000);
+  setTimeout(loadTable,500);
+  /* Watchdog (temuan audit 1): kalau setelah ~35 detik masih ada panel/tabel
+     yang berisi "Memuat…", tulis pesan error yang jujur — jangan biarkan
+     "Memuat…" tinggal selamanya (mis. script gagal sebelum promise dibuat). */
+  setTimeout(function(){
+    document.querySelectorAll('[data-panel]').forEach(function(box){
+      var e=box.querySelector('.tp-empty');
+      if(e&&e.textContent.indexOf('Memuat')===0)e.textContent='Data tidak tersedia — CoinGecko tidak terjangkau.';
+    });
+    var tb=document.getElementById('marketTableBody');
+    if(tb){var te=tb.querySelector('.tbl-empty');if(te&&te.textContent.indexOf('Memuat harga live')===0)te.textContent='Harga tidak dapat dimuat — CoinGecko tidak terjangkau (mungkin batas permintaan). Coba muat ulang halaman.';}
+  },35000);
 })();
 </script>
 <script type="module">
-/* Landing live (refactor 25 Nov 2026; slot 50-artikel 27 Nov 2026): 1 Berita Utama + 4 Berita Pilihan + 10 kartu "Berita terbaru" + 5 Berita Trending, seksi
+/* Landing live (refactor 25 Nov 2026; slot 50-artikel 27 Nov 2026): 1 Berita Utama + 4 Berita Pilihan + 10 kartu "Berita terbaru" + 5 Berita Lainnya, seksi
    Breaking, dan ticker dibaca dari sumber yang sama dengan portal
    (news-data.json + berita Admin Firestore lewat news.js). HTML statis
    tetap jadi fallback: kalau data gagal dimuat, kartu statis dibiarkan. */
@@ -1133,6 +1193,29 @@ function esc(s) {
 
 /* Isi thumb kartu: foto kalau ada, kalau tidak pakai placeholder huruf
    kategori (CSS .ph sudah ada di halaman). */
+/* Fallback gambar berita (temuan audit 16): kalau foto gagal dimuat, ganti
+   dengan placeholder ikon kategori — jangan biarkan ikon gambar rusak. */
+function armNewsImg(img, item) {
+  if (!img) return;
+  img.onerror = function () {
+    var ph = document.createElement("span");
+    ph.className = "ph";
+    ph.textContent = CAT_ICON[item.cat] || "◆";
+    if (img.parentNode) img.parentNode.insertBefore(ph, img);
+    img.remove();
+  };
+}
+
+/* Potong ringkasan di batas kata + "…" (temuan audit 26a) — jangan tengah kata. */
+function cutSummary(s, max) {
+  s = s || "";
+  if (s.length <= max) return s;
+  var cut = s.slice(0, max);
+  var sp = cut.lastIndexOf(" ");
+  if (sp > 0) cut = cut.slice(0, sp);
+  return cut + "…";
+}
+
 function setThumb(thumb, item) {
   if (!thumb) return;
   var oldImg = thumb.querySelector("img");
@@ -1141,6 +1224,7 @@ function setThumb(thumb, item) {
     if (oldPh) oldPh.remove();
     if (!oldImg) { oldImg = document.createElement("img"); oldImg.loading = "lazy"; oldImg.alt = ""; thumb.prepend(oldImg); }
     oldImg.src = item.img;
+    armNewsImg(oldImg, item);
     oldImg.alt = item.title || "";
     if (String(item.img).indexOf("proc-") >= 0) oldImg.classList.add("proc");
     else oldImg.classList.remove("proc");
@@ -1160,7 +1244,7 @@ function updateCard(card, item) {
   var oldTitle = h ? h.textContent : "";
   if (h) h.textContent = item.title || "";
   var p = card.querySelector("p");
-  if (p) p.textContent = (item.summary || "").slice(0, 220);
+  if (p) p.textContent = cutSummary(item.summary, 220);
   var bd = card.querySelector(".badge");
   if (bd) {
     bd.textContent = CAT_LABEL[item.cat] || "Crypto";
@@ -1177,7 +1261,7 @@ function updateCard(card, item) {
 function updateBreakMain(el, item) {
   if (!el || !item || !item.img) return;
   var img = el.querySelector("img");
-  if (img) { img.src = item.img; img.alt = item.title || ""; }
+  if (img) { img.src = item.img; armNewsImg(img, item); img.alt = item.title || ""; }
   var h = el.querySelector("h3");
   if (h) h.textContent = item.title || "";
   var p = el.querySelector("p");
@@ -1189,7 +1273,7 @@ function updateBreakMain(el, item) {
 function updateBreakItem(el, item) {
   if (!el || !item || !item.img) return;
   var img = el.querySelector("img");
-  if (img) { img.src = item.img; img.alt = item.title || ""; }
+  if (img) { img.src = item.img; armNewsImg(img, item); img.alt = item.title || ""; }
   var h = el.querySelector("h4");
   if (h) h.textContent = item.title || "";
   var m = el.querySelector(".meta");
@@ -1230,7 +1314,7 @@ function pickSlots(sorted) {
 function updateUtama(el, item) {
   if (!el || !item) return;
   var img = el.querySelector("img");
-  if (img && item.img) { img.src = item.img; img.alt = item.title || ""; }
+  if (img && item.img) { img.src = item.img; armNewsImg(img, item); img.alt = item.title || ""; }
   var h = el.querySelector("h3");
   if (h) h.textContent = item.title || "";
   var p = el.querySelector("p");
@@ -1271,6 +1355,7 @@ try {
       }).join("");
       track.innerHTML = html + html; /* gandakan agar marquee mulus */
     }
+    if (window.renderCatCards) window.renderCatCards(items);
   }
 } catch (e) {
   console.warn("Berita landing tidak dapat dimuat:", e);
