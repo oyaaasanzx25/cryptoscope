@@ -312,7 +312,7 @@ h1,h2,h3,.panel-head b,.news-item b,.analysis-body h4,.quick-card b{font-family:
 </div></div>
     </section>
     <section id="market"><div class="section-head"><h3>Pantauan market</h3><a href="#market" id="marketDetail">Detail →</a></div>
-      <div class="panel"><div class="panel-head"><b>Aset populer</b><small id="marketStamp" data-price-date="28 Nov 2026 · 05:09 WIB">Memuat harga live…</small></div><div class="market-list">
+      <div class="panel"><div class="panel-head"><b>Aset populer</b><small id="marketStamp" data-price-date="28 Nov 2026 · 07:05 WIB">Memuat harga live…</small></div><div class="market-list">
         <div class="asset" id="bitcoin"><div class="asset-left"><span class="asset-icon">₿</span><div><b>Bitcoin</b><small>BTC</small></div></div><div class="asset-price" id="price-btc">$59.800<small>−1,20% hari ini</small></div></div>
         <div class="asset"><div class="asset-left"><span class="asset-icon">◆</span><div><b>Ethereum</b><small>ETH</small></div></div><div class="asset-price" id="price-eth">$1.660<small>−1,70% hari ini</small></div></div>
         <div class="asset"><div class="asset-left"><span class="asset-icon">◎</span><div><b>Solana</b><small>SOL</small></div></div><div class="asset-price" id="price-sol">$71,50<small>+0,80% hari ini</small></div></div>
@@ -1101,7 +1101,7 @@ async function loadMarket(){
 }
 loadMarket();
 /* Gambaran pasar global dari CoinGecko (gratis, tanpa API key).
-   Nilai fallback statis (snapshot 28 Nov 2026 · 05:09 WIB) tetap tampil
+   Nilai fallback statis (snapshot 28 Nov 2026 · 07:05 WIB) tetap tampil
    kalau API gagal — fail() hanya menandai stamp sebagai offline dan tidak
    pernah menimpa angka fallback dengan "—". Dua request CoinGecko (harga
    + global) dijeda 1,5 detik agar tidak bersamaan (menghindari 429
